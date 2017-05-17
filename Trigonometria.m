@@ -86,7 +86,7 @@
 (*"Sostituisco i valori \[LongRightArrow] \!\(\*SuperscriptBox[\(40\), \(2\)]\) + ",InputField[Dynamic[catetoValore],String,FieldSize-> 3],"\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\) ",Dynamic[CheckAnswer[catetoValore,"110"]]," = \!\(\*SuperscriptBox[\(C\), \(2\)]\)\n",*)
 (*"\n",*)
 (*"Ricavo C \[LongRightArrow] C = ",SqrtBox[Row[{"\!\(\*SuperscriptBox[\(A\), \(2\)]\) + ",InputField[Dynamic[catetoBNome],String,FieldSize-> 1],"\!\(\*SuperscriptBox[\(\\\ \), \(\(2\)\(\\\ \\\ \\\ \\\ \)\)]\)"}]] // DisplayForm,Dynamic[CheckAnswer[catetoBNome,"B"]],"\n \n",*)
-(*"Approssima il risultato per difetto\n",*)
+(*"Approssima il risultato per difetto\n\n",*)
 (*"Calcolo C \[LongRightArrow] C = ", SqrtBox[Row[{InputField[Dynamic[catetoAValore],String,FieldSize-> 2],"\!\(\*SuperscriptBox[\(\\\ \), \(\(2\)\(\\\ \\\ \\\ \\\ \)\)]\)",Dynamic[CheckAnswer[catetoAValore,"40"]]," + ",InputField[Dynamic[catetoBValore],String,FieldSize-> 3],"\!\(\*SuperscriptBox[\(\\\ \), \(\(2\)\(\\\ \\\ \)\)]\)",Dynamic[CheckAnswer[catetoBValore,"110"]]}]] //  DisplayForm," = ",InputField[Dynamic[ipotenusaValore],String,FieldSize->3],Dynamic[CheckAnswer[ipotenusaValore,"117"]]*)
 (*}];*)
 (**)
