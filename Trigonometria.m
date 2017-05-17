@@ -3,7 +3,7 @@
 (* ::Input:: *)
 (*BeginPackage[ "Trigonometria`"]*)
 (*(*ClearAll["Trigonometria`*"];*) *)
-(**)
+(*(* DIO DE DIO*) *)
 (*EsercizioEsempio::usage = "Stampa un'esercizio d'esempio per calcolare Sen(\[Alpha])";*)
 (**)
 (*Esercizio1::usage= "Esercizio su seno coseno tangente";*)
@@ -605,6 +605,3 @@
 (*End[]*)
 (**)
 (*EndPackage[]*)
-
-
-
