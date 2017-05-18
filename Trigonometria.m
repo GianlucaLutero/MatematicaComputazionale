@@ -1083,6 +1083,18 @@ PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->{0.20
 }, { Row[{"      Se l'angolo \[EGrave] retto il coseno ha valore = 1, \nquindi otteniamo il teorema di pitagora: \!\(\*SuperscriptBox[\(AB\), \(2\)]\) + \!\(\*SuperscriptBox[\(BC\), \(2\)]\) = \!\(\*SuperscriptBox[\(AC\), \(2\)]\)"}]}},Frame->Directive[Lighter[Gray,0.5]]]
 
 
+(*######################### ESERCIZI ##############################*)
+
+
+
+
+
+
+
+
+
+
+
 (*Esercizio d'esempio*)
 EsercizioEsempio[]:=
 
@@ -1161,13 +1173,23 @@ senValoreDen3],String,FieldSize->3],Dynamic[CheckAnswer[senValoreDen3,"117"]]}],
 
 Grid[{{Text[Style["Esercizio guidato:",20,FontColor-> Red]]},
 {Magnify[Graphics[{
-   (* triangle *)
-  Line[{{0, 0}, {0,1}, {2, 0}, {0, 0}}],
+
   (* right angle symbol *)
   Line[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}}],
+ {Opacity[0.2],Darker[Green,0.3],Polygon[{{0, 0.1}, {0.1, 0.1}, {0.1, 0},{0, 0}}]},
+ {Darker[Green,0.3],Line[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}}]},
+  
   (* angle symbol *)
-  Circle[{2, 0}, 0.2, {145.5 Degree, 182.5 Degree}],
-  Circle[{0,1},0.2,{260 Degree,340 Degree}],
+  (* ANGOLO IN (2,0) *)
+  {Opacity[0.2], Darker[Green,0.3], Disk[{2, 0}, 0.2, angolo[{0, 0}, {0, 1}, {2, 0}]+Pi]},
+  {Darker[Green,0.2], Circle[{2, 0}, 0.2, angolo[{0, 0}, {0,1}, {2, 0}]+Pi]},
+
+  (* ANGOLO IN (0,1) *)
+  {Opacity[0.2], Darker[Green,0.3], Disk[{0, 1}, 0.2, {angolo[{2, 0}, {0, 0}, {0, 1}][[1]]+2Pi,3Pi/2}]},
+  {Darker[Green,0.2], Circle[{0, 1}, 0.2, {angolo[{2, 0}, {0, 0}, {0, 1}][[1]]+2Pi,3Pi/2}]},
+   (* triangle *)
+  {Opacity[0],EdgeForm[Directive[Black]],Triangle[{{0, 0}, {0,1}, {2, 0}}]},
+  
   (* labels *)
   Rotate[
    Text[Style["A", 15],
@@ -1176,9 +1198,9 @@ Grid[{{Text[Style["Esercizio guidato:",20,FontColor-> Red]]},
    {0.7, -0.1}],
   Text[Style["C", 15],
    {1, 0.6}, {-1, 0}],
- Text[Style["\[Alpha]", 10], {1.7, 0.08}],
- Text[Style["\[Beta]",10],{0.085,0.75}],
- Text[Style["90\[Degree]",10],{0.2,0.2}]
+ Text[Style["\[Alpha]", 10,Darker[Green,0.3]], {1.7, 0.08}],
+ Text[Style["\[Beta]",10,Darker[Green,0.3]],{0.085,0.75}],
+ Text[Style["90\[Degree]",10,Darker[Green,0.3]],{0.2,0.2}]
   }],2]
 ,Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizioGuidato],1.4],Text[""]},
 {Text[Style["Procedimento:",17,FontColor -> Red]]},
