@@ -1377,7 +1377,7 @@ Text["5",{0.4,-0.15}]
 
 Esercizio8[]:=
 Module[{res5 =""},
-datiEsercizio8 = StringJoin[Style["A = 24 \nC = 12\!\(\*SqrtBox[\(3\)]\)\nB = 12",FontFamily-> "sans sarif",Bold],Style["\n?cos(\[Gamma])",FontColor->Red,FontFamily-> "sans sarif",Bold]];
+datiEsercizio8 = StringJoin[Style["A = 24 \nC = 12\!\(\*SqrtBox[\(3\)]\)\nB = 12",FontFamily-> "sans sarif",Bold],Style["\nTrovare cos(\[Gamma])",FontColor->Red,FontFamily-> "sans sarif",Bold]];
 
 
 Grid[{{Text[Style["Esercizio 8:",20,FontColor-> Red]]},
@@ -1403,9 +1403,9 @@ Text[Style["\[Gamma]",10,Darker[Green,0.3]],{0.8,0.08}]
   }],2]
 ,Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizio8],1.4],Text[""]},
 {Text[Style["Procedimento:",17,FontColor -> Red]]},
-{Text[Style["Ricordati! \!\(\*SuperscriptBox[\(C\), \(2\)]\) = \!\(\*SuperscriptBox[\(B\), \(2\)]\) + \!\(\*SuperscriptBox[\(A\), \(2\)]\) - 2AB cos(\[Gamma])",Bold,20]]},
-{Magnify[Row[{"cos(\[Gamma]) = \!\(\*FractionBox[\(\(\\\ \)\(\*SuperscriptBox[\(B\), \(2\)]\\\  + \\\ \*SuperscriptBox[\(A\), \(2\)]\\\  - \\\ \*SuperscriptBox[\(C\), \(2\)]\)\), \(2  AB\)]\) = ",Row[{InputField[Dynamic[val13],String,FieldSize->2],CheckAnswer[val13,"12"],"\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\) + 576 - 472"}]/Row[{"2 ", InputField[Dynamic[val14],String,FieldSize->2],CheckAnswer[val14,"288"]}]}],2]},
-{Magnify[Row[{RadioButtonBar[Dynamic[res5],{"\!\(\*FractionBox[\(1\), \(2\)]\)","\!\(\*FractionBox[SqrtBox[\(3\)], \(2\)]\)","-\!\(\*FractionBox[\(1\), \(2\)]\)","-\!\(\*FractionBox[SqrtBox[\(3\)], \(2\)]\)"}],"         ",Dynamic[CheckAnswer[res5,"\!\(\*FractionBox[\(1\), \(2\)]\)"]]}],2]}
+{Text[Style["Ricorda! \!\(\*SuperscriptBox[\(C\), \(2\)]\) = \!\(\*SuperscriptBox[\(B\), \(2\)]\) + \!\(\*SuperscriptBox[\(A\), \(2\)]\) - 2A\[CenterDot]B cos(\[Gamma])",Bold,20]]},
+{Magnify[Row[{"cos(\[Gamma]) = \!\(\*FractionBox[\(\(\\\ \)\(\*SuperscriptBox[\(B\), \(2\)]\\\  + \\\ \*SuperscriptBox[\(A\), \(2\)]\\\  - \\\ \*SuperscriptBox[\(C\), \(2\)]\)\), \(2  A\[CenterDot]B\)]\) = ",Row[{InputField[Dynamic[val13],String,FieldSize->2],CheckAnswer[val13,"12"],"\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\) + 576 - 472"}]/Row[{"2 ", InputField[Dynamic[val14],String,FieldSize->2],CheckAnswer[val14,"288"]}]}],2]},
+{Style["Quindi cos(\[Gamma]) misura:",17,Bold],Magnify[Row[{RadioButtonBar[Dynamic[res5],{"\!\(\*FractionBox[\(1\), \(2\)]\)","\!\(\*FractionBox[SqrtBox[\(3\)], \(2\)]\)","-\!\(\*FractionBox[\(1\), \(2\)]\)","-\!\(\*FractionBox[SqrtBox[\(3\)], \(2\)]\)"}],"         ",Dynamic[CheckAnswer[res5,"\!\(\*FractionBox[\(1\), \(2\)]\)"]]}],2]}
 
 
 },Alignment->{Left,Center},Spacings -> {10,5}]]
@@ -1518,14 +1518,14 @@ Grid[{{Text[Style["Esercizio 9:",20,FontColor-> Red]]},
 {esercizio9testo},
          { Magnify[Sharpen[Import["campanile.jpeg"]],5],
 Magnify[
-Row[{Style["?H\n",FontColor->Red],Style["Approssimare il risultato per difetto\n",FontColor->Red,8],"tan(",InputField[Dynamic[tang],String,FieldSize->1],Dynamic[CheckAnswer[tang,"42"]],"\!\(\*SuperscriptBox[\(\\\ \), \(\[Degree]\)]\)) = ", Row[{InputField[Dynamic[altezza],String,FieldSize->1],Dynamic[CheckAnswer[altezza,"H"]]}]/Row[{InputField[Dynamic[base],String,FieldSize->1],Dynamic[CheckAnswer[base,"80"]]}]," \nH = ",Row[{InputField[Dynamic[base2],String,FieldSize->1],Dynamic[CheckAnswer[base2,"80"]]}]," \[CenterDot] tan(",Row[{InputField[Dynamic[altezza2],String,FieldSize->1],Dynamic[CheckAnswer[altezza2,"42"]]}],"\!\(\*SuperscriptBox[\(\\\ \), \(\[Degree]\)]\)) = ",Row[{InputField[Dynamic[altezza3],String,FieldSize->1],Dynamic[CheckAnswer[altezza3,"72"]]}]}],2]}
+Row[{Style["Trovare H, dove H \[EGrave] l'altezza del campanile\n",FontColor->Red],Style["Approssimare il risultato per difetto\n",FontColor->Red,8],"tan(",InputField[Dynamic[tang],String,FieldSize->1],Dynamic[CheckAnswer[tang,"42"]],"\!\(\*SuperscriptBox[\(\\\ \), \(\[Degree]\)]\)) = ", Row[{InputField[Dynamic[altezza],String,FieldSize->1],Dynamic[CheckAnswer[altezza,"H"]]}]/Row[{InputField[Dynamic[base],String,FieldSize->1],Dynamic[CheckAnswer[base,"80"]]}]," \nH = ",Row[{InputField[Dynamic[base2],String,FieldSize->1],Dynamic[CheckAnswer[base2,"80"]]}]," \[CenterDot] tan(",Row[{InputField[Dynamic[altezza2],String,FieldSize->1],Dynamic[CheckAnswer[altezza2,"42"]]}],"\!\(\*SuperscriptBox[\(\\\ \), \(\[Degree]\)]\)) = ",Row[{InputField[Dynamic[altezza3],String,FieldSize->1],Dynamic[CheckAnswer[altezza3,"72"]]}]}],2]}
 
 },Alignment->{Left,Center},Spacings -> {10,5}]
 ]
 
 (*Esercizio 7*)
 Esercizio7[] := 
-Module[{G7Ese=""},
+Module[{G7=""},
 
 datiEsercizio7 = StringJoin[Style["A = 2 \nB = 3\n\[Gamma] = \!\(\*SuperscriptBox[\(60\), \(o\)]\)",FontFamily-> "sans sarif",Bold],Style["\nTrovare C",FontColor->Red,FontFamily-> "sans sarif",Bold]];
 
@@ -1560,7 +1560,7 @@ Grid[{{Text[Style["Esercizio 7:",20,FontColor-> Red]]},
   }],2]
 ,Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizio7],1.4],Text[""]},
 {Text[Style["Procedimento:",17,FontColor -> Red]]},
-{Text[Style["Si applica il teorema del coseno:",Bold,20]], Magnify[Row[{"\!\(\*SuperscriptBox[\(C\), \(2\)]\) = ",InputField[Dynamic[A7],String,FieldSize->1],"\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\)",Dynamic[CheckAnswer[A7,"A"]]," + ",
+{Text[Style["Applicare il teorema del coseno:",Bold,20]], Magnify[Row[{"\!\(\*SuperscriptBox[\(C\), \(2\)]\) = ",InputField[Dynamic[A7],String,FieldSize->1],"\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\)",Dynamic[CheckAnswer[A7,"A"]]," + ",
 InputField[Dynamic[B7],String,FieldSize->1],"\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\)",Dynamic[CheckAnswer[B7,"B"]]," - 2 \[CenterDot] A \[CenterDot] " ,
 InputField[Dynamic[B8],String,FieldSize->1],Dynamic[CheckAnswer[B8,"B"]]," \[CenterDot] cos(",,
 PopupMenu[Dynamic[G7],{"\[Alpha]","\[Beta]","\[Gamma]"}],Dynamic[CheckAnswer[G7,"\[Gamma]"]],")" }]]},
@@ -1660,12 +1660,12 @@ Text[Style["\!\(\*SuperscriptBox[\(C\), \(2\)]\)",Bold,20],{1.3,1.3}]
 (*Esercizio 10*)
 Esercizio10[]:=
 Module[{},
-esercizio10testo = Text[Style["Trovare l'angolo \[Alpha]",Bold,20]];
+esercizio10testo = Text[Style["",Bold,20]];
 Grid[{{Text[Style["Esercizio 10:",20,FontColor-> Red]]},
 {esercizio10testo},
-         { Magnify[Sharpen[Import["//home//gianluca//Universit\[AGrave]//Magistrale//Matematica_Computazionale//scivolo.jpeg"]],2],
+         { Magnify[Sharpen[Import["scivolo.jpeg"]],2],
 Magnify[
-Row[{Style["?\[Alpha]\n",FontColor->Red],Style["Approssima il risultato per difetto alla prima cifra decimale\n\n",FontColor->Red,10],Style[""], Row[{InputField[Dynamic[alpha2],String,FieldSize->2],Dynamic[CheckAnswer[alpha2,"2.5"]]}]/("sen(\[Alpha])")," = ",Row[{InputField[Dynamic[gamma3],String,FieldSize->1],Dynamic[CheckAnswer[gamma3,"3" ]]}]/Row[{"sen(",InputField[Dynamic[gamma2],String,FieldSize->1],"\[Degree])",Dynamic[CheckAnswer[gamma2,"60"]]}]," \[LongRightArrow] ",
+Row[{Style["Trovare \[Alpha]\n",FontColor->Red],Style["Approssima il risultato per difetto alla prima cifra decimale\n\n",FontColor->Red,10],Style[""], Row[{InputField[Dynamic[alpha2],String,FieldSize->2],Dynamic[CheckAnswer[alpha2,"2.5"]]}]/("sen(\[Alpha])")," = ",Row[{InputField[Dynamic[gamma3],String,FieldSize->1],Dynamic[CheckAnswer[gamma3,"3" ]]}]/Row[{"sen(",InputField[Dynamic[gamma2],String,FieldSize->1],"\[Degree])",Dynamic[CheckAnswer[gamma2,"60"]]}]," \[LongRightArrow] ",
 "sen(\[Alpha]) = ",Row[{InputField[Dynamic[latob],String,FieldSize->2],Dynamic[CheckAnswer[latob,"2.5"]]}]/Row[{InputField[Dynamic[latoc],String,FieldSize->1],Dynamic[CheckAnswer[latoc,"3"]]}]," \[CenterDot] ",Row[{SqrtBox[InputField[Dynamic[num10],String,FieldSize->1]]//DisplayForm,Dynamic[CheckAnswer[num10,"3"]] }] /Row[{InputField[Dynamic[den10],String,FieldSize->1],Dynamic[CheckAnswer[den10,"2"]]}],
 " = ",Row[{InputField[Dynamic[res10],String,FieldSize->2],Dynamic[CheckAnswer[res10,"0.7"]]}]
 
