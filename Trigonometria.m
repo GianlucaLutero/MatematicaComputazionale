@@ -7,7 +7,38 @@
 (* :Summary: ... *)
 
 BeginPackage["Trigonometria`"]
+
 (* Funzioni *)
+EsercizioEsempio::usage = "Stampa un'esercizio d'esempio per calcolare Sen(\[Alpha])";
+
+Esercizio1::usage= "Esercizio su seno coseno tangente";
+
+Esercizio2::usage = "Esercizio a risposta multipla";
+
+Esercizio3::usage = "Esercizio: calcolo lato triangolo - Teorema della corda ";
+
+Esercizio4::usage= "Esercizio: trovare lato di un triangolo a risposta multipla";
+
+Esercizio5::usage = "Esercizio: trovare il lato C usando la relazione \!\(\*FractionBox[\(\(\\\ \)\(A\)\), \(sen \((\[Alpha])\)\)]\) =\!\(\*FractionBox[\(\(\\\ \)\(B\)\), \(sen \((\[Beta])\)\)]\)";
+
+Esercizio6::usage="Esercizio: teorema dei seni risposta multipla";
+
+Esercizio7::usage = "Esercizio: trovare il lato C con il teorema del coseno";
+
+Esercizio8::usage = "Esercizio: trovare cos(\[Gamma]) usando il teorema del coseno";
+
+Esercizio9::usage = "Esercizio: campanile";
+
+Esercizio10::usage = "Esercizio: scivolo";
+
+
+CheckAnswer::usage = "Modulo che compara i parametri answer_ e correct_ passati in input.\n
+                      Il risultato della valutazione \[EGrave] \[Checkmark] se i parametri sono uguali\n
+                      X altrimenti ";
+
+Calcolatrice::usage = "Calcolatrice semplice per il calcolo di funzioni trigonometriche";
+
+TPitagora::usage = "suggerimento Teorema di pitagora";
 
 
 
