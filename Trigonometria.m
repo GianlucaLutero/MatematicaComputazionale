@@ -1284,13 +1284,15 @@ Grid[{{Text[Style["Esercizio 3:",20,FontColor-> Red]]},
 (* CIRCONFERENZA *)
 {Lighter[Gray,0.5],Circle[{0,0},1]},
 
-{Darker[Green,0.2],Thick,Circle[{Cos[Pi+0.4], Sin[Pi+0.5]},0.2,{0,1}]},
+{Opacity[0.2],Darker[Green,0.3],Thick,Disk[pc,0.2, angolo[pa,pb, pc]]},
+{Darker[Green,0.2],Thick,Circle[pc,0.2, angolo[pa,pb, pc]]},
+
 
 (* TRIANGOLO *)
 {Opacity[0],Black ,EdgeForm[Black], Triangle[{{Cos[(Pi/2)+0.3], Sin[(Pi/2)+0.3]},{Cos[0-0.2], Sin[0-0.2]},{Cos[Pi+0.5], Sin[Pi+0.5]}}]},
 
 (* RAGGIO *)
-{Black,Line[{{0,0},{Cos[0-0.2], Sin[0-0.2]}}]},
+{Black,Dashing[Medium],Line[{{0,0},pb}]},
 
 (* CORDA *)
 {Red,Thick,Line[{{Cos[(Pi/2)+0.3], Sin[(Pi/2)+0.3]},{Cos[0-0.2], Sin[0-0.2]}}]},
@@ -1308,7 +1310,7 @@ Grid[{{Text[Style["Esercizio 3:",20,FontColor-> Red]]},
 Text["  A",{Cos[(Pi/2)+0.4], Sin[(Pi/2)]}],
 Text["   B",{Cos[0], Sin[0-0.3]}],
 Text["   C",{Cos[Pi+0.2], Sin[Pi+0.6]}],
-Text["\!\(\*SuperscriptBox[\(60\), \(o\)]\)",{Cos[Pi+0.9],Sin[11/6 Pi+0.2]}],
+Text[Style["\!\(\*SuperscriptBox[\(60\), \(o\)]\)",Darker[Green,0.2]],{Cos[Pi+0.9],Sin[11/6 Pi+0.2]}],
 Text["2",{0.4,-0.15}]
 
 },PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->0.25]
@@ -1335,13 +1337,14 @@ Grid[{{Text[Style["Esercizio 4:",20,FontColor-> Red]]},
 (* CIRCONFERENZA *)
 {Lighter[Gray,0.5],Circle[{0,0},1]},
 
-{Darker[Green,0.2],Thick,Circle[{Cos[Pi+0.4], Sin[Pi+0.5]},0.2,{0,1}]},
+{Opacity[0.2],Darker[Green,0.3],Thick,Disk[pc,0.2, angolo[pa,pb, pc]]},
+{Darker[Green,0.2],Thick,Circle[pc,0.2, angolo[pa,pb, pc]]},
 
 (* TRIANGOLO *)
 {Opacity[0],Black ,EdgeForm[Black], Triangle[{{Cos[(Pi/2)+0.3], Sin[(Pi/2)+0.3]},{Cos[0-0.2], Sin[0-0.2]},{Cos[Pi+0.5], Sin[Pi+0.5]}}]},
 
 (* RAGGIO *)
-{Black,Line[{{0,0},{Cos[0-0.2], Sin[0-0.2]}}]},
+{Black,Dashing[Medium],Line[{{0,0},pb}]},
 
 (* CORDA *)
 {Red,Thick,Line[{{Cos[(Pi/2)+0.3], Sin[(Pi/2)+0.3]},{Cos[0-0.2], Sin[0-0.2]}}]},
@@ -1359,7 +1362,7 @@ Grid[{{Text[Style["Esercizio 4:",20,FontColor-> Red]]},
 Text["  A",{Cos[(Pi/2)+0.4], Sin[(Pi/2)]}],
 Text["   B",{Cos[0], Sin[0-0.3]}],
 Text["   C",{Cos[Pi+0.2], Sin[Pi+0.6]}],
-Text["\!\(\*SuperscriptBox[\(60\), \(o\)]\)",{Cos[Pi+0.9],Sin[11/6 Pi+0.2]}],
+Text[Style["\!\(\*SuperscriptBox[\(60\), \(o\)]\)",Darker[Green,0.3]],{Cos[Pi+0.9],Sin[11/6 Pi+0.2]}],
 Text["5",{0.4,-0.15}]
 
 },PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->0.25]
