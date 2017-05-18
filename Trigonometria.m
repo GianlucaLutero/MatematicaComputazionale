@@ -1174,12 +1174,11 @@ senValoreDen3],String,FieldSize->3],Dynamic[CheckAnswer[senValoreDen3,"117"]]}],
 Grid[{{Text[Style["Esercizio guidato:",20,FontColor-> Red]]},
 {Magnify[Graphics[{
 
-  (* right angle symbol *)
-  Line[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}}],
+ 
+ (* ANGOLO RETTANGOLO *)
  {Opacity[0.2],Darker[Green,0.3],Polygon[{{0, 0.1}, {0.1, 0.1}, {0.1, 0},{0, 0}}]},
  {Darker[Green,0.3],Line[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}}]},
   
-  (* angle symbol *)
   (* ANGOLO IN (2,0) *)
   {Opacity[0.2], Darker[Green,0.3], Disk[{2, 0}, 0.2, angolo[{0, 0}, {0, 1}, {2, 0}]+Pi]},
   {Darker[Green,0.2], Circle[{2, 0}, 0.2, angolo[{0, 0}, {0,1}, {2, 0}]+Pi]},
@@ -1187,7 +1186,8 @@ Grid[{{Text[Style["Esercizio guidato:",20,FontColor-> Red]]},
   (* ANGOLO IN (0,1) *)
   {Opacity[0.2], Darker[Green,0.3], Disk[{0, 1}, 0.2, {angolo[{2, 0}, {0, 0}, {0, 1}][[1]]+2Pi,3Pi/2}]},
   {Darker[Green,0.2], Circle[{0, 1}, 0.2, {angolo[{2, 0}, {0, 0}, {0, 1}][[1]]+2Pi,3Pi/2}]},
-   (* triangle *)
+  
+  (* triangle *)
   {Opacity[0],EdgeForm[Directive[Black]],Triangle[{{0, 0}, {0,1}, {2, 0}}]},
   
   (* labels *)
@@ -1225,13 +1225,23 @@ datiEsercizio2 = StringJoin[Style["B = 30 \ntan(\[Beta]) = \!\(\*FractionBox[\(3
 
 Grid[{{Text[Style["Esercizio 2:",20,FontColor-> Red]]},
  {Magnify[Graphics[{
-   (* triangle *)
-   Line[{{0, 0}, {0,1.3}, {0.7, 0}, {0, 0}}],
-  (* right angle symbol *)
-   Line[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}}],
-  (* angle symbol *)
 
-   Circle[{0,1.3},0.2,{270 Degree,300 Degree}],
+ 
+  (* ANGOLO RETTANGOLO *)
+  {Opacity[0.2],Darker[Green,0.3],Polygon[{{0, 0.1}, {0.1, 0.1}, {0.1, 0},{0, 0}}]},
+  {Darker[Green,0.3],Line[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}}]},
+  
+  (* ANGOLO IN (0.7,0) *)
+  {Opacity[0.2], Darker[Green,0.3], Disk[{0.7, 0}, 0.2, angolo[{0, 0}, {0,1.3}, {0.7, 0}]+Pi]},
+  {Darker[Green,0.2], Circle[{0.7, 0}, 0.2, angolo[{0, 0}, {0,1.3}, {0.7, 0}]+Pi]},
+
+  (* ANGOLO IN (0,1.3) *)
+  {Opacity[0.2], Darker[Green,0.3], Disk[{0, 1.3}, 0.2, {angolo[{0.7, 0}, {0, 0}, {0, 1.3}][[1]]+2Pi,3Pi/2}]},
+  {Darker[Green,0.2], Circle[{0, 1.3}, 0.2, {angolo[{0.7, 0}, {0, 0}, {0, 1.3}][[1]]+2Pi,3Pi/2}]},
+  
+  (* triangle *)
+  {Opacity[0],EdgeForm[Directive[Black]],Triangle[{{0, 0}, {0,1.3}, {0.7, 0}}]},  
+
   (* labels *)
    Rotate[
        Text[Style["A", 15],
@@ -1240,7 +1250,9 @@ Grid[{{Text[Style["Esercizio 2:",20,FontColor-> Red]]},
        {0.3, -0.1}],
        Text[Style["C", 15],
        {0.5, 0.6}, {-1, 0}],
-        Text[Style["\[Beta]",10],{0.085,1.0}]
+        Text[Style["\[Beta]",10, Darker[Green,0.3]],{0.085,1.0}],
+         Text[Style["\[Alpha]", 10,Darker[Green,0.3]], {0.6, 0.08}],
+         Text[Style["90\[Degree]",10,Darker[Green,0.3]],{0.15,0.15}]
   }],2],
 Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizio2],1.4]},
 
