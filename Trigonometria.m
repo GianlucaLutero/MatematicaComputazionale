@@ -51,6 +51,16 @@ If[(p3[[1]]-p2[[1]])!=0, ArcTan[(p3[[2]] -p2[[2]])/(p3[[1]]-p2[[1]])],0] }
 
 
 
+(* PUNTI GENERICI *)
+pa = {Cos[(Pi/2)+0.3], Sin[(Pi/2)+0.3]};
+pb = {Cos[-0.2], Sin[-0.2]};
+pc = {Cos[Pi +0.5], Sin[Pi +0.5]};
+
+pa2 = {Cos[Pi/2], Sin[(Pi/2)]}
+pb2 = {Cos[-0.2], Sin[-0.2]}
+pc2 = {Cos[3Pi/2], Sin[3Pi/2]}
+
+
 (* GENERA BOTTONE *)
 (* Funzione che genera il bottone che richiama la fiunzione grafiseno[] *)
 bottonesen[]:=
@@ -666,9 +676,6 @@ teoremacorda[] :=
 Grid[{{
 Graphics[{
 
-pa = {Cos[(Pi/2)+0.3], Sin[(Pi/2)+0.3]};
-pb = {Cos[-0.2], Sin[-0.2]};
-pc = {Cos[Pi+0.5], Sin[Pi+0.5]};
 
 (* CIRCONFERENZA *)
 {Lighter[Gray,0.5],Circle[{0,0},1]},
@@ -779,12 +786,12 @@ Text[Style["\[Theta]",Darker[Green,0.3]], {Cos[th]+0.1, Sin[th]+0.1}]
 
 
 
-DynamicModule[{pt={Cos[ptctrl], Sin[ptctrl]}},
+DynamicModule[{pt={Cos[ptctrl], Sin[ptctrl]},pt2={ptctrl,0}},
 Grid[{
 {LocatorPane[Dynamic[pt,
-{(pt=Normalize[#]) &,
-(pt=Normalize[#])&,
-(pt=Normalize[#];ptctrl=If[#=={2Pi,0},Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]]) &}],
+{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
+(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
+(pt=Normalize[#];ptctrl=pt2[[1]])&}],
 Dynamic[anglegraph[pa,pb,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]],
 pcc ={Sin[ ptctrl], Cos[ptctrl]};
 LineLegend[{Darker[Green,0.3],Red,},{"\[Theta]","Corda"},LegendMarkerSize->40, LabelStyle->15]
@@ -875,29 +882,23 @@ Text["r",{0.4,-0.15}]
 
 }],PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->0.25]];
 
-DynamicModule[{pt={Cos[ptctrl], Sin[ptctrl]}},
+DynamicModule[{pt={Cos[ptctrl], Sin[ptctrl]},pt2={ptctrl,0}},
 Grid[{
 {LocatorPane[Dynamic[pt,
-{(pt=Normalize[#]) &,
-(pt=Normalize[#])&,
-(pt=Normalize[#];ptctrl=If[#=={2Pi,0},Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]])&}],
+{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
+(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
+(pt=Normalize[#];ptctrl=pt2[[1]])&}],
 Dynamic[anglegraph[pa2,pb2,pc2,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]],
 pcc ={Sin[ ptctrl], Cos[ptctrl]};
   LineLegend[{Darker[Green,0.3],Red},{Row@{"\[Delta]"},"Coda"},LegendMarkerSize->40]
 }},Alignment->{Center,Center}]]
 
-],
-
-{{ptctrl,0.4,"angle"},0,2Pi},TrackedSymbols:>{ptctrl}]
+],{{ptctrl,0.4,"angle"},0,2Pi},TrackedSymbols:>{ptctrl}]
 
 
 teoremaseni[] :=
 Grid[{{
 Graphics[{
-(* INIZIALIZZAZIONE PUNTI *)
-pa = {Cos[(Pi/2)+0.3], Sin[(Pi/2)+0.3]};
-pb = {Cos[-0.2], Sin[-0.2]};
-pc = {Cos[Pi +0.5], Sin[Pi +0.5]};
 
 (* CIRCONFERENZA *)
 {Lighter[Gray,0.5],Circle[{0,0},1]},
@@ -1273,10 +1274,6 @@ Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizio2],1.4]},
 (*Esercizio3 calcolo lato triangolo - Teorema della corda *)
 Esercizio3[]:=
 Module[{},
-pa = {Cos[(Pi/2)+0.3], Sin[(Pi/2)+0.3]};
-pb = {Cos[0-0.2], Sin[0-0.2]};
-pc = {Cos[Pi+0.5], Sin[Pi+0.5]};
-
 
 Grid[{{Text[Style["Esercizio 3:",20,FontColor-> Red]]},
 {Graphics[{
@@ -1326,9 +1323,7 @@ Row[{InputField[Dynamic[coef],String,FieldSize->1],Dynamic[CheckAnswer[coef,"2"]
 (*Esercizio4*)
 Esercizio4[]:=
 Module[{},
-pa = {Cos[(Pi/2)+0.3], Sin[(Pi/2)+0.3]};
-pb = {Cos[0-0.2], Sin[0-0.2]};
-pc = {Cos[Pi+0.5], Sin[Pi+0.5]};
+
 
 
 Grid[{{Text[Style["Esercizio 4:",20,FontColor-> Red]]},
