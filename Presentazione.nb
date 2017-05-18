@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    258316,       6570]
-NotebookOptionsPosition[    246768,       6205]
-NotebookOutlinePosition[    249676,       6279]
-CellTagsIndexPosition[    249596,       6274]
+NotebookDataLength[    291718,       7394]
+NotebookOptionsPosition[    280090,       7027]
+NotebookOutlinePosition[    282978,       7101]
+CellTagsIndexPosition[    282898,       7096]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -33,7 +33,8 @@ ID4CxMfRMTZ9L168YL5w4YIaUD4AiC8C8Qcg/gvE/9AxFreC7PQD4gtA/BGq
 5F9s+h88eMBBjt0w/devXxcGso+S4m9k/ZcuXRKHpgeS3A7TD0wrkpToPw9J
 ywOmn1L3Uxp+lMYfpemH0vRLjfwDjQey8y9a+fGOWDPwlF+gsPhEKDywlZ8g
 d0D9EniexPITGd++fZv3PBnlN6764zxa3QHCAIDESDs=
-         "], {{0, 26}, {16, 0}}, {0, 255},
+         "], {{0, 26}, {16, 
+         0}}, {0, 255},
          ColorFunction->RGBColor],
         BaseStyle->"ImageGraphics",
         ImageSize->Magnification[1],
@@ -64,7 +65,8 @@ eu5WMrilsBwehJXwMKyGx2EtPElPU/19La9ZzXtWcozlHHMxa9zKmnM5h9mc
 Ic+VbLvs7ZkOau7owEAYTDtfY7BhoKGTOgAAAAAAANDr+hu2t9jWonmuvzFG
 nbsNhd1hOOwJI2Fv2B9Gw4FwMBwKR8JYOJrGW9THx/LaQ3nvgRxrf449krWG
 s/ZQtZH3NdfY7rrqtdW6/fvw/9LMnpuZ9Jty646y6n8AhCP7tg==
-         "], {{0, 26}, {2000, 0}}, {0, 255},
+         "], {{0, 26}, {
+         2000, 0}}, {0, 255},
          ColorFunction->RGBColor],
         BaseStyle->"ImageGraphics",
         ImageSize->Magnification[1],
@@ -100,6 +102,7 @@ Pu7kfNfO+x+/T/70++ob7NUEtQ==
      RowBox[{
      "Background", " ", "images", " ", "and", " ", "text", " ", "colors", " ",
        "have", " ", "been", " ", "adjusted", " ", "for", " ", "editing", " ", 
+      
       RowBox[{"purposes", "."}]}],
      LineBreakWithin->False,
      FontFamily->"Helvetica",
@@ -248,15 +251,23 @@ Cell["", "SlideShowNavigationBar",
 
 Cell[BoxData[
  RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "Import", "[", 
+     "\"\</Users/filippo/MatematicaComputazionale/Trigonometria.m\>\"", "]"}],
+     "\\\\", "Quiet"}], " ", "*)"}], "\[IndentingNewLine]", 
   RowBox[{
-  "Import", "[", 
-   "\"\</Users/filippo/MatematicaComputazionale/Trigonometria.m\>\"", "]"}], 
-  "\\\\", "Quiet"}]], "Input",
+   RowBox[{
+   "Import", "[", 
+    "\"\</home/gianluca/Universit\[AGrave]/Magistrale/Matematica_\
+Computazionale/Progetto/MatematicaComputazionale/Trigonometria.m\>\"", "]"}], 
+   "\\\\", "Quiet"}]}]], "Input",
  CellChangeTimes->{
   3.703569631646016*^9, {3.703866257456611*^9, 3.70386626964732*^9}, {
    3.703940891185894*^9, 3.703940892633933*^9}, 3.7039466013663073`*^9, {
    3.704004335365964*^9, 3.7040043426327047`*^9}, {3.704168155668787*^9, 
-   3.70416816832374*^9}},
+   3.704126436970355*^9}},
  EmphasizeSyntaxErrors->True,
  FontFamily->"OpenDyslexic",
  ExpressionUUID -> "efc61d3a-ddfc-4487-8f91-61dfec0839cd"],
@@ -382,7 +393,7 @@ Cell[BoxData[
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[Trigonometria`ptctrl$$], Rational[1, 6] Pi, "Angle"}, 0, 2 Pi}}, 
-    Typeset`size$$ = {475., {199.5, 206.5}}, Typeset`update$$ = 0, 
+    Typeset`size$$ = {479., {199.5, 206.5}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
     Trigonometria`ptctrl$5280$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -439,6 +450,7 @@ Cell[BoxData[
                Darker[Green, 0.3]], {0.2, 0.1}], 
              Text[
               Style["Cos(\[Theta])", Blue], {Cos[Trigonometria`th]/2, -0.1}], 
+             
              Rotate[
               Text[
                Style["Sin(\[Theta])", Red], {-0.1, Sin[Trigonometria`th]/2}], 
@@ -493,7 +505,7 @@ Cell[BoxData[
          Trigonometria`ptctrl$$, Rational[1, 6] Pi, "Angle"}, 0, 2 Pi}}, 
       "Options" :> {TrackedSymbols :> {Trigonometria`ptctrl$$}}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{526., {251., 258.}},
+     ImageSizeCache->{526., {248., 255.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -698,7 +710,7 @@ Cell[BoxData[
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[Trigonometria`ptctrl$$], Rational[1, 6] Pi, "angle"}, 0, 2 Pi}}, 
-    Typeset`size$$ = {460., {199.5, 206.5}}, Typeset`update$$ = 0, 
+    Typeset`size$$ = {462., {199.5, 206.5}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
     Trigonometria`ptctrl$5327$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -839,7 +851,7 @@ Cell[BoxData[
          Trigonometria`ptctrl$$, Rational[1, 6] Pi, "angle"}, 0, 2 Pi}}, 
       "Options" :> {TrackedSymbols :> {Trigonometria`ptctrl$$}}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{511., {251., 258.}},
+     ImageSizeCache->{509., {248., 255.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1059,7 +1071,8 @@ Cell[BoxData[
           5.934119456780721}]], GeometricTransformationBox[InsetBox[
           StyleBox["\<\"A\"\>",
            StripOnInput->False,
-           FontSize->15], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], InsetBox[
+           FontSize->15], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], 
+        InsetBox[
          StyleBox["\<\"B\"\>",
           StripOnInput->False,
           FontSize->15], {0.7, -0.1}], InsetBox[
@@ -1102,7 +1115,7 @@ Rule[FontFamily, \\\"sans sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\"\>",
       Text[" "]], 
      StyleBox[
       PanelBox["\<\" Sin(\[Alpha]) = \\!\\(\\*FractionBox[\\(A\\), \
-\\(B\\)]\\) = \\!\\(\\*FractionBox[\\(\\(\\\\ \\\\ \\)\\(25\\)\\(\\\\ \\)\\), \
+\\(C\\)]\\) = \\!\\(\\*FractionBox[\\(\\(\\\\ \\\\ \\)\\(25\\)\\(\\\\ \\)\\), \
 \\(\\(\\\\ \\)\\(50\\)\\)]\\) = \\!\\(\\*FractionBox[\\(\\(\\\\ \\)\\(1\\)\\(\
 \\\\ \\)\\), \\(2\\)]\\)\"\>"],
       StripOnInput->False,
@@ -1112,9 +1125,9 @@ Rule[FontFamily, \\\"sans sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\"\>",
    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Center}}},
    GridBoxDividers->{"RowsIndexed" -> {3 -> RGBColor[1, 0, 0]}},
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
-   GridBoxSpacings->{"Columns" -> {{10}}, "Rows" -> {{10}}}],
+   GridBoxSpacings->{"Columns" -> {{5}}, "Rows" -> {{5}}}],
   "Grid"]], "Output",
- CellChangeTimes->{3.7041691135856333`*^9}]
+ CellChangeTimes->{{3.7041691135856333`*^9, 3.704126505815894*^9}}]
 }, Open  ]]
 }, Open  ]],
 
@@ -1150,7 +1163,7 @@ Cell[BoxData[
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[Trigonometria`ptctrl$$], Rational[1, 6] Pi, "angle"}, 0, 2 Pi}}, 
-    Typeset`size$$ = {474., {199.5, 206.5}}, Typeset`update$$ = 0, 
+    Typeset`size$$ = {478., {199.5, 206.5}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
     Trigonometria`ptctrl$5387$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -1231,6 +1244,7 @@ Cell[BoxData[
                  If[Trigonometria`th <= (3 Pi)/2, {{
                     Opacity[0.2], 
                     Darker[Green, 0.3], Thick, 
+                    
                     Polygon[{{Cos[Trigonometria`th] + 0.1, 0}, {
                     Cos[Trigonometria`th] + 0.1, -0.1}, {
                     Cos[Trigonometria`th], -0.1}, {
@@ -1323,7 +1337,7 @@ Cell[BoxData[
       "Options" :> {
        TrackedSymbols :> {Trigonometria`showvalue, Trigonometria`ptctrl$$}}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{525., {251., 258.}},
+     ImageSizeCache->{525., {248., 255.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1461,7 +1475,7 @@ Cell[BoxData[
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[Trigonometria`ptctrl$$], Rational[1, 6] Pi, "angle"}, 0, 2 Pi}}, 
-    Typeset`size$$ = {474., {199.5, 206.5}}, Typeset`update$$ = 0, 
+    Typeset`size$$ = {478., {199.5, 206.5}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
     Trigonometria`ptctrl$5433$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -1557,7 +1571,7 @@ Cell[BoxData[
       "Options" :> {
        TrackedSymbols :> {Trigonometria`showvalue, Trigonometria`ptctrl$$}}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{525., {251., 258.}},
+     ImageSizeCache->{525., {248., 255.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1633,7 +1647,7 @@ Cell[BoxData[
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[Trigonometria`ptctrl$$], Rational[1, 6] Pi, ""}, 0, 2 Pi, 
-      Rational[1, 6] Pi}}, Typeset`size$$ = {560., {218., 246.}}, 
+      Rational[1, 6] Pi}}, Typeset`size$$ = {583., {219., 251.}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
     Trigonometria`ptctrl$5475$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -1690,6 +1704,7 @@ Cell[BoxData[
                Darker[Green, 0.3]], {0.2, 0.1}], 
              Text[
               Style["Cos(\[Theta])", Blue], {Cos[Trigonometria`th]/2, -0.1}], 
+             
              Rotate[
               Text[
                Style["Sin(\[Theta])", Red], {-0.1, Sin[Trigonometria`th]/2}], 
@@ -1712,7 +1727,7 @@ Cell[BoxData[
                  Sin[Trigonometria`th]}}]}, {
               If[
                And[
-               Trigonometria`th != Pi/2, Trigonometria`th != 3 Pi/2], {{
+               Trigonometria`th != Pi/2, Trigonometria`th != 3 (Pi/2)], {{
                 Orange, Thick, 
                  Line[{{1, 0}, {1, 
                     Tan[Trigonometria`th]}}]}, {Orange, 
@@ -1768,7 +1783,7 @@ Cell[BoxData[
       "Options" :> {
        TrackedSymbols :> {Trigonometria`showvalue, Trigonometria`ptctrl$$}}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{611., {279., 286.}},
+     ImageSizeCache->{630., {280., 287.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1803,7 +1818,7 @@ Cell[BoxData[
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[Trigonometria`ptctrl$$], Rational[1, 4] Pi, ""}, 0, 2 Pi, 
-      Rational[1, 4] Pi}}, Typeset`size$$ = {560., {218., 246.}}, 
+      Rational[1, 4] Pi}}, Typeset`size$$ = {583., {219., 251.}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
     Trigonometria`ptctrl$5532$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -1860,6 +1875,7 @@ Cell[BoxData[
                Darker[Green, 0.3]], {0.2, 0.1}], 
              Text[
               Style["Cos(\[Theta])", Blue], {Cos[Trigonometria`th]/2, -0.1}], 
+             
              Rotate[
               Text[
                Style["Sin(\[Theta])", Red], {-0.1, Sin[Trigonometria`th]/2}], 
@@ -1882,7 +1898,7 @@ Cell[BoxData[
                  Sin[Trigonometria`th]}}]}, {
               If[
                And[
-               Trigonometria`th != Pi/2, Trigonometria`th != 3 Pi/2], {{
+               Trigonometria`th != Pi/2, Trigonometria`th != 3 (Pi/2)], {{
                 Orange, Thick, 
                  Line[{{1, 0}, {1, 
                     Tan[Trigonometria`th]}}]}, {Orange, 
@@ -1937,7 +1953,7 @@ Cell[BoxData[
          0, 2 Pi, Rational[1, 4] Pi}}, 
       "Options" :> {TrackedSymbols :> {Trigonometria`ptctrl$$}}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{611., {279., 286.}},
+     ImageSizeCache->{630., {280., 287.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -2160,9 +2176,9 @@ Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"Esercizio1", "[", "]"}], "//", " ", "Quiet"}]], "Code",
+  RowBox[{"Esercizio1", "[", "]"}], " ", "//", " ", "Quiet"}]], "Code",
  CellChangeTimes->{{3.7039421126114435`*^9, 3.703942120523225*^9}, 
-   3.703948224644946*^9},
+   3.703948224644946*^9, {3.704126608340702*^9, 3.704126618852888*^9}},
  FontFamily->"OpenDyslexic",
  ExpressionUUID -> "764634c7-7c1b-491d-b259-41bbb1e4184e"],
 
@@ -2205,7 +2221,8 @@ Cell[BoxData[
           "Triangle"]}, GeometricTransformationBox[InsetBox[
           StyleBox["\<\"A\"\>",
            StripOnInput->False,
-           FontSize->15], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], InsetBox[
+           FontSize->15], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], 
+        InsetBox[
          StyleBox["\<\"B\"\>",
           StripOnInput->False,
           FontSize->15], {0.7, -0.1}], InsetBox[
@@ -2277,7 +2294,7 @@ di Pitagora:\"\>",
      PanelBox[
       StyleBox[
        TemplateBox[{
-        "\"Applico la formula \[LongRightArrow] \
+        "\"Applico il teorema \[LongRightArrow] \
 \\!\\(\\*SuperscriptBox[\\(A\\), \\(2\\)]\\) + \"",DynamicBox[
           ToBoxes[
            InputField[
@@ -2422,6 +2439,7 @@ di Pitagora:\"\>",
             InputFieldBox[
              Dynamic[Trigonometria`senNome], String, FieldSize -> 3], 
             "\"(\[Alpha])\""}, "RowDefault"], "\"cos(\[Alpha])\""],DynamicBox[
+         
           ToBoxes[
            Trigonometria`CheckAnswer[Trigonometria`senNome, "sen"], 
            StandardForm]],"\" = \"",FractionBox[
@@ -2551,10 +2569,811 @@ di Pitagora:\"\>",
    AutoDelete->False,
    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Center}}},
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
-   GridBoxSpacings->{"Columns" -> {{10}}, "Rows" -> {{10}}}],
+   GridBoxSpacings->{"Columns" -> {{5}}, "Rows" -> {{5}}}],
   "Grid"]], "Output",
- CellChangeTimes->{3.7039421219834275`*^9, 3.703948225993637*^9, 
-  3.7040030758643627`*^9, 3.7041683262341776`*^9, 3.7041690567647424`*^9},
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.7039421219834275`*^9, 3.703948225993637*^9, 3.7040030758643627`*^9, 
+   3.7041683262341776`*^9, {3.7041690567647424`*^9, 3.704126458413084*^9}, {
+   3.70412659158648*^9, 3.704126624888259*^9}, {3.704126683020368*^9, 
+   3.704126711627511*^9}},
+ FontFamily->"OpenDyslexic",
+ ExpressionUUID -> "19a965c6-e9bd-49ab-8d59-5e86104e44fb"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox[
+        StyleBox["\<\"Esercizio guidato:\"\>",
+         StripOnInput->False,
+         FontSize->20,
+         FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText"],
+      Text[
+       Style["Esercizio guidato:", 20, FontColor -> RGBColor[1, 0, 0]]]], "", 
+     ""},
+    {
+     StyleBox[
+      GraphicsBox[{
+        {RGBColor[0., 0.7, 0.], Opacity[0.2], 
+         PolygonBox[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}, {0, 0}}]}, 
+        {RGBColor[0., 0.7, 0.], LineBox[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}}]}, 
+        {RGBColor[0., 0.7, 0.], Opacity[0.2], 
+         DiskBox[{2, 0}, 0.2, 
+          NCache[{Pi, Pi - ArcTan[Rational[1, 2]]}, {3.141592653589793, 
+           2.677945044588987}]]}, 
+        {RGBColor[0., 0.8, 0.], 
+         CircleBox[{2, 0}, 0.2, 
+          NCache[{Pi, Pi - ArcTan[Rational[1, 2]]}, {3.141592653589793, 
+           2.677945044588987}]]}, 
+        {RGBColor[0., 0.7, 0.], Opacity[0.2], 
+         DiskBox[{0, 1}, 0.2, 
+          NCache[{2 Pi - ArcTan[Rational[1, 2]], Rational[3, 2] Pi}, {
+           5.81953769817878, 4.71238898038469}]]}, 
+        {RGBColor[0., 0.8, 0.], 
+         CircleBox[{0, 1}, 0.2, 
+          NCache[{2 Pi - ArcTan[Rational[1, 2]], Rational[3, 2] Pi}, {
+           5.81953769817878, 4.71238898038469}]]}, 
+        {Opacity[0], EdgeForm[GrayLevel[0]], 
+         TagBox[PolygonBox[{{0, 0}, {0, 1}, {2, 0}}],
+          "Triangle"]}, GeometricTransformationBox[InsetBox[
+          StyleBox["\<\"A\"\>",
+           StripOnInput->False,
+           FontSize->15], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], 
+        InsetBox[
+         StyleBox["\<\"B\"\>",
+          StripOnInput->False,
+          FontSize->15], {0.7, -0.1}], InsetBox[
+         StyleBox["\<\"C\"\>",
+          StripOnInput->False,
+          FontSize->15], {1, 0.6}, ImageScaled[{0, Rational[1, 2]}]], InsetBox[
+         StyleBox["\<\"\[Alpha]\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0., 0.7, 0.],
+          FrontFaceColor->RGBColor[0., 0.7, 0.],
+          BackFaceColor->RGBColor[0., 0.7, 0.],
+          GraphicsColor->RGBColor[0., 0.7, 0.],
+          FontSize->10,
+          FontColor->RGBColor[0., 0.7, 0.]], {1.7, 0.08}], InsetBox[
+         StyleBox["\<\"\[Beta]\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0., 0.7, 0.],
+          FrontFaceColor->RGBColor[0., 0.7, 0.],
+          BackFaceColor->RGBColor[0., 0.7, 0.],
+          GraphicsColor->RGBColor[0., 0.7, 0.],
+          FontSize->10,
+          FontColor->RGBColor[0., 0.7, 0.]], {0.085, 0.75}], InsetBox[
+         StyleBox["\<\"90\[Degree]\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0., 0.7, 0.],
+          FrontFaceColor->RGBColor[0., 0.7, 0.],
+          BackFaceColor->RGBColor[0., 0.7, 0.],
+          GraphicsColor->RGBColor[0., 0.7, 0.],
+          FontSize->10,
+          FontColor->RGBColor[0., 0.7, 0.]], {0.2, 0.2}]}],
+      StripOnInput->False,
+      Magnification->2 Inherited], 
+     StyleBox["\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"A = 40 \\\\\\\\nB = \
+110\\\\\\\"\\\", Rule[FontFamily, \\\"sans sarif\\\"], Bold, \
+Rule[StripOnInput, False]]\\)\\!\\(\\*StyleBox[\\\"\\\\\\\"\\\\\\\\nTrovare \
+Sen(\[Alpha]),Cos(\[Alpha]),Tan(\[Alpha]) e l'angolo \[Alpha]\\\\\\\"\\\", \
+Rule[FontColor, RGBColor[1, 0, 0]], Rule[FontFamily, \\\"sans sarif\\\"], \
+Bold, Rule[StripOnInput, False]]\\)\"\>",
+      StripOnInput->False,
+      Magnification->1.4 Inherited], 
+     InterpretationBox[Cell[BoxData[
+       FormBox["\<\"\"\>", TextForm]], "InlineText"],
+      Text[""]]},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox[
+        StyleBox["\<\"Procedimento:\"\>",
+         StripOnInput->False,
+         FontSize->17,
+         FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText"],
+      Text[
+       Style["Procedimento:", 17, FontColor -> RGBColor[1, 0, 0]]]], "", ""},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox[
+        StyleBox["\<\"Passo 1: cerchiamo l'ipotenusa C.\\n Applico il Teorema \
+di Pitagora:\"\>",
+         StripOnInput->False,
+         FontSize->15,
+         FontWeight->Bold], TextForm]], "InlineText"],
+      Text[
+       Style[
+       "Passo 1: cerchiamo l'ipotenusa C.\n Applico il Teorema di Pitagora:", 
+        Bold, 15]]], "", ""},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox["\<\"\"\>", TextForm]], "InlineText"],
+      Text[""]], 
+     PanelBox[
+      StyleBox[
+       TemplateBox[{
+        "\"Applico il teorema \[LongRightArrow] \
+\\!\\(\\*SuperscriptBox[\\(A\\), \\(2\\)]\\) + \"",DynamicBox[
+          ToBoxes[
+           InputField[
+            Dynamic[Trigonometria`catetoNome], String, FieldSize -> 1], 
+           StandardForm]],
+         "\"\\!\\(\\*SuperscriptBox[\\(\\\\ \\), \\(2\\)]\\) \"",DynamicBox[
+          ToBoxes[
+           Trigonometria`CheckAnswer[Trigonometria`catetoNome, "B"], 
+           StandardForm]],"\" = \"",InputFieldBox[
+          Dynamic[Trigonometria`ipotenusaNome], String, FieldSize -> 1],
+         "\"\\!\\(\\*SuperscriptBox[\\(\\\\ \\), \\(\\(2\\)\\(\\\\ \\\\ \\\\ \
+\\)\\)]\\)\"",DynamicBox[
+          ToBoxes[
+           Trigonometria`CheckAnswer[Trigonometria`ipotenusaNome, "C"], 
+           StandardForm]],"\"\\n \\n\"",
+         "\"Sostituisco i valori \[LongRightArrow] \
+\\!\\(\\*SuperscriptBox[\\(40\\), \\(2\\)]\\) + \"",InputFieldBox[
+          Dynamic[Trigonometria`catetoValore], String, FieldSize -> 3],
+         "\"\\!\\(\\*SuperscriptBox[\\(\\\\ \\), \\(2\\)]\\) \"",DynamicBox[
+          ToBoxes[
+           Trigonometria`CheckAnswer[Trigonometria`catetoValore, "110"], 
+           StandardForm]],
+         "\" = \\!\\(\\*SuperscriptBox[\\(C\\), \\(2\\)]\\)\\n\"","\"\\n\"",
+         "\"Ricavo C \[LongRightArrow] C = \"",TagBox[
+          SqrtBox[
+           TemplateBox[{"\"\\!\\(\\*SuperscriptBox[\\(A\\), \\(2\\)]\\) + \"", 
+             InputFieldBox[
+              Dynamic[Trigonometria`catetoBNome], String, FieldSize -> 1], 
+             "\"\\!\\(\\*SuperscriptBox[\\(\\\\ \\), \\(\\(2\\)\\(\\\\ \\\\ \
+\\\\ \\\\ \\)\\)]\\)\""}, "RowDefault"]], DisplayForm],DynamicBox[
+          ToBoxes[
+           Trigonometria`CheckAnswer[Trigonometria`catetoBNome, "B"], 
+           StandardForm]],"\"\\n \\n\"",
+         "\"Approssima il risultato per difetto\\n\\n\"",
+         "\"Calcolo C \[LongRightArrow] C = \"",TagBox[
+          SqrtBox[
+           TemplateBox[{
+             InputFieldBox[
+              Dynamic[Trigonometria`catetoAValore], String, FieldSize -> 2], 
+             "\"\\!\\(\\*SuperscriptBox[\\(\\\\ \\), \\(\\(2\\)\\(\\\\ \\\\ \
+\\\\ \\\\ \\)\\)]\\)\"", 
+             DynamicBox[
+              ToBoxes[
+               Trigonometria`CheckAnswer[Trigonometria`catetoAValore, "40"], 
+               StandardForm]], "\" + \"", 
+             InputFieldBox[
+              Dynamic[Trigonometria`catetoBValore], String, FieldSize -> 3], 
+             "\"\\!\\(\\*SuperscriptBox[\\(\\\\ \\), \\(\\(2\\)\\(\\\\ \\\\ \
+\\)\\)]\\)\"", 
+             DynamicBox[
+              ToBoxes[
+               Trigonometria`CheckAnswer[Trigonometria`catetoBValore, "110"], 
+               StandardForm]]}, "RowDefault"]], DisplayForm],"\" = \"",
+         InputFieldBox[
+          Dynamic[Trigonometria`ipotenusaValore], String, FieldSize -> 3],
+         DynamicBox[
+          ToBoxes[
+           Trigonometria`CheckAnswer[Trigonometria`ipotenusaValore, "117"], 
+           StandardForm]]},
+        "RowDefault"],
+       StripOnInput->False,
+       Magnification->2 Inherited]], ""},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox[
+        StyleBox["\<\"Passo 2: cerchiamo sen(\[Alpha]).\"\>",
+         StripOnInput->False,
+         FontSize->15,
+         FontWeight->Bold], TextForm]], "InlineText"],
+      Text[
+       Style["Passo 2: cerchiamo sen(\[Alpha]).", Bold, 15]]], "", ""},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox["\<\"\"\>", TextForm]], "InlineText"],
+      Text[""]], 
+     PanelBox[
+      StyleBox[
+       TemplateBox[{"\"sen(\[Alpha]) = \"",FractionBox["\"A\"", 
+          InputFieldBox[
+           Dynamic[Trigonometria`ipotenusaSenCNome], String, FieldSize -> 2]],
+         DynamicBox[
+          ToBoxes[
+           Trigonometria`CheckAnswer[Trigonometria`ipotenusaSenCNome, "C"], 
+           StandardForm]],"\" = \"",FractionBox["\"40\"", 
+          InputFieldBox[
+           Dynamic[Trigonometria`ipotenusaSenValore], String, FieldSize -> 
+           3]],DynamicBox[
+          ToBoxes[
+           Trigonometria`CheckAnswer[Trigonometria`ipotenusaSenValore, "117"],
+            StandardForm]]},
+        "RowDefault"],
+       StripOnInput->False,
+       Magnification->2 Inherited]], ""},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox[
+        StyleBox["\<\"Passo 3: cerchiamo cos(\[Alpha]).\"\>",
+         StripOnInput->False,
+         FontSize->15,
+         FontWeight->Bold], TextForm]], "InlineText"],
+      Text[
+       Style["Passo 3: cerchiamo cos(\[Alpha]).", Bold, 15]]], "", ""},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox["\<\"\"\>", TextForm]], "InlineText"],
+      Text[""]], 
+     PanelBox[
+      StyleBox[
+       TemplateBox[{"\"cos(\[Alpha]) = \"",FractionBox["\"B\"", 
+          InputFieldBox[
+           Dynamic[Trigonometria`ipotenusaCosCNome], String, FieldSize -> 2]],
+         DynamicBox[
+          ToBoxes[
+           Trigonometria`CheckAnswer[Trigonometria`ipotenusaCosCNome, "C"], 
+           StandardForm]],"\" = \"",FractionBox["\"110\"", 
+          InputFieldBox[
+           Dynamic[Trigonometria`ipotenusaCosValore], String, FieldSize -> 
+           3]],DynamicBox[
+          ToBoxes[
+           Trigonometria`CheckAnswer[Trigonometria`ipotenusaCosValore, "117"],
+            StandardForm]]},
+        "RowDefault"],
+       StripOnInput->False,
+       Magnification->2 Inherited]], ""},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox[
+        StyleBox["\<\"Passo 4: cerchiamo tan(\[Alpha]).\"\>",
+         StripOnInput->False,
+         FontSize->15,
+         FontWeight->Bold], TextForm]], "InlineText"],
+      Text[
+       Style["Passo 4: cerchiamo tan(\[Alpha]).", Bold, 15]]], "", ""},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox["\<\"\"\>", TextForm]], "InlineText"],
+      Text[""]], 
+     PanelBox[
+      StyleBox[
+       TemplateBox[{"\"tan(\[Alpha]) = \"",FractionBox[
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`senNome], String, FieldSize -> 3], 
+            "\"(\[Alpha])\""}, "RowDefault"], "\"cos(\[Alpha])\""],DynamicBox[
+         
+          ToBoxes[
+           Trigonometria`CheckAnswer[Trigonometria`senNome, "sen"], 
+           StandardForm]],"\" = \"",FractionBox[
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`senValoreNum], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`senValoreNum, "40"], 
+              StandardForm]]}, "RowDefault"], 
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`senValoreDen], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`senValoreDen, "117"], 
+              StandardForm]]}, "RowDefault"]],"\"/\"",FractionBox[
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`cosValoreNum], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`cosValoreNum, "110"], 
+              StandardForm]]}, "RowDefault"], 
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`cosValoreDen], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`cosValoreDen, "117"], 
+              StandardForm]]}, "RowDefault"]],"\" =\\n \"",FractionBox[
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`senValoreNum2], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`senValoreNum2, "40"], 
+              StandardForm]]}, "RowDefault"], 
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`senValoreDen2], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`senValoreDen2, "117"], 
+              StandardForm]]}, "RowDefault"]],"\"\[CenterDot]\"",FractionBox[
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`cosValoreNum2], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`cosValoreNum2, "117"], 
+              StandardForm]]}, "RowDefault"], 
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`cosValoreDen2], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`cosValoreDen2, "110"], 
+              StandardForm]]}, "RowDefault"]],"\" = \"",FractionBox[
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`resNum], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`resNum, "40"], 
+              StandardForm]]}, "RowDefault"], 
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`resDen], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`resDen, "110"], 
+              StandardForm]]}, "RowDefault"]],"\" = \"",FractionBox[
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`resNum2], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`resNum2, "4"], 
+              StandardForm]]}, "RowDefault"], 
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`resDen2], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`resDen2, "11"], 
+              StandardForm]]}, "RowDefault"]]},
+        "RowDefault"],
+       StripOnInput->False,
+       Magnification->2 Inherited]], ""},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox[
+        StyleBox["\<\"Passo 5: cerchiamo \[Alpha].\"\>",
+         StripOnInput->False,
+         FontSize->15,
+         FontWeight->Bold], TextForm]], "InlineText"],
+      Text[
+       Style["Passo 5: cerchiamo \[Alpha].", Bold, 15]]], "", ""},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox["\<\"\"\>", TextForm]], "InlineText"],
+      Text[""]], 
+     PanelBox[
+      StyleBox[
+       TemplateBox[{
+        "\"\[Alpha] = \\!\\(\\*SuperscriptBox[\\(sen\\), \\(-1\\)]\\)(\"",
+         FractionBox[
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`senValoreNum3], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`senValoreNum3, "40"], 
+              StandardForm]]}, "RowDefault"], 
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`senValoreDen3], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`senValoreDen3, "117"], 
+              StandardForm]]}, "RowDefault"]],"\")\""},
+        "RowDefault"],
+       StripOnInput->False,
+       Magnification->2 Inherited]], ""}
+   },
+   AutoDelete->False,
+   GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Center}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{5}}, "Rows" -> {{5}}}],
+  "Grid"]], "Output",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.7039421219834275`*^9, 3.703948225993637*^9, 3.7040030758643627`*^9, 
+   3.7041683262341776`*^9, {3.7041690567647424`*^9, 3.704126458413084*^9}, {
+   3.70412659158648*^9, 3.704126624888259*^9}, 3.704126683020368*^9},
+ FontFamily->"OpenDyslexic",
+ ExpressionUUID -> "19a965c6-e9bd-49ab-8d59-5e86104e44fb"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox[
+        StyleBox["\<\"Esercizio guidato:\"\>",
+         StripOnInput->False,
+         FontSize->20,
+         FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText"],
+      Text[
+       Style["Esercizio guidato:", 20, FontColor -> RGBColor[1, 0, 0]]]], "", 
+     ""},
+    {
+     StyleBox[
+      GraphicsBox[{
+        {RGBColor[0., 0.7, 0.], Opacity[0.2], 
+         PolygonBox[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}, {0, 0}}]}, 
+        {RGBColor[0., 0.7, 0.], LineBox[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}}]}, 
+        {RGBColor[0., 0.7, 0.], Opacity[0.2], 
+         DiskBox[{2, 0}, 0.2, 
+          NCache[{Pi, Pi - ArcTan[Rational[1, 2]]}, {3.141592653589793, 
+           2.677945044588987}]]}, 
+        {RGBColor[0., 0.8, 0.], 
+         CircleBox[{2, 0}, 0.2, 
+          NCache[{Pi, Pi - ArcTan[Rational[1, 2]]}, {3.141592653589793, 
+           2.677945044588987}]]}, 
+        {RGBColor[0., 0.7, 0.], Opacity[0.2], 
+         DiskBox[{0, 1}, 0.2, 
+          NCache[{2 Pi - ArcTan[Rational[1, 2]], Rational[3, 2] Pi}, {
+           5.81953769817878, 4.71238898038469}]]}, 
+        {RGBColor[0., 0.8, 0.], 
+         CircleBox[{0, 1}, 0.2, 
+          NCache[{2 Pi - ArcTan[Rational[1, 2]], Rational[3, 2] Pi}, {
+           5.81953769817878, 4.71238898038469}]]}, 
+        {Opacity[0], EdgeForm[GrayLevel[0]], 
+         TagBox[PolygonBox[{{0, 0}, {0, 1}, {2, 0}}],
+          "Triangle"]}, GeometricTransformationBox[InsetBox[
+          StyleBox["\<\"A\"\>",
+           StripOnInput->False,
+           FontSize->15], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], 
+        InsetBox[
+         StyleBox["\<\"B\"\>",
+          StripOnInput->False,
+          FontSize->15], {0.7, -0.1}], InsetBox[
+         StyleBox["\<\"C\"\>",
+          StripOnInput->False,
+          FontSize->15], {1, 0.6}, ImageScaled[{0, Rational[1, 2]}]], InsetBox[
+         StyleBox["\<\"\[Alpha]\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0., 0.7, 0.],
+          FrontFaceColor->RGBColor[0., 0.7, 0.],
+          BackFaceColor->RGBColor[0., 0.7, 0.],
+          GraphicsColor->RGBColor[0., 0.7, 0.],
+          FontSize->10,
+          FontColor->RGBColor[0., 0.7, 0.]], {1.7, 0.08}], InsetBox[
+         StyleBox["\<\"\[Beta]\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0., 0.7, 0.],
+          FrontFaceColor->RGBColor[0., 0.7, 0.],
+          BackFaceColor->RGBColor[0., 0.7, 0.],
+          GraphicsColor->RGBColor[0., 0.7, 0.],
+          FontSize->10,
+          FontColor->RGBColor[0., 0.7, 0.]], {0.085, 0.75}], InsetBox[
+         StyleBox["\<\"90\[Degree]\"\>",
+          StripOnInput->False,
+          LineColor->RGBColor[0., 0.7, 0.],
+          FrontFaceColor->RGBColor[0., 0.7, 0.],
+          BackFaceColor->RGBColor[0., 0.7, 0.],
+          GraphicsColor->RGBColor[0., 0.7, 0.],
+          FontSize->10,
+          FontColor->RGBColor[0., 0.7, 0.]], {0.2, 0.2}]}],
+      StripOnInput->False,
+      Magnification->2 Inherited], 
+     StyleBox["\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"A = 40 \\\\\\\\nB = \
+110\\\\\\\"\\\", Rule[FontFamily, \\\"sans sarif\\\"], Bold, \
+Rule[StripOnInput, False]]\\)\\!\\(\\*StyleBox[\\\"\\\\\\\"\\\\\\\\nTrovare \
+Sen(\[Alpha]),Cos(\[Alpha]),Tan(\[Alpha]) e l'angolo \[Alpha]\\\\\\\"\\\", \
+Rule[FontColor, RGBColor[1, 0, 0]], Rule[FontFamily, \\\"sans sarif\\\"], \
+Bold, Rule[StripOnInput, False]]\\)\"\>",
+      StripOnInput->False,
+      Magnification->1.4 Inherited], 
+     InterpretationBox[Cell[BoxData[
+       FormBox["\<\"\"\>", TextForm]], "InlineText"],
+      Text[""]]},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox[
+        StyleBox["\<\"Procedimento:\"\>",
+         StripOnInput->False,
+         FontSize->17,
+         FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText"],
+      Text[
+       Style["Procedimento:", 17, FontColor -> RGBColor[1, 0, 0]]]], "", ""},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox[
+        StyleBox["\<\"Passo 1: cerchiamo l'ipotenusa C.\\n Applico il Teorema \
+di Pitagora:\"\>",
+         StripOnInput->False,
+         FontSize->15,
+         FontWeight->Bold], TextForm]], "InlineText"],
+      Text[
+       Style[
+       "Passo 1: cerchiamo l'ipotenusa C.\n Applico il Teorema di Pitagora:", 
+        Bold, 15]]], "", ""},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox["\<\"\"\>", TextForm]], "InlineText"],
+      Text[""]], 
+     PanelBox[
+      StyleBox[
+       TemplateBox[{
+        "\"Applico il teorema \[LongRightArrow] \
+\\!\\(\\*SuperscriptBox[\\(A\\), \\(2\\)]\\) + \"",DynamicBox[
+          ToBoxes[
+           InputField[
+            Dynamic[Trigonometria`catetoNome], String, FieldSize -> 1], 
+           StandardForm]],
+         "\"\\!\\(\\*SuperscriptBox[\\(\\\\ \\), \\(2\\)]\\) \"",DynamicBox[
+          ToBoxes[
+           Trigonometria`CheckAnswer[Trigonometria`catetoNome, "B"], 
+           StandardForm]],"\" = \"",InputFieldBox[
+          Dynamic[Trigonometria`ipotenusaNome], String, FieldSize -> 1],
+         "\"\\!\\(\\*SuperscriptBox[\\(\\\\ \\), \\(\\(2\\)\\(\\\\ \\\\ \\\\ \
+\\)\\)]\\)\"",DynamicBox[
+          ToBoxes[
+           Trigonometria`CheckAnswer[Trigonometria`ipotenusaNome, "C"], 
+           StandardForm]],"\"\\n \\n\"",
+         "\"Sostituisco i valori \[LongRightArrow] \
+\\!\\(\\*SuperscriptBox[\\(40\\), \\(2\\)]\\) + \"",InputFieldBox[
+          Dynamic[Trigonometria`catetoValore], String, FieldSize -> 3],
+         "\"\\!\\(\\*SuperscriptBox[\\(\\\\ \\), \\(2\\)]\\) \"",DynamicBox[
+          ToBoxes[
+           Trigonometria`CheckAnswer[Trigonometria`catetoValore, "110"], 
+           StandardForm]],
+         "\" = \\!\\(\\*SuperscriptBox[\\(C\\), \\(2\\)]\\)\\n\"","\"\\n\"",
+         "\"Ricavo C \[LongRightArrow] C = \"",TagBox[
+          SqrtBox[
+           TemplateBox[{"\"\\!\\(\\*SuperscriptBox[\\(A\\), \\(2\\)]\\) + \"", 
+             InputFieldBox[
+              Dynamic[Trigonometria`catetoBNome], String, FieldSize -> 1], 
+             "\"\\!\\(\\*SuperscriptBox[\\(\\\\ \\), \\(\\(2\\)\\(\\\\ \\\\ \
+\\\\ \\\\ \\)\\)]\\)\""}, "RowDefault"]], DisplayForm],DynamicBox[
+          ToBoxes[
+           Trigonometria`CheckAnswer[Trigonometria`catetoBNome, "B"], 
+           StandardForm]],"\"\\n \\n\"",
+         "\"Approssima il risultato per difetto\\n\\n\"",
+         "\"Calcolo C \[LongRightArrow] C = \"",TagBox[
+          SqrtBox[
+           TemplateBox[{
+             InputFieldBox[
+              Dynamic[Trigonometria`catetoAValore], String, FieldSize -> 2], 
+             "\"\\!\\(\\*SuperscriptBox[\\(\\\\ \\), \\(\\(2\\)\\(\\\\ \\\\ \
+\\\\ \\\\ \\)\\)]\\)\"", 
+             DynamicBox[
+              ToBoxes[
+               Trigonometria`CheckAnswer[Trigonometria`catetoAValore, "40"], 
+               StandardForm]], "\" + \"", 
+             InputFieldBox[
+              Dynamic[Trigonometria`catetoBValore], String, FieldSize -> 3], 
+             "\"\\!\\(\\*SuperscriptBox[\\(\\\\ \\), \\(\\(2\\)\\(\\\\ \\\\ \
+\\)\\)]\\)\"", 
+             DynamicBox[
+              ToBoxes[
+               Trigonometria`CheckAnswer[Trigonometria`catetoBValore, "110"], 
+               StandardForm]]}, "RowDefault"]], DisplayForm],"\" = \"",
+         InputFieldBox[
+          Dynamic[Trigonometria`ipotenusaValore], String, FieldSize -> 3],
+         DynamicBox[
+          ToBoxes[
+           Trigonometria`CheckAnswer[Trigonometria`ipotenusaValore, "117"], 
+           StandardForm]]},
+        "RowDefault"],
+       StripOnInput->False,
+       Magnification->2 Inherited]], ""},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox[
+        StyleBox["\<\"Passo 2: cerchiamo sen(\[Alpha]).\"\>",
+         StripOnInput->False,
+         FontSize->15,
+         FontWeight->Bold], TextForm]], "InlineText"],
+      Text[
+       Style["Passo 2: cerchiamo sen(\[Alpha]).", Bold, 15]]], "", ""},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox["\<\"\"\>", TextForm]], "InlineText"],
+      Text[""]], 
+     PanelBox[
+      StyleBox[
+       TemplateBox[{"\"sen(\[Alpha]) = \"",FractionBox["\"A\"", 
+          InputFieldBox[
+           Dynamic[Trigonometria`ipotenusaSenCNome], String, FieldSize -> 2]],
+         DynamicBox[
+          ToBoxes[
+           Trigonometria`CheckAnswer[Trigonometria`ipotenusaSenCNome, "C"], 
+           StandardForm]],"\" = \"",FractionBox["\"40\"", 
+          InputFieldBox[
+           Dynamic[Trigonometria`ipotenusaSenValore], String, FieldSize -> 
+           3]],DynamicBox[
+          ToBoxes[
+           Trigonometria`CheckAnswer[Trigonometria`ipotenusaSenValore, "117"],
+            StandardForm]]},
+        "RowDefault"],
+       StripOnInput->False,
+       Magnification->2 Inherited]], ""},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox[
+        StyleBox["\"\<Passo 3: cerchiamo cos(\[Alpha]).\>\"",
+         StripOnInput->False,
+         FontSize->15,
+         FontWeight->Bold], TextForm]], "InlineText"],
+      Text[
+       Style["Passo 3: cerchiamo cos(\[Alpha]).", Bold, 15]]], "", ""},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox["\<\"\"\>", TextForm]], "InlineText"],
+      Text[""]], 
+     PanelBox[
+      StyleBox[
+       TemplateBox[{"\"cos(\[Alpha]) = \"",FractionBox["\"B\"", 
+          InputFieldBox[
+           Dynamic[Trigonometria`ipotenusaCosCNome], String, FieldSize -> 2]],
+         DynamicBox[
+          ToBoxes[
+           Trigonometria`CheckAnswer[Trigonometria`ipotenusaCosCNome, "C"], 
+           StandardForm]],"\" = \"",FractionBox["\"110\"", 
+          InputFieldBox[
+           Dynamic[Trigonometria`ipotenusaCosValore], String, FieldSize -> 
+           3]],DynamicBox[
+          ToBoxes[
+           Trigonometria`CheckAnswer[Trigonometria`ipotenusaCosValore, "117"],
+            StandardForm]]},
+        "RowDefault"],
+       StripOnInput->False,
+       Magnification->2 Inherited]], ""},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox[
+        StyleBox["\<\"Passo 4: cerchiamo tan(\[Alpha]).\"\>",
+         StripOnInput->False,
+         FontSize->15,
+         FontWeight->Bold], TextForm]], "InlineText"],
+      Text[
+       Style["Passo 4: cerchiamo tan(\[Alpha]).", Bold, 15]]], "", ""},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox["\<\"\"\>", TextForm]], "InlineText"],
+      Text[""]], 
+     PanelBox[
+      StyleBox[
+       TemplateBox[{"\"tan(\[Alpha]) = \"",FractionBox[
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`senNome], String, FieldSize -> 3], 
+            "\"(\[Alpha])\""}, "RowDefault"], "\"cos(\[Alpha])\""],DynamicBox[
+         
+          ToBoxes[
+           Trigonometria`CheckAnswer[Trigonometria`senNome, "sen"], 
+           StandardForm]],"\" = \"",FractionBox[
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`senValoreNum], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`senValoreNum, "40"], 
+              StandardForm]]}, "RowDefault"], 
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`senValoreDen], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`senValoreDen, "117"], 
+              StandardForm]]}, "RowDefault"]],"\"/\"",FractionBox[
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`cosValoreNum], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`cosValoreNum, "110"], 
+              StandardForm]]}, "RowDefault"], 
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`cosValoreDen], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`cosValoreDen, "117"], 
+              StandardForm]]}, "RowDefault"]],"\" =\\n \"",FractionBox[
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`senValoreNum2], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`senValoreNum2, "40"], 
+              StandardForm]]}, "RowDefault"], 
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`senValoreDen2], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`senValoreDen2, "117"], 
+              StandardForm]]}, "RowDefault"]],"\"\[CenterDot]\"",FractionBox[
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`cosValoreNum2], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`cosValoreNum2, "117"], 
+              StandardForm]]}, "RowDefault"], 
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`cosValoreDen2], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`cosValoreDen2, "110"], 
+              StandardForm]]}, "RowDefault"]],"\" = \"",FractionBox[
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`resNum], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`resNum, "40"], 
+              StandardForm]]}, "RowDefault"], 
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`resDen], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`resDen, "110"], 
+              StandardForm]]}, "RowDefault"]],"\" = \"",FractionBox[
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`resNum2], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`resNum2, "4"], 
+              StandardForm]]}, "RowDefault"], 
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`resDen2], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`resDen2, "11"], 
+              StandardForm]]}, "RowDefault"]]},
+        "RowDefault"],
+       StripOnInput->False,
+       Magnification->2 Inherited]], ""},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox[
+        StyleBox["\<\"Passo 5: cerchiamo \[Alpha].\"\>",
+         StripOnInput->False,
+         FontSize->15,
+         FontWeight->Bold], TextForm]], "InlineText"],
+      Text[
+       Style["Passo 5: cerchiamo \[Alpha].", Bold, 15]]], "", ""},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox["\<\"\"\>", TextForm]], "InlineText"],
+      Text[""]], 
+     PanelBox[
+      StyleBox[
+       TemplateBox[{
+        "\"\[Alpha] = \\!\\(\\*SuperscriptBox[\\(sen\\), \\(-1\\)]\\)(\"",
+         FractionBox[
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`senValoreNum3], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`senValoreNum3, "40"], 
+              StandardForm]]}, "RowDefault"], 
+          TemplateBox[{
+            InputFieldBox[
+             Dynamic[Trigonometria`senValoreDen3], String, FieldSize -> 3], 
+            DynamicBox[
+             ToBoxes[
+              Trigonometria`CheckAnswer[Trigonometria`senValoreDen3, "117"], 
+              StandardForm]]}, "RowDefault"]],"\")\""},
+        "RowDefault"],
+       StripOnInput->False,
+       Magnification->2 Inherited]], ""}
+   },
+   AutoDelete->False,
+   GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Center}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{5}}, "Rows" -> {{5}}}],
+  "Grid"]], "Output",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.7039421219834275`*^9, 3.703948225993637*^9, 3.7040030758643627`*^9, 
+   3.7041683262341776`*^9, {3.7041690567647424`*^9, 3.704126458413084*^9}, {
+   3.70412659158648*^9, 3.704126624888259*^9}},
  FontFamily->"OpenDyslexic",
  ExpressionUUID -> "19a965c6-e9bd-49ab-8d59-5e86104e44fb"]
 }, Open  ]]
@@ -2597,7 +3416,8 @@ Cell[BoxData[
         {RGBColor[0., 0.7, 0.], Opacity[0.2], 
          DiskBox[{0.7, 0}, 0.2, {3.141592653589793, 2.0647376957144776`}]}, 
         {RGBColor[0., 0.8, 0.], 
-         CircleBox[{0.7, 0}, 0.2, {3.141592653589793, 2.0647376957144776`}]}, 
+         CircleBox[{0.7, 0}, 0.2, {3.141592653589793, 
+          2.0647376957144776`}]}, 
         {RGBColor[0., 0.7, 0.], Opacity[0.2], 
          DiskBox[{0, 1.3}, 0.2, 
           NCache[{5.20633034930427, Rational[3, 2] Pi}, {5.20633034930427, 
@@ -2611,7 +3431,8 @@ Cell[BoxData[
           "Triangle"]}, GeometricTransformationBox[InsetBox[
           StyleBox["\<\"A\"\>",
            StripOnInput->False,
-           FontSize->15], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], InsetBox[
+           FontSize->15], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], 
+        InsetBox[
          StyleBox["\<\"B\"\>",
           StripOnInput->False,
           FontSize->15], {0.3, -0.1}], InsetBox[
@@ -2757,7 +3578,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
      StyleBox[
       DynamicBox[ToBoxes[
         Trigonometria`CheckAnswer[Trigonometria`catAd, "A"], StandardForm],
-       ImageSizeCache->{33., {0., 32.}}],
+       ImageSizeCache->{35., {0., 33.}}],
       StripOnInput->False,
       Magnification->3 Inherited]},
     {
@@ -2822,7 +3643,6 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
              StripOnInput->False]}
           },
           AutoDelete->False,
-          
           GridBoxAlignment->{
            "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
             "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
@@ -2843,7 +3663,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
      StyleBox[
       DynamicBox[ToBoxes[
         Trigonometria`CheckAnswer[Trigonometria`catOp, "B"], StandardForm],
-       ImageSizeCache->{32., {0., 28.}}],
+       ImageSizeCache->{33., {0., 32.}}],
       StripOnInput->False,
       Magnification->3 Inherited]},
     {
@@ -2877,6 +3697,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
             "\"\[LongRightArrow] Atan(\[Beta]) = B \[LongRightArrow] A = \
 \\!\\(\\*FractionBox[\\(\\(\\\\ \\)\\(B\\)\\), \\(tan \
 \\((\[Beta])\\)\\)]\\)\"", StripOnInput -> False], TextForm]], "InlineText"], 
+         
          Text[
           Style[
           "\[LongRightArrow] Atan(\[Beta]) = B \[LongRightArrow] A = \
@@ -2929,7 +3750,6 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
           GridBoxAlignment->{
            "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
             "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
-          
           GridBoxItemSize->{
            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
           GridBoxSpacings->{"Columns" -> {
@@ -2967,7 +3787,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
      StyleBox[
       DynamicBox[ToBoxes[
         Trigonometria`CheckAnswer[Trigonometria`A, "50"], StandardForm],
-       ImageSizeCache->{33., {0., 32.}}],
+       ImageSizeCache->{35., {0., 33.}}],
       StripOnInput->False,
       Magnification->3 Inherited]}
    },
@@ -3291,7 +4111,7 @@ Cell[BoxData[
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[Trigonometria`ptctrl$$], 3.641592653589793, "angle"}, 0, 2 Pi}}, 
-    Typeset`size$$ = {504., {199.5, 206.5}}, Typeset`update$$ = 0, 
+    Typeset`size$$ = {510., {199.5, 206.5}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
     Trigonometria`ptctrl$5755$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -3453,7 +4273,7 @@ Cell[BoxData[
          Trigonometria`ptctrl$$, 3.641592653589793, "angle"}, 0, 2 Pi}}, 
       "Options" :> {TrackedSymbols :> {Trigonometria`ptctrl$$}}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{555., {247., 254.}},
+     ImageSizeCache->{557., {243., 250.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -3475,7 +4295,7 @@ Cell[BoxData[
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[Trigonometria`ptctrl$$], 3.641592653589793, "angle"}, 0, 2 Pi}}, 
-    Typeset`size$$ = {504., {199.5, 206.5}}, Typeset`update$$ = 0, 
+    Typeset`size$$ = {510., {199.5, 206.5}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
     Trigonometria`ptctrl$23227$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -3632,7 +4452,7 @@ Cell[BoxData[
          Trigonometria`ptctrl$$, 3.641592653589793, "angle"}, 0, 2 Pi}}, 
       "Options" :> {TrackedSymbols :> {Trigonometria`ptctrl$$}}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{555., {251., 258.}},
+     ImageSizeCache->{557., {248., 255.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -3693,7 +4513,7 @@ Cell[BoxData[
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
        Hold[Trigonometria`ptctrl$$], 0.4, "angle"}, 0, 2 Pi}}, 
-    Typeset`size$$ = {502., {199.5, 206.5}}, Typeset`update$$ = 0, 
+    Typeset`size$$ = {508., {199.5, 206.5}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
     Trigonometria`ptctrl$5799$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -3899,7 +4719,7 @@ Cell[BoxData[
       "Specifications" :> {{{Trigonometria`ptctrl$$, 0.4, "angle"}, 0, 2 Pi}},
        "Options" :> {TrackedSymbols :> {Trigonometria`ptctrl$$}}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{553., {251., 258.}},
+     ImageSizeCache->{555., {248., 255.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -4306,7 +5126,7 @@ Cell[BoxData[
      StyleBox[
       DynamicBox[ToBoxes[
         Trigonometria`CheckAnswer[Trigonometria`AB2, "5"], StandardForm],
-       ImageSizeCache->{32., {0., 28.}}],
+       ImageSizeCache->{33., {0., 32.}}],
       StripOnInput->False,
       Magnification->3 Inherited], ""}
    },
@@ -4626,7 +5446,8 @@ Cell[BoxData[
           "Triangle"]}, GeometricTransformationBox[InsetBox[
           StyleBox["\<\"C\"\>",
            StripOnInput->False,
-           FontSize->10], {-0.6, 0.4}], {{{1, 0}, {0, 1}}, Center}], InsetBox[
+           FontSize->10], {-0.6, 0.4}], {{{1, 0}, {0, 1}}, Center}], 
+        InsetBox[
          StyleBox["\<\"A\"\>",
           StripOnInput->False,
           FontSize->10], {0.3, -0.1}], InsetBox[
@@ -4900,7 +5721,8 @@ Cell[BoxData[
           "Triangle"]}, GeometricTransformationBox[InsetBox[
           StyleBox["\<\"B\"\>",
            StripOnInput->False,
-           FontSize->10], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], InsetBox[
+           FontSize->10], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], 
+        InsetBox[
          StyleBox["\<\"C\"\>",
           StripOnInput->False,
           FontSize->10], {0.7, -0.1}], InsetBox[
@@ -5005,7 +5827,6 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
             RadioButtonBox[Dynamic[Trigonometria`res4], {
              "\!\(\*FractionBox[\(2\), \(3\)]\)"},
              DefaultBaseStyle->"RadioButtonBar"], 
-            
             StyleBox["\<\"\\!\\(\\*FractionBox[\\(2\\), \\(3\\)]\\)\"\>", 
              "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -5088,7 +5909,7 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
         Trigonometria`CheckAnswer[
         Trigonometria`res4, "\!\(\*FractionBox[\(2\), \(3\)]\)"], 
         StandardForm],
-       ImageSizeCache->{32., {0., 28.}}],
+       ImageSizeCache->{33., {0., 32.}}],
       StripOnInput->False,
       Magnification->3 Inherited]}
    },
@@ -5596,7 +6417,8 @@ Cell[BoxData[
           "Triangle"]}, GeometricTransformationBox[InsetBox[
           StyleBox["\<\"B\"\>",
            StripOnInput->False,
-           FontSize->10], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], InsetBox[
+           FontSize->10], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], 
+        InsetBox[
          StyleBox["\<\"C\"\>",
           StripOnInput->False,
           FontSize->10], {0.7, -0.1}], InsetBox[
@@ -5804,7 +6626,8 @@ Cell[BoxData[
           "Triangle"]}, GeometricTransformationBox[InsetBox[
           StyleBox["\<\"C\"\>",
            StripOnInput->False,
-           FontSize->10], {-0.4, 0.4}], {{{1, 0}, {0, 1}}, Center}], InsetBox[
+           FontSize->10], {-0.4, 0.4}], {{{1, 0}, {0, 1}}, Center}], 
+        InsetBox[
          StyleBox["\<\"A\"\>",
           StripOnInput->False,
           FontSize->10], {0.3, -0.1}], InsetBox[
@@ -5872,7 +6695,6 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
               BoxData[
                FormBox["\"\"", TextForm]], "InlineText"], 
              Text[""]], DynamicModuleValues :> {}], 
-           
            "\"\\!\\(\\*SuperscriptBox[\\(\\\\ \\), \\(2\\)]\\) + 576 - \
 472\""}, "RowDefault"], 
          TemplateBox[{"\"2 \"", 
@@ -5922,8 +6744,7 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
                StyleBox[
                "\"-\\!\\(\\*FractionBox[\\(1\\), \\(2\\)]\\)\"", 
                 "RadioButtonBarLabel", StripOnInput -> False]}}, AutoDelete -> 
-             False, 
-             GridBoxItemSize -> {
+             False, GridBoxItemSize -> {
               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
              ColumnAlignments -> Left, ColumnSpacings -> 0.3], "  ", 
             GridBox[{{
@@ -6159,6 +6980,7 @@ decimale\\n\\n\"", FontColor -> RGBColor[1, 0, 0], 10, StripOnInput -> False],
             ToBoxes[
              Trigonometria`CheckAnswer[Trigonometria`latoc, "3"], 
              StandardForm]]}, "RowDefault"]],"\" \[CenterDot] \"",FractionBox[
+        
          TemplateBox[{
            TagBox[
             SqrtBox[
@@ -6203,10 +7025,10 @@ Cell["", "SlideShowNavigationBar",
  CellTags->"SlideShowHeader",
  ExpressionUUID -> "0b0d8546-a0e6-4e8e-8c13-213784e15ec2"]
 },
-WindowSize->{1280, 637},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+WindowSize->{1600, 842},
+WindowMargins->{{1, Automatic}, {0, 32}},
 TaggingRules->{"SlideShow" -> True},
-FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -6215,362 +7037,364 @@ StyleDefinitions->"Default.nb"
 (*CellTagsOutline
 CellTagsIndex->{
  "SlideShowHeader"->{
-  Cell[580, 22, 4444, 97, 77, "SlideShowNavigationBar",
+  Cell[580, 22, 4471, 100, 75, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[5603, 141, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[5630, 144, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[7310, 179, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[7337, 182, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[9558, 243, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[9585, 246, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[12066, 312, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[12385, 323, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[23531, 621, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[23864, 633, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[38145, 1003, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[38478, 1015, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[42611, 1122, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[42975, 1135, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[61701, 1604, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[62086, 1618, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[76618, 1962, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[77035, 1978, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[82059, 2153, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[82476, 2169, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[98725, 2564, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[132033, 3383, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[115845, 3008, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[149161, 3828, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[127022, 3262, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[160338, 4082, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[157705, 3935, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[191021, 4755, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[164371, 4110, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[197687, 4930, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[172716, 4327, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[206032, 5147, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[177785, 4451, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[211101, 5271, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[183099, 4578, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[216415, 5398, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[193751, 4849, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[227076, 5670, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[204157, 5109, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[237478, 5930, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[210432, 5273, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[243753, 6094, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[220821, 5544, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[254142, 6365, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[229807, 5768, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[263137, 6590, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[238081, 5969, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[271394, 6790, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[241978, 6075, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[275291, 6896, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[246612, 6200, 152, 3, 76, "SlideShowNavigationBar",
+  Cell[279934, 7022, 152, 3, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"SlideShowHeader", 247110, 6216}
+ {"SlideShowHeader", 280410, 7038}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 4444, 97, 77, "SlideShowNavigationBar",
+Cell[580, 22, 4471, 100, 75, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
-Cell[5027, 121, 222, 7, 198, "Title"],
-Cell[5252, 130, 314, 6, 107, "Subtitle"]
+Cell[5054, 124, 222, 7, 202, "Title"],
+Cell[5279, 133, 314, 6, 111, "Subtitle"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5603, 141, 152, 3, 76, "SlideShowNavigationBar",
+Cell[5630, 144, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
-Cell[5758, 146, 1515, 28, 398, "Section"]
+Cell[5785, 149, 1515, 28, 420, "Section"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7310, 179, 152, 3, 76, "SlideShowNavigationBar",
- CellTags->"SlideShowHeader"],
-Cell[CellGroupData[{
-Cell[7487, 186, 337, 6, 80, "Section"],
-Cell[7827, 194, 814, 15, 151, "Text"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[8678, 214, 327, 6, 80, "Section"],
-Cell[9008, 222, 501, 15, 235, "Text"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[9558, 243, 152, 3, 76, "SlideShowNavigationBar",
- CellTags->"SlideShowHeader"],
-Cell[9713, 248, 544, 13, 38, "Input"],
-Cell[CellGroupData[{
-Cell[10282, 265, 531, 11, 131, "Section"],
-Cell[10816, 278, 1201, 28, 459, "Text"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[12066, 312, 152, 3, 76, "SlideShowNavigationBar",
+Cell[7337, 182, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[12243, 319, 389, 7, 80, "Section"],
-Cell[12635, 328, 933, 35, 143, "Text"],
-Cell[CellGroupData[{
-Cell[13593, 367, 386, 7, 57, "Code"],
-Cell[13982, 376, 6235, 138, 526, "Output"]
-}, Open  ]],
-Cell[20232, 517, 1422, 47, 91, "Text"],
-Cell[CellGroupData[{
-Cell[21679, 568, 319, 6, 57, "Code"],
-Cell[22001, 576, 618, 14, 41, "Output"]
+Cell[7514, 189, 337, 6, 82, "Section"],
+Cell[7854, 197, 814, 15, 161, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[22656, 595, 215, 4, 57, "Code"],
-Cell[22874, 601, 596, 13, 41, "Output"]
-}, Open  ]]
+Cell[8705, 217, 327, 6, 82, "Section"],
+Cell[9035, 225, 501, 15, 251, "Text"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[23531, 621, 152, 3, 76, "SlideShowNavigationBar",
+Cell[9585, 246, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
-Cell[23686, 626, 1548, 56, 101, "Text"],
+Cell[9740, 251, 836, 21, 106, "Input"],
 Cell[CellGroupData[{
-Cell[25259, 686, 184, 4, 57, "Code"],
-Cell[25446, 692, 7505, 165, 526, "Output"]
-}, Open  ]],
-Cell[32966, 860, 1841, 59, 280, "Text"],
-Cell[CellGroupData[{
-Cell[34832, 923, 238, 5, 57, "Code"],
-Cell[35073, 930, 3023, 67, 359, "Output"]
+Cell[10601, 276, 531, 11, 135, "Section"],
+Cell[11135, 289, 1201, 28, 491, "Text"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[38145, 1003, 152, 3, 76, "SlideShowNavigationBar",
+Cell[12385, 323, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[38322, 1010, 272, 6, 57, "Code"],
-Cell[38597, 1018, 435, 9, 49, "Output"]
+Cell[12562, 330, 389, 7, 82, "Section"],
+Cell[12954, 339, 933, 35, 147, "Text"],
+Cell[CellGroupData[{
+Cell[13912, 378, 386, 7, 59, "Code"],
+Cell[14301, 387, 6249, 139, 520, "Output"]
+}, Open  ]],
+Cell[20565, 529, 1422, 47, 95, "Text"],
+Cell[CellGroupData[{
+Cell[22012, 580, 319, 6, 59, "Code"],
+Cell[22334, 588, 618, 14, 40, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[39069, 1032, 305, 6, 57, "Code"],
-Cell[39377, 1040, 3185, 76, 734, "Output"]
+Cell[22989, 607, 215, 4, 59, "Code"],
+Cell[23207, 613, 596, 13, 40, "Output"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[42611, 1122, 152, 3, 76, "SlideShowNavigationBar",
+Cell[23864, 633, 152, 3, 74, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[24019, 638, 1548, 56, 111, "Text"],
+Cell[CellGroupData[{
+Cell[25592, 698, 184, 4, 59, "Code"],
+Cell[25779, 704, 7505, 165, 520, "Output"]
+}, Open  ]],
+Cell[33299, 872, 1841, 59, 301, "Text"],
+Cell[CellGroupData[{
+Cell[35165, 935, 238, 5, 59, "Code"],
+Cell[35406, 942, 3023, 67, 359, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38478, 1015, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[42788, 1129, 285, 5, 80, "Section"],
-Cell[CellGroupData[{
-Cell[43098, 1138, 217, 4, 57, "Code"],
-Cell[43318, 1144, 8991, 198, 526, "Output"]
-}, Open  ]],
-Cell[52324, 1345, 2894, 99, 266, "Text"],
-Cell[CellGroupData[{
-Cell[55243, 1448, 234, 5, 57, "Code"],
-Cell[55480, 1455, 5334, 119, 526, "Output"]
+Cell[38655, 1022, 272, 6, 59, "Code"],
+Cell[38930, 1030, 435, 9, 44, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[60851, 1579, 213, 4, 57, "Code"],
-Cell[61067, 1585, 573, 12, 41, "Output"]
-}, Open  ]]
+Cell[39402, 1044, 305, 6, 59, "Code"],
+Cell[39710, 1052, 3216, 77, 539, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[61701, 1604, 152, 3, 76, "SlideShowNavigationBar",
+Cell[42975, 1135, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[61878, 1611, 326, 6, 80, "Section"],
+Cell[43152, 1142, 285, 5, 82, "Section"],
 Cell[CellGroupData[{
-Cell[62229, 1621, 189, 4, 57, "Code"],
-Cell[62421, 1627, 6974, 159, 582, "Output"]
+Cell[43462, 1151, 217, 4, 59, "Code"],
+Cell[43682, 1157, 9012, 199, 520, "Output"]
+}, Open  ]],
+Cell[52709, 1359, 2894, 99, 287, "Text"],
+Cell[CellGroupData[{
+Cell[55628, 1462, 234, 5, 59, "Code"],
+Cell[55865, 1469, 5334, 119, 520, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[69432, 1791, 189, 4, 57, "Code"],
-Cell[69624, 1797, 6933, 158, 582, "Output"]
+Cell[61236, 1593, 213, 4, 59, "Code"],
+Cell[61452, 1599, 573, 12, 40, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[76618, 1962, 152, 3, 76, "SlideShowNavigationBar",
+Cell[62086, 1618, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[76795, 1969, 281, 5, 80, "Section"],
-Cell[77079, 1976, 4931, 171, 529, "Text"]
+Cell[62263, 1625, 326, 6, 82, "Section"],
+Cell[CellGroupData[{
+Cell[62614, 1635, 189, 4, 59, "Code"],
+Cell[62806, 1641, 6990, 160, 584, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[69833, 1806, 189, 4, 59, "Code"],
+Cell[70025, 1812, 6949, 159, 584, "Output"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[82059, 2153, 152, 3, 76, "SlideShowNavigationBar",
+Cell[77035, 1978, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[82236, 2160, 272, 6, 57, "Code"],
-Cell[82511, 2168, 16165, 390, 2909, "Output"]
+Cell[77212, 1985, 281, 5, 82, "Section"],
+Cell[77496, 1992, 4931, 171, 563, "Text"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[98725, 2564, 152, 3, 76, "SlideShowNavigationBar",
+Cell[82476, 2169, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[98902, 2571, 272, 6, 57, "Code"],
-Cell[99177, 2579, 15922, 403, 1157, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[115136, 2987, 214, 4, 57, "Code"],
-Cell[115353, 2993, 443, 9, 49, "Output"]
+Cell[82653, 2176, 323, 6, 59, "Code"],
+Cell[82979, 2184, 16359, 397, 1960, "Output"],
+Cell[99341, 2583, 16331, 396, 1960, "Output"],
+Cell[115675, 2981, 16309, 396, 1960, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[115845, 3008, 152, 3, 76, "SlideShowNavigationBar",
+Cell[132033, 3383, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[116022, 3015, 285, 5, 80, "Section"],
-Cell[CellGroupData[{
-Cell[116332, 3024, 306, 6, 62, "Subsection"],
-Cell[CellGroupData[{
-Cell[116663, 3034, 189, 4, 57, "Code"],
-Cell[116855, 3040, 9916, 209, 426, "Output"]
+Cell[132210, 3390, 272, 6, 59, "Code"],
+Cell[132485, 3398, 15930, 404, 1174, "Output"]
 }, Open  ]],
-Cell[126786, 3252, 175, 3, 50, "Input"]
-}, Open  ]]
+Cell[CellGroupData[{
+Cell[148452, 3807, 214, 4, 59, "Code"],
+Cell[148669, 3813, 443, 9, 44, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[127022, 3262, 152, 3, 76, "SlideShowNavigationBar",
+Cell[149161, 3828, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[127199, 3269, 283, 5, 45, "Subsubsection"],
+Cell[149338, 3835, 285, 5, 82, "Section"],
 Cell[CellGroupData[{
-Cell[127507, 3278, 245, 5, 57, "Code"],
-Cell[127755, 3285, 8470, 181, 518, "Output"]
-}, Open  ]],
-Cell[136240, 3469, 8440, 181, 518, "Input"],
-Cell[144683, 3652, 1234, 25, 690, "Text"],
+Cell[149648, 3844, 306, 6, 64, "Subsection"],
 Cell[CellGroupData[{
-Cell[145942, 3681, 216, 4, 57, "Code"],
-Cell[146161, 3687, 10951, 230, 526, "Output"]
+Cell[149979, 3854, 189, 4, 59, "Code"],
+Cell[150171, 3860, 9916, 209, 426, "Output"]
 }, Open  ]],
-Cell[157127, 3920, 529, 9, 53, "Text"]
+Cell[160102, 4072, 175, 3, 73, "Input"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[157705, 3935, 152, 3, 76, "SlideShowNavigationBar",
+Cell[160338, 4082, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[157882, 3942, 274, 6, 57, "Code"],
-Cell[158159, 3950, 5914, 147, 762, "Output"]
+Cell[160515, 4089, 283, 5, 48, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[160823, 4098, 245, 5, 59, "Code"],
+Cell[161071, 4105, 8470, 181, 510, "Output"]
 }, Open  ]],
-Cell[164088, 4100, 246, 5, 30, "Input"]
+Cell[169556, 4289, 8440, 181, 520, "Input"],
+Cell[177999, 4472, 1234, 25, 734, "Text"],
+Cell[CellGroupData[{
+Cell[179258, 4501, 216, 4, 59, "Code"],
+Cell[179477, 4507, 10951, 230, 520, "Output"]
+}, Open  ]],
+Cell[190443, 4740, 529, 9, 77, "Text"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[164371, 4110, 152, 3, 76, "SlideShowNavigationBar",
+Cell[191021, 4755, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[164548, 4117, 276, 6, 57, "Code"],
-Cell[164827, 4125, 7840, 196, 702, "Output"]
-}, Open  ]]
+Cell[191198, 4762, 274, 6, 59, "Code"],
+Cell[191475, 4770, 5914, 147, 765, "Output"]
+}, Open  ]],
+Cell[197404, 4920, 246, 5, 40, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[172716, 4327, 152, 3, 76, "SlideShowNavigationBar",
+Cell[197687, 4930, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[172893, 4334, 282, 5, 70, "Section"],
-Cell[CellGroupData[{
-Cell[173200, 4343, 310, 6, 62, "Subsection"],
-Cell[CellGroupData[{
-Cell[173535, 4353, 188, 4, 57, "Code"],
-Cell[173726, 4359, 3986, 84, 426, "Output"]
-}, Open  ]]
-}, Open  ]]
+Cell[197864, 4937, 276, 6, 59, "Code"],
+Cell[198143, 4945, 7840, 196, 707, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[177785, 4451, 152, 3, 76, "SlideShowNavigationBar",
+Cell[206032, 5147, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[177962, 4458, 310, 6, 91, "Subsection"],
+Cell[206209, 5154, 282, 5, 82, "Section"],
 Cell[CellGroupData[{
-Cell[178297, 4468, 214, 4, 57, "Code"],
-Cell[178514, 4474, 3958, 83, 426, "Output"]
-}, Open  ]],
-Cell[182487, 4560, 563, 12, 125, "Text"]
+Cell[206516, 5163, 310, 6, 64, "Subsection"],
+Cell[CellGroupData[{
+Cell[206851, 5173, 188, 4, 59, "Code"],
+Cell[207042, 5179, 3986, 84, 426, "Output"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[183099, 4578, 152, 3, 76, "SlideShowNavigationBar",
+Cell[211101, 5271, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[183276, 4585, 273, 6, 57, "Code"],
-Cell[183552, 4593, 10150, 250, 1136, "Output"]
+Cell[211278, 5278, 310, 6, 95, "Subsection"],
+Cell[CellGroupData[{
+Cell[211613, 5288, 214, 4, 59, "Code"],
+Cell[211830, 5294, 3958, 83, 426, "Output"]
+}, Open  ]],
+Cell[215803, 5380, 563, 12, 191, "Text"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[193751, 4849, 152, 3, 76, "SlideShowNavigationBar",
+Cell[216415, 5398, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[193928, 4856, 274, 6, 57, "Code"],
-Cell[194205, 4864, 9903, 239, 542, "Output"]
+Cell[216592, 5405, 273, 6, 59, "Code"],
+Cell[216868, 5413, 10159, 251, 1062, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[204157, 5109, 152, 3, 76, "SlideShowNavigationBar",
+Cell[227076, 5670, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[204334, 5116, 321, 6, 70, "Section"],
-Cell[CellGroupData[{
-Cell[204680, 5126, 1137, 33, 62, "Subsection"],
-Cell[CellGroupData[{
-Cell[205842, 5163, 190, 4, 57, "Code"],
-Cell[206035, 5169, 4324, 96, 359, "Output"]
-}, Open  ]]
-}, Open  ]]
+Cell[227253, 5677, 274, 6, 59, "Code"],
+Cell[227530, 5685, 9899, 239, 568, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[210432, 5273, 152, 3, 76, "SlideShowNavigationBar",
+Cell[237478, 5930, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[210609, 5280, 279, 5, 55, "Subsection"],
+Cell[237655, 5937, 321, 6, 82, "Section"],
 Cell[CellGroupData[{
-Cell[210913, 5289, 193, 4, 57, "Code"],
-Cell[211109, 5295, 5518, 118, 359, "Output"]
-}, Open  ]],
-Cell[216642, 5416, 4130, 122, 340, "Text"]
+Cell[238001, 5947, 1137, 33, 64, "Subsection"],
+Cell[CellGroupData[{
+Cell[239163, 5984, 190, 4, 59, "Code"],
+Cell[239356, 5990, 4324, 96, 359, "Output"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[220821, 5544, 152, 3, 76, "SlideShowNavigationBar",
+Cell[243753, 6094, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[220998, 5551, 274, 6, 57, "Code"],
-Cell[221275, 5559, 8483, 203, 788, "Output"]
+Cell[243930, 6101, 279, 5, 57, "Subsection"],
+Cell[CellGroupData[{
+Cell[244234, 6110, 193, 4, 59, "Code"],
+Cell[244430, 6116, 5518, 118, 359, "Output"]
+}, Open  ]],
+Cell[249963, 6237, 4130, 122, 521, "Text"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[229807, 5768, 152, 3, 76, "SlideShowNavigationBar",
+Cell[254142, 6365, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[229984, 5775, 272, 6, 57, "Code"],
-Cell[230259, 5783, 7773, 180, 814, "Output"]
+Cell[254319, 6372, 274, 6, 59, "Code"],
+Cell[254596, 6380, 8492, 204, 807, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[238081, 5969, 152, 3, 76, "SlideShowNavigationBar",
+Cell[263137, 6590, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[238258, 5976, 274, 6, 57, "Code"],
-Cell[238535, 5984, 3394, 85, 465, "Output"]
+Cell[263314, 6597, 272, 6, 59, "Code"],
+Cell[263589, 6605, 7756, 179, 826, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[241978, 6075, 152, 3, 76, "SlideShowNavigationBar",
+Cell[271394, 6790, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[242155, 6082, 275, 6, 57, "Code"],
-Cell[242433, 6090, 4152, 106, 483, "Output"]
+Cell[271571, 6797, 274, 6, 59, "Code"],
+Cell[271848, 6805, 3394, 85, 484, "Output"]
 }, Open  ]]
 }, Open  ]],
-Cell[246612, 6200, 152, 3, 76, "SlideShowNavigationBar",
+Cell[CellGroupData[{
+Cell[275291, 6896, 152, 3, 74, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[275468, 6903, 275, 6, 59, "Code"],
+Cell[275746, 6911, 4161, 107, 493, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[279934, 7022, 152, 3, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"]
 }
 ]

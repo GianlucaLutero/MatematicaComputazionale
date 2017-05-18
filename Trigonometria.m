@@ -1102,7 +1102,7 @@ EsercizioEsempio[]:=
 Module[{},
 
 datiEsempio = StringJoin[Style["A = 25 \nC = 50",FontFamily-> "sans sarif",Bold],Style["\nTrovare Sen(\[Alpha])",FontColor->Red,FontFamily-> "sans sarif",Bold]];
-risoluzioneEsempio =Panel[" Sin(\[Alpha]) = \!\(\*FractionBox[\(A\), \(B\)]\) = \!\(\*FractionBox[\(\(\\\ \\\ \)\(25\)\(\\\ \)\), \(\(\\\ \)\(50\)\)]\) = \!\(\*FractionBox[\(\(\\\ \)\(1\)\(\\\ \)\), \(2\)]\)"];
+risoluzioneEsempio =Panel[" Sin(\[Alpha]) = \!\(\*FractionBox[\(A\), \(C\)]\) = \!\(\*FractionBox[\(\(\\\ \\\ \)\(25\)\(\\\ \)\), \(\(\\\ \)\(50\)\)]\) = \!\(\*FractionBox[\(\(\\\ \)\(1\)\(\\\ \)\), \(2\)]\)"];
 
 Grid[{{Text[Style["Esempio 1:",20,FontColor-> Red]]}, 
 {Magnify[Graphics[{
@@ -1124,7 +1124,7 @@ Grid[{{Text[Style["Esempio 1:",20,FontColor-> Red]]},
   }],2],
 Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsempio],1.4],Text[""]},
 {Text[Style["Procedimento:",17,FontColor -> Red]]},{Text[" "],Magnify[risoluzioneEsempio,2]}}
-,Alignment-> {Left,Center},Spacings -> {10,10},Dividers->{{},{3 -> Red}}]
+,Alignment-> {Left,Center},Spacings -> {5,5},Dividers->{{},{3 -> Red}}]
 
 ]
 
@@ -1140,11 +1140,12 @@ Esercizio1[]:=
 Module[{},
 datiEsercizioGuidato = StringJoin[Style["A = 40 \nB = 110",FontFamily-> "sans sarif",Bold],Style["\nTrovare Sen(\[Alpha]),Cos(\[Alpha]),Tan(\[Alpha]) e l'angolo \[Alpha]",FontColor->Red,FontFamily-> "sans sarif",Bold]];
 
-risoluzioneEsercizioGuidatoPasso1 = Row[{"Applico la formula \[LongRightArrow] \!\(\*SuperscriptBox[\(A\), \(2\)]\) + ",Dynamic[InputField[Dynamic[catetoNome],String,FieldSize-> 1]],"\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\) ",Dynamic[CheckAnswer[catetoNome,"B"]]," = ",InputField[Dynamic[ipotenusaNome],String,FieldSize-> 1] ,"\!\(\*SuperscriptBox[\(\\\ \), \(\(2\)\(\\\ \\\ \\\ \)\)]\)",Dynamic[CheckAnswer[ipotenusaNome,"C"]],"\n \n",
+risoluzioneEsercizioGuidatoPasso1 = Row[{"Applico il teorema \[LongRightArrow] \!\(\*SuperscriptBox[\(A\), \(2\)]\) + ",Dynamic[InputField[Dynamic[catetoNome],String,FieldSize-> 1]],"\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\) ",Dynamic[CheckAnswer[catetoNome,"B"]]," = ",InputField[Dynamic[ipotenusaNome],String,FieldSize-> 1] ,"\!\(\*SuperscriptBox[\(\\\ \), \(\(2\)\(\\\ \\\ \\\ \)\)]\)",Dynamic[CheckAnswer[ipotenusaNome,"C"]],
+"\n \n",
 "Sostituisco i valori \[LongRightArrow] \!\(\*SuperscriptBox[\(40\), \(2\)]\) + ",InputField[Dynamic[catetoValore],String,FieldSize-> 3],"\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\) ",Dynamic[CheckAnswer[catetoValore,"110"]]," = \!\(\*SuperscriptBox[\(C\), \(2\)]\)\n",
 "\n",
 "Ricavo C \[LongRightArrow] C = ",SqrtBox[Row[{"\!\(\*SuperscriptBox[\(A\), \(2\)]\) + ",InputField[Dynamic[catetoBNome],String,FieldSize-> 1],"\!\(\*SuperscriptBox[\(\\\ \), \(\(2\)\(\\\ \\\ \\\ \\\ \)\)]\)"}]] // DisplayForm,Dynamic[CheckAnswer[catetoBNome,"B"]],"\n \n",
-"Approssima il risultato per difetto\n\n",
+"Approssima il risultato per difetto!\n\n",
 "Calcolo C \[LongRightArrow] C = ", SqrtBox[Row[{InputField[Dynamic[catetoAValore],String,FieldSize-> 2],"\!\(\*SuperscriptBox[\(\\\ \), \(\(2\)\(\\\ \\\ \\\ \\\ \)\)]\)",Dynamic[CheckAnswer[catetoAValore,"40"]]," + ",InputField[Dynamic[catetoBValore],String,FieldSize-> 3],"\!\(\*SuperscriptBox[\(\\\ \), \(\(2\)\(\\\ \\\ \)\)]\)",Dynamic[CheckAnswer[catetoBValore,"110"]]}]] //  DisplayForm," = ",InputField[Dynamic[ipotenusaValore],String,FieldSize->3],Dynamic[CheckAnswer[ipotenusaValore,"117"]]
 }];
 
@@ -1153,17 +1154,20 @@ risoluzioneEsercizioGuidatoPasso2 = Row[{"sen(\[Alpha]) = ",("A")/InputField[Dyn
 risoluzioneEsercizioGuidatoPasso3 = Row[{"cos(\[Alpha]) = ",("B")/InputField[Dynamic[ipotenusaCosCNome],String,FieldSize->2],Dynamic[CheckAnswer[ipotenusaCosCNome,"C"]]," = ",("110")/InputField[Dynamic[ipotenusaCosValore],String,FieldSize->3],Dynamic[CheckAnswer[ipotenusaCosValore,"117"]]}];
 
 
-risoluzioneEsercizioGuidatoPasso4 = Row[{"tan(\[Alpha]) = ",Row[{InputField[Dynamic[senNome],String,FieldSize->3],"(\[Alpha])"}]/("cos(\[Alpha])"),Dynamic[CheckAnswer[senNome,"sen"]]," = ",
-Row[{InputField[Dynamic[senValoreNum],String,FieldSize->3],Dynamic[CheckAnswer[senValoreNum,"40"]]}]/Row[ {InputField[Dynamic[senValoreDen],String,FieldSize->3],Dynamic[CheckAnswer[senValoreDen,"117"]]}],"/"
-,
+risoluzioneEsercizioGuidatoPasso4 = Row[{"tan(\[Alpha]) = ",
+Row[{InputField[Dynamic[senNome],String,FieldSize->3],"(\[Alpha])"}]/("cos(\[Alpha])"),Dynamic[CheckAnswer[senNome,"sen"]],"\n",
+"Sostituisco i valori di seno e coseno trovati ai passi 2 e 3: "," = ",
+Row[{InputField[Dynamic[senValoreNum],String,FieldSize->3],Dynamic[CheckAnswer[senValoreNum,"40"]]}]/Row[ {InputField[Dynamic[senValoreDen],String,FieldSize->3],Dynamic[CheckAnswer[senValoreDen,"117"]]}],"/",
 Row[{InputField[Dynamic[cosValoreNum],String,FieldSize->3],Dynamic[CheckAnswer[cosValoreNum,"110"]]}]/Row[{InputField[Dynamic[cosValoreDen],String,FieldSize->3],Dynamic[CheckAnswer[cosValoreDen,"117"]]}],
-" =\n ",Row[{InputField[Dynamic[senValoreNum2],String,FieldSize->3],Dynamic[CheckAnswer[senValoreNum2,"40"]]}]/Row[ {InputField[Dynamic[senValoreDen2],String,FieldSize->3],Dynamic[CheckAnswer[senValoreDen2,"117"]]}],"\[CenterDot]"
-,
+"\n",
+"Ricorda! La divisione tra due frazioni\ndiventa la prima frazione moltiplicata per l'inversa della seconda:",
+Row[{InputField[Dynamic[senValoreNum2],String,FieldSize->3],Dynamic[CheckAnswer[senValoreNum2,"40"]]}]/Row[ {InputField[Dynamic[senValoreDen2],String,FieldSize->3],Dynamic[CheckAnswer[senValoreDen2,"117"]]}],"\[CenterDot]",
 Row[{InputField[Dynamic[cosValoreNum2],String,FieldSize->3],Dynamic[CheckAnswer[cosValoreNum2,"117"]]}]/Row[{InputField[Dynamic[cosValoreDen2],String,FieldSize->3],Dynamic[CheckAnswer[cosValoreDen2,"110"]]}],
-" = ",
-Row[{InputField[Dynamic[resNum],String,FieldSize->3],Dynamic[CheckAnswer[resNum,"40"]]}]/Row[{InputField[Dynamic[resDen],String,FieldSize->3],Dynamic[CheckAnswer[resDen,"110"]]}]
-,
-" = ",
+"\n",
+"Dopo aver eseguito la moltiplicazione tra le due frazioni ottengo:",
+Row[{InputField[Dynamic[resNum],String,FieldSize->3],Dynamic[CheckAnswer[resNum,"40"]]}]/Row[{InputField[Dynamic[resDen],String,FieldSize->3],Dynamic[CheckAnswer[resDen,"110"]]}],
+"\n",
+"Semplifico ai minimi termini la frazione e ottengo:",
 Row[{InputField[Dynamic[resNum2],String,FieldSize->3],Dynamic[CheckAnswer[resNum2,"4"]]}]/Row[{InputField[Dynamic[resDen2],String,FieldSize->3],Dynamic[CheckAnswer[resDen2,"11"]]}]
 }];
 
@@ -1172,7 +1176,7 @@ senValoreDen3],String,FieldSize->3],Dynamic[CheckAnswer[senValoreDen3,"117"]]}],
 
 
 
-Grid[{{Text[Style["Esercizio guidato:",20,FontColor-> Red]]},
+Grid[{{Text[Style["Esercizio Guidato:",20,FontColor-> Red]]},
 {Magnify[Graphics[{
 
  
@@ -1205,17 +1209,17 @@ Grid[{{Text[Style["Esercizio guidato:",20,FontColor-> Red]]},
   }],2]
 ,Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizioGuidato],1.4],Text[""]},
 {Text[Style["Procedimento:",17,FontColor -> Red]]},
-{Text[Style["Passo 1: cerchiamo l'ipotenusa C.\n Applico il Teorema di Pitagora:",Bold,15]]},
+{Text[Style["Passo 1: Cerchiamo l'ipotenusa C.\n Applico il Teorema di Pitagora:",Bold,15]]},
 {Text[""],Panel[Magnify[risoluzioneEsercizioGuidatoPasso1,2]]},
-{Text[Style["Passo 2: cerchiamo sen(\[Alpha]).",Bold,15]]},
+{Text[Style["Passo 2: Cerchiamo sen(\[Alpha]).",Bold,15]]},
 {Text[""],Panel[Magnify[risoluzioneEsercizioGuidatoPasso2,2]]},
-{Text[Style["Passo 3: cerchiamo cos(\[Alpha]).",Bold,15]]},
+{Text[Style["Passo 3: Cerchiamo cos(\[Alpha]).",Bold,15]]},
 {Text[""],Panel[Magnify[risoluzioneEsercizioGuidatoPasso3,2]]},
-{Text[Style["Passo 4: cerchiamo tan(\[Alpha]).",Bold,15]]},
+{Text[Style["Passo 4: Cerchiamo tan(\[Alpha]).",Bold,15]]},
 {Text[""],Panel[Magnify[risoluzioneEsercizioGuidatoPasso4,2]]},
-{Text[Style["Passo 5: cerchiamo \[Alpha].",Bold,15]]},
+{Text[Style["Passo 5: Cerchiamo \[Alpha].",Bold,15]]},
 {Text[""],Panel[Magnify[risoluzioneEsercizioGuidatoPasso5,2]]}
-},Alignment-> {Left,Center},Spacings -> {10,10}] 
+},Alignment-> {Left,Center},Spacings -> {1,1}] 
 
 ]
 
@@ -1265,7 +1269,7 @@ Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizio2],1.4]},
 
 {Text[Style["Qual \[EGrave] il cateto opposto?",Bold,20]],Magnify[RadioButtonBar[Dynamic[catOp],{"A","B","C"}],2],Magnify[Dynamic[CheckAnswer[catOp,"B"]],3]},
 
-{Magnify[Row[{Text[Style["tan\[Beta] = "]],Row[{InputField[Dynamic[catOp2],String,FieldSize->1],Dynamic[CheckAnswer[catOp2,"B"]]}]/Row[{InputField[Dynamic[catAd2],String,FieldSize->1],Dynamic[CheckAnswer[catAd2,"A"]]}],Text[Style["\[LongRightArrow] Atan(\[Beta]) = B \[LongRightArrow] A = \!\(\*FractionBox[\(\(\\\ \)\(B\)\), \(tan \((\[Beta])\)\)]\)"]]}],2]},
+{Magnify[Row[{Text[Style["tan\[Beta] = "]],Row[{InputField[Dynamic[catOp2],String,FieldSize->1],Dynamic[CheckAnswer[catOp2,"B"]]}]/Row[{InputField[Dynamic[catAd2],String,FieldSize->1],Dynamic[CheckAnswer[catAd2,"A"]]}],Text[Style["\[LongRightArrow] A tan(\[Beta]) = B \[LongRightArrow] A = \!\(\*FractionBox[\(\(\\\ \)\(B\)\), \(tan \((\[Beta])\)\)]\)"]]}],2]},
 
 {Text[Style["Quanto vale A??",Bold,20]],Magnify[RadioButtonBar[Dynamic[A],{"50","18","2"}],2],Magnify[Dynamic[CheckAnswer[A,"50"]],3]}
 },Alignment-> {Left,Center},Spacings -> {10,5}] 
@@ -1668,7 +1672,7 @@ CreateDialog[{Magnify[InputField[Dynamic[espressione],String,Alignment->Right,Fi
 ]
 
 (*Teorema di pitagora*)
-TPitagora[]:=
+TPitagora[]:=Button["Teorema di Pitagora",
 Module[{},
 
 CreateDialog[{Style["Teorema di Pitagora",FontSize->14,Bold],
@@ -1691,6 +1695,8 @@ Text[Style["\!\(\*SuperscriptBox[\(C\), \(2\)]\)",Bold,20],{1.3,1.3}]
 }]
 
 }]
+]
+
 ]
 
 (*Esercizio 10*)
