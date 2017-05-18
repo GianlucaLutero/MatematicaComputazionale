@@ -1382,12 +1382,15 @@ datiEsercizio8 = StringJoin[Style["A = 24 \nC = 12\!\(\*SqrtBox[\(3\)]\)\nB = 12
 
 Grid[{{Text[Style["Esercizio 8:",20,FontColor-> Red]]},
 {Magnify[Graphics[{
+
+
+(* ARCO SU (1,0) *)
+{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{1, 0}, 0.15, angolo[{-0.2, 0}, {-0.5, 1}, {1, 0}]+Pi]},
+{Darker[Green,0.2],Circle[{1, 0}, 0.15, angolo[{-0.2, 0}, {-0.5, 1}, {1, 0}]+Pi]},
+
    (* triangle *)
-  Line[{{-0.2, 0}, {-0.5,1}, {1, 0}, {-0.2, 0}}],
+{Opacity[0],EdgeForm[Directive[Black]], Triangle[{{-0.2, 0}, {-0.5, 1}, {1, 0}, {-0.2, 0}}]},
 
-  (* angle symbol *)
-
- Circle[{1,0},0.1,{142 Degree,180Degree}],
   (* labels *)
   Rotate[
    Text[Style["C", 10],
@@ -1396,7 +1399,7 @@ Grid[{{Text[Style["Esercizio 8:",20,FontColor-> Red]]},
    {0.3, -0.1}],
   Text[Style["B", 10],
    {0.2, 0.6}, {-0.4, 0}],
-Text[Style["\[Gamma]",10],{0.8,0.05}]
+Text[Style["\[Gamma]",10,Darker[Green,0.3]],{0.8,0.08}]
   }],2]
 ,Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizio8],1.4],Text[""]},
 {Text[Style["Procedimento:",17,FontColor -> Red]]},
@@ -1418,13 +1421,22 @@ datiEsercizio5 = StringJoin[Style["A = 6 \n\[Alpha] = \!\(\*SuperscriptBox[\(30\
 
 Grid[{{Text[Style["Esercizio 5:",20,FontColor-> Red]]},
 {Magnify[Graphics[{
+
+
+
+
+(* ARCO SU (0,0) *)
+{Opacity[0.2],Darker[Green,0.3],Disk[{0, 0}, 0.12, {angolo[{0.7, 0}, {-1,1}, {0, 0}][[2]]+Pi, 0} ]},
+{Darker[Green,0.2],Circle[{0, 0} ,0.12, {angolo[{0.7, 0}, {-1,1}, {0, 0}][[2]]+Pi, 0}]},
+
+(* ARCO SU (-1,1) *)
+{Opacity[0.2],Darker[Green,0.3],Disk[{-1,1}, 0.2, angolo[{0, 0}, {0.7, 0}, {-1,1}]]},
+{Darker[Green,0.2],Circle[{-1,1}, 0.2, angolo[{0, 0}, {0.7, 0}, {-1,1}]]},
+
+
    (* triangle *)
-  Line[{{0, 0}, {-1,1}, {0.7, 0}, {0, 0}}],
-
-  (* angle symbol *)
-
-  Circle[{-1,1},0.2,{310 Degree,340 Degree}],
-Circle[{0,0},0.09,{0 Degree,135 Degree}],
+ {Opacity[0],EdgeForm[Directive[Black]], Triangle[{{0, 0}, {-1,1}, {0.7, 0}}]},
+ 
   (* labels *)
   Rotate[
    Text[Style["C", 10],
@@ -1433,8 +1445,8 @@ Circle[{0,0},0.09,{0 Degree,135 Degree}],
    {0.3, -0.1}],
   Text[Style["B", 10],
    {0.1, 0.6}, {-0.5, 0}],
- Text[Style["\[Alpha]",10],{-0.8,1.0}],
-Text[Style["\[Beta]",10],{0.1,0.1}]
+ Text[Style["\[Alpha]",10,Darker[Green,0.2]],{-0.8,1.0}],
+Text[Style["\[Beta]",10,Darker[Green,0.2]],{0.1,0.15}]
   }],2]
 ,Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizio5],1.4],Text[""]},
 {Text[Style["Procedimento:",17,FontColor -> Red]]},
