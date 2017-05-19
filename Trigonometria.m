@@ -64,7 +64,7 @@ pc2 = {Cos[3Pi/2], Sin[3Pi/2]}
 (* GENERA BOTTONE *)
 (* Funzione che genera il bottone che richiama la fiunzione grafiseno[] *)
 bottonesen[]:=
-Button["Funzione Seno",MessageDialog[  grafiseno[] ,WindowSize->All,Editable->False]]
+Button["Funzione Seno",MessageDialog[  graficoseno[] ,WindowSize->All,Editable->False]]
 
 
 bottonecos[]:=
