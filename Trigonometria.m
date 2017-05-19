@@ -1106,21 +1106,37 @@ risoluzioneEsempio =Panel[" Sin(\[Alpha]) = \!\(\*FractionBox[\(A\), \(C\)]\) = 
 
 Grid[{{Text[Style["Esempio 1:",20,FontColor-> Red]]}, 
 {Magnify[Graphics[{
-   (* triangle *)
+   (* triangle 
    Line[{{0, 0}, {0,1}, {2, 0}, {0, 0}}],
-  (* right angle symbol *)
+   right angle symbol 
    Line[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}}],
-  (* angle symbol *)
+   angle symbol 
   Circle[{2, 0}, 0.2, {145.5 Degree, 182.5 Degree}],
-  Circle[{0,1},0.2,{260 Degree,340 Degree}],
+  Circle[{0,1},0.2,{260 Degree,340 Degree}],*)
+  
+   (* ANGOLO RETTANGOLO *)
+ {Opacity[0.2],Darker[Green,0.3],Polygon[{{0, 0.1}, {0.1, 0.1}, {0.1, 0},{0, 0}}]},
+ {Darker[Green,0.3],Line[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}}]},
+  
+  (* ANGOLO IN (2,0) *)
+  {Opacity[0.2], Darker[Green,0.3], Disk[{2, 0}, 0.2, angolo[{0, 0}, {0, 1}, {2, 0}]+Pi]},
+  {Darker[Green,0.2], Circle[{2, 0}, 0.2, angolo[{0, 0}, {0,1}, {2, 0}]+Pi]},
+
+  (* ANGOLO IN (0,1) *)
+  {Opacity[0.2], Darker[Green,0.3], Disk[{0, 1}, 0.2, {angolo[{2, 0}, {0, 0}, {0, 1}][[1]]+2Pi,3Pi/2}]},
+  {Darker[Green,0.2], Circle[{0, 1}, 0.2, {angolo[{2, 0}, {0, 0}, {0, 1}][[1]]+2Pi,3Pi/2}]},
+  
+  (* triangle *)
+  {Opacity[0],EdgeForm[Directive[Black]],Triangle[{{0, 0}, {0,1}, {2, 0}}]},
+  
   (* labels *)
   Rotate[
     Text[Style["A", 15],{-0.1, 0.5}], 0 Degree],
     Text[Style["B", 15],{0.7, -0.1}],
     Text[Style["C", 15],{1, 0.6}, {-1, 0}],
-    Text[Style["\[Theta]", 10], {1.7, 0.08}],
-    Text[Style["\[Alpha]",10],{0.085,0.75}],
-    Text[Style["90\[Degree]",10],{0.2,0.2}]
+    Text[Style["\[Theta]", 10,Darker[Green,0.3]], {1.7, 0.08}],
+    Text[Style["\[Alpha]",10,Darker[Green,0.3]],{0.085,0.75}],
+    Text[Style["90\[Degree]",10,Darker[Green,0.3]],{0.2,0.2}]
   }],2],
 Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsempio],1.4],Text[""]},
 {Text[Style["Procedimento:",17,FontColor -> Red]]},{Text[" "],Magnify[risoluzioneEsempio,2]}}
