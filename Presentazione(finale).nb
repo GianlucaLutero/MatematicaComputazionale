@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   2923360,      50602]
-NotebookOptionsPosition[   2900924,      50036]
-NotebookOutlinePosition[   2905723,      50165]
-CellTagsIndexPosition[   2905641,      50160]
+NotebookDataLength[   2927826,      50710]
+NotebookOptionsPosition[   2905386,      50144]
+NotebookOutlinePosition[   2910184,      50273]
+CellTagsIndexPosition[   2910102,      50268]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -33,7 +33,8 @@ ID4CxMfRMTZ9L168YL5w4YIaUD4AiC8C8Qcg/gvE/9AxFreC7PQD4gtA/BGq
 5F9s+h88eMBBjt0w/devXxcGso+S4m9k/ZcuXRKHpgeS3A7TD0wrkpToPw9J
 ywOmn1L3Uxp+lMYfpemH0vRLjfwDjQey8y9a+fGOWDPwlF+gsPhEKDywlZ8g
 d0D9EniexPITGd++fZv3PBnlN6764zxa3QHCAIDESDs=
-         "], {{0, 26}, {16, 0}}, {0, 255},
+         "], {{0, 26}, {16, 
+         0}}, {0, 255},
          ColorFunction->RGBColor],
         BaseStyle->"ImageGraphics",
         ImageSize->Magnification[1],
@@ -64,7 +65,8 @@ eu5WMrilsBwehJXwMKyGx2EtPElPU/19La9ZzXtWcozlHHMxa9zKmnM5h9mc
 Ic+VbLvs7ZkOau7owEAYTDtfY7BhoKGTOgAAAAAAANDr+hu2t9jWonmuvzFG
 nbsNhd1hOOwJI2Fv2B9Gw4FwMBwKR8JYOJrGW9THx/LaQ3nvgRxrf449krWG
 s/ZQtZH3NdfY7rrqtdW6/fvw/9LMnpuZ9Jty646y6n8AhCP7tg==
-         "], {{0, 26}, {2000, 0}}, {0, 255},
+         "], {{0, 26}, {
+         2000, 0}}, {0, 255},
          ColorFunction->RGBColor],
         BaseStyle->"ImageGraphics",
         ImageSize->Magnification[1],
@@ -100,6 +102,7 @@ Pu7kfNfO+x+/T/70++ob7NUEtQ==
      RowBox[{
      "Background", " ", "images", " ", "and", " ", "text", " ", "colors", " ",
        "have", " ", "been", " ", "adjusted", " ", "for", " ", "editing", " ", 
+      
       RowBox[{"purposes", "."}]}],
      LineBreakWithin->False,
      FontFamily->"Helvetica",
@@ -43331,9 +43334,10 @@ KXTDcA==
   DefaultBaseStyle->"ImageGraphics",
   ImageSizeRaw->{1280, 960},
   PlotRange->{{0, 1280}, {0, 960}}]], "Output",
- CellChangeTimes->{
-  3.704181605884975*^9},ExpressionUUID->"e77d7be1-0ea4-4099-bb64-\
-3a8a7526f4b6"]
+ CellChangeTimes->{3.704181605884975*^9, 3.704182870271806*^9, 
+  3.7041904189942093`*^9, 
+  3.704190526817532*^9},ExpressionUUID->"e270da07-3d6a-4e31-9f2e-\
+dd2c22bbbafa"]
 }, Open  ]],
 
 Cell[TextData[StyleBox["Calcolo Numerico e Software Didattico-Matematica \
@@ -43438,14 +43442,23 @@ Cell[TextData[StyleBox["Prerequisiti",
 
 Cell["\<\
 - Nozioni algebriche che si acquisiscono durante il primo biennio della \
-Scuola Secondaria di Secondo Grado.
+Scuola Secondaria di Secondo Grado:
+\t- Operazioni con i polinomi;
+\t- Operazioni con le frazioni;
+\t- Prodotti notevoli;
+\t- Raccoglimento a fattor comune.
 
 - Il Teorema di Pitagora 
 
-- Propriet\[AGrave] dei triangoli
+- Propriet\[AGrave] dei triangoli:
+\t- Criteri di congruenza ;
+\t-Criteri di similitudine.
+\t
 
--Goniometria (per il triennio): funzioni goniometrica, funzioni inverse, \
-angoli associati.
+-Goniometria (per il triennio): 
+\t- Funzioni goniometriche (seno,coseno,tangente);
+\t- Funzioni inverse ( arcoseno,arcocoseno, arcotangente);
+\t- Angoli associati.
 
   
 \
@@ -43454,7 +43467,7 @@ angoli associati.
   3.702188561809354*^9, 3.7021887207319193`*^9}, {3.702189008946814*^9, 
   3.702189057732115*^9}, {3.702958793514718*^9, 3.702958859146895*^9}, {
   3.704169966799079*^9, 3.704169967633738*^9}, {3.7041753880885973`*^9, 
-  3.704175421302066*^9}},
+  3.704175421302066*^9}, {3.704190139002318*^9, 3.704190343210218*^9}},
  FontFamily->"OpenDyslexic",
  FontWeight->"Regular",ExpressionUUID->"65271cce-8aa2-4634-9541-8ab133eb2f2d"]
 }, Open  ]]
@@ -43621,19 +43634,19 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{Trigonometria`ptctrl$$ = 1.0863183977578734`, 
+   DynamicModuleBox[{Trigonometria`ptctrl$$ = Rational[1, 6] Pi, 
     Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[Trigonometria`ptctrl$$], Rational[1, 6] Pi, "Angle"}, 0, 2 Pi}}, 
     Typeset`size$$ = {478., {198.88671875, 207.11328125}}, Typeset`update$$ = 
     0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
-    Trigonometria`ptctrl$5843$$ = 0}, 
+    Trigonometria`ptctrl$4612$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {Trigonometria`ptctrl$$ = Rational[1, 6] Pi}, 
       "ControllerVariables" :> {
-        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$5843$$, 0]}, 
+        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$4612$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -43683,6 +43696,7 @@ Cell[BoxData[
                Darker[Green, 0.3]], {0.2, 0.1}], 
              Text[
               Style["Cos(\[Theta])", Blue], {Cos[Trigonometria`th]/2, -0.1}], 
+             
              Rotate[
               Text[
                Style["Sin(\[Theta])", Red], {-0.1, Sin[Trigonometria`th]/2}], 
@@ -43753,11 +43767,13 @@ Cell[BoxData[
    3.703862623630522*^9, 3.7038626484758387`*^9}, {3.703862701216816*^9, 
    3.703862730161173*^9}, {3.7039408961937213`*^9, 3.703940904892466*^9}, {
    3.703941771404128*^9, 3.7039417811581984`*^9}, 3.703946794330942*^9, 
-   3.704003074354559*^9, 3.70416829720728*^9},
+   3.704003074354559*^9, 3.70416829720728*^9, 3.704182870350656*^9, {
+   3.704190419338297*^9, 3.704190447939559*^9}, {3.704190527111924*^9, 
+   3.704190529720487*^9}},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"c00af8c2-7e52-44c6-b2a2-eea27fb18631"]
+ FontWeight->"Regular",ExpressionUUID->"226da5ee-065d-49ab-bc7c-a862c784eb15"]
 }, Open  ]],
 
 Cell[TextData[StyleBox["",
@@ -43793,13 +43809,14 @@ Cell[BoxData[
   3.7038663013408756`*^9, 3.703866338606423*^9, {3.7039408967412786`*^9, 
    3.703940908900725*^9}, {3.7039417718211765`*^9, 3.703941783828933*^9}, 
    3.703946794573558*^9, 3.7040030745419827`*^9, 3.704168299453219*^9, {
-   3.7041691920322533`*^9, 3.7041692049558573`*^9}, 3.704169766106948*^9},
+   3.7041691920322533`*^9, 3.7041692049558573`*^9}, 3.704169766106948*^9, 
+   3.704182870493985*^9, 3.7041904194051456`*^9, 3.70419052716072*^9},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
  FontWeight->"Regular",
  Background->RGBColor[
-  1, 0.85, 0.85],ExpressionUUID->"b06a74be-7656-49e9-9e91-0f8fb2731358"]
+  1, 0.85, 0.85],ExpressionUUID->"9ea5dc64-c69a-4670-9237-fba9520fbbe5"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -43823,13 +43840,14 @@ Cell[BoxData[
   3.7038663832968783`*^9, {3.703940896794318*^9, 3.703940926428261*^9}, {
    3.7039417718476787`*^9, 3.7039417868394766`*^9}, 3.703946794652046*^9, 
    3.7040030746039553`*^9, 3.7041683009901037`*^9, 3.7041691940094357`*^9, 
-   3.704169771652755*^9},
+   3.704169771652755*^9, 3.70418287054158*^9, 3.704190419472086*^9, 
+   3.7041905272055798`*^9},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
  FontWeight->"Regular",
  Background->RGBColor[
-  1, 0.85, 0.85],ExpressionUUID->"4e6b3289-741e-46b4-9275-2181c30eb27e"]
+  1, 0.85, 0.85],ExpressionUUID->"9cd6b6b5-06b2-483e-838f-390ea8876db8"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -43951,12 +43969,12 @@ Cell[BoxData[
        Hold[Trigonometria`ptctrl$$], Rational[1, 6] Pi, "angle"}, 0, 2 Pi}}, 
     Typeset`size$$ = {461., {198.88671875, 207.11328125}}, Typeset`update$$ = 
     0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
-    Trigonometria`ptctrl$5919$$ = 0}, 
+    Trigonometria`ptctrl$3794$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {Trigonometria`ptctrl$$ = Rational[1, 6] Pi}, 
       "ControllerVariables" :> {
-        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$5919$$, 0]}, 
+        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$3794$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -44101,13 +44119,15 @@ Cell[BoxData[
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.703862777693576*^9, 3.703940896841196*^9, 
-  3.7039417718626924`*^9, 3.7039419072994184`*^9, 3.703946794719541*^9, 
-  3.704003074653544*^9, 3.704168303013137*^9},
+ CellChangeTimes->{
+  3.703862777693576*^9, 3.703940896841196*^9, 3.7039417718626924`*^9, 
+   3.7039419072994184`*^9, 3.703946794719541*^9, 3.704003074653544*^9, 
+   3.704168303013137*^9, 3.7041828705913553`*^9, {3.704190419538583*^9, 
+   3.7041904385117483`*^9}, 3.704190527254795*^9},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"a769ef2e-5f37-4d4b-8888-cdf89b3c87de"]
+ FontWeight->"Regular",ExpressionUUID->"a4cb78c0-f9f9-4114-a286-fcadffc4f50b"]
 }, Open  ]],
 
 Cell[TextData[{
@@ -44185,41 +44205,41 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[GridBox[{
     {
-     GraphicsBox[{{{
-         {RGBColor[0, 1, 1], Opacity[0.1], EdgeForm[{RGBColor[0, 1, 1], 
-          Thickness[Large]}], 
-          
-          TagBox[PolygonBox[
-            NCache[{{-1, 0}, {2^Rational[-1, 2], 0}, {
-              2^Rational[-1, 2], 2^Rational[-1, 2]}}, {{-1, 0}, {
-              0.7071067811865475, 0}, {0.7071067811865475, 
-              0.7071067811865475}}]],
-           "Triangle"]}}}, {{
-         {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
-          DiskBox[{-1, 0}, 0.2, 
-           NCache[{-ArcTan[2^Rational[-1, 2]/(-1 - 2^Rational[-1, 2])], 0}, {
-            0.39269908169872414`, 0}]]}}}, {{
-         {RGBColor[0., 0.8, 0.], Thickness[Large], 
-          CircleBox[{-1, 0}, 0.2, 
-           NCache[{-ArcTan[2^Rational[-1, 2]/(-1 - 2^Rational[-1, 2])], 0}, {
-            0.39269908169872414`, 0}]]}}}, {{
-         {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
+     GraphicsBox[{{
+        {RGBColor[0, 1, 1], Opacity[0.1], EdgeForm[{RGBColor[0, 1, 1], 
+         Thickness[Large]}], 
+         TagBox[
           PolygonBox[
-           NCache[{{0.6071067811865475, 0}, {0.6071067811865475, 0.1}, {
-             2^Rational[-1, 2], 0.1}, {2^Rational[-1, 2], 0}}, {{
-             0.6071067811865475, 0}, {0.6071067811865475, 0.1}, {
-             0.7071067811865475, 0.1}, {0.7071067811865475, 0}}]]}}}, {{
-         {RGBColor[0., 0.7, 0.], 
-          LineBox[NCache[{{0.6071067811865475, 0}, {0.6071067811865475, 
-             0.1}, {2^Rational[-1, 2], 0.1}}, {{0.6071067811865475, 0}, {
-             0.6071067811865475, 0.1}, {0.7071067811865475, 0.1}}]]}}}, {{
-         {GrayLevel[0], 
-          DiskBox[NCache[{2^Rational[-1, 2], 0}, {0.7071067811865475, 0}], 
-           0.02]}}}, {{
-         {GrayLevel[0], 
-          DiskBox[NCache[{2^Rational[-1, 2], 2^Rational[-1, 2]}, {
-            0.7071067811865475, 0.7071067811865475}], 0.02]}}}, {{
-         {GrayLevel[0], DiskBox[{-1, 0}, 0.02]}}}, 
+           NCache[{{-1, 0}, {2^Rational[-1, 2], 0}, {
+             2^Rational[-1, 2], 2^Rational[-1, 2]}}, {{-1, 0}, {
+             0.7071067811865475, 0}, {0.7071067811865475, 
+             0.7071067811865475}}]],
+          "Triangle"]}}, {
+        {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
+         DiskBox[{-1, 0}, 0.2, 
+          NCache[{-ArcTan[2^Rational[-1, 2]/(-1 - 2^Rational[-1, 2])], 0}, {
+           0.39269908169872414`, 0}]]}}, {
+        {RGBColor[0., 0.8, 0.], Thickness[Large], 
+         CircleBox[{-1, 0}, 0.2, 
+          NCache[{-ArcTan[2^Rational[-1, 2]/(-1 - 2^Rational[-1, 2])], 0}, {
+           0.39269908169872414`, 0}]]}}, {
+        {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
+         PolygonBox[
+          NCache[{{0.6071067811865475, 0}, {0.6071067811865475, 0.1}, {
+            2^Rational[-1, 2], 0.1}, {2^Rational[-1, 2], 0}}, {{
+            0.6071067811865475, 0}, {0.6071067811865475, 0.1}, {
+            0.7071067811865475, 0.1}, {0.7071067811865475, 0}}]]}}, {
+        {RGBColor[0., 0.7, 0.], 
+         LineBox[NCache[{{0.6071067811865475, 0}, {0.6071067811865475, 0.1}, {
+            2^Rational[-1, 2], 0.1}}, {{0.6071067811865475, 0}, {
+            0.6071067811865475, 0.1}, {0.7071067811865475, 0.1}}]]}}, {
+        {GrayLevel[0], 
+         DiskBox[NCache[{2^Rational[-1, 2], 0}, {0.7071067811865475, 0}], 
+          0.02]}}, {
+        {GrayLevel[0], 
+         DiskBox[NCache[{2^Rational[-1, 2], 2^Rational[-1, 2]}, {
+           0.7071067811865475, 0.7071067811865475}], 0.02]}}, {
+        {GrayLevel[0], DiskBox[{-1, 0}, 0.02]}}, 
        InsetBox["\<\"A\"\>", 
         NCache[{2^Rational[-1, 2], 0.8071067811865474}, {0.7071067811865475, 
          0.8071067811865474}]], InsetBox["\<\"C\"\>", {-1.1, 0}], 
@@ -44246,11 +44266,12 @@ Cell[BoxData[
   "Grid"]], "Output",
  CellChangeTimes->{3.703862823428588*^9, 3.703940896894593*^9, 
   3.7039417718939495`*^9, 3.70394298377773*^9, 3.703946794869362*^9, 
-  3.704003074786738*^9, 3.704168272757625*^9, 3.704168305564983*^9},
+  3.704003074786738*^9, 3.704168272757625*^9, 3.704168305564983*^9, 
+  3.704182870726534*^9, 3.70419041960432*^9, 3.704190527377727*^9},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"09deb9a0-6a73-4845-86f4-23f3ae1d7734"]
+ FontWeight->"Regular",ExpressionUUID->"b26d484c-2f8a-44dd-9b5c-5d9f9819d46f"]
 }, Open  ]],
 
 Cell[TextData[{
@@ -44456,14 +44477,15 @@ Cell[BoxData[
 
 Cell[BoxData[
  TemplateBox[{FrontEndObject[
-    LinkObject["gtrjt_shm", 3, 1]],103,
-   "FrontEndObject[LinkObject[\"gtrjt_shm\", 3, 1]]","103","103"},
+    LinkObject["pt6kg_shm", 3, 1]],24,
+   "FrontEndObject[LinkObject[\"pt6kg_shm\", 3, 1]]","24","24"},
   "NotebookObjectUnsaved"]], "Output",
  CellChangeTimes->{3.7039429525834045`*^9, 3.703946795693454*^9, 
-  3.70394839860182*^9, 3.704003075054468*^9, 3.7041820034746237`*^9},
+  3.70394839860182*^9, 3.704003075054468*^9, 3.7041820034746237`*^9, 
+  3.704182871047069*^9, 3.704190419670208*^9, 3.704190527646962*^9},
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"dc1b6bec-8041-49d7-a981-132fd7492c90"]
+ FontWeight->"Regular",ExpressionUUID->"a86eba76-58e0-4913-a5ad-5c7b3feb4b8b"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -44486,7 +44508,7 @@ Cell[BoxData[
          StripOnInput->False,
          FontSize->20,
          FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText",
-       ExpressionUUID->"8277f1ba-236f-4f28-a0f9-b77fa58c7cb0"],
+       ExpressionUUID->"916fd49f-0a64-4eb4-b548-efb9054d9cee"],
       Text[
        Style["Esempio 1:", 20, FontColor -> RGBColor[1, 0, 0]]]], "", ""},
     {
@@ -44499,7 +44521,8 @@ Cell[BoxData[
           5.934119456780721}]], GeometricTransformationBox[InsetBox[
           StyleBox["\<\"A\"\>",
            StripOnInput->False,
-           FontSize->15], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], InsetBox[
+           FontSize->15], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], 
+        InsetBox[
          StyleBox["\<\"B\"\>",
           StripOnInput->False,
           FontSize->15], {0.7, -0.1}], InsetBox[
@@ -44526,7 +44549,7 @@ Rule[FontFamily, \\\"sans sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\"\>",
       Magnification->1.4 Inherited], 
      InterpretationBox[Cell[BoxData[
        FormBox["\<\"\"\>", TextForm]], "InlineText",ExpressionUUID->
-       "d70cdf8d-ecae-495f-9868-6e0ece1784aa"],
+       "ba5d6915-8858-45ac-a970-f6d7d85b0ef7"],
       Text[""]]},
     {
      InterpretationBox[Cell[BoxData[
@@ -44535,17 +44558,17 @@ Rule[FontFamily, \\\"sans sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\"\>",
          StripOnInput->False,
          FontSize->17,
          FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText",
-       ExpressionUUID->"9a090a9d-13e6-40c0-a0cc-ad632a909e26"],
+       ExpressionUUID->"91e1f80c-223c-40ae-b844-e4ceb73c1143"],
       Text[
        Style["Procedimento:", 17, FontColor -> RGBColor[1, 0, 0]]]], "", ""},
     {
      InterpretationBox[Cell[BoxData[
        FormBox["\<\" \"\>", TextForm]], "InlineText",ExpressionUUID->
-       "e44aac7e-9456-4b5a-a031-b1ac961561bf"],
+       "4587f6cc-1841-4c63-8307-6d720510cc49"],
       Text[" "]], 
      StyleBox[
       PanelBox["\<\" Sin(\[Alpha]) = \\!\\(\\*FractionBox[\\(A\\), \
-\\(B\\)]\\) = \\!\\(\\*FractionBox[\\(\\(\\\\ \\\\ \\)\\(25\\)\\(\\\\ \\)\\), \
+\\(C\\)]\\) = \\!\\(\\*FractionBox[\\(\\(\\\\ \\\\ \\)\\(25\\)\\(\\\\ \\)\\), \
 \\(\\(\\\\ \\)\\(50\\)\\)]\\) = \\!\\(\\*FractionBox[\\(\\(\\\\ \\)\\(1\\)\\(\
 \\\\ \\)\\), \\(2\\)]\\)\"\>"],
       StripOnInput->False,
@@ -44555,13 +44578,11 @@ Rule[FontFamily, \\\"sans sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\"\>",
    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Center}}},
    GridBoxDividers->{"RowsIndexed" -> {3 -> RGBColor[1, 0, 0]}},
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
-   GridBoxSpacings->{"Columns" -> {{10}}, "Rows" -> {{10}}}],
+   GridBoxSpacings->{"Columns" -> {{5}}, "Rows" -> {{5}}}],
   "Grid"]], "Output",
- CellChangeTimes->{3.703942028681099*^9, 3.703946795807166*^9, 
-  3.703948209204191*^9, 3.70400307514933*^9, 3.70416830974657*^9},
- FontFamily->"OpenDyslexic",
- FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"73b0db34-11f6-4df4-ad9b-2904297d6b1e"]
+ CellChangeTimes->{3.7041828825378847`*^9, 3.704190419737241*^9, 
+  3.704190527690646*^9},ExpressionUUID->"85d94e88-50c8-4c42-bec5-\
+11f48f772728"]
 }, Open  ]]
 }, Open  ]],
 
@@ -44597,19 +44618,19 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{Trigonometria`ptctrl$$ = 0.7791149780902686, 
+   DynamicModuleBox[{Trigonometria`ptctrl$$ = Rational[1, 6] Pi, 
     Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[Trigonometria`ptctrl$$], Rational[1, 6] Pi, "angle"}, 0, 2 Pi}}, 
     Typeset`size$$ = {477., {198.88671875, 207.11328125}}, Typeset`update$$ = 
     0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
-    Trigonometria`ptctrl$5979$$ = 0}, 
+    Trigonometria`ptctrl$3862$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {Trigonometria`ptctrl$$ = Rational[1, 6] Pi}, 
       "ControllerVariables" :> {
-        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$5979$$, 0]}, 
+        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$3862$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -44683,6 +44704,7 @@ Cell[BoxData[
                  If[Trigonometria`th <= (3 Pi)/2, {{
                     Opacity[0.2], 
                     Darker[Green, 0.3], Thick, 
+                    
                     Polygon[{{Cos[Trigonometria`th] + 0.1, 0}, {
                     Cos[Trigonometria`th] + 0.1, -0.1}, {
                     Cos[Trigonometria`th], -0.1}, {
@@ -44789,11 +44811,12 @@ Cell[BoxData[
  CellChangeTimes->{
   3.703862860503118*^9, 3.703940896925843*^9, 3.703941771940825*^9, 
    3.703942052907565*^9, 3.7039467958689327`*^9, {3.704003075201689*^9, 
-   3.704003077693231*^9}, 3.704168316114337*^9},
+   3.704003077693231*^9}, 3.704168316114337*^9, 3.70418287119738*^9, 
+   3.704190419805656*^9, 3.704190527742277*^9},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"4c29fb24-a92b-4fba-9412-d31fd7d44c55"]
+ FontWeight->"Regular",ExpressionUUID->"b13a2514-6065-4727-ba4c-f87adcd04c7b"]
 }, Open  ]],
 
 Cell[TextData[{
@@ -44962,13 +44985,14 @@ Cell[BoxData[
   Method->"Preemptive"]], "Output",
  CellChangeTimes->{{3.703866896716856*^9, 3.703866911801592*^9}, 
    3.7039408970104885`*^9, 3.7039417720788507`*^9, 3.7039420601349435`*^9, 
-   3.703946796153141*^9, 3.704003075387569*^9},
+   3.703946796153141*^9, 3.704003075387569*^9, 3.7041828714089622`*^9, 
+   3.704190419871764*^9, 3.704190527890283*^9},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
  FontWeight->"Regular",
  Background->RGBColor[
-  1, 0.85, 0.85],ExpressionUUID->"8cc4d04d-8a0a-4251-8acc-b4807cff9c04"]
+  1, 0.85, 0.85],ExpressionUUID->"1de6aa3f-453b-4dd2-83fb-21cfdec94440"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -44995,13 +45019,14 @@ Cell[TextData[StyleBox["ANGOLI NOTI",
  FontWeight->"Regular",ExpressionUUID->"a2480c7b-8e5d-4e6f-acaf-d308d914fe90"],
 
 Cell[TextData[StyleBox["Osserva i valori di seno, coseno e tangente dei \
-principali angoli.\nIn questa animazione puoi osservare seno,c oseno e \
-tangente, degli angoli che sono multipli di 30\[Degree].",
+principali angoli.\nIn questa animazione puoi osservare seno, coseno e \
+tangente degli angoli che sono multipli di 30\[Degree].",
  FontFamily->"OpenDyslexic",
  FontSize->16,
  FontWeight->"Regular"]], "Text",
- CellChangeTimes->{{3.7041764398457823`*^9, 
-  3.7041765217199183`*^9}},ExpressionUUID->"31dcc374-c919-4869-91e7-\
+ CellChangeTimes->{{3.7041764398457823`*^9, 3.7041765217199183`*^9}, {
+  3.704190567911936*^9, 
+  3.704190574420127*^9}},ExpressionUUID->"31dcc374-c919-4869-91e7-\
 bbffcd4ad6a5"],
 
 Cell[CellGroupData[{
@@ -45016,19 +45041,19 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{Trigonometria`ptctrl$$ = 0, Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{{
+   DynamicModuleBox[{Trigonometria`ptctrl$$ = Rational[1, 6] Pi, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[Trigonometria`ptctrl$$], Rational[1, 6] Pi, ""}, 0, 2 Pi, 
-      Rational[1, 6] Pi}}, Typeset`size$$ = {545., {219., 239.}}, 
+      Rational[1, 6] Pi}}, Typeset`size$$ = {560., {219., 248.}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
-    Trigonometria`ptctrl$6105$$ = 0}, 
+    Trigonometria`ptctrl$3908$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {Trigonometria`ptctrl$$ = Rational[1, 6] Pi}, 
       "ControllerVariables" :> {
-        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$6105$$, 0]}, 
+        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$3908$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -45078,6 +45103,7 @@ Cell[BoxData[
                Darker[Green, 0.3]], {0.2, 0.1}], 
              Text[
               Style["Cos(\[Theta])", Blue], {Cos[Trigonometria`th]/2, -0.1}], 
+             
              Rotate[
               Text[
                Style["Sin(\[Theta])", Red], {-0.1, Sin[Trigonometria`th]/2}], 
@@ -45156,7 +45182,7 @@ Cell[BoxData[
       "Options" :> {
        TrackedSymbols :> {Trigonometria`showvalue, Trigonometria`ptctrl$$}}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{590., {275., 284.}},
+     ImageSizeCache->{605., {280., 289.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -45169,20 +45195,22 @@ Cell[BoxData[
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{3.70386295918711*^9, 3.7039408970417404`*^9, 
   3.7039417721257286`*^9, 3.7039421042354956`*^9, 3.703946796217732*^9, 
-  3.7040030754545813`*^9, 3.7041683206030483`*^9},
+  3.7040030754545813`*^9, 3.7041683206030483`*^9, 3.704182871475142*^9, 
+  3.704190419938036*^9, 3.704190527938703*^9},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"a74b178a-c9fb-4002-91b0-5b9ac1b3090c"]
+ FontWeight->"Regular",ExpressionUUID->"5cbef8b8-b9d5-4997-aff5-5f361c5eb5a7"]
 }, Open  ]],
 
-Cell[TextData[StyleBox["In questa  animazione osserva seno, coseno e tangente \
-degli angoli multipli di 45\[Degree].",
+Cell[TextData[StyleBox["In questa  animazione puoi osservare seno, coseno e \
+tangente degli angoli multipli di 45\[Degree].",
  FontFamily->"OpenDyslexic",
  FontSize->16,
  FontWeight->"Regular"]], "Text",
- CellChangeTimes->{{3.7041765283983297`*^9, 
-  3.704176558856835*^9}},ExpressionUUID->"60be76d6-ed4a-4a8e-8801-\
+ CellChangeTimes->{{3.7041765283983297`*^9, 3.704176558856835*^9}, {
+  3.7041905815591173`*^9, 
+  3.704190584628248*^9}},ExpressionUUID->"60be76d6-ed4a-4a8e-8801-\
 eec71ebe2ff6"],
 
 Cell[CellGroupData[{
@@ -45197,19 +45225,19 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{Trigonometria`ptctrl$$ = Rational[3, 4] Pi, 
+   DynamicModuleBox[{Trigonometria`ptctrl$$ = Rational[1, 4] Pi, 
     Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[Trigonometria`ptctrl$$], Rational[1, 4] Pi, ""}, 0, 2 Pi, 
-      Rational[1, 4] Pi}}, Typeset`size$$ = {570., {219., 251.}}, 
+      Rational[1, 4] Pi}}, Typeset`size$$ = {560., {219., 247.}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
-    Trigonometria`ptctrl$6199$$ = 0}, 
+    Trigonometria`ptctrl$3965$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {Trigonometria`ptctrl$$ = Rational[1, 4] Pi}, 
       "ControllerVariables" :> {
-        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$6199$$, 0]}, 
+        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$3965$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -45259,6 +45287,7 @@ Cell[BoxData[
                Darker[Green, 0.3]], {0.2, 0.1}], 
              Text[
               Style["Cos(\[Theta])", Blue], {Cos[Trigonometria`th]/2, -0.1}], 
+             
              Rotate[
               Text[
                Style["Sin(\[Theta])", Red], {-0.1, Sin[Trigonometria`th]/2}], 
@@ -45336,7 +45365,7 @@ Cell[BoxData[
          0, 2 Pi, Rational[1, 4] Pi}}, 
       "Options" :> {TrackedSymbols :> {Trigonometria`ptctrl$$}}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{615., {281., 290.}},
+     ImageSizeCache->{605., {279., 288.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -45349,24 +45378,26 @@ Cell[BoxData[
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{3.703862987445499*^9, 3.703940897110343*^9, 
   3.703941772156979*^9, 3.7039421075433903`*^9, 3.703946796367025*^9, 
-  3.704003075688933*^9, 3.704168323243307*^9},
+  3.704003075688933*^9, 3.704168323243307*^9, 3.7041828716438923`*^9, 
+  3.704190420005744*^9, 3.704190528075053*^9},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"8f187bd7-123a-4600-b3c7-9b202ff49cf7"]
+ FontWeight->"Regular",ExpressionUUID->"496d042f-4f6b-4b2c-a2f5-c8c19b6eb710"]
 }, Open  ]],
 
 Cell[TextData[StyleBox["Osserva che il seno di un angolo \[EGrave] uguale al \
-seno del supplementare: ad esempio il seno di 30\[Degree]\[EGrave] uguale al \
-seno di 150\[Degree]. Questo ti servir\[AGrave] in una slide servir\[AGrave] \
-dopo.",
+seno del suo supplementare: ad esempio il seno di 30\[Degree] \[EGrave] \
+uguale al seno di 150\[Degree]. Questo ti servir\[AGrave] in una slide dopo.",
+ 
  FontFamily->"OpenDyslexic",
  FontSize->16,
  FontWeight->"Regular"]], "Text",
  CellChangeTimes->{{3.704177826486671*^9, 3.704177836227373*^9}, {
   3.70417790432281*^9, 3.704177977262665*^9}, {3.704178010054338*^9, 
-  3.70417802517276*^9}, {3.704180524271583*^9, 
-  3.704180542182276*^9}},ExpressionUUID->"f1685c28-9bf0-4503-b03d-\
+  3.70417802517276*^9}, {3.704180524271583*^9, 3.704180542182276*^9}, {
+  3.704190594263165*^9, 
+  3.704190606279574*^9}},ExpressionUUID->"f1685c28-9bf0-4503-b03d-\
 60cf4829d5f7"]
 }, Open  ]]
 }, Open  ]],
@@ -45394,12 +45425,11 @@ Cell[TextData[StyleBox["Promemoria: FORMULE INVERSE",
 
 Cell[TextData[{
  StyleBox["Come trovo l\[CloseCurlyQuote]angolo \[Theta] a partire dal seno?",
+  
   FontSize->24,
   FontColor->RGBColor[0.5019607843137255, 0., 0.5019607843137255]],
  StyleBox["\n",
   FontSize->24,
-  FontColor->GrayLevel[0]],
- StyleBox["\n",
   FontColor->GrayLevel[0]],
  StyleBox["sen(\[Theta])",
   FontSize->18,
@@ -45446,11 +45476,19 @@ Cell[TextData[{
   FormBox[
    FractionBox["1", "2"], TraditionalForm]],
   FontSize->18,ExpressionUUID->"61d3ad21-4945-4643-befd-45e8a74fac69"],
- "\nL\[CloseCurlyQuote]",
+ "\n",
+ StyleBox["L\[CloseCurlyQuote]",
+  FontSize->18],
  StyleBox["arcoseno",
+  FontSize->18,
   FontColor->RGBColor[1., 0., 1.]],
- " \[EGrave] la formula inversa del seno!",
- StyleBox["\n\n\n",
+ StyleBox[" \[EGrave] la formula inversa del seno!\n\n",
+  FontSize->18],
+ StyleBox["Come trovo l\[CloseCurlyQuote]angolo \[Theta] a partire dal \
+coseno?",
+  FontSize->24,
+  FontColor->RGBColor[0.5019607843137255, 0., 0.5019607843137255]],
+ StyleBox["\n",
   FontSize->18],
  StyleBox["cos(\[Theta])",
   FontSize->18,
@@ -45505,7 +45543,13 @@ Cell[TextData[{
  StyleBox["arcocoseno",
   FontSize->18,
   FontColor->RGBColor[1., 0., 1.]],
- StyleBox[" \[EGrave] la formula inversa del coseno!\n\n\n",
+ StyleBox[" \[EGrave] la formula inversa del coseno!\n\n",
+  FontSize->18],
+ StyleBox["Come trovo l\[CloseCurlyQuote]angolo \[Theta] a partire dalla \
+tangente?",
+  FontSize->24,
+  FontColor->RGBColor[0.5019607843137255, 0., 0.5019607843137255]],
+ StyleBox["\n",
   FontSize->18],
  StyleBox["tan(\[Theta]) = ",
   FontSize->18,
@@ -45565,7 +45609,7 @@ Cell[TextData[{
    3.703573604206109*^9}, {3.703573657966654*^9, 3.703573658944536*^9}, {
    3.7035737252961493`*^9, 3.703573797417841*^9}, {3.7041713010812483`*^9, 
    3.704171305919359*^9}, {3.70417661503507*^9, 3.704176671500309*^9}, 
-   3.704176720256481*^9},
+   3.704176720256481*^9, {3.704190615830072*^9, 3.704190635984571*^9}},
  FontFamily->"OpenDyslexic",
  FontWeight->"Regular",ExpressionUUID->"f3499736-a878-42fe-b2aa-286ec6d48717"]
 }, Open  ]]
@@ -45596,43 +45640,43 @@ Cell[BoxData[
     {
      InterpretationBox[Cell[BoxData[
        FormBox[
-        StyleBox["\<\"Esercizio guidato:\"\>",
+        StyleBox["\<\"Esercizio Guidato:\"\>",
          StripOnInput->False,
          FontSize->20,
          FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText",
-       ExpressionUUID->"ddee262a-3547-4be2-a4f0-25a84b815eeb"],
+       ExpressionUUID->"14d58b82-679c-4c26-bf77-ee68b4a6e8eb"],
       Text[
-       Style["Esercizio guidato:", 20, FontColor -> RGBColor[1, 0, 0]]]], "", 
+       Style["Esercizio Guidato:", 20, FontColor -> RGBColor[1, 0, 0]]]], "", 
      ""},
     {
      StyleBox[
-      GraphicsBox[{{{{{
-            {RGBColor[0., 0.7, 0.], Opacity[0.2], 
-             PolygonBox[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}, {0, 0}}]}}}}}, {{{{
-            {RGBColor[0., 0.7, 0.], 
-             LineBox[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}}]}}}}}, {{{{
-            {RGBColor[0., 0.7, 0.], Opacity[0.2], 
-             DiskBox[{2, 0}, 0.2, 
-              NCache[{Pi, Pi - ArcTan[Rational[1, 2]]}, {3.141592653589793, 
-               2.677945044588987}]]}}}}}, {{{{
-            {RGBColor[0., 0.8, 0.], 
-             CircleBox[{2, 0}, 0.2, 
-              NCache[{Pi, Pi - ArcTan[Rational[1, 2]]}, {3.141592653589793, 
-               2.677945044588987}]]}}}}}, {{{{
-            {RGBColor[0., 0.7, 0.], Opacity[0.2], 
-             DiskBox[{0, 1}, 0.2, 
-              NCache[{2 Pi - ArcTan[Rational[1, 2]], Rational[3, 2] Pi}, {
-               5.81953769817878, 4.71238898038469}]]}}}}}, {{{{
-            {RGBColor[0., 0.8, 0.], 
-             CircleBox[{0, 1}, 0.2, 
-              NCache[{2 Pi - ArcTan[Rational[1, 2]], Rational[3, 2] Pi}, {
-               5.81953769817878, 4.71238898038469}]]}}}}}, {{{{
-            {Opacity[0], EdgeForm[GrayLevel[0]], 
-             TagBox[PolygonBox[{{0, 0}, {0, 1}, {2, 0}}],
-              "Triangle"]}}}}}, GeometricTransformationBox[InsetBox[
+      GraphicsBox[{{
+         {RGBColor[0., 0.7, 0.], Opacity[0.2], 
+          PolygonBox[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}, {0, 0}}]}}, {
+         {RGBColor[0., 0.7, 0.], LineBox[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}}]}}, {
+         {RGBColor[0., 0.7, 0.], Opacity[0.2], 
+          DiskBox[{2, 0}, 0.2, 
+           NCache[{Pi, Pi - ArcTan[Rational[1, 2]]}, {3.141592653589793, 
+            2.677945044588987}]]}}, {
+         {RGBColor[0., 0.8, 0.], 
+          CircleBox[{2, 0}, 0.2, 
+           NCache[{Pi, Pi - ArcTan[Rational[1, 2]]}, {3.141592653589793, 
+            2.677945044588987}]]}}, {
+         {RGBColor[0., 0.7, 0.], Opacity[0.2], 
+          DiskBox[{0, 1}, 0.2, 
+           NCache[{2 Pi - ArcTan[Rational[1, 2]], Rational[3, 2] Pi}, {
+            5.81953769817878, 4.71238898038469}]]}}, {
+         {RGBColor[0., 0.8, 0.], 
+          CircleBox[{0, 1}, 0.2, 
+           NCache[{2 Pi - ArcTan[Rational[1, 2]], Rational[3, 2] Pi}, {
+            5.81953769817878, 4.71238898038469}]]}}, {
+         {Opacity[0], EdgeForm[GrayLevel[0]], 
+          TagBox[PolygonBox[{{0, 0}, {0, 1}, {2, 0}}],
+           "Triangle"]}}, GeometricTransformationBox[InsetBox[
           StyleBox["\<\"A\"\>",
            StripOnInput->False,
-           FontSize->15], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], InsetBox[
+           FontSize->15], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], 
+        InsetBox[
          StyleBox["\<\"B\"\>",
           StripOnInput->False,
           FontSize->15], {0.7, -0.1}], InsetBox[
@@ -45675,7 +45719,7 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
       Magnification->1.4 Inherited], 
      InterpretationBox[Cell[BoxData[
        FormBox["\<\"\"\>", TextForm]], "InlineText",ExpressionUUID->
-       "215614b9-7c8c-40c1-812f-d32d00b86fd1"],
+       "3c2a5adc-59a9-41a0-9f5d-865083f77a8a"],
       Text[""]]},
     {
      InterpretationBox[Cell[BoxData[
@@ -45684,36 +45728,64 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
          StripOnInput->False,
          FontSize->17,
          FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText",
-       ExpressionUUID->"0d9f9b88-ad9a-4733-a80d-4fed97ff3e71"],
+       ExpressionUUID->"21b0bd85-b7c8-4866-bfce-5abb41776c79"],
       Text[
        Style["Procedimento:", 17, FontColor -> RGBColor[1, 0, 0]]]], "", ""},
     {
      InterpretationBox[Cell[BoxData[
        FormBox[
-        StyleBox["\<\"Passo 1: cerchiamo l'ipotenusa C.\\n Applico il Teorema \
+        StyleBox["\<\"Passo 1: Cerchiamo l'ipotenusa C.\\n Applico il Teorema \
 di Pitagora:\"\>",
          StripOnInput->False,
          FontSize->15,
          FontWeight->Bold], TextForm]], "InlineText",ExpressionUUID->
-       "b9160df7-2c73-469f-92d2-fc5cbf14a6c2"],
+       "8cf90e47-3d32-4975-ae5e-f32826e6a5e6"],
       Text[
        Style[
-       "Passo 1: cerchiamo l'ipotenusa C.\n Applico il Teorema di Pitagora:", 
+       "Passo 1: Cerchiamo l'ipotenusa C.\n Applico il Teorema di Pitagora:", 
         Bold, 15]]], "", ""},
     {
      InterpretationBox[Cell[BoxData[
        FormBox["\<\"\"\>", TextForm]], "InlineText",ExpressionUUID->
-       "3fa2f651-c193-4a5e-90da-7c41e4110a53"],
+       "7b542bd0-e1d0-403b-bafa-cbb0d08b09bd"],
       Text[""]], 
      PanelBox[
       StyleBox[
        TemplateBox[{
-        "\"Applico la formula \[LongRightArrow] \
-\\!\\(\\*SuperscriptBox[\\(A\\), \\(2\\)]\\) + \"",DynamicBox[
+        ButtonBox["\"Teorema di Pitagora\"", ButtonFunction :> Module[{}, 
+            CreateDialog[{
+              Style["Teorema di Pitagora", FontSize -> 14, Bold], 
+              Graphics[{
+                Line[{{0, 0}, {0, 1}, {1.5, 0}, {0, 0}}], {
+                 Lighter[Green, 0.5], 
+                 Rectangle[{0, 0}, {1.5, -1.5}]}, {
+                 Darker[Green, 0.5], 
+                 Line[{{0, 0}, {1.5, 0}, {1.5, -1.5}, {0, -1.5}, {0, 0}}]}, 
+                Text[
+                 Style["\!\(\*SuperscriptBox[\(A\), \(2\)]\)", Bold, 20], {
+                 0.8, -0.7}], {
+                 Lighter[Red, 0.5], 
+                 Rectangle[{0, 0}, {-1, 1}]}, {Red, 
+                 Line[{{0, 0}, {-1, 0}, {-1, 1}, {0, 1}, {0, 0}}]}, 
+                Text[
+                 Style[
+                 "\!\(\*SuperscriptBox[\(B\), \(2\)]\)", Bold, 20], {-0.5, 
+                 0.5}], {
+                 Lighter[Blue, 0.5], 
+                 Rotate[
+                  Rectangle[{0, 1}, {1.8, -0.8}], Pi/3 - 0.06, {0, 1}]}, {
+                Blue, 
+                 Line[{{0, 1}, {1.5, 0}, {2.5, 1.5}, {1, 2.5}, {0, 1}}]}, 
+                Text[
+                 Style["\!\(\*SuperscriptBox[\(C\), \(2\)]\)", Bold, 20], {
+                 1.3, 1.3}]}]}]], Appearance -> Automatic, Evaluator -> 
+          Automatic, Method -> "Preemptive"],"\"\\n\"",
+         "\"Applico il teorema \[LongRightArrow] \\!\\(\\*SuperscriptBox[\\(A\
+\\), \\(2\\)]\\) + \"",DynamicBox[
           ToBoxes[
            InputField[
             Dynamic[Trigonometria`catetoNome], String, FieldSize -> 1], 
-           StandardForm], ImageSizeCache -> {27.48046875, {10., 25.}}],
+           StandardForm]],
          "\"\\!\\(\\*SuperscriptBox[\\(\\\\ \\), \\(2\\)]\\) \"",DynamicBox[
           ToBoxes[
            Trigonometria`CheckAnswer[Trigonometria`catetoNome, "B"], 
@@ -45742,7 +45814,7 @@ di Pitagora:\"\>",
           ToBoxes[
            Trigonometria`CheckAnswer[Trigonometria`catetoBNome, "B"], 
            StandardForm]],"\"\\n \\n\"",
-         "\"Approssima il risultato per difetto\\n\\n\"",
+         "\"Approssima il risultato per difetto!\\n\\n\"",
          "\"Calcolo C \[LongRightArrow] C = \"",TagBox[
           SqrtBox[
            TemplateBox[{
@@ -45774,17 +45846,17 @@ di Pitagora:\"\>",
     {
      InterpretationBox[Cell[BoxData[
        FormBox[
-        StyleBox["\<\"Passo 2: cerchiamo sen(\[Alpha]).\"\>",
+        StyleBox["\<\"Passo 2: Cerchiamo sen(\[Alpha]).\"\>",
          StripOnInput->False,
          FontSize->15,
          FontWeight->Bold], TextForm]], "InlineText",ExpressionUUID->
-       "f9eda86a-910e-470c-8e36-d21e136a877c"],
+       "9a418cc9-f777-41a0-8656-d2bb3ae1209a"],
       Text[
-       Style["Passo 2: cerchiamo sen(\[Alpha]).", Bold, 15]]], "", ""},
+       Style["Passo 2: Cerchiamo sen(\[Alpha]).", Bold, 15]]], "", ""},
     {
      InterpretationBox[Cell[BoxData[
        FormBox["\<\"\"\>", TextForm]], "InlineText",ExpressionUUID->
-       "71225f18-f539-4829-96a6-8987a0cc0597"],
+       "a74ad70b-a402-4ede-885a-97f68d64b6d3"],
       Text[""]], 
      PanelBox[
       StyleBox[
@@ -45807,17 +45879,17 @@ di Pitagora:\"\>",
     {
      InterpretationBox[Cell[BoxData[
        FormBox[
-        StyleBox["\<\"Passo 3: cerchiamo cos(\[Alpha]).\"\>",
+        StyleBox["\<\"Passo 3: Cerchiamo cos(\[Alpha]).\"\>",
          StripOnInput->False,
          FontSize->15,
          FontWeight->Bold], TextForm]], "InlineText",ExpressionUUID->
-       "6d76d45e-7b8c-4646-96fd-192316b047f8"],
+       "034a1d80-37f2-4859-885d-8df2bc803626"],
       Text[
-       Style["Passo 3: cerchiamo cos(\[Alpha]).", Bold, 15]]], "", ""},
+       Style["Passo 3: Cerchiamo cos(\[Alpha]).", Bold, 15]]], "", ""},
     {
      InterpretationBox[Cell[BoxData[
        FormBox["\<\"\"\>", TextForm]], "InlineText",ExpressionUUID->
-       "c14bf9b0-d1d7-42c3-af7b-078bd4aa38e2"],
+       "6cd661c7-2f8f-47a9-82e7-f93a20712ea4"],
       Text[""]], 
      PanelBox[
       StyleBox[
@@ -45840,17 +45912,17 @@ di Pitagora:\"\>",
     {
      InterpretationBox[Cell[BoxData[
        FormBox[
-        StyleBox["\<\"Passo 4: cerchiamo tan(\[Alpha]).\"\>",
+        StyleBox["\<\"Passo 4: Cerchiamo tan(\[Alpha]).\"\>",
          StripOnInput->False,
          FontSize->15,
          FontWeight->Bold], TextForm]], "InlineText",ExpressionUUID->
-       "0858faa4-bee6-4d88-a346-8ac5fdf38d53"],
+       "64d39587-a516-44fe-9903-4a9b1488d7d9"],
       Text[
-       Style["Passo 4: cerchiamo tan(\[Alpha]).", Bold, 15]]], "", ""},
+       Style["Passo 4: Cerchiamo tan(\[Alpha]).", Bold, 15]]], "", ""},
     {
      InterpretationBox[Cell[BoxData[
        FormBox["\<\"\"\>", TextForm]], "InlineText",ExpressionUUID->
-       "abec0adc-8925-4780-82e0-93bd95d994dc"],
+       "52eaaa68-cb48-4f86-a872-f98761959eb9"],
       Text[""]], 
      PanelBox[
       StyleBox[
@@ -45859,9 +45931,12 @@ di Pitagora:\"\>",
             InputFieldBox[
              Dynamic[Trigonometria`senNome], String, FieldSize -> 3], 
             "\"(\[Alpha])\""}, "RowDefault"], "\"cos(\[Alpha])\""],DynamicBox[
+         
           ToBoxes[
            Trigonometria`CheckAnswer[Trigonometria`senNome, "sen"], 
-           StandardForm]],"\" = \"",FractionBox[
+           StandardForm]],"\"\\n\"",
+         "\"Sostituisco i valori di seno e coseno trovati ai passi 2 e 3: \"",
+         FractionBox[
           TemplateBox[{
             InputFieldBox[
              Dynamic[Trigonometria`senValoreNum], String, FieldSize -> 3], 
@@ -45889,7 +45964,9 @@ di Pitagora:\"\>",
             DynamicBox[
              ToBoxes[
               Trigonometria`CheckAnswer[Trigonometria`cosValoreDen, "117"], 
-              StandardForm]]}, "RowDefault"]],"\" =\\n \"",FractionBox[
+              StandardForm]]}, "RowDefault"]],"\"\\n\"",
+         "\"Ricorda! La divisione tra due frazioni\\ndiventa la prima \
+frazione moltiplicata per l'inversa della seconda:\"",FractionBox[
           TemplateBox[{
             InputFieldBox[
              Dynamic[Trigonometria`senValoreNum2], String, FieldSize -> 3], 
@@ -45917,7 +45994,9 @@ di Pitagora:\"\>",
             DynamicBox[
              ToBoxes[
               Trigonometria`CheckAnswer[Trigonometria`cosValoreDen2, "110"], 
-              StandardForm]]}, "RowDefault"]],"\" = \"",FractionBox[
+              StandardForm]]}, "RowDefault"]],"\"\\n\"",
+         "\"Dopo aver eseguito la moltiplicazione tra le due frazioni \
+ottengo:\"",FractionBox[
           TemplateBox[{
             InputFieldBox[
              Dynamic[Trigonometria`resNum], String, FieldSize -> 3], 
@@ -45931,7 +46010,8 @@ di Pitagora:\"\>",
             DynamicBox[
              ToBoxes[
               Trigonometria`CheckAnswer[Trigonometria`resDen, "110"], 
-              StandardForm]]}, "RowDefault"]],"\" = \"",FractionBox[
+              StandardForm]]}, "RowDefault"]],"\"\\n\"",
+         "\"Semplifico ai minimi termini la frazione e ottengo:\"",FractionBox[
           TemplateBox[{
             InputFieldBox[
              Dynamic[Trigonometria`resNum2], String, FieldSize -> 3], 
@@ -45952,17 +46032,17 @@ di Pitagora:\"\>",
     {
      InterpretationBox[Cell[BoxData[
        FormBox[
-        StyleBox["\<\"Passo 5: cerchiamo \[Alpha].\"\>",
+        StyleBox["\<\"Passo 5: Cerchiamo \[Alpha].\"\>",
          StripOnInput->False,
          FontSize->15,
          FontWeight->Bold], TextForm]], "InlineText",ExpressionUUID->
-       "1b16bf2e-40e4-423d-b431-7a24014ae60f"],
+       "b0b7476f-4cc7-4ed3-a0b6-9b16c20e5268"],
       Text[
-       Style["Passo 5: cerchiamo \[Alpha].", Bold, 15]]], "", ""},
+       Style["Passo 5: Cerchiamo \[Alpha].", Bold, 15]]], "", ""},
     {
      InterpretationBox[Cell[BoxData[
        FormBox["\<\"\"\>", TextForm]], "InlineText",ExpressionUUID->
-       "f73ec4c2-adf9-4d8d-93e4-b8fe7e3e63dd"],
+       "a043c3c5-ef4a-4d2c-a95b-8df17e27f862"],
       Text[""]], 
      PanelBox[
       StyleBox[
@@ -45990,13 +46070,11 @@ di Pitagora:\"\>",
    AutoDelete->False,
    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Center}}},
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
-   GridBoxSpacings->{"Columns" -> {{10}}, "Rows" -> {{10}}}],
+   GridBoxSpacings->{"Columns" -> {{1}}, "Rows" -> {{1}}}],
   "Grid"]], "Output",
- CellChangeTimes->{3.7039421219834275`*^9, 3.703948225993637*^9, 
-  3.7040030758643627`*^9, 3.704168328720566*^9},
- FontFamily->"OpenDyslexic",
- FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"2d48a5ae-0f1d-4310-bcad-3d5532bdeea3"]
+ CellChangeTimes->{3.704182898443487*^9, 3.7041904200702257`*^9, 
+  3.7041905282053623`*^9},ExpressionUUID->"6e70c683-20ed-4755-a886-\
+ee8f603e93f9"]
 }, Open  ]]
 }, Open  ]],
 
@@ -46029,36 +46107,35 @@ Cell[BoxData[
          StripOnInput->False,
          FontSize->20,
          FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText",
-       ExpressionUUID->"dc1f6c29-d638-4160-beda-6c72bbf94b2c"],
+       ExpressionUUID->"5845015c-b3a6-44ec-9af2-eb820741dc02"],
       Text[
        Style["Esercizio 2:", 20, FontColor -> RGBColor[1, 0, 0]]]], "", ""},
     {
      StyleBox[
-      GraphicsBox[{{{{{
-            {RGBColor[0., 0.7, 0.], Opacity[0.2], 
-             PolygonBox[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}, {0, 0}}]}}}}}, {{{{
-            {RGBColor[0., 0.7, 0.], 
-             LineBox[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}}]}}}}}, {{{{
-            {RGBColor[0., 0.7, 0.], Opacity[0.2], 
-             DiskBox[{0.7, 0}, 0.2, {3.141592653589793, 
-              2.0647376957144776`}]}}}}}, {{{{
-            {RGBColor[0., 0.8, 0.], 
-             CircleBox[{0.7, 0}, 0.2, {3.141592653589793, 
-              2.0647376957144776`}]}}}}}, {{{{
-            {RGBColor[0., 0.7, 0.], Opacity[0.2], 
-             DiskBox[{0, 1.3}, 0.2, 
-              NCache[{5.20633034930427, Rational[3, 2] Pi}, {5.20633034930427,
-                4.71238898038469}]]}}}}}, {{{{
-            {RGBColor[0., 0.8, 0.], 
-             CircleBox[{0, 1.3}, 0.2, 
-              NCache[{5.20633034930427, Rational[3, 2] Pi}, {5.20633034930427,
-                4.71238898038469}]]}}}}}, {{{{
-            {Opacity[0], EdgeForm[GrayLevel[0]], 
-             TagBox[PolygonBox[{{0, 0}, {0, 1.3}, {0.7, 0}}],
-              "Triangle"]}}}}}, GeometricTransformationBox[InsetBox[
+      GraphicsBox[{{
+         {RGBColor[0., 0.7, 0.], Opacity[0.2], 
+          PolygonBox[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}, {0, 0}}]}}, {
+         {RGBColor[0., 0.7, 0.], LineBox[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}}]}}, {
+         {RGBColor[0., 0.7, 0.], Opacity[0.2], 
+          DiskBox[{0.7, 0}, 0.2, {3.141592653589793, 2.0647376957144776`}]}}, {
+         {RGBColor[0., 0.8, 0.], 
+          CircleBox[{0.7, 0}, 0.2, {3.141592653589793, 
+           2.0647376957144776`}]}}, {
+         {RGBColor[0., 0.7, 0.], Opacity[0.2], 
+          DiskBox[{0, 1.3}, 0.2, 
+           NCache[{5.20633034930427, Rational[3, 2] Pi}, {5.20633034930427, 
+            4.71238898038469}]]}}, {
+         {RGBColor[0., 0.8, 0.], 
+          CircleBox[{0, 1.3}, 0.2, 
+           NCache[{5.20633034930427, Rational[3, 2] Pi}, {5.20633034930427, 
+            4.71238898038469}]]}}, {
+         {Opacity[0], EdgeForm[GrayLevel[0]], 
+          TagBox[PolygonBox[{{0, 0}, {0, 1.3}, {0.7, 0}}],
+           "Triangle"]}}, GeometricTransformationBox[InsetBox[
           StyleBox["\<\"A\"\>",
            StripOnInput->False,
-           FontSize->15], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], InsetBox[
+           FontSize->15], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], 
+        InsetBox[
          StyleBox["\<\"B\"\>",
           StripOnInput->False,
           FontSize->15], {0.3, -0.1}], InsetBox[
@@ -46095,8 +46172,8 @@ Cell[BoxData[
 = \\\\\\\\!\\\\\\\\(\\\\\\\\*FractionBox[\\\\\\\\(3\\\\\\\\), \
 \\\\\\\\(5\\\\\\\\)]\\\\\\\\)\\\\\\\"\\\", Rule[FontFamily, \\\"sans \
 sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\\!\\(\\*StyleBox[\\\"\\\\\\\"\
-\\\\\\\\n?A\\\\\\\"\\\", Rule[FontColor, RGBColor[1, 0, 0]], Rule[FontFamily, \
-\\\"sans sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\"\>",
+\\\\\\\\nTrovare A\\\\\\\"\\\", Rule[FontColor, RGBColor[1, 0, 0]], \
+Rule[FontFamily, \\\"sans sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\"\>",
       StripOnInput->False,
       Magnification->1.4 Inherited], ""},
     {
@@ -46106,7 +46183,7 @@ sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\\!\\(\\*StyleBox[\\\"\\\\\\\"\
          StripOnInput->False,
          FontSize->17,
          FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText",
-       ExpressionUUID->"8474ebca-55c1-4d89-917e-d5cec77c101b"],
+       ExpressionUUID->"7902dffa-914f-486e-89c7-27cb19aae16f"],
       Text[
        Style["Procedimento:", 17, FontColor -> RGBColor[1, 0, 0]]]], "", ""},
     {
@@ -46117,7 +46194,7 @@ sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\\!\\(\\*StyleBox[\\\"\\\\\\\"\
          StripOnInput->False,
          FontSize->20,
          FontWeight->Bold], TextForm]], "InlineText",ExpressionUUID->
-       "30303ded-745f-4ad2-9281-f757aa0c2908"],
+       "06cb0d0f-25f1-4ce6-92f3-ff86dcb70e30"],
       Text[
        Style[
        "Ricorda! tan\[Beta] =\!\(\*FractionBox[\(\(\\ \)\(cateto\\ \
@@ -46129,7 +46206,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
          StripOnInput->False,
          FontSize->20,
          FontWeight->Bold], TextForm]], "InlineText",ExpressionUUID->
-       "6c657a1c-5e90-49c4-86c7-4cd773ec3f98"],
+       "9f6a5ef2-2620-4223-9214-598687fa74b9"],
       Text[
        Style["Qual \[EGrave] il cateto adiacente?", Bold, 20]]], 
      StyleBox[
@@ -46137,7 +46214,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
        StyleBox[
         RowBox[{GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`catAd], {"A"},
+            RadioButtonBox[Dynamic[Trigonometria`catAd$4134], {"A"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"A\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -46158,7 +46235,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`catAd], {"B"},
+            RadioButtonBox[Dynamic[Trigonometria`catAd$4134], {"B"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"B\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -46179,7 +46256,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`catAd], {"C"},
+            RadioButtonBox[Dynamic[Trigonometria`catAd$4134], {"C"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"C\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -46200,13 +46277,14 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}]}], "Deploy"],
        RadioButtonBar[
-        Dynamic[Trigonometria`catAd], {"A", "B", "C"}]],
+        Dynamic[Trigonometria`catAd$4134], {"A", "B", "C"}]],
       StripOnInput->False,
       Magnification->2 Inherited], 
      StyleBox[
       DynamicBox[ToBoxes[
-        Trigonometria`CheckAnswer[Trigonometria`catAd, "A"], StandardForm],
-       ImageSizeCache->{35., {0., 34.}}],
+        Trigonometria`CheckAnswer[Trigonometria`catAd$4134, "A"], 
+        StandardForm],
+       ImageSizeCache->{0., {10., 38.}}],
       StripOnInput->False,
       Magnification->3 Inherited]},
     {
@@ -46216,7 +46294,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
          StripOnInput->False,
          FontSize->20,
          FontWeight->Bold], TextForm]], "InlineText",ExpressionUUID->
-       "f248ca51-d71a-4673-9246-cec55334567e"],
+       "24a3a25c-40bc-4839-a8c8-4864d1ee9e20"],
       Text[
        Style["Qual \[EGrave] il cateto opposto?", Bold, 20]]], 
      StyleBox[
@@ -46224,7 +46302,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
        StyleBox[
         RowBox[{GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`catOp], {"A"},
+            RadioButtonBox[Dynamic[Trigonometria`catOp$4134], {"A"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"A\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -46245,7 +46323,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`catOp], {"B"},
+            RadioButtonBox[Dynamic[Trigonometria`catOp$4134], {"B"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"B\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -46266,7 +46344,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`catOp], {"C"},
+            RadioButtonBox[Dynamic[Trigonometria`catOp$4134], {"C"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"C\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -46287,13 +46365,14 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}]}], "Deploy"],
        RadioButtonBar[
-        Dynamic[Trigonometria`catOp], {"A", "B", "C"}]],
+        Dynamic[Trigonometria`catOp$4134], {"A", "B", "C"}]],
       StripOnInput->False,
       Magnification->2 Inherited], 
      StyleBox[
       DynamicBox[ToBoxes[
-        Trigonometria`CheckAnswer[Trigonometria`catOp, "B"], StandardForm],
-       ImageSizeCache->{32., {0., 31.}}],
+        Trigonometria`CheckAnswer[Trigonometria`catOp$4134, "B"], 
+        StandardForm],
+       ImageSizeCache->{0., {10., 38.}}],
       StripOnInput->False,
       Magnification->3 Inherited]},
     {
@@ -46308,10 +46387,10 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
           Style["tan\[Beta] = "]]],FractionBox[
          TemplateBox[{
            InputFieldBox[
-            Dynamic[Trigonometria`catOp2], String, FieldSize -> 1], 
+            Dynamic[Trigonometria`catOp2$4134], String, FieldSize -> 1], 
            DynamicBox[
             ToBoxes[
-             Trigonometria`CheckAnswer[Trigonometria`catOp2, "B"], 
+             Trigonometria`CheckAnswer[Trigonometria`catOp2$4134, "B"], 
              StandardForm]]}, "RowDefault"], 
          TemplateBox[{
            InputFieldBox[
@@ -46324,12 +46403,12 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
           BoxData[
            FormBox[
             StyleBox[
-            "\"\[LongRightArrow] Atan(\[Beta]) = B \[LongRightArrow] A = \
-\\!\\(\\*FractionBox[\\(\\(\\\\ \\)\\(B\\)\\), \\(tan \
-\\((\[Beta])\\)\\)]\\)\"", StripOnInput -> False], TextForm]], "InlineText"], 
+            "\"\[LongRightArrow] A tan(\[Beta]) = B \[LongRightArrow] A = \\!\
+\\(\\*FractionBox[\\(\\(\\\\ \\)\\(B\\)\\), \\(tan \\((\[Beta])\\)\\)]\\)\"", 
+             StripOnInput -> False], TextForm]], "InlineText"], 
          Text[
           Style[
-          "\[LongRightArrow] Atan(\[Beta]) = B \[LongRightArrow] A = \
+          "\[LongRightArrow] A tan(\[Beta]) = B \[LongRightArrow] A = \
 \!\(\*FractionBox[\(\(\\ \)\(B\)\), \(tan \((\[Beta])\)\)]\)"]]]},
        "RowDefault"],
       StripOnInput->False,
@@ -46337,19 +46416,19 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
     {
      InterpretationBox[Cell[BoxData[
        FormBox[
-        StyleBox["\<\"Quanto vale A??\"\>",
+        StyleBox["\<\"Quanto vale A?\"\>",
          StripOnInput->False,
          FontSize->20,
          FontWeight->Bold], TextForm]], "InlineText",ExpressionUUID->
-       "d35aa8da-98ae-4012-a98a-de852023a1b4"],
+       "40434444-24ec-49dd-a91a-10d721cbd182"],
       Text[
-       Style["Quanto vale A??", Bold, 20]]], 
+       Style["Quanto vale A?", Bold, 20]]], 
      StyleBox[
       InterpretationBox[
        StyleBox[
         RowBox[{GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`A], {"50"},
+            RadioButtonBox[Dynamic[Trigonometria`A$4134], {"50"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"50\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -46370,7 +46449,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`A], {"18"},
+            RadioButtonBox[Dynamic[Trigonometria`A$4134], {"18"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"18\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -46391,7 +46470,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`A], {"2"},
+            RadioButtonBox[Dynamic[Trigonometria`A$4134], {"2"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"2\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -46412,13 +46491,13 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}]}], "Deploy"],
        RadioButtonBar[
-        Dynamic[Trigonometria`A], {"50", "18", "2"}]],
+        Dynamic[Trigonometria`A$4134], {"50", "18", "2"}]],
       StripOnInput->False,
       Magnification->2 Inherited], 
      StyleBox[
       DynamicBox[ToBoxes[
-        Trigonometria`CheckAnswer[Trigonometria`A, "50"], StandardForm],
-       ImageSizeCache->{35., {0., 34.}}],
+        Trigonometria`CheckAnswer[Trigonometria`A$4134, "50"], StandardForm],
+       ImageSizeCache->{0., {10., 38.}}],
       StripOnInput->False,
       Magnification->3 Inherited]}
    },
@@ -46428,10 +46507,11 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
    GridBoxSpacings->{"Columns" -> {{10}}, "Rows" -> {{5}}}],
   "Grid"]], "Output",
  CellChangeTimes->{3.7039428724679375`*^9, 3.703946796565926*^9, 
-  3.703948261791901*^9, 3.70400307597867*^9, 3.704168334504569*^9},
+  3.703948261791901*^9, 3.70400307597867*^9, 3.704168334504569*^9, 
+  3.704182871926577*^9, 3.7041904201597843`*^9, 3.704190528305566*^9},
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"8beebc0b-4c1c-4d18-9ea7-bea0a44ff6a7"]
+ FontWeight->"Regular",ExpressionUUID->"7e190e9f-609c-4086-bac3-69403776443a"]
 }, Open  ]]
 }, Open  ]],
 
@@ -46694,11 +46774,12 @@ Cell[BoxData[
  CellChangeTimes->{
   3.703863026297469*^9, 3.7039408971415963`*^9, 3.703941772194463*^9, {
    3.7039467968618593`*^9, 3.703946798466337*^9}, 3.7040030762824917`*^9, 
-   3.704003265236156*^9, 3.704168338260044*^9},
+   3.704003265236156*^9, 3.704168338260044*^9, 3.7041828720343933`*^9, 
+   3.704190420305722*^9, 3.704190528376338*^9},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"35d7c5dd-3e7d-4f1f-8c72-fcafd52a50c7"]
+ FontWeight->"Regular",ExpressionUUID->"d014e3c4-f426-4904-8ed2-c297e582aa88"]
 }, Open  ]],
 
 Cell[BoxData["\[IndentingNewLine]"], "Input",
@@ -46743,19 +46824,19 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{Trigonometria`ptctrl$$ = 3.931627568920009, 
+   DynamicModuleBox[{Trigonometria`ptctrl$$ = 3.641592653589793, 
     Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[Trigonometria`ptctrl$$], 3.641592653589793, "angle"}, 0, 2 Pi}}, 
     Typeset`size$$ = {505., {198.88671875, 207.11328125}}, Typeset`update$$ = 
     0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
-    Trigonometria`ptctrl$6446$$ = 0}, 
+    Trigonometria`ptctrl$4181$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {Trigonometria`ptctrl$$ = 3.641592653589793}, 
       "ControllerVariables" :> {
-        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$6446$$, 0]}, 
+        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$4181$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -46921,11 +47002,12 @@ Cell[BoxData[
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.704168342340809*^9},
+ CellChangeTimes->{3.704168342340809*^9, 3.704182872096211*^9, 
+  3.704190420371641*^9, 3.704190528424411*^9},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"b8409424-205f-4838-98c0-f1c690d1e5f3"]
+ FontWeight->"Regular",ExpressionUUID->"23e5931c-ba72-4062-b065-c7969950b55b"]
 }, Open  ]],
 
 Cell[BoxData[""], "Input",
@@ -46948,7 +47030,6 @@ insiste sulla corda ",
    StyleBox[
     OverscriptBox["AB", "_"],
     FontSize->18], TraditionalForm]],
-  FormatType->"TraditionalForm",
   FontSize->16,ExpressionUUID->"13ffa2e7-ccfe-47b1-81d1-54395798dd6a"],
  " (ricorda che tutti gli angoli che insistono sulla stessa corda sono \
 uguali)",
@@ -46965,8 +47046,7 @@ a \[Theta], quindi, considerando che ",
      FractionBox[
       OverscriptBox["AB", "_"], 
       OverscriptBox["AC", "_"]],
-     FontSize->16]}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+     FontSize->16]}], TraditionalForm]],ExpressionUUID->
   "6356828a-b343-4997-9234-a536e8eaf89e"],
  " si ha:",
  StyleBox["\n ",
@@ -46975,8 +47055,7 @@ a \[Theta], quindi, considerando che ",
   FormBox[
    OverscriptBox[
     StyleBox["AB",
-     FontSize->16], "_"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+     FontSize->16], "_"], TraditionalForm]],ExpressionUUID->
   "172114e7-17d4-42cb-90e2-06b84f87c139"],
  StyleBox[" = ",
   FontSize->16],
@@ -46984,8 +47063,7 @@ a \[Theta], quindi, considerando che ",
   FormBox[
    OverscriptBox[
     StyleBox["AC",
-     FontSize->16], "_"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+     FontSize->16], "_"], TraditionalForm]],ExpressionUUID->
   "854615ba-7df2-4780-b2c9-ce1243bad62f"],
  StyleBox[" \[CenterDot]sen(\[Theta]) = 2r\[CenterDot]sen(\[Theta])\n\nQuindi \
 ",
@@ -46993,7 +47071,6 @@ a \[Theta], quindi, considerando che ",
  Cell[BoxData[
   FormBox[
    OverscriptBox["AB", "_"], TraditionalForm]],
-  FormatType->"TraditionalForm",
   FontSize->16,
   FontColor->RGBColor[1., 0., 0.5019607843137255],ExpressionUUID->
   "20e663d5-84e4-4cfe-905a-4b8b6a3d5111"],
@@ -47013,7 +47090,7 @@ sempre lo stesso! \n\nQuando l\[CloseCurlyQuote]angolo \[EGrave] nell\
   3.704003477407679*^9, 3.704003480868709*^9}, {3.704172459277309*^9, 
   3.704172504369363*^9}, {3.704172579034595*^9, 3.704172585092595*^9}, {
   3.704177156090205*^9, 3.7041772903543463`*^9}, {3.7041773356752863`*^9, 
-  3.704177519099537*^9}},
+  3.704177519099537*^9}, {3.704190714804245*^9, 3.7041907157962723`*^9}},
  FontFamily->"OpenDyslexic",
  FontWeight->"Regular",ExpressionUUID->"89c0288f-674d-490d-b69b-1ff57ab443c0"],
 
@@ -47029,18 +47106,18 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{Trigonometria`ptctrl$$ = 2 Pi, Typeset`show$$ = True, 
+   DynamicModuleBox[{Trigonometria`ptctrl$$ = 0.4, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
        Hold[Trigonometria`ptctrl$$], 0.4, "angle"}, 0, 2 Pi}}, 
     Typeset`size$$ = {506., {198.88671875, 207.11328125}}, Typeset`update$$ = 
     0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
-    Trigonometria`ptctrl$6544$$ = 0}, 
+    Trigonometria`ptctrl$4225$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {Trigonometria`ptctrl$$ = 0.4}, 
       "ControllerVariables" :> {
-        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$6544$$, 0]}, 
+        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$4225$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -47253,11 +47330,12 @@ Cell[BoxData[
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{3.7038671880872765`*^9, 3.70394089721062*^9, 
   3.703941772310358*^9, 3.703942323558496*^9, 3.703946797031694*^9, 
-  3.704003076477169*^9, 3.70416837617039*^9},
+  3.704003076477169*^9, 3.70416837617039*^9, 3.704182872309442*^9, 
+  3.704190420438116*^9, 3.704190528543461*^9},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"c60727c1-0dc3-4c64-a74d-3f5f6b3999d8"]
+ FontWeight->"Regular",ExpressionUUID->"6fa060e3-b93d-4dd8-abab-4e4d51700b82"]
 }, Open  ]],
 
 Cell[TextData[StyleBox["ADBC \[EGrave] un poligono inscritto nella \
@@ -47307,42 +47385,41 @@ Cell[BoxData[
          StripOnInput->False,
          FontSize->20,
          FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText",
-       ExpressionUUID->"82c9fa72-6510-4b1d-b7dd-dead8bf16997"],
+       ExpressionUUID->"a30dfbe0-36f9-4978-bd07-5e442b71332b"],
       Text[
        Style["Esercizio 3:", 20, FontColor -> RGBColor[1, 0, 0]]]], ""},
     {
-     GraphicsBox[{{{{
-          {RGBColor[0.75, 0.75, 0.75], CircleBox[{0, 0}]}}}}, {{{
-          {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
-           DiskBox[{-0.8775825618903728, -0.4794255386042029}, 0.2, {
-            1.1853981633974482`, 0.14999999999999997`}]}}}}, {{{
-          {RGBColor[0., 0.8, 0.], Thickness[Large], 
-           CircleBox[{-0.8775825618903728, -0.4794255386042029}, 0.2, {
-            1.1853981633974482`, 0.14999999999999997`}]}}}}, {{{
-          {GrayLevel[0], Opacity[0], EdgeForm[GrayLevel[0]], 
-           
-           TagBox[PolygonBox[{{-0.29552020666133955`, 0.955336489125606}, {
-             0.9800665778412416, -0.19866933079506122`}, \
-{-0.8775825618903728, -0.4794255386042029}}],
-            "Triangle"]}}}}, {{{
-          {GrayLevel[0], Dashing[Medium], 
-           LineBox[{{0, 0}, {
-             0.9800665778412416, -0.19866933079506122`}}]}}}}, {{{
-          {RGBColor[1, 0, 0], Thickness[Large], 
-           LineBox[{{-0.29552020666133955`, 0.955336489125606}, {
-            0.9800665778412416, -0.19866933079506122`}}]}}}}, {{{
-          {GrayLevel[0], DiskBox[{0, 0}, 0.02]}}}}, {{{
-          {GrayLevel[0], 
-           DiskBox[{-0.29552020666133955, 0.955336489125606}, 0.02]}}}}, {{{
-          {GrayLevel[0], 
-           DiskBox[{0.9800665778412416, -0.19866933079506122}, 0.02]}}}}, {{{
-          {GrayLevel[0], 
-           DiskBox[{-0.8775825618903728, -0.4794255386042029}, 0.02]}}}}, 
+     GraphicsBox[{{
+        {RGBColor[0.75, 0.75, 0.75], CircleBox[{0, 0}]}}, {
+        {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
+         DiskBox[{-0.8775825618903728, -0.4794255386042029}, 0.2, {
+          1.1853981633974482`, 0.14999999999999997`}]}}, {
+        {RGBColor[0., 0.8, 0.], Thickness[Large], 
+         CircleBox[{-0.8775825618903728, -0.4794255386042029}, 0.2, {
+          1.1853981633974482`, 0.14999999999999997`}]}}, {
+        {GrayLevel[0], Opacity[0], EdgeForm[GrayLevel[0]], 
+         TagBox[
+          PolygonBox[{{-0.29552020666133955`, 0.955336489125606}, {
+           0.9800665778412416, -0.19866933079506122`}, {-0.8775825618903728, \
+-0.4794255386042029}}],
+          "Triangle"]}}, {
+        {GrayLevel[0], Dashing[Medium], 
+         LineBox[{{0, 0}, {0.9800665778412416, -0.19866933079506122`}}]}}, {
+        {RGBColor[1, 0, 0], Thickness[Large], 
+         LineBox[{{-0.29552020666133955`, 0.955336489125606}, {
+          0.9800665778412416, -0.19866933079506122`}}]}}, {
+        {GrayLevel[0], DiskBox[{0, 0}, 0.02]}}, {
+        {GrayLevel[0], 
+         DiskBox[{-0.29552020666133955, 0.955336489125606}, 0.02]}}, {
+        {GrayLevel[0], 
+         DiskBox[{0.9800665778412416, -0.19866933079506122}, 0.02]}}, {
+        {GrayLevel[0], 
+         DiskBox[{-0.8775825618903728, -0.4794255386042029}, 0.02]}}, 
        InsetBox["\<\"  A\"\>", {-0.38941834230865036, 1}], 
        InsetBox["\<\"   B\"\>", {1, -0.29552020666133955}], 
        InsetBox["\<\"   C\"\>", {-0.9800665778412416, -0.5646424733950354}], 
        InsetBox[
-        StyleBox["\<\"\\!\\(\\*SuperscriptBox[\\(60\\), \\(o\\)]\\)\"\>",
+        StyleBox["\<\"\[Theta]\"\>",
          StripOnInput->False,
          LineColor->RGBColor[0., 0.8, 0.],
          FrontFaceColor->RGBColor[0., 0.8, 0.],
@@ -47357,11 +47434,13 @@ Cell[BoxData[
       PlotRange->1,
       PlotRangePadding->0.25], 
      StyleBox[
-      StyleBox["\<\"?AB\"\>",
-       StripOnInput->False,
-       FontFamily->"sans sarif",
-       FontWeight->Bold,
-       FontColor->RGBColor[1, 0, 0]],
+      TemplateBox[{
+       "\"r = 2\\n\[Theta] = \\!\\(\\*SuperscriptBox[\\(60\\), \\(o\\)]\\)\\n\
+\"",StyleBox[
+        "\"Trovare \\!\\(\\*OverscriptBox[\\(AB\\), \\(_\\)]\\)\"", FontColor -> 
+         RGBColor[1, 0, 0], FontFamily -> "sans sarif", Bold, StripOnInput -> 
+         False]},
+       "RowDefault"],
       StripOnInput->False,
       Magnification->2 Inherited]},
     {
@@ -47371,7 +47450,7 @@ Cell[BoxData[
          StripOnInput->False,
          FontSize->17,
          FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText",
-       ExpressionUUID->"dc088445-ee4f-4f28-a6a5-3b5c25e8e7fa"],
+       ExpressionUUID->"0c4d37ba-b208-447b-a347-e0c9d59c05c9"],
       Text[
        Style["Procedimento:", 17, FontColor -> RGBColor[1, 0, 0]]]], ""},
     {
@@ -47380,10 +47459,12 @@ Cell[BoxData[
          Cell[
           BoxData[
            FormBox[
-            StyleBox["\"AB = 2\[CenterDot] \"", StripOnInput -> False], 
-            TextForm]], "InlineText"], 
+            StyleBox[
+            "\"\\!\\(\\*OverscriptBox[\\(AB\\), \\(_\\)]\\) = 2\[CenterDot] \
+\"", StripOnInput -> False], TextForm]], "InlineText"], 
          Text[
-          Style["AB = 2\[CenterDot] "]]],TemplateBox[{
+          Style["\!\(\*OverscriptBox[\(AB\), \(_\)]\) = 2\[CenterDot] "]]],
+        TemplateBox[{
           InputFieldBox[
            Dynamic[Trigonometria`raggio], String, FieldSize -> 1], 
           DynamicBox[
@@ -47446,10 +47527,11 @@ Cell[BoxData[
    GridBoxSpacings->{"Columns" -> {{10}}, "Rows" -> {{5}}}],
   "Grid"]], "Output",
  CellChangeTimes->{3.703948479686776*^9, 3.704003076670199*^9, 
-  3.704168379970766*^9},
+  3.704168379970766*^9, 3.704182872497851*^9, 3.704190420533996*^9, 
+  3.704190528674733*^9},
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"dc95f1e5-e916-4a90-bc25-599ca3585179"]
+ FontWeight->"Regular",ExpressionUUID->"265c07fe-5bc0-4103-bb7a-b62f8dad8ef5"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -47490,7 +47572,7 @@ Cell[BoxData[
          StripOnInput->False,
          FontSize->20,
          FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText",
-       ExpressionUUID->"0f432e67-d2aa-45dc-828e-06b529b83ac1"],
+       ExpressionUUID->"bf472d7e-eb81-400b-958f-597a3be6b841"],
       Text[
        Style["Esercizio 4:", 20, FontColor -> RGBColor[1, 0, 0]]]], "", ""},
     {
@@ -47524,7 +47606,7 @@ Cell[BoxData[
        InsetBox["\<\"   B\"\>", {1, -0.29552020666133955}], 
        InsetBox["\<\"   C\"\>", {-0.9800665778412416, -0.5646424733950354}], 
        InsetBox[
-        StyleBox["\<\"\\!\\(\\*SuperscriptBox[\\(60\\), \\(o\\)]\\)\"\>",
+        StyleBox["\<\"\[Theta]\"\>",
          StripOnInput->False,
          LineColor->RGBColor[0., 0.7, 0.],
          FrontFaceColor->RGBColor[0., 0.7, 0.],
@@ -47539,27 +47621,32 @@ Cell[BoxData[
       PlotRange->1,
       PlotRangePadding->0.25], 
      StyleBox[
-      StyleBox["\<\"?AB\"\>",
-       StripOnInput->False,
-       FontFamily->"sans sarif",
-       FontWeight->Bold,
-       FontColor->RGBColor[1, 0, 0]],
+      TemplateBox[{
+       "\"r = 5\\n\[Theta] = \\!\\(\\*SuperscriptBox[\\(60\\), \\(o\\)]\\)\\n\
+\"",StyleBox[
+        "\"Trovare \\!\\(\\*OverscriptBox[\\(AB\\), \\(_\\)]\\)\"", FontColor -> 
+         RGBColor[1, 0, 0], FontFamily -> "sans sarif", Bold, StripOnInput -> 
+         False]},
+       "RowDefault"],
       StripOnInput->False,
       Magnification->2 Inherited], 
      InterpretationBox[Cell[BoxData[
        FormBox["\<\"\"\>", TextForm]], "InlineText",ExpressionUUID->
-       "040a54d6-8f10-4595-b759-f5c035fc75ec"],
+       "f8b474d5-efa8-4fc0-9042-6b263f413cf2"],
       Text[""]]},
     {
      InterpretationBox[Cell[BoxData[
        FormBox[
-        StyleBox["\<\"Procedimento:\"\>",
+        StyleBox["\<\"Quindi il lato \\!\\(\\*OverscriptBox[\\(AB\\), \
+\\(_\\)]\\) misura:\"\>",
          StripOnInput->False,
          FontSize->17,
          FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText",
-       ExpressionUUID->"dc50acdf-5e8f-4918-b7a1-fe7299a35ab5"],
+       ExpressionUUID->"48c1aee7-f7de-4d2a-bcc0-eb9a0dec97ee"],
       Text[
-       Style["Procedimento:", 17, FontColor -> RGBColor[1, 0, 0]]]], "", ""},
+       Style[
+       "Quindi il lato \!\(\*OverscriptBox[\(AB\), \(_\)]\) misura:", 17, 
+        FontColor -> RGBColor[1, 0, 0]]]], "", ""},
     {
      StyleBox[
       InterpretationBox[
@@ -47567,7 +47654,7 @@ Cell[BoxData[
         RowBox[{GridBox[{
            {
             
-            RadioButtonBox[Dynamic[Trigonometria`AB2], {
+            RadioButtonBox[Dynamic[Trigonometria`AB2$4312], {
              "\!\(\*FractionBox[\(5\), \(2\)]\)"},
              DefaultBaseStyle->"RadioButtonBar"], 
             
@@ -47592,7 +47679,7 @@ Cell[BoxData[
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
             
-            RadioButtonBox[Dynamic[Trigonometria`AB2], {
+            RadioButtonBox[Dynamic[Trigonometria`AB2$4312], {
              "\!\(\*FractionBox[\(5\), \(2\)]\)\!\(\*SqrtBox[\(3\)]\)"},
              DefaultBaseStyle->"RadioButtonBar"], 
             
@@ -47616,7 +47703,7 @@ Cell[BoxData[
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`AB2], {"5"},
+            RadioButtonBox[Dynamic[Trigonometria`AB2$4312], {"5"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"5\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -47637,7 +47724,7 @@ Cell[BoxData[
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`AB2], {"30"},
+            RadioButtonBox[Dynamic[Trigonometria`AB2$4312], {"30"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"30\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -47658,7 +47745,7 @@ Cell[BoxData[
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}]}], "Deploy"],
        RadioButtonBar[
-        Dynamic[Trigonometria`AB2], {
+        Dynamic[Trigonometria`AB2$4312], {
         "\!\(\*FractionBox[\(5\), \(2\)]\)", 
          "\!\(\*FractionBox[\(5\), \(2\)]\)\!\(\*SqrtBox[\(3\)]\)", "5", 
          "30"}]],
@@ -47666,8 +47753,9 @@ Cell[BoxData[
       Magnification->2 Inherited], 
      StyleBox[
       DynamicBox[ToBoxes[
-        Trigonometria`CheckAnswer[Trigonometria`AB2, "5"], StandardForm],
-       ImageSizeCache->{32., {0., 31.}}],
+        Trigonometria`CheckAnswer[Trigonometria`AB2$4312, "5"], StandardForm],
+       
+       ImageSizeCache->{0., {10., 38.}}],
       StripOnInput->False,
       Magnification->3 Inherited], ""}
    },
@@ -47677,10 +47765,11 @@ Cell[BoxData[
    GridBoxSpacings->{"Columns" -> {{10}}, "Rows" -> {{5}}}],
   "Grid"]], "Output",
  CellChangeTimes->{3.703942353134987*^9, 3.703946797347062*^9, 
-  3.70394833284067*^9, 3.704003076760845*^9, 3.704168382792261*^9},
+  3.70394833284067*^9, 3.704003076760845*^9, 3.704168382792261*^9, 
+  3.704182872578257*^9, 3.704190420586835*^9, 3.704190528757172*^9},
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"c2caa21c-7d02-4b52-9737-fb6256604e42"]
+ FontWeight->"Regular",ExpressionUUID->"bd173207-b0d1-4a89-b713-844688eb7748"]
 }, Open  ]]
 }, Open  ]],
 
@@ -47704,12 +47793,12 @@ Cell[TextData[StyleBox["TEOREMA DEI SENI",
  FontSize->14,
  FontWeight->"Regular",ExpressionUUID->"27ab370e-739a-45e8-9525-f17fa8be66d2"],
 
-Cell[TextData[StyleBox["Dato un triangolo ABC qualsiasi",
+Cell[TextData[StyleBox["Dato un triangolo ABC qualsiasi:",
  FontFamily->"OpenDyslexic",
  FontSize->16,
  FontWeight->"Regular"]], "Text",
- CellChangeTimes->{{3.704173149065812*^9, 
-  3.704173173162977*^9}},ExpressionUUID->"46ad9e4a-aba3-4fdb-8c94-\
+ CellChangeTimes->{{3.704173149065812*^9, 3.704173173162977*^9}, 
+   3.7041907338720284`*^9},ExpressionUUID->"46ad9e4a-aba3-4fdb-8c94-\
 d9d3f4d56e75"]
 }, Open  ]],
 
@@ -47772,43 +47861,42 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[GridBox[{
     {
-     GraphicsBox[{{{{
-          {RGBColor[0.75, 0.75, 0.75], CircleBox[{0, 0}]}}}}, {{{
-          {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
-           DiskBox[{-0.8775825618903728, -0.4794255386042029}, 0.2, {
-            1.1853981633974482`, 0.14999999999999997`}]}}}}, {{{
-          {RGBColor[0., 0.8, 0.], Thickness[Large], 
-           CircleBox[{-0.8775825618903728, -0.4794255386042029}, 0.2, {
-            1.1853981633974482`, 0.14999999999999997`}]}}}}, {{{
-          {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
-           DiskBox[{0.9800665778412416, -0.19866933079506122}, 0.2, {
-            2.4061944901923447`, 3.291592653589793}]}}}}, {{{
-          {RGBColor[0., 0.8, 0.], Thickness[Large], 
-           CircleBox[{0.9800665778412416, -0.19866933079506122}, 0.2, {
-            2.4061944901923447`, 3.291592653589793}]}}}}, {{{
-          {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
-           DiskBox[{-0.29552020666133955, 0.955336489125606}, 
-            0.2, {-1.956194490192345, -0.7353981633974482}]}}}}, {{{
-          {RGBColor[0., 0.8, 0.], Thickness[Large], 
-           CircleBox[{-0.29552020666133955, 0.955336489125606}, 
-            0.2, {-1.956194490192345, -0.7353981633974482}]}}}}, {{{
-          {RGBColor[0, 1, 1], Opacity[0.1], EdgeForm[{RGBColor[0, 1, 1], 
-           Thickness[Large]}], 
-           
-           TagBox[PolygonBox[{{-0.29552020666133955`, 0.955336489125606}, {
-             0.9800665778412416, -0.19866933079506122`}, \
-{-0.8775825618903728, -0.4794255386042029}}],
-            "Triangle"]}}}}, {{{
-          {GrayLevel[0], Dashing[Medium], 
-           LineBox[{{0, 0}, {
-             0.9800665778412416, -0.19866933079506122`}}]}}}}, {{{
-          {GrayLevel[0], DiskBox[{0, 0}, 0.02]}}}}, {{{
-          {GrayLevel[0], 
-           DiskBox[{-0.29552020666133955, 0.955336489125606}, 0.02]}}}}, {{{
-          {GrayLevel[0], 
-           DiskBox[{0.9800665778412416, -0.19866933079506122}, 0.02]}}}}, {{{
-          {GrayLevel[0], 
-           DiskBox[{-0.8775825618903728, -0.4794255386042029}, 0.02]}}}}, 
+     GraphicsBox[{{
+        {RGBColor[0.75, 0.75, 0.75], CircleBox[{0, 0}]}}, {
+        {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
+         DiskBox[{-0.8775825618903728, -0.4794255386042029}, 0.2, {
+          1.1853981633974482`, 0.14999999999999997`}]}}, {
+        {RGBColor[0., 0.8, 0.], Thickness[Large], 
+         CircleBox[{-0.8775825618903728, -0.4794255386042029}, 0.2, {
+          1.1853981633974482`, 0.14999999999999997`}]}}, {
+        {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
+         DiskBox[{0.9800665778412416, -0.19866933079506122}, 0.2, {
+          2.4061944901923447`, 3.291592653589793}]}}, {
+        {RGBColor[0., 0.8, 0.], Thickness[Large], 
+         CircleBox[{0.9800665778412416, -0.19866933079506122}, 0.2, {
+          2.4061944901923447`, 3.291592653589793}]}}, {
+        {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
+         DiskBox[{-0.29552020666133955, 0.955336489125606}, 
+          0.2, {-1.956194490192345, -0.7353981633974482}]}}, {
+        {RGBColor[0., 0.8, 0.], Thickness[Large], 
+         CircleBox[{-0.29552020666133955, 0.955336489125606}, 
+          0.2, {-1.956194490192345, -0.7353981633974482}]}}, {
+        {RGBColor[0, 1, 1], Opacity[0.1], EdgeForm[{RGBColor[0, 1, 1], 
+         Thickness[Large]}], 
+         TagBox[
+          PolygonBox[{{-0.29552020666133955`, 0.955336489125606}, {
+           0.9800665778412416, -0.19866933079506122`}, {-0.8775825618903728, \
+-0.4794255386042029}}],
+          "Triangle"]}}, {
+        {GrayLevel[0], Dashing[Medium], 
+         LineBox[{{0, 0}, {0.9800665778412416, -0.19866933079506122`}}]}}, {
+        {GrayLevel[0], DiskBox[{0, 0}, 0.02]}}, {
+        {GrayLevel[0], 
+         DiskBox[{-0.29552020666133955, 0.955336489125606}, 0.02]}}, {
+        {GrayLevel[0], 
+         DiskBox[{0.9800665778412416, -0.19866933079506122}, 0.02]}}, {
+        {GrayLevel[0], 
+         DiskBox[{-0.8775825618903728, -0.4794255386042029}, 0.02]}}, 
        InsetBox["\<\"A\"\>", {-0.29552020666133955, 1.055336489125606}], 
        InsetBox["\<\"B\"\>", {1.0800665778412417, -0.19866933079506122}], 
        InsetBox["\<\"C\"\>", {-0.9775825618903727, -0.4794255386042029}], 
@@ -47850,11 +47938,12 @@ Cell[BoxData[
   "Grid"]], "Output",
  CellChangeTimes->{3.703863174920074*^9, 3.7039408972796335`*^9, 
   3.703941772360749*^9, 3.7039423605461826`*^9, 3.7039467974020567`*^9, 
-  3.704003076824266*^9, 3.70400351514786*^9, 3.7041683871005383`*^9},
+  3.704003076824266*^9, 3.70400351514786*^9, 3.7041683871005383`*^9, 
+  3.7041828726425457`*^9, 3.704190420654331*^9, 3.704190528806189*^9},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"4593639c-c7ae-41d4-a080-17aab8820154"]
+ FontWeight->"Regular",ExpressionUUID->"539e942b-444c-4efd-afe6-5644474f82c9"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -47895,42 +47984,42 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[GridBox[{
     {
-     GraphicsBox[{{{
-         {RGBColor[0.75, 0.75, 0.75], CircleBox[{0, 0}]}}}, {{
-         {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
-          DiskBox[{-0.8775825618903728, -0.4794255386042029}, 0.2, {
-           1.1853981633974482`, 0.14999999999999997`}]}}}, {{
-         {RGBColor[0., 0.8, 0.], Thickness[Large], 
-          CircleBox[{-0.8775825618903728, -0.4794255386042029}, 0.2, {
-           1.1853981633974482`, 0.14999999999999997`}]}}}, {{
-         {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
-          DiskBox[{0.9800665778412416, -0.19866933079506122}, 0.2, {
-           2.4061944901923447`, 3.291592653589793}]}}}, {{
-         {RGBColor[0., 0.8, 0.], Thickness[Large], 
-          CircleBox[{0.9800665778412416, -0.19866933079506122}, 0.2, {
-           2.4061944901923447`, 3.291592653589793}]}}}, {{
-         {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
-          DiskBox[{-0.29552020666133955, 0.955336489125606}, 
-           0.2, {-1.956194490192345, -0.7353981633974482}]}}}, {{
-         {RGBColor[0., 0.8, 0.], Thickness[Large], 
-          CircleBox[{-0.29552020666133955, 0.955336489125606}, 
-           0.2, {-1.956194490192345, -0.7353981633974482}]}}}, {{
-         {RGBColor[0, 1, 1], Opacity[0.1], EdgeForm[{RGBColor[0, 1, 1], 
-          Thickness[Large]}], 
-          
-          TagBox[PolygonBox[{{-0.29552020666133955`, 0.955336489125606}, {
-            0.9800665778412416, -0.19866933079506122`}, {-0.8775825618903728, \
+     GraphicsBox[{{
+        {RGBColor[0.75, 0.75, 0.75], CircleBox[{0, 0}]}}, {
+        {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
+         DiskBox[{-0.8775825618903728, -0.4794255386042029}, 0.2, {
+          1.1853981633974482`, 0.14999999999999997`}]}}, {
+        {RGBColor[0., 0.8, 0.], Thickness[Large], 
+         CircleBox[{-0.8775825618903728, -0.4794255386042029}, 0.2, {
+          1.1853981633974482`, 0.14999999999999997`}]}}, {
+        {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
+         DiskBox[{0.9800665778412416, -0.19866933079506122}, 0.2, {
+          2.4061944901923447`, 3.291592653589793}]}}, {
+        {RGBColor[0., 0.8, 0.], Thickness[Large], 
+         CircleBox[{0.9800665778412416, -0.19866933079506122}, 0.2, {
+          2.4061944901923447`, 3.291592653589793}]}}, {
+        {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
+         DiskBox[{-0.29552020666133955, 0.955336489125606}, 
+          0.2, {-1.956194490192345, -0.7353981633974482}]}}, {
+        {RGBColor[0., 0.8, 0.], Thickness[Large], 
+         CircleBox[{-0.29552020666133955, 0.955336489125606}, 
+          0.2, {-1.956194490192345, -0.7353981633974482}]}}, {
+        {RGBColor[0, 1, 1], Opacity[0.1], EdgeForm[{RGBColor[0, 1, 1], 
+         Thickness[Large]}], 
+         TagBox[
+          PolygonBox[{{-0.29552020666133955`, 0.955336489125606}, {
+           0.9800665778412416, -0.19866933079506122`}, {-0.8775825618903728, \
 -0.4794255386042029}}],
-           "Triangle"]}}}, {{
-         {GrayLevel[0], Dashing[Medium], 
-          LineBox[{{0, 0}, {0.9800665778412416, -0.19866933079506122`}}]}}}, {{
-         {GrayLevel[0], DiskBox[{0, 0}, 0.02]}}}, {{
-         {GrayLevel[0], 
-          DiskBox[{-0.29552020666133955, 0.955336489125606}, 0.02]}}}, {{
-         {GrayLevel[0], 
-          DiskBox[{0.9800665778412416, -0.19866933079506122}, 0.02]}}}, {{
-         {GrayLevel[0], 
-          DiskBox[{-0.8775825618903728, -0.4794255386042029}, 0.02]}}}, 
+          "Triangle"]}}, {
+        {GrayLevel[0], Dashing[Medium], 
+         LineBox[{{0, 0}, {0.9800665778412416, -0.19866933079506122`}}]}}, {
+        {GrayLevel[0], DiskBox[{0, 0}, 0.02]}}, {
+        {GrayLevel[0], 
+         DiskBox[{-0.29552020666133955, 0.955336489125606}, 0.02]}}, {
+        {GrayLevel[0], 
+         DiskBox[{0.9800665778412416, -0.19866933079506122}, 0.02]}}, {
+        {GrayLevel[0], 
+         DiskBox[{-0.8775825618903728, -0.4794255386042029}, 0.02]}}, 
        InsetBox["\<\"A\"\>", {-0.29552020666133955, 1.055336489125606}], 
        InsetBox["\<\"B\"\>", {1.0800665778412417, -0.19866933079506122}], 
        InsetBox["\<\"C\"\>", {-0.9775825618903727, -0.4794255386042029}], 
@@ -47972,11 +48061,12 @@ Cell[BoxData[
   "Grid"]], "Output",
  CellChangeTimes->{3.7038673711823397`*^9, 3.703940897310891*^9, 
   3.703941772394822*^9, 3.7039423631528177`*^9, 3.703946797453463*^9, 
-  3.704003076892997*^9, 3.704168389454422*^9},
+  3.704003076892997*^9, 3.704168389454422*^9, 3.7041828727114058`*^9, 
+  3.704190420722754*^9, 3.704190528857915*^9},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"dfe76b9a-c62f-409f-8846-45636ba53782"]
+ FontWeight->"Regular",ExpressionUUID->"d3787db0-e815-4dbf-afbb-ebbfe0ca7a72"]
 }, Open  ]],
 
 Cell[TextData[{
@@ -47986,7 +48076,6 @@ Cell[TextData[{
  Cell[BoxData[
   FormBox[
    OverscriptBox["BC", "_"], TraditionalForm]],
-  FormatType->"TraditionalForm",
   FontSize->16,ExpressionUUID->"e40c18f6-a1f6-4179-ae99-59c2791d9216"],
  StyleBox[" = 2r\[CenterDot]sen(\[Alpha]) \[LongRightArrow] ",
   FontSize->16,
@@ -47999,7 +48088,6 @@ Cell[TextData[{
       OverscriptBox["BC", "_"]}], 
      RowBox[{"sen", "(", "\[Alpha]", ")"}]],
     FontSize->18], TraditionalForm]],
-  FormatType->"TraditionalForm",
   FontSize->16,ExpressionUUID->"bf07dac5-f192-4fa6-be01-524c4938bf7c"],
  StyleBox[" = 2r\n",
   FontSize->16,
@@ -48007,7 +48095,6 @@ Cell[TextData[{
  Cell[BoxData[
   FormBox[
    OverscriptBox["AC", "_"], TraditionalForm]],
-  FormatType->"TraditionalForm",
   FontSize->16,ExpressionUUID->"d6a8fca8-9e16-456c-bd3a-d1407da9ede6"],
  StyleBox[" = 2r\[CenterDot]sen(\[Beta]) \[LongRightArrow]",
   FontSize->16,
@@ -48020,7 +48107,6 @@ Cell[TextData[{
       OverscriptBox["AC", "_"], " "}], 
      RowBox[{"sen", "(", "\[Beta]", ")"}]],
     FontSize->18], TraditionalForm]],
-  FormatType->"TraditionalForm",
   FontSize->16,ExpressionUUID->"9877b6bf-a3ac-4074-afc4-c19522e423ac"],
  StyleBox["= 2r\n",
   FontSize->16,
@@ -48028,7 +48114,6 @@ Cell[TextData[{
  Cell[BoxData[
   FormBox[
    OverscriptBox["AB", "_"], TraditionalForm]],
-  FormatType->"TraditionalForm",
   FontSize->16,ExpressionUUID->"2df575bf-1bab-47c8-b54e-9b0647238e7b"],
  StyleBox[" = 2r\[CenterDot]sen(\[Theta])\[LongRightArrow] ",
   FontSize->16,
@@ -48041,7 +48126,6 @@ Cell[TextData[{
       OverscriptBox["AB", "_"]}], 
      RowBox[{"sen", "(", "\[Theta]", ")"}]],
     FontSize->18], TraditionalForm]],
-  FormatType->"TraditionalForm",
   FontSize->16,ExpressionUUID->"ccf319e4-80a9-44a0-9c51-67a6a06861a3"],
  StyleBox[" = 2r\n\nQuindi:",
   FontSize->16,
@@ -48056,8 +48140,7 @@ Cell[TextData[{
      RowBox[{"sen", "(", "\[Alpha]", ")"}]],
     FontSize->24,
     FontColor->RGBColor[1., 0., 0.5019607843137255]], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
-  "bf3012f2-c352-4a43-8636-6110066050ff"],
+  FontSize->24,ExpressionUUID->"bf3012f2-c352-4a43-8636-6110066050ff"],
  StyleBox[" = ",
   FontSize->24,
   FontColor->RGBColor[1., 0., 0.5019607843137255]],
@@ -48068,6 +48151,7 @@ Cell[TextData[{
      OverscriptBox["AC", "_"], " "}], 
     RowBox[{
      RowBox[{"sen", "(", "\[Beta]", ")"}], " "}]], TraditionalForm]],
+  FontSize->24,
   FontColor->RGBColor[1., 0., 0.5019607843137255],ExpressionUUID->
   "3c819b6b-a139-45fc-afb6-cda85905fec8"],
  StyleBox["= ",
@@ -48078,12 +48162,14 @@ Cell[TextData[{
    FractionBox[
     OverscriptBox["AB", "_"], 
     RowBox[{"sen", "(", "\[Theta]", ")"}]], TraditionalForm]],
+  FontSize->24,
   FontColor->RGBColor[1., 0., 0.5019607843137255],ExpressionUUID->
   "08547cb0-b5d5-4725-a091-53998d8e7fb9"]
 }], "Text",
  CellChangeTimes->{
   3.703752814660338*^9, {3.704178303221066*^9, 3.704178458781307*^9}, {
-   3.704180683436183*^9, 3.704180687437531*^9}},
+   3.704180683436183*^9, 3.704180687437531*^9}, {3.70419081646301*^9, 
+   3.704190819376313*^9}},
  FontFamily->"OpenDyslexic",
  FontWeight->"Regular",ExpressionUUID->"ac658347-7d30-4ff0-99e3-98593d227af8"]
 }, Open  ]]
@@ -48118,34 +48204,35 @@ Cell[BoxData[
          StripOnInput->False,
          FontSize->20,
          FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText",
-       ExpressionUUID->"c968cea0-97fd-4198-aa3c-4300e97665c8"],
+       ExpressionUUID->"65935590-edcd-4647-836b-93d52538196a"],
       Text[
        Style["Esercizio 5:", 20, FontColor -> RGBColor[1, 0, 0]]]], "", ""},
     {
      StyleBox[
-      GraphicsBox[{{{{
-           {RGBColor[0., 0.7, 0.], Opacity[0.2], 
-            DiskBox[{0, 0}, 0.12, 
-             NCache[{Rational[3, 4] Pi, 0}, {2.356194490192345, 0}]]}}}}, {{{
-           {RGBColor[0., 0.8, 0.], 
-            CircleBox[{0, 0}, 0.12, 
-             NCache[{Rational[3, 4] Pi, 0}, {2.356194490192345, 0}]]}}}}, {{{
-           {RGBColor[0., 0.7, 0.], Opacity[0.2], 
-            DiskBox[{-1, 1}, 0.2, 
-             NCache[{Rational[-1, 4] 
-               Pi, -0.5317240672588056}, {-0.7853981633974483, \
--0.5317240672588056}]]}}}}, {{{
-           {RGBColor[0., 0.8, 0.], 
-            CircleBox[{-1, 1}, 0.2, 
-             NCache[{Rational[-1, 4] 
-               Pi, -0.5317240672588056}, {-0.7853981633974483, \
--0.5317240672588056}]]}}}}, {{{
-           {Opacity[0], EdgeForm[GrayLevel[0]], 
-            TagBox[PolygonBox[{{0, 0}, {-1, 1}, {0.7, 0}}],
-             "Triangle"]}}}}, GeometricTransformationBox[InsetBox[
+      GraphicsBox[{{
+         {RGBColor[0., 0.7, 0.], Opacity[0.2], 
+          DiskBox[{0, 0}, 0.12, 
+           NCache[{Rational[3, 4] Pi, 0}, {2.356194490192345, 0}]]}}, {
+         {RGBColor[0., 0.8, 0.], 
+          CircleBox[{0, 0}, 0.12, 
+           NCache[{Rational[3, 4] Pi, 0}, {2.356194490192345, 0}]]}}, {
+         {RGBColor[0., 0.7, 0.], Opacity[0.2], 
+          DiskBox[{-1, 1}, 0.2, 
+           NCache[{Rational[-1, 4] 
+             Pi, -0.5317240672588056}, {-0.7853981633974483, \
+-0.5317240672588056}]]}}, {
+         {RGBColor[0., 0.8, 0.], 
+          CircleBox[{-1, 1}, 0.2, 
+           NCache[{Rational[-1, 4] 
+             Pi, -0.5317240672588056}, {-0.7853981633974483, \
+-0.5317240672588056}]]}}, {
+         {Opacity[0], EdgeForm[GrayLevel[0]], 
+          TagBox[PolygonBox[{{0, 0}, {-1, 1}, {0.7, 0}}],
+           "Triangle"]}}, GeometricTransformationBox[InsetBox[
           StyleBox["\<\"C\"\>",
            StripOnInput->False,
-           FontSize->10], {-0.6, 0.4}], {{{1, 0}, {0, 1}}, Center}], InsetBox[
+           FontSize->10], {-0.6, 0.4}], {{{1, 0}, {0, 1}}, Center}], 
+        InsetBox[
          StyleBox["\<\"A\"\>",
           StripOnInput->False,
           FontSize->10], {0.3, -0.1}], InsetBox[
@@ -48175,15 +48262,14 @@ Cell[BoxData[
 \\\\\\\\(o\\\\\\\\)]\\\\\\\\)\\\\\\\\n\[Beta] = \
 \\\\\\\\!\\\\\\\\(\\\\\\\\*SuperscriptBox[\\\\\\\\(105\\\\\\\\), \\\\\\\\(o\\\
 \\\\\\)]\\\\\\\\)\\\\\\\"\\\", Rule[FontFamily, \\\"sans sarif\\\"], Bold, \
-Rule[StripOnInput, \
-False]]\\)\\!\\(\\*StyleBox[\\\"\\\\\\\"\\\\\\\\n?C\\\\\\\"\\\", \
-Rule[FontColor, RGBColor[1, 0, 0]], Rule[FontFamily, \\\"sans sarif\\\"], \
-Bold, Rule[StripOnInput, False]]\\)\"\>",
+Rule[StripOnInput, False]]\\)\\!\\(\\*StyleBox[\\\"\\\\\\\"\\\\\\\\nTrovare C\
+\\\\\\\"\\\", Rule[FontColor, RGBColor[1, 0, 0]], Rule[FontFamily, \\\"sans \
+sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\"\>",
       StripOnInput->False,
       Magnification->1.4 Inherited], 
      InterpretationBox[Cell[BoxData[
        FormBox["\<\"\"\>", TextForm]], "InlineText",ExpressionUUID->
-       "87825499-170c-4b3a-a3fa-b9f89eb98d26"],
+       "dbcaf17c-8f89-486e-8a68-cce5f61b11d2"],
       Text[""]]},
     {
      InterpretationBox[Cell[BoxData[
@@ -48192,7 +48278,7 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
          StripOnInput->False,
          FontSize->17,
          FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText",
-       ExpressionUUID->"1b5f93df-4652-4b7f-a861-f344a6133402"],
+       ExpressionUUID->"9656c2d6-1a12-4288-bbcc-ed60569f30ef"],
       Text[
        Style["Procedimento:", 17, FontColor -> RGBColor[1, 0, 0]]]], "", ""},
     {
@@ -48207,6 +48293,7 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
              False], TextForm]], "InlineText"], 
          Text[
           Style[
+          
           "Calcolare l'ampiezza dell'angolo \
 \[Gamma]:\!\(\*SuperscriptBox[\(180\), \(o\)]\)-("]]],InputFieldBox[
          Dynamic[Trigonometria`ott], String, FieldSize -> 3],StyleBox[
@@ -48236,7 +48323,7 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
 \\!\\(\\*FractionBox[\\(\\(A\\)\\(\\\\ \\)\\), \\(sen \\((\[Alpha])\\)\\)]\\) \
 =\\!\\(\\*FractionBox[\\(\\(\\\\ \\)\\(C\\)\\), \\(sen \
 \\((\[Gamma])\\)\\)]\\)\"\>", TextForm]], "InlineText",ExpressionUUID->
-        "f8a8c2b3-1322-463c-88e2-f33a18d88aaf"],
+        "cfc44b78-36bf-4f4e-958d-94919449bba2"],
        Text[
         Style[
         "Utilizzare la relazione \!\(\*FractionBox[\(\(A\)\(\\ \)\), \(sen \
@@ -48247,7 +48334,7 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
     {
      InterpretationBox[Cell[BoxData[
        FormBox["\<\"\"\>", TextForm]], "InlineText",ExpressionUUID->
-       "2339a89f-f8ce-4ed2-aa41-d2b2e13bf6f5"],
+       "e337deb3-5a76-4be9-bd70-a71e1aeb6c26"],
       Text[""]], 
      StyleBox[
       TemplateBox[{FractionBox["\"6\"", 
@@ -48297,7 +48384,7 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
      StyleBox[
       InterpretationBox[Cell[BoxData[
         FormBox["\<\"Ricavare:\"\>", TextForm]], "InlineText",ExpressionUUID->
-        "3febf877-5333-4f64-9fae-9ccf27117b61"],
+        "a333de6f-6745-47df-8418-b8370f9e4d3c"],
        Text[
         Style["Ricavare:"]]],
       StripOnInput->False,
@@ -48305,7 +48392,7 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
     {
      InterpretationBox[Cell[BoxData[
        FormBox["\<\"\"\>", TextForm]], "InlineText",ExpressionUUID->
-       "466c8b40-4c10-4cab-9075-b0f78ef58414"],
+       "69b00470-2087-4ced-8597-b378e3199078"],
       Text[""]], 
      StyleBox[
       TemplateBox[{"\"C = 6\"",FractionBox[
@@ -48347,10 +48434,10 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
          SqrtBox[
           TemplateBox[{
             InputFieldBox[
-             Dynamic[Trigonometria`res4], String, FieldSize -> 1], 
+             Dynamic[Trigonometria`res41], String, FieldSize -> 1], 
             DynamicBox[
              ToBoxes[
-              Trigonometria`CheckAnswer[Trigonometria`res4, "2"], 
+              Trigonometria`CheckAnswer[Trigonometria`res41, "2"], 
               StandardForm]]}, "RowDefault"]], DisplayForm]},
        "RowDefault"],
       StripOnInput->False,
@@ -48362,10 +48449,11 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
    GridBoxSpacings->{"Columns" -> {{10}}, "Rows" -> {{5}}}],
   "Grid"]], "Output",
  CellChangeTimes->{3.7039423804651833`*^9, 3.703946797547654*^9, 
-  3.7039483425793743`*^9, 3.704003076958263*^9, 3.7041683918843822`*^9},
+  3.7039483425793743`*^9, 3.704003076958263*^9, 3.7041683918843822`*^9, 
+  3.704182872777069*^9, 3.704190420787685*^9, 3.7041905289420757`*^9},
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"92febfe9-1f96-4659-8244-5ff29f1f628f"]
+ FontWeight->"Regular",ExpressionUUID->"429165e2-cf33-4b25-96fb-2c36b609ac11"]
 }, Open  ]]
 }, Open  ]],
 
@@ -48394,42 +48482,42 @@ Cell[BoxData[
     {
      InterpretationBox[Cell[BoxData[
        FormBox[
-        StyleBox["\<\"Esercizio:\"\>",
+        StyleBox["\<\"Esercizio 6:\"\>",
          StripOnInput->False,
          FontSize->20,
          FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText",
-       ExpressionUUID->"383e33d5-669c-400d-990c-9ef5ef897545"],
+       ExpressionUUID->"36e3eb74-d346-4962-a290-3c44760e961e"],
       Text[
-       Style["Esercizio:", 20, FontColor -> RGBColor[1, 0, 0]]]], "", ""},
+       Style["Esercizio 6:", 20, FontColor -> RGBColor[1, 0, 0]]]], "", ""},
     {
      StyleBox[
-      GraphicsBox[{{{
-          {RGBColor[0., 0.7, 0.], Opacity[0.2], 
-           PolygonBox[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}, {0, 0}}]}}}, {{
-          {RGBColor[0., 0.7, 0.], 
-           LineBox[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}}]}}}, {{
-          {RGBColor[0., 0.7, 0.], Opacity[0.2], 
-           DiskBox[{2, 0}, 0.2, 
-            NCache[{Pi, Pi - ArcTan[Rational[1, 2]]}, {3.141592653589793, 
-             2.677945044588987}]]}}}, {{
-          {RGBColor[0., 0.8, 0.], 
-           CircleBox[{2, 0}, 0.2, 
-            NCache[{Pi, Pi - ArcTan[Rational[1, 2]]}, {3.141592653589793, 
-             2.677945044588987}]]}}}, {{
-          {RGBColor[0., 0.7, 0.], Opacity[0.2], 
-           DiskBox[{0, 1}, 0.2, 
-            NCache[{2 Pi - ArcTan[Rational[1, 2]], Rational[3, 2] Pi}, {
-             5.81953769817878, 4.71238898038469}]]}}}, {{
-          {RGBColor[0., 0.8, 0.], 
-           CircleBox[{0, 1}, 0.2, 
-            NCache[{2 Pi - ArcTan[Rational[1, 2]], Rational[3, 2] Pi}, {
-             5.81953769817878, 4.71238898038469}]]}}}, {{
-          {Opacity[0], EdgeForm[GrayLevel[0]], 
-           TagBox[PolygonBox[{{0, 0}, {0, 1}, {2, 0}}],
-            "Triangle"]}}}, GeometricTransformationBox[InsetBox[
+      GraphicsBox[{{
+         {RGBColor[0., 0.7, 0.], Opacity[0.2], 
+          PolygonBox[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}, {0, 0}}]}}, {
+         {RGBColor[0., 0.7, 0.], LineBox[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}}]}}, {
+         {RGBColor[0., 0.7, 0.], Opacity[0.2], 
+          DiskBox[{2, 0}, 0.2, 
+           NCache[{Pi, Pi - ArcTan[Rational[1, 2]]}, {3.141592653589793, 
+            2.677945044588987}]]}}, {
+         {RGBColor[0., 0.8, 0.], 
+          CircleBox[{2, 0}, 0.2, 
+           NCache[{Pi, Pi - ArcTan[Rational[1, 2]]}, {3.141592653589793, 
+            2.677945044588987}]]}}, {
+         {RGBColor[0., 0.7, 0.], Opacity[0.2], 
+          DiskBox[{0, 1}, 0.2, 
+           NCache[{2 Pi - ArcTan[Rational[1, 2]], Rational[3, 2] Pi}, {
+            5.81953769817878, 4.71238898038469}]]}}, {
+         {RGBColor[0., 0.8, 0.], 
+          CircleBox[{0, 1}, 0.2, 
+           NCache[{2 Pi - ArcTan[Rational[1, 2]], Rational[3, 2] Pi}, {
+            5.81953769817878, 4.71238898038469}]]}}, {
+         {Opacity[0], EdgeForm[GrayLevel[0]], 
+          TagBox[PolygonBox[{{0, 0}, {0, 1}, {2, 0}}],
+           "Triangle"]}}, GeometricTransformationBox[InsetBox[
           StyleBox["\<\"B\"\>",
            StripOnInput->False,
-           FontSize->10], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], InsetBox[
+           FontSize->10], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], 
+        InsetBox[
          StyleBox["\<\"C\"\>",
           StripOnInput->False,
           FontSize->10], {0.7, -0.1}], InsetBox[
@@ -48462,26 +48550,19 @@ Cell[BoxData[
           FontColor->RGBColor[0., 0.7, 0.]], {0.2, 0.2}]}],
       StripOnInput->False,
       Magnification->2 Inherited], 
-     StyleBox["\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"\\\\\\\\!\\\\\\\\(\\\\\\\\*\
-FractionBox[\\\\\\\\(A\\\\\\\\), \\\\\\\\(sen \
-\\\\\\\\((\[Alpha])\\\\\\\\)\\\\\\\\)]\\\\\\\\) \
-=\\\\\\\\!\\\\\\\\(\\\\\\\\*FractionBox[\\\\\\\\(\\\\\\\\(B\\\\\\\\)\\\\\\\\(\
-\\\\\\\\\\\\\\\\ \\\\\\\\)\\\\\\\\), \\\\\\\\(sen \\\\\\\\((\[Beta])\\\\\\\\)\
-\\\\\\\\)]\\\\\\\\) \
-=\\\\\\\\!\\\\\\\\(\\\\\\\\*FractionBox[\\\\\\\\(\\\\\\\\(\\\\\\\\\\\\\\\\ \\\
-\\\\\\)\\\\\\\\(C\\\\\\\\)\\\\\\\\), \\\\\\\\(sen \
-\\\\\\\\((\[Gamma])\\\\\\\\)\\\\\\\\)]\\\\\\\\)\\\\\\\\n\\\\\\\\nA = 12 \
-\\\\\\\\n\[Alpha] = \\\\\\\\!\\\\\\\\(\\\\\\\\*SuperscriptBox[\\\\\\\\(30\\\\\
-\\\\), \\\\\\\\(o\\\\\\\\)]\\\\\\\\)\\\\\\\\nB = 9\\\\\\\"\\\", \
-Rule[FontFamily, \\\"sans sarif\\\"], Bold, Rule[StripOnInput, \
-False]]\\)\\!\\(\\*StyleBox[\\\"\\\\\\\"\\\\\\\\n?sen(\[Alpha])\\\\\\\"\\\", \
-Rule[FontColor, RGBColor[1, 0, 0]], Rule[FontFamily, \\\"sans sarif\\\"], \
-Bold, Rule[StripOnInput, False]]\\)\"\>",
+     StyleBox["\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"A = 12 \\\\\\\\nB = \
+9\\\\\\\\n\[Alpha] = \
+\\\\\\\\!\\\\\\\\(\\\\\\\\*SuperscriptBox[\\\\\\\\(30\\\\\\\\), \
+\\\\\\\\(o\\\\\\\\)]\\\\\\\\)\\\\\\\"\\\", Rule[FontFamily, \\\"sans \
+sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\\!\\(\\*StyleBox[\\\"\\\\\\\"\
+\\\\\\\\nTrovare sen(\[Alpha])\\\\\\\"\\\", Rule[FontColor, RGBColor[1, 0, \
+0]], Rule[FontFamily, \\\"sans sarif\\\"], Bold, Rule[StripOnInput, \
+False]]\\)\"\>",
       StripOnInput->False,
       Magnification->1.4 Inherited], 
      InterpretationBox[Cell[BoxData[
        FormBox["\<\"\"\>", TextForm]], "InlineText",ExpressionUUID->
-       "27a07a4b-ee73-49f3-968d-b5410141cbc1"],
+       "34529b62-7c93-4883-9802-6e057355b88e"],
       Text[""]]},
     {
      InterpretationBox[Cell[BoxData[
@@ -48490,26 +48571,43 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
          StripOnInput->False,
          FontSize->17,
          FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText",
-       ExpressionUUID->"0b63819e-05c1-4188-b457-c6580b953a1e"],
+       ExpressionUUID->"c4c26ac0-1fc8-416d-916c-3475d05ccd14"],
       Text[
        Style["Procedimento:", 17, FontColor -> RGBColor[1, 0, 0]]]], "", ""},
     {
      InterpretationBox[Cell[BoxData[
        FormBox[
-        StyleBox["\<\"sen(\[Alpha])?\"\>",
+        StyleBox["\<\"Ricorda! \\!\\(\\*FractionBox[\\(A\\), \\(sen \\((\
+\[Alpha])\\)\\)]\\) =\\!\\(\\*FractionBox[\\(\\(B\\)\\(\\\\ \\)\\), \\(sen \
+\\((\[Beta])\\)\\)]\\) =\\!\\(\\*FractionBox[\\(\\(\\\\ \\)\\(C\\)\\), \\(sen \
+\\((\[Gamma])\\)\\)]\\)\"\>",
+         StripOnInput->False,
+         FontSize->17,
+         FontWeight->Bold], TextForm]], "InlineText",ExpressionUUID->
+       "41010caa-290c-4b7f-b82d-5f3a51d51a21"],
+      Text[
+       Style[
+       "Ricorda! \!\(\*FractionBox[\(A\), \(sen \((\[Alpha])\)\)]\) \
+=\!\(\*FractionBox[\(\(B\)\(\\ \)\), \(sen \((\[Beta])\)\)]\) \
+=\!\(\*FractionBox[\(\(\\ \)\(C\)\), \(sen \((\[Gamma])\)\)]\)", FontSize -> 
+        17, Bold]]], "", ""},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox[
+        StyleBox["\<\"Quanto misura sen(\[Alpha])?\"\>",
          StripOnInput->False,
          FontSize->20,
          FontWeight->Bold], TextForm]], "InlineText",ExpressionUUID->
-       "fb161d08-f938-4009-bfa2-fdf01c2b8f97"],
+       "9166154e-c76d-4f16-a787-86e623c133a9"],
       Text[
-       Style["sen(\[Alpha])?", Bold, 20]]], 
+       Style["Quanto misura sen(\[Alpha])?", Bold, 20]]], 
      StyleBox[
       InterpretationBox[
        StyleBox[
         RowBox[{GridBox[{
            {
             
-            RadioButtonBox[Dynamic[Trigonometria`res4], {
+            RadioButtonBox[Dynamic[Trigonometria`res4$4422], {
              "\!\(\*FractionBox[\(3\), \(2\)]\)"},
              DefaultBaseStyle->"RadioButtonBar"], 
             
@@ -48522,7 +48620,6 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
           GridBoxAlignment->{
            "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
             "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
-          
           GridBoxItemSize->{
            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
           GridBoxSpacings->{"Columns" -> {
@@ -48534,7 +48631,7 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
             
-            RadioButtonBox[Dynamic[Trigonometria`res4], {
+            RadioButtonBox[Dynamic[Trigonometria`res4$4422], {
              "\!\(\*FractionBox[\(2\), \(3\)]\)"},
              DefaultBaseStyle->"RadioButtonBar"], 
             
@@ -48559,7 +48656,7 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
             
-            RadioButtonBox[Dynamic[Trigonometria`res4], {
+            RadioButtonBox[Dynamic[Trigonometria`res4$4422], {
              "\!\(\*FractionBox[\(2\), \(3\)]\)\!\(\*SqrtBox[\(3\)]\)"},
              DefaultBaseStyle->"RadioButtonBar"], 
             
@@ -48584,7 +48681,7 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
             
-            RadioButtonBox[Dynamic[Trigonometria`res4], {
+            RadioButtonBox[Dynamic[Trigonometria`res4$4422], {
              "\!\(\*FractionBox[\(3\), \(2\)]\)\!\(\*SqrtBox[\(3\)]\)"},
              DefaultBaseStyle->"RadioButtonBar"], 
             
@@ -48608,7 +48705,7 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}]}], "Deploy"],
        RadioButtonBar[
-        Dynamic[Trigonometria`res4], {
+        Dynamic[Trigonometria`res4$4422], {
         "\!\(\*FractionBox[\(3\), \(2\)]\)", 
          "\!\(\*FractionBox[\(2\), \(3\)]\)", 
          "\!\(\*FractionBox[\(2\), \(3\)]\)\!\(\*SqrtBox[\(3\)]\)", 
@@ -48618,9 +48715,9 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
      StyleBox[
       DynamicBox[ToBoxes[
         Trigonometria`CheckAnswer[
-        Trigonometria`res4, "\!\(\*FractionBox[\(2\), \(3\)]\)"], 
+        Trigonometria`res4$4422, "\!\(\*FractionBox[\(2\), \(3\)]\)"], 
         StandardForm],
-       ImageSizeCache->{32., {0., 31.}}],
+       ImageSizeCache->{0., {10., 38.}}],
       StripOnInput->False,
       Magnification->3 Inherited]}
    },
@@ -48631,10 +48728,11 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
   "Grid"]], "Output",
  CellChangeTimes->{3.7039424412624683`*^9, 3.7039467976983147`*^9, 
   3.7039483527227783`*^9, 3.704003077060176*^9, 3.704168396084214*^9, 
-  3.704169544979862*^9},
+  3.704169544979862*^9, 3.704182872908856*^9, 3.704190420858584*^9, 
+  3.7041905290461082`*^9},
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"0c7f07c4-96b2-4475-ad6d-26a44ab60e0a"]
+ FontWeight->"Regular",ExpressionUUID->"24115d58-74a1-46ce-81c0-0533f0658305"]
 }, Open  ]]
 }, Open  ]],
 
@@ -48735,57 +48833,57 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[GridBox[{
     {
-     GraphicsBox[{{{
-         {RGBColor[0, 1, 1], Opacity[0.1], EdgeForm[{RGBColor[0, 1, 1], 
-          Thickness[Large]}], 
-          
-          TagBox[PolygonBox[
-            NCache[{{-1, 0}, {1, 0}, {
-              2^Rational[-1, 2], 2^Rational[-1, 2]}}, {{-1, 0}, {1, 0}, {
-              0.7071067811865475, 0.7071067811865475}}]],
-           "Triangle"]}}}, {{
-         {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
-          DiskBox[NCache[{2^Rational[-1, 2], 2^Rational[-1, 2]}, {
-            0.7071067811865475, 0.7071067811865475}], 0.2, 
-           NCache[{Rational[-1, 2] Pi + 
-             ArcTan[2^Rational[-1, 2]/(1 + 2^Rational[-1, 2])], 
-             Rational[-1, 2] Pi + 
-             ArcTan[2^Rational[-1, 2]/(-1 + 
-               2^Rational[-1, 
-                  2])]}, {-1.1780972450961724`, -2.748893571891069}]]}}}, {{
-         {RGBColor[0., 0.8, 0.], Thickness[Large], 
-          CircleBox[
-           NCache[{2^Rational[-1, 2], 2^Rational[-1, 2]}, {0.7071067811865475,
-             0.7071067811865475}], 0.2, 
-           NCache[{Rational[-1, 2] Pi + 
-             ArcTan[2^Rational[-1, 2]/(1 + 2^Rational[-1, 2])], 
-             Rational[-1, 2] Pi + 
-             ArcTan[2^Rational[-1, 2]/(-1 + 
-               2^Rational[-1, 
-                  2])]}, {-1.1780972450961724`, -2.748893571891069}]]}}}, {{
-         {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
-          DiskBox[{1, 0}, 0.2, 
-           NCache[{Pi, Pi - ArcTan[
-             2^Rational[-1, 2]/(1 - 2^Rational[-1, 2])]}, {3.141592653589793, 
-            1.9634954084936207`}]]}}}, {{
-         {RGBColor[0., 0.8, 0.], Thickness[Large], 
-          CircleBox[{1, 0}, 0.2, 
-           NCache[{Pi, Pi - ArcTan[
-             2^Rational[-1, 2]/(1 - 2^Rational[-1, 2])]}, {3.141592653589793, 
-            1.9634954084936207`}]]}}}, {{
-         {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
-          DiskBox[{-1, 0}, 0.2, 
-           NCache[{-ArcTan[2^Rational[-1, 2]/(-1 - 2^Rational[-1, 2])], 0}, {
-            0.39269908169872414`, 0}]]}}}, {{
-         {RGBColor[0., 0.8, 0.], Thickness[Large], 
-          CircleBox[{-1, 0}, 0.2, 
-           NCache[{-ArcTan[2^Rational[-1, 2]/(-1 - 2^Rational[-1, 2])], 0}, {
-            0.39269908169872414`, 0}]]}}}, {{
-         {GrayLevel[0], 
-          DiskBox[NCache[{2^Rational[-1, 2], 2^Rational[-1, 2]}, {
-            0.7071067811865475, 0.7071067811865475}], 0.02]}}}, {{
-         {GrayLevel[0], DiskBox[{1, 0}, 0.02]}}}, {{
-         {GrayLevel[0], DiskBox[{-1, 0}, 0.02]}}}, 
+     GraphicsBox[{{
+        {RGBColor[0, 1, 1], Opacity[0.1], EdgeForm[{RGBColor[0, 1, 1], 
+         Thickness[Large]}], 
+         TagBox[
+          PolygonBox[
+           NCache[{{-1, 0}, {1, 0}, {
+             2^Rational[-1, 2], 2^Rational[-1, 2]}}, {{-1, 0}, {1, 0}, {
+             0.7071067811865475, 0.7071067811865475}}]],
+          "Triangle"]}}, {
+        {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
+         DiskBox[NCache[{2^Rational[-1, 2], 2^Rational[-1, 2]}, {
+           0.7071067811865475, 0.7071067811865475}], 0.2, 
+          NCache[{Rational[-1, 2] Pi + 
+            ArcTan[2^Rational[-1, 2]/(1 + 2^Rational[-1, 2])], 
+            Rational[-1, 2] Pi + 
+            ArcTan[2^Rational[-1, 2]/(-1 + 
+              2^Rational[-1, 
+                 2])]}, {-1.1780972450961724`, -2.748893571891069}]]}}, {
+        {RGBColor[0., 0.8, 0.], Thickness[Large], 
+         CircleBox[
+          NCache[{2^Rational[-1, 2], 2^Rational[-1, 2]}, {0.7071067811865475, 
+           0.7071067811865475}], 0.2, 
+          NCache[{Rational[-1, 2] Pi + 
+            ArcTan[2^Rational[-1, 2]/(1 + 2^Rational[-1, 2])], 
+            Rational[-1, 2] Pi + 
+            ArcTan[2^Rational[-1, 2]/(-1 + 
+              2^Rational[-1, 
+                 2])]}, {-1.1780972450961724`, -2.748893571891069}]]}}, {
+        {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
+         DiskBox[{1, 0}, 0.2, 
+          NCache[{Pi, Pi - ArcTan[
+            2^Rational[-1, 2]/(1 - 2^Rational[-1, 2])]}, {3.141592653589793, 
+           1.9634954084936207`}]]}}, {
+        {RGBColor[0., 0.8, 0.], Thickness[Large], 
+         CircleBox[{1, 0}, 0.2, 
+          NCache[{Pi, Pi - ArcTan[
+            2^Rational[-1, 2]/(1 - 2^Rational[-1, 2])]}, {3.141592653589793, 
+           1.9634954084936207`}]]}}, {
+        {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
+         DiskBox[{-1, 0}, 0.2, 
+          NCache[{-ArcTan[2^Rational[-1, 2]/(-1 - 2^Rational[-1, 2])], 0}, {
+           0.39269908169872414`, 0}]]}}, {
+        {RGBColor[0., 0.8, 0.], Thickness[Large], 
+         CircleBox[{-1, 0}, 0.2, 
+          NCache[{-ArcTan[2^Rational[-1, 2]/(-1 - 2^Rational[-1, 2])], 0}, {
+           0.39269908169872414`, 0}]]}}, {
+        {GrayLevel[0], 
+         DiskBox[NCache[{2^Rational[-1, 2], 2^Rational[-1, 2]}, {
+           0.7071067811865475, 0.7071067811865475}], 0.02]}}, {
+        {GrayLevel[0], DiskBox[{1, 0}, 0.02]}}, {
+        {GrayLevel[0], DiskBox[{-1, 0}, 0.02]}}, 
        InsetBox["\<\"A\"\>", 
         NCache[{2^Rational[-1, 2], 0.8071067811865474}, {0.7071067811865475, 
          0.8071067811865474}]], InsetBox["\<\"B\"\>", {1.1, 0}], 
@@ -48825,11 +48923,12 @@ Cell[BoxData[
   "Grid"]], "Output",
  CellChangeTimes->{3.703863205287299*^9, 3.703940897342144*^9, 
   3.703941772441698*^9, 3.7039424523239822`*^9, 3.703946797752244*^9, 
-  3.704003077133994*^9, 3.7041683993122663`*^9},
+  3.704003077133994*^9, 3.7041683993122663`*^9, 3.7041828731702538`*^9, 
+  3.704190421058077*^9, 3.704190529112401*^9},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"5681d9b2-db8a-44f2-8bf3-7e5c4a4f94bf"]
+ FontWeight->"Regular",ExpressionUUID->"baf4c583-c9c9-4e57-a785-ce28215c2f0b"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -48857,10 +48956,11 @@ Cell[BoxData[
     Trigonometria`pitagora[], WindowSize -> All, Editable -> False],
   Evaluator->Automatic,
   Method->"Preemptive"]], "Output",
- CellChangeTimes->{3.704181018364779*^9},
+ CellChangeTimes->{3.704181018364779*^9, 3.704182873226617*^9, 
+  3.704190421159474*^9, 3.7041905291742573`*^9},
  TextAlignment->Center,
  Background->RGBColor[
-  1, 0.85, 0.85],ExpressionUUID->"2eef00b7-149f-48f5-8e51-3882b3c38df0"]
+  1, 0.85, 0.85],ExpressionUUID->"e471af90-6081-46eb-b971-95cdf016fd71"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -49011,11 +49111,12 @@ Cell[BoxData[
   "Grid"]], "Output",
  CellChangeTimes->{3.703863328195582*^9, 3.703940897379905*^9, 
   3.703941772510723*^9, 3.703942455040086*^9, 3.703946797803369*^9, 
-  3.704003077193606*^9, 3.7041684022974653`*^9},
+  3.704003077193606*^9, 3.7041684022974653`*^9, 3.704182873292973*^9, 
+  3.704190421508431*^9, 3.704190529246681*^9},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"1ed215f5-e073-47f8-abab-8f9e8d5dbd22"]
+ FontWeight->"Regular",ExpressionUUID->"5da734e7-bafc-4a13-83d0-c5f0cce5955f"]
 }, Open  ]],
 
 Cell[TextData[{
@@ -49366,43 +49467,42 @@ Cell[BoxData[
     {
      InterpretationBox[Cell[BoxData[
        FormBox[
-        StyleBox["\<\"Esercizio guidato:\"\>",
+        StyleBox["\<\"Esercizio 7:\"\>",
          StripOnInput->False,
          FontSize->20,
          FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText",
-       ExpressionUUID->"4b94ceb7-a0e6-4e2f-8652-ea04b9d30bc6"],
+       ExpressionUUID->"05553242-2c84-46c1-bf44-429a43641c16"],
       Text[
-       Style["Esercizio guidato:", 20, FontColor -> RGBColor[1, 0, 0]]]], "", 
-     ""},
+       Style["Esercizio 7:", 20, FontColor -> RGBColor[1, 0, 0]]]], "", ""},
     {
      StyleBox[
-      GraphicsBox[{{{{
-           {RGBColor[0., 0.7, 0.], Opacity[0.2], 
-            PolygonBox[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}, {0, 0}}]}}}}, {{{
-           {RGBColor[0., 0.7, 0.], 
-            LineBox[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}}]}}}}, {{{
-           {RGBColor[0., 0.7, 0.], Opacity[0.2], 
-            DiskBox[{2, 0}, 0.2, 
-             NCache[{Pi, Pi - ArcTan[Rational[1, 2]]}, {3.141592653589793, 
-              2.677945044588987}]]}}}}, {{{
-           {RGBColor[0., 0.8, 0.], 
-            CircleBox[{2, 0}, 0.2, 
-             NCache[{Pi, Pi - ArcTan[Rational[1, 2]]}, {3.141592653589793, 
-              2.677945044588987}]]}}}}, {{{
-           {RGBColor[0., 0.7, 0.], Opacity[0.2], 
-            DiskBox[{0, 1}, 0.2, 
-             NCache[{2 Pi - ArcTan[Rational[1, 2]], Rational[3, 2] Pi}, {
-              5.81953769817878, 4.71238898038469}]]}}}}, {{{
-           {RGBColor[0., 0.8, 0.], 
-            CircleBox[{0, 1}, 0.2, 
-             NCache[{2 Pi - ArcTan[Rational[1, 2]], Rational[3, 2] Pi}, {
-              5.81953769817878, 4.71238898038469}]]}}}}, {{{
-           {Opacity[0], EdgeForm[GrayLevel[0]], 
-            TagBox[PolygonBox[{{0, 0}, {0, 1}, {2, 0}}],
-             "Triangle"]}}}}, GeometricTransformationBox[InsetBox[
+      GraphicsBox[{{
+         {RGBColor[0., 0.7, 0.], Opacity[0.2], 
+          PolygonBox[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}, {0, 0}}]}}, {
+         {RGBColor[0., 0.7, 0.], LineBox[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}}]}}, {
+         {RGBColor[0., 0.7, 0.], Opacity[0.2], 
+          DiskBox[{2, 0}, 0.2, 
+           NCache[{Pi, Pi - ArcTan[Rational[1, 2]]}, {3.141592653589793, 
+            2.677945044588987}]]}}, {
+         {RGBColor[0., 0.8, 0.], 
+          CircleBox[{2, 0}, 0.2, 
+           NCache[{Pi, Pi - ArcTan[Rational[1, 2]]}, {3.141592653589793, 
+            2.677945044588987}]]}}, {
+         {RGBColor[0., 0.7, 0.], Opacity[0.2], 
+          DiskBox[{0, 1}, 0.2, 
+           NCache[{2 Pi - ArcTan[Rational[1, 2]], Rational[3, 2] Pi}, {
+            5.81953769817878, 4.71238898038469}]]}}, {
+         {RGBColor[0., 0.8, 0.], 
+          CircleBox[{0, 1}, 0.2, 
+           NCache[{2 Pi - ArcTan[Rational[1, 2]], Rational[3, 2] Pi}, {
+            5.81953769817878, 4.71238898038469}]]}}, {
+         {Opacity[0], EdgeForm[GrayLevel[0]], 
+          TagBox[PolygonBox[{{0, 0}, {0, 1}, {2, 0}}],
+           "Triangle"]}}, GeometricTransformationBox[InsetBox[
           StyleBox["\<\"B\"\>",
            StripOnInput->False,
-           FontSize->10], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], InsetBox[
+           FontSize->10], {-0.1, 0.5}], {{{1, 0}, {0, 1}}, Center}], 
+        InsetBox[
          StyleBox["\<\"C\"\>",
           StripOnInput->False,
           FontSize->10], {0.7, -0.1}], InsetBox[
@@ -49440,13 +49540,13 @@ Cell[BoxData[
 \\\\\\\\!\\\\\\\\(\\\\\\\\*SuperscriptBox[\\\\\\\\(60\\\\\\\\), \
 \\\\\\\\(o\\\\\\\\)]\\\\\\\\)\\\\\\\"\\\", Rule[FontFamily, \\\"sans \
 sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\\!\\(\\*StyleBox[\\\"\\\\\\\"\
-\\\\\\\\n?C\\\\\\\"\\\", Rule[FontColor, RGBColor[1, 0, 0]], Rule[FontFamily, \
-\\\"sans sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\"\>",
+\\\\\\\\nTrovare C\\\\\\\"\\\", Rule[FontColor, RGBColor[1, 0, 0]], \
+Rule[FontFamily, \\\"sans sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\"\>",
       StripOnInput->False,
       Magnification->1.4 Inherited], 
      InterpretationBox[Cell[BoxData[
        FormBox["\<\"\"\>", TextForm]], "InlineText",ExpressionUUID->
-       "8a9e7d0a-2cd7-46fa-b59a-bbf2849632ed"],
+       "aa6e52f9-b63f-4b80-bd3c-c629a0ba2cf3"],
       Text[""]]},
     {
      InterpretationBox[Cell[BoxData[
@@ -49455,19 +49555,19 @@ sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\\!\\(\\*StyleBox[\\\"\\\\\\\"\
          StripOnInput->False,
          FontSize->17,
          FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText",
-       ExpressionUUID->"941458c7-a035-4e6b-8733-f50848f1e939"],
+       ExpressionUUID->"a5365177-cbec-477b-8934-9568ef115178"],
       Text[
        Style["Procedimento:", 17, FontColor -> RGBColor[1, 0, 0]]]], "", ""},
     {
      InterpretationBox[Cell[BoxData[
        FormBox[
-        StyleBox["\<\"Si applica il teorema del coseno:\"\>",
+        StyleBox["\<\"Applicare il teorema del coseno:\"\>",
          StripOnInput->False,
          FontSize->20,
          FontWeight->Bold], TextForm]], "InlineText",ExpressionUUID->
-       "ea3177ce-082f-401d-98f1-72069f1fe2ee"],
+       "d0346fbc-11d3-42bb-870f-bd08cf81e914"],
       Text[
-       Style["Si applica il teorema del coseno:", Bold, 20]]], 
+       Style["Applicare il teorema del coseno:", Bold, 20]]], 
      StyleBox[
       TemplateBox[{
        "\"\\!\\(\\*SuperscriptBox[\\(C\\), \\(2\\)]\\) = \"",InputFieldBox[
@@ -49485,11 +49585,11 @@ sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\\!\\(\\*StyleBox[\\\"\\\\\\\"\
          ToBoxes[
           Trigonometria`CheckAnswer[Trigonometria`B8, "B"], StandardForm]],
         "\" \[CenterDot] cos(\"","",PopupMenuBox[
-         Dynamic[Trigonometria`G7], {
+         Dynamic[Trigonometria`G7$4465], {
          "\[Alpha]" -> "\"\[Alpha]\"", "\[Beta]" -> "\"\[Beta]\"", "\[Gamma]" -> 
           "\"\[Gamma]\""}],DynamicBox[
          ToBoxes[
-          Trigonometria`CheckAnswer[Trigonometria`G7, "\[Gamma]"], 
+          Trigonometria`CheckAnswer[Trigonometria`G7$4465, "\[Gamma]"], 
           StandardForm]],"\")\""},
        "RowDefault"],
       StripOnInput->False,
@@ -49501,7 +49601,7 @@ sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\\!\\(\\*StyleBox[\\\"\\\\\\\"\
          StripOnInput->False,
          FontSize->20,
          FontWeight->Bold], TextForm]], "InlineText",ExpressionUUID->
-       "321ce381-bfde-4f8d-9940-e4c95d3eaa1a"],
+       "26ac774a-6ff6-430b-9802-29aea25bb0fd"],
       Text[
        Style["Quindi:", Bold, 20]]], 
      StyleBox[
@@ -49544,7 +49644,7 @@ sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\\!\\(\\*StyleBox[\\\"\\\\\\\"\
          StripOnInput->False,
          FontSize->20,
          FontWeight->Bold], TextForm]], "InlineText",ExpressionUUID->
-       "f78624b3-94db-4eaf-97fb-cfbeb912e447"],
+       "69443922-3dab-446f-bf32-28c53b9a6f17"],
       Text[
        Style["Da cui: ", Bold, 20]]], 
      StyleBox[
@@ -49568,10 +49668,11 @@ sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\\!\\(\\*StyleBox[\\\"\\\\\\\"\
    GridBoxSpacings->{"Columns" -> {{10}}, "Rows" -> {{5}}}],
   "Grid"]], "Output",
  CellChangeTimes->{3.7039425203416495`*^9, 3.703946797949709*^9, 
-  3.703948359643725*^9, 3.704003077258898*^9, 3.704168406330283*^9},
+  3.703948359643725*^9, 3.704003077258898*^9, 3.704168406330283*^9, 
+  3.704182873373398*^9, 3.7041904216218987`*^9, 3.704190529313163*^9},
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"5c4f88fc-15e6-406b-a15b-753c904ab185"]
+ FontWeight->"Regular",ExpressionUUID->"d274d49f-47be-4a26-9a67-0dfa18b9fc83"]
 }, Open  ]]
 }, Open  ]],
 
@@ -49604,24 +49705,25 @@ Cell[BoxData[
          StripOnInput->False,
          FontSize->20,
          FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText",
-       ExpressionUUID->"34326daa-e236-41c5-860d-88bed8484462"],
+       ExpressionUUID->"66ff38a7-da17-47be-9c97-b8aaffdad404"],
       Text[
        Style["Esercizio 8:", 20, FontColor -> RGBColor[1, 0, 0]]]], "", ""},
     {
      StyleBox[
-      GraphicsBox[{{{{
-           {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
-            DiskBox[{1, 0}, 0.15, {3.141592653589793, 
-             2.5535900500422257`}]}}}}, {{{
-           {RGBColor[0., 0.8, 0.], 
-            CircleBox[{1, 0}, 0.15, {3.141592653589793, 
-             2.5535900500422257`}]}}}}, {{{
-           {Opacity[0], EdgeForm[GrayLevel[0]], 
-            TagBox[PolygonBox[{{-0.2, 0}, {-0.5, 1}, {1, 0}, {-0.2, 0}}],
-             "Triangle"]}}}}, GeometricTransformationBox[InsetBox[
+      GraphicsBox[{{
+         {RGBColor[0., 0.7, 0.], Thickness[Large], Opacity[0.2], 
+          DiskBox[{1, 0}, 0.15, {3.141592653589793, 
+           2.5535900500422257`}]}}, {
+         {RGBColor[0., 0.8, 0.], 
+          CircleBox[{1, 0}, 0.15, {3.141592653589793, 
+           2.5535900500422257`}]}}, {
+         {Opacity[0], EdgeForm[GrayLevel[0]], 
+          TagBox[PolygonBox[{{-0.2, 0}, {-0.5, 1}, {1, 0}, {-0.2, 0}}],
+           "Triangle"]}}, GeometricTransformationBox[InsetBox[
           StyleBox["\<\"C\"\>",
            StripOnInput->False,
-           FontSize->10], {-0.4, 0.4}], {{{1, 0}, {0, 1}}, Center}], InsetBox[
+           FontSize->10], {-0.4, 0.4}], {{{1, 0}, {0, 1}}, Center}], 
+        InsetBox[
          StyleBox["\<\"A\"\>",
           StripOnInput->False,
           FontSize->10], {0.3, -0.1}], InsetBox[
@@ -49641,14 +49743,14 @@ Cell[BoxData[
      StyleBox["\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"A = 24 \\\\\\\\nC = 12\\\\\\\
 \\!\\\\\\\\(\\\\\\\\*SqrtBox[\\\\\\\\(3\\\\\\\\)]\\\\\\\\)\\\\\\\\nB = 12\\\\\
 \\\"\\\", Rule[FontFamily, \\\"sans sarif\\\"], Bold, Rule[StripOnInput, \
-False]]\\)\\!\\(\\*StyleBox[\\\"\\\\\\\"\\\\\\\\n?cos(\[Gamma])\\\\\\\"\\\", \
-Rule[FontColor, RGBColor[1, 0, 0]], Rule[FontFamily, \\\"sans sarif\\\"], \
-Bold, Rule[StripOnInput, False]]\\)\"\>",
+False]]\\)\\!\\(\\*StyleBox[\\\"\\\\\\\"\\\\\\\\nTrovare \
+cos(\[Gamma])\\\\\\\"\\\", Rule[FontColor, RGBColor[1, 0, 0]], \
+Rule[FontFamily, \\\"sans sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\"\>",
       StripOnInput->False,
       Magnification->1.4 Inherited], 
      InterpretationBox[Cell[BoxData[
        FormBox["\<\"\"\>", TextForm]], "InlineText",ExpressionUUID->
-       "418fb743-4dd6-4d4e-8639-a6de8f9f968d"],
+       "69c55a56-7600-408e-bad6-e04c7cf2f773"],
       Text[""]]},
     {
      InterpretationBox[Cell[BoxData[
@@ -49657,31 +49759,32 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
          StripOnInput->False,
          FontSize->17,
          FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText",
-       ExpressionUUID->"fd3d481d-c84e-434e-9363-82f7b11233f9"],
+       ExpressionUUID->"218c4dcc-9771-4569-98f6-78ca73990436"],
       Text[
        Style["Procedimento:", 17, FontColor -> RGBColor[1, 0, 0]]]], "", ""},
     {
      InterpretationBox[Cell[BoxData[
        FormBox[
-        StyleBox["\<\"Ricordati! \\!\\(\\*SuperscriptBox[\\(C\\), \\(2\\)]\\) \
-= \\!\\(\\*SuperscriptBox[\\(B\\), \\(2\\)]\\) + \\!\\(\\*SuperscriptBox[\\(A\
-\\), \\(2\\)]\\) - 2AB cos(\[Gamma])\"\>",
+        StyleBox["\<\"Ricorda! \\!\\(\\*SuperscriptBox[\\(C\\), \\(2\\)]\\) = \
+\\!\\(\\*SuperscriptBox[\\(B\\), \\(2\\)]\\) + \
+\\!\\(\\*SuperscriptBox[\\(A\\), \\(2\\)]\\) - 2A\[CenterDot]B \
+cos(\[Gamma])\"\>",
          StripOnInput->False,
          FontSize->20,
          FontWeight->Bold], TextForm]], "InlineText",ExpressionUUID->
-       "cecd5bfa-40af-4a45-9aa3-5b53d2dc861c"],
+       "f1af389a-f19e-45c2-a59c-9d4a235bf056"],
       Text[
        Style[
-       "Ricordati! \!\(\*SuperscriptBox[\(C\), \(2\)]\) = \
-\!\(\*SuperscriptBox[\(B\), \(2\)]\) + \!\(\*SuperscriptBox[\(A\), \(2\)]\) - \
-2AB cos(\[Gamma])", Bold, 20]]], "", ""},
+       "Ricorda! \!\(\*SuperscriptBox[\(C\), \(2\)]\) = \!\(\*SuperscriptBox[\
+\(B\), \(2\)]\) + \!\(\*SuperscriptBox[\(A\), \(2\)]\) - 2A\[CenterDot]B cos(\
+\[Gamma])", Bold, 20]]], "", ""},
     {
      StyleBox[
       TemplateBox[{
        "\"cos(\[Gamma]) = \\!\\(\\*FractionBox[\\(\\(\\\\ \
 \\)\\(\\*SuperscriptBox[\\(B\\), \\(2\\)]\\\\  + \\\\ \
 \\*SuperscriptBox[\\(A\\), \\(2\\)]\\\\  - \\\\ \\*SuperscriptBox[\\(C\\), \
-\\(2\\)]\\)\\), \\(2  AB\\)]\\) = \"",FractionBox[
+\\(2\\)]\\)\\), \\(2  A\[CenterDot]B\\)]\\) = \"",FractionBox[
          TemplateBox[{
            InputFieldBox[
             Dynamic[Trigonometria`val13], String, FieldSize -> 2], 
@@ -49706,13 +49809,17 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
       StripOnInput->False,
       Magnification->2 Inherited], "", ""},
     {
+     StyleBox["\<\"Quindi cos(\[Gamma]) misura:\"\>",
+      StripOnInput->False,
+      FontSize->17,
+      FontWeight->Bold], 
      StyleBox[
       TemplateBox[{InterpretationBox[
          StyleBox[
           RowBox[{
             GridBox[{{
                RadioButtonBox[
-                Dynamic[Trigonometria`res5], {
+                Dynamic[Trigonometria`res5$4513], {
                 "\!\(\*FractionBox[\(1\), \(2\)]\)"}, DefaultBaseStyle -> 
                 "RadioButtonBar"], 
                StyleBox[
@@ -49723,7 +49830,7 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
              ColumnAlignments -> Left, ColumnSpacings -> 0.3], "  ", 
             GridBox[{{
                RadioButtonBox[
-                Dynamic[Trigonometria`res5], {
+                Dynamic[Trigonometria`res5$4513], {
                 "\!\(\*FractionBox[SqrtBox[\(3\)], \(2\)]\)"}, 
                 DefaultBaseStyle -> "RadioButtonBar"], 
                StyleBox[
@@ -49734,7 +49841,7 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
              ColumnAlignments -> Left, ColumnSpacings -> 0.3], "  ", 
             GridBox[{{
                RadioButtonBox[
-                Dynamic[Trigonometria`res5], {
+                Dynamic[Trigonometria`res5$4513], {
                 "-\!\(\*FractionBox[\(1\), \(2\)]\)"}, DefaultBaseStyle -> 
                 "RadioButtonBar"], 
                StyleBox[
@@ -49745,7 +49852,7 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
              ColumnAlignments -> Left, ColumnSpacings -> 0.3], "  ", 
             GridBox[{{
                RadioButtonBox[
-                Dynamic[Trigonometria`res5], {
+                Dynamic[Trigonometria`res5$4513], {
                 "-\!\(\*FractionBox[SqrtBox[\(3\)], \(2\)]\)"}, 
                 DefaultBaseStyle -> "RadioButtonBar"], 
                StyleBox[
@@ -49755,7 +49862,7 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
              ColumnAlignments -> Left, ColumnSpacings -> 0.3]}], "Deploy"], 
          RadioButtonBar[
-          Dynamic[Trigonometria`res5], {
+          Dynamic[Trigonometria`res5$4513], {
           "\!\(\*FractionBox[\(1\), \(2\)]\)", 
            "\!\(\*FractionBox[SqrtBox[\(3\)], \(2\)]\)", 
            "-\!\(\*FractionBox[\(1\), \(2\)]\)", 
@@ -49763,11 +49870,11 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
         DynamicBox[
          ToBoxes[
           Trigonometria`CheckAnswer[
-          Trigonometria`res5, "\!\(\*FractionBox[\(1\), \(2\)]\)"], 
+          Trigonometria`res5$4513, "\!\(\*FractionBox[\(1\), \(2\)]\)"], 
           StandardForm]]},
        "RowDefault"],
       StripOnInput->False,
-      Magnification->2 Inherited], "", ""}
+      Magnification->2 Inherited], ""}
    },
    AutoDelete->False,
    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Center}}},
@@ -49776,10 +49883,11 @@ Bold, Rule[StripOnInput, False]]\\)\"\>",
   "Grid"]], "Output",
  CellChangeTimes->{
   3.7039425556176467`*^9, 3.703946798062866*^9, 3.703948366469611*^9, 
-   3.704003077340789*^9, {3.704168411624454*^9, 3.704168421452804*^9}},
+   3.704003077340789*^9, {3.704168411624454*^9, 3.704168421452804*^9}, 
+   3.70418287346058*^9, 3.704190421742292*^9, 3.7041905293909397`*^9},
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"7255e956-56df-455c-a934-d01c33f5ccf4"]
+ FontWeight->"Regular",ExpressionUUID->"efd308f8-cfe2-41ba-89b2-80493a723969"]
 }, Open  ]]
 }, Open  ]],
 
@@ -49812,7 +49920,7 @@ Cell[BoxData[
          StripOnInput->False,
          FontSize->20,
          FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText",
-       ExpressionUUID->"5f75e954-2157-4855-9642-3c312249b9e6"],
+       ExpressionUUID->"731fa8fe-2e37-4499-b3c0-85b6b72acad5"],
       Text[
        Style["Esercizio 9:", 20, FontColor -> RGBColor[1, 0, 0]]]], ""},
     {
@@ -49822,7 +49930,7 @@ Cell[BoxData[
          StripOnInput->False,
          FontSize->20,
          FontWeight->Bold], TextForm]], "InlineText",ExpressionUUID->
-       "d7a5a982-ec6e-45f1-8930-f79fe291ca7e"],
+       "db686587-6f78-4484-821a-e1111b3225b4"],
       Text[
        Style["Sia H l'altezza del campanile", Bold, 20]]], ""},
     {
@@ -49833,8 +49941,8 @@ Cell[BoxData[
      StyleBox[
       TemplateBox[{
        StyleBox[
-        "\"?H\\n\"", FontColor -> RGBColor[1, 0, 0], StripOnInput -> False],
-        StyleBox[
+        "\"Trovare H, dove H \[EGrave] l'altezza del campanile\\n\"", 
+         FontColor -> RGBColor[1, 0, 0], StripOnInput -> False],StyleBox[
         "\"Approssimare il risultato per difetto\\n\"", FontColor -> 
          RGBColor[1, 0, 0], 8, StripOnInput -> False],"\"tan(\"",InputFieldBox[
          Dynamic[Trigonometria`tang], String, FieldSize -> 1],DynamicBox[
@@ -49886,11 +49994,9 @@ Cell[BoxData[
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
    GridBoxSpacings->{"Columns" -> {{10}}, "Rows" -> {{5}}}],
   "Grid"]], "Output",
- CellChangeTimes->{3.7039425754202757`*^9, 3.703946798178029*^9, 
-  3.703948371281022*^9, 3.704003077425893*^9, 3.7041684260887136`*^9},
- FontFamily->"OpenDyslexic",
- FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"8d37d30e-fbed-4f11-a6b3-1745c3e016b4"]
+ CellChangeTimes->{3.704183008266856*^9, 3.70419042190835*^9, 
+  3.7041905294566717`*^9},ExpressionUUID->"02659047-7a0c-46cb-9382-\
+c0a530a57ebe"]
 }, Open  ]]
 }, Open  ]],
 
@@ -49923,19 +50029,19 @@ Cell[BoxData[
          StripOnInput->False,
          FontSize->20,
          FontColor->RGBColor[1, 0, 0]], TextForm]], "InlineText",
-       ExpressionUUID->"902d3fc5-2697-4bc3-8746-f36a47d481d0"],
+       ExpressionUUID->"ca67724f-ff61-433e-9323-e6aa5d515543"],
       Text[
        Style["Esercizio 10:", 20, FontColor -> RGBColor[1, 0, 0]]]], ""},
     {
      InterpretationBox[Cell[BoxData[
        FormBox[
-        StyleBox["\<\"Trovare l'angolo \[Alpha]\"\>",
+        StyleBox["\<\"\"\>",
          StripOnInput->False,
          FontSize->20,
          FontWeight->Bold], TextForm]], "InlineText",ExpressionUUID->
-       "40563a5e-f856-43fa-b0e8-c3f1b2efc58c"],
+       "f68a5738-305a-424f-a7d7-2880f31c5776"],
       Text[
-       Style["Trovare l'angolo \[Alpha]", Bold, 20]]], ""},
+       Style["", Bold, 20]]], ""},
     {
      StyleBox[
       RowBox[{"Sharpen", "[", "$Failed", "]"}],
@@ -49944,8 +50050,8 @@ Cell[BoxData[
      StyleBox[
       TemplateBox[{
        StyleBox[
-        "\"?\[Alpha]\\n\"", FontColor -> RGBColor[1, 0, 0], StripOnInput -> 
-         False],StyleBox[
+        "\"Trovare \[Alpha]\\n\"", FontColor -> RGBColor[1, 0, 0], 
+         StripOnInput -> False],StyleBox[
         "\"Approssima il risultato per difetto alla prima cifra \
 decimale\\n\\n\"", FontColor -> RGBColor[1, 0, 0], 10, StripOnInput -> False],
         StyleBox["\"\"", StripOnInput -> False],FractionBox[
@@ -49987,6 +50093,7 @@ decimale\\n\\n\"", FontColor -> RGBColor[1, 0, 0], 10, StripOnInput -> False],
             ToBoxes[
              Trigonometria`CheckAnswer[Trigonometria`latoc, "3"], 
              StandardForm]]}, "RowDefault"]],"\" \[CenterDot] \"",FractionBox[
+        
          TemplateBox[{
            TagBox[
             SqrtBox[
@@ -50020,10 +50127,11 @@ decimale\\n\\n\"", FontColor -> RGBColor[1, 0, 0], 10, StripOnInput -> False],
    GridBoxSpacings->{"Columns" -> {{10}}, "Rows" -> {{5}}}],
   "Grid"]], "Output",
  CellChangeTimes->{3.703942595144486*^9, 3.70394679834509*^9, 
-  3.703948375679737*^9, 3.704003077539571*^9, 3.704168432306019*^9},
+  3.703948375679737*^9, 3.704003077539571*^9, 3.704168432306019*^9, 
+  3.704182873744755*^9, 3.704190422024982*^9, 3.704190529546404*^9},
  FontFamily->"OpenDyslexic",
  FontSize->14,
- FontWeight->"Regular",ExpressionUUID->"98f3d61b-f262-49b5-9aab-b8da148f5499"]
+ FontWeight->"Regular",ExpressionUUID->"4a271409-7cc4-4f82-b54b-702a0e348304"]
 }, Open  ]]
 }, Open  ]],
 
@@ -50034,7 +50142,7 @@ Cell["", "SlideShowNavigationBar",
  CellTags->
   "SlideShowHeader",ExpressionUUID->"0b0d8546-a0e6-4e8e-8c13-213784e15ec2"]
 },
-WindowSize->{Full, Full},
+WindowSize->{808, 655},
 WindowMargins->{{55, Automatic}, {Automatic, 18}},
 TaggingRules->{"SlideShow" -> True},
 FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 16, \
@@ -50047,111 +50155,111 @@ StyleDefinitions->"Default.nb"
 (*CellTagsOutline
 CellTagsIndex->{
  "SlideShowHeader"->{
-  Cell[580, 22, 4482, 99, 
+  Cell[580, 22, 4509, 102, 
   75, "SlideShowNavigationBar", "ExpressionUUID" -> "
    ff061b19-78df-4426-84ae-4a02cd5c333e",
    CellTags->"SlideShowHeader"],
-  Cell[2640434, 43351, 190, 5, 
+  Cell[2640532, 43355, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "
    27012d45-0ea1-4f58-8190-50e8b92ac9a0",
    CellTags->"SlideShowHeader"],
-  Cell[2642180, 43391, 190, 5, 
+  Cell[2642278, 43395, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "
    496f1601-951b-40b1-89e9-198113a781e6",
    CellTags->"SlideShowHeader"],
-  Cell[2644676, 43464, 190, 5, 
+  Cell[2645073, 43477, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "d4a3994a-d88f-4f00-98b2-
    db18aef836ba",
    CellTags->"SlideShowHeader"],
-  Cell[2647704, 43538, 190, 5, 
+  Cell[2648101, 43551, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "
    662c697d-36a7-4e84-8fbd-936cc439c2e4",
    CellTags->"SlideShowHeader"],
-  Cell[2659346, 43838, 190, 5, 
+  Cell[2660019, 43856, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "3329c87d-1a06-45ce-a2cd-
    fc587ad29a03",
    CellTags->"SlideShowHeader"],
-  Cell[2680872, 44438, 190, 5, 
+  Cell[2681667, 44459, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "127890ed-ba16-42ab-81a5-
    d1a4c0887359",
    CellTags->"SlideShowHeader"],
-  Cell[2685896, 44569, 190, 5, 
+  Cell[2686658, 44590, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "98a57774-de45-4b81-a33b-
    d9999ffbe613",
    CellTags->"SlideShowHeader"],
-  Cell[2701711, 44977, 190, 5, 
+  Cell[2702634, 45001, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "cc4718d5-2b71-428d-a73c-
    de37ed219aa1",
    CellTags->"SlideShowHeader"],
-  Cell[2718138, 45375, 190, 5, 
+  Cell[2719389, 45406, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "e8a7e8c2-b615-4317-9e1e-
    aa9eb67abda8",
    CellTags->"SlideShowHeader"],
-  Cell[2724322, 45575, 190, 5, 
+  Cell[2726020, 45619, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "eaf6e525-c36e-4362-8f56-
    a8581be1a2d8",
    CellTags->"SlideShowHeader"],
-  Cell[2742067, 46004, 190, 5, 
+  Cell[2745255, 46082, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "97f35bd5-8e5b-47c6-
    b08c-2c23589bf25f",
    CellTags->"SlideShowHeader"],
-  Cell[2759085, 46439, 190, 5, 
+  Cell[2762347, 46519, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "c44748c8-a41f-40d2-bf07-
    d3ea0c0187a5",
    CellTags->"SlideShowHeader"],
-  Cell[2770900, 46714, 190, 5, 
+  Cell[2774234, 46795, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "b98afe31-6ef7-4b77-
    a0fb-93070ade76b3",
    CellTags->"SlideShowHeader"],
-  Cell[2795946, 47282, 190, 5, 
+  Cell[2799300, 47360, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "8198f957-0f2c-442d-bc21-
    b3ff3c00aa7b",
    CellTags->"SlideShowHeader"],
-  Cell[2803005, 47465, 190, 5, 
+  Cell[2806537, 47547, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "
    79411d95-75b5-41f9-913f-49a0af07715d",
    CellTags->"SlideShowHeader"],
-  Cell[2811662, 47688, 190, 5, 
+  Cell[2815543, 47777, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "e5ff2ab5-1c1b-45c2-87ef-
    ae5888966edf",
    CellTags->"SlideShowHeader"],
-  Cell[2818399, 47863, 190, 5, 
+  Cell[2822244, 47952, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "d900f154-99e5-4186-9c3f-
    acf46c69304a",
    CellTags->"SlideShowHeader"],
-  Cell[2826891, 48093, 190, 5, 
+  Cell[2830611, 48179, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "
    a6df3a26-7079-41ed-8c66-4b9dc53eec51",
    CellTags->"SlideShowHeader"],
-  Cell[2838116, 48373, 190, 5, 
+  Cell[2841880, 48461, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "
    74e0ba1b-538d-45b1-8a09-0f50e5f2eb50",
    CellTags->"SlideShowHeader"],
-  Cell[2848937, 48642, 190, 5, 
+  Cell[2853049, 48740, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "
    41b2bb30-5cfd-49e3-962d-49993bc646a3",
    CellTags->"SlideShowHeader"],
-  Cell[2857199, 48870, 190, 5, 
+  Cell[2861384, 48970, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "bd142521-b6a4-4440-8eb7-
    a4085abbf0ed",
    CellTags->"SlideShowHeader"],
-  Cell[2873575, 49345, 190, 5, 
+  Cell[2877829, 49446, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "
    33cfab2c-7ae8-42ef-80e9-26e97505bbe9",
    CellTags->"SlideShowHeader"],
-  Cell[2883114, 49579, 190, 5, 
+  Cell[2887360, 49680, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "
    7550307c-13c6-4e02-9ff1-913f87ebb124",
    CellTags->"SlideShowHeader"],
-  Cell[2891758, 49787, 190, 5, 
+  Cell[2896248, 49895, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "
    c9f68e56-5109-4e91-93f2-37ac61b83c84",
    CellTags->"SlideShowHeader"],
-  Cell[2895864, 49898, 190, 5, 
+  Cell[2900291, 50004, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "
    0f88e0b8-3ce3-4fa1-9a35-135d50c33eb3",
    CellTags->"SlideShowHeader"],
-  Cell[2900730, 50029, 190, 5, 
+  Cell[2905192, 50137, 190, 5, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "0b0d8546-
    a0e6-4e8e-8c13-213784e15ec2",
    CellTags->"SlideShowHeader"]}
@@ -50159,449 +50267,449 @@ CellTagsIndex->{
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"SlideShowHeader", 2901275, 50048}
+ {"SlideShowHeader", 2905735, 50156}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 4482, 99, 75, "SlideShowNavigationBar", "ExpressionUUID" -> \
+Cell[580, 22, 4509, 102, 75, "SlideShowNavigationBar", "ExpressionUUID" -> \
 "ff061b19-78df-4426-84ae-4a02cd5c333e",
  CellTags->"SlideShowHeader"],
-Cell[5065, 123, 357, 7, 105, "Title", "ExpressionUUID" -> \
+Cell[5092, 126, 357, 7, 105, "Title", "ExpressionUUID" -> \
 "8fad6acd-86e2-4dc6-82e1-89f1a60f5c96"],
 Cell[CellGroupData[{
-Cell[5447, 134, 286, 7, 22, "Code", "ExpressionUUID" -> \
+Cell[5474, 137, 286, 7, 22, "Code", "ExpressionUUID" -> \
 "9cf134f0-a629-4a56-a075-2a437c5cb4f7",
  CellOpen->False],
-Cell[5736, 143, 2634216, 43192, 798, "Output", "ExpressionUUID" -> \
-"e77d7be1-0ea4-4099-bb64-3a8a7526f4b6"]
+Cell[5763, 146, 2634287, 43193, 798, "Output", "ExpressionUUID" -> \
+"e270da07-3d6a-4e31-9f2e-dd2c22bbbafa"]
 }, Open  ]],
-Cell[2639967, 43338, 430, 8, 89, "Subtitle", "ExpressionUUID" -> \
+Cell[2640065, 43342, 430, 8, 89, "Subtitle", "ExpressionUUID" -> \
 "5b35e99e-8570-4658-af04-5f307a8d7bd7"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2640434, 43351, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2640532, 43355, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "27012d45-0ea1-4f58-8190-50e8b92ac9a0",
  CellTags->"SlideShowHeader"],
-Cell[2640627, 43358, 1516, 28, 413, "Section", "ExpressionUUID" -> \
+Cell[2640725, 43362, 1516, 28, 413, "Section", "ExpressionUUID" -> \
 "28867ebd-4ddc-4d62-8d18-4803749c67c0"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2642180, 43391, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2642278, 43395, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "496f1601-951b-40b1-89e9-198113a781e6",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2642395, 43400, 387, 8, 75, "Section", "ExpressionUUID" -> \
+Cell[2642493, 43404, 387, 8, 75, "Section", "ExpressionUUID" -> \
 "1c64015d-75f2-4913-bd06-d48b6da81dcc"],
-Cell[2642785, 43410, 711, 13, 127, "Text", "ExpressionUUID" -> \
+Cell[2642883, 43414, 711, 13, 127, "Text", "ExpressionUUID" -> \
 "f9dc73bd-d5aa-4fe5-8812-54d33a5f8699"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2643533, 43428, 377, 8, 75, "Section", "ExpressionUUID" -> \
+Cell[2643631, 43432, 377, 8, 75, "Section", "ExpressionUUID" -> \
 "f0a85a5b-0874-4db0-975b-4e210f1ba1e9"],
-Cell[2643913, 43438, 714, 20, 301, "Text", "ExpressionUUID" -> \
+Cell[2644011, 43442, 1013, 29, 591, "Text", "ExpressionUUID" -> \
 "65271cce-8aa2-4634-9541-8ab133eb2f2d"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2644676, 43464, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2645073, 43477, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "d4a3994a-d88f-4f00-98b2-db18aef836ba",
  CellTags->"SlideShowHeader"],
-Cell[2644869, 43471, 530, 13, 40, "Input", "ExpressionUUID" -> \
+Cell[2645266, 43484, 530, 13, 40, "Input", "ExpressionUUID" -> \
 "efc61d3a-ddfc-4487-8f91-61dfec0839cd"],
 Cell[CellGroupData[{
-Cell[2645424, 43488, 608, 14, 121, "Section", "ExpressionUUID" -> \
+Cell[2645821, 43501, 608, 14, 121, "Section", "ExpressionUUID" -> \
 "eebc9a3e-1f4d-4185-98bf-2c9e5ec0cc68"],
-Cell[2646035, 43504, 1620, 28, 475, "Text", "ExpressionUUID" -> \
+Cell[2646432, 43517, 1620, 28, 475, "Text", "ExpressionUUID" -> \
 "65f2a966-0f58-4ab5-91cc-3afc3391e721"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2647704, 43538, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2648101, 43551, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "662c697d-36a7-4e84-8fbd-936cc439c2e4",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2647919, 43547, 439, 9, 75, "Section", "ExpressionUUID" -> \
+Cell[2648316, 43560, 439, 9, 75, "Section", "ExpressionUUID" -> \
 "a3bc7838-fb0f-40bc-b142-ca1a36dc64e5"],
-Cell[2648361, 43558, 1570, 48, 121, "Text", "ExpressionUUID" -> \
+Cell[2648758, 43571, 1570, 48, 121, "Text", "ExpressionUUID" -> \
 "b42f20ef-8eb8-4505-b903-b1082c9ebae2"],
 Cell[CellGroupData[{
-Cell[2649956, 43610, 421, 8, 61, "Code", "ExpressionUUID" -> \
+Cell[2650353, 43623, 421, 8, 61, "Code", "ExpressionUUID" -> \
 "b88380e5-673a-4261-af01-e00664bfec47"],
-Cell[2650380, 43620, 6263, 139, 526, "Output", "ExpressionUUID" -> \
-"c00af8c2-7e52-44c6-b2a2-eea27fb18631"]
+Cell[2650777, 43633, 6397, 142, 526, "Output", "ExpressionUUID" -> \
+"226da5ee-065d-49ab-bc7c-a862c784eb15"]
 }, Open  ]],
-Cell[2656658, 43762, 473, 8, 47, "Text", "ExpressionUUID" -> \
+Cell[2657189, 43778, 473, 8, 47, "Text", "ExpressionUUID" -> \
 "cf213812-a977-42f6-8d34-514e88985674"],
 Cell[CellGroupData[{
-Cell[2657156, 43774, 372, 8, 22, "Code", "ExpressionUUID" -> \
+Cell[2657687, 43790, 372, 8, 22, "Code", "ExpressionUUID" -> \
 "a0933898-eae8-4ae9-baeb-b472fca09161",
  CellOpen->False],
-Cell[2657531, 43784, 744, 17, 59, "Output", "ExpressionUUID" -> \
-"b06a74be-7656-49e9-9e91-0f8fb2731358"]
+Cell[2658062, 43800, 815, 18, 59, "Output", "ExpressionUUID" -> \
+"9ea5dc64-c69a-4670-9237-fba9520fbbe5"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2658312, 43806, 268, 6, 22, "Code", "ExpressionUUID" -> \
+Cell[2658914, 43823, 268, 6, 22, "Code", "ExpressionUUID" -> \
 "aa6610b1-50bb-4fe0-ad89-22d3ca02ed12",
  CellOpen->False],
-Cell[2658583, 43814, 702, 17, 59, "Output", "ExpressionUUID" -> \
-"4e6b3289-741e-46b4-9275-2181c30eb27e"]
+Cell[2659185, 43831, 773, 18, 59, "Output", "ExpressionUUID" -> \
+"9cd6b6b5-06b2-483e-838f-390ea8876db8"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2659346, 43838, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2660019, 43856, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "3329c87d-1a06-45ce-a2cd-fc587ad29a03",
  CellTags->"SlideShowHeader"],
-Cell[2659539, 43845, 527, 10, 58, "Text", "ExpressionUUID" -> \
+Cell[2660212, 43863, 527, 10, 58, "Text", "ExpressionUUID" -> \
 "f641fa14-e015-4896-9bf4-3b3960a89684"],
-Cell[2660069, 43857, 2223, 75, 122, "Text", "ExpressionUUID" -> \
+Cell[2660742, 43875, 2223, 75, 122, "Text", "ExpressionUUID" -> \
 "3aac99b1-aa51-4fb4-a1d0-6fe446681566"],
 Cell[CellGroupData[{
-Cell[2662317, 43936, 219, 5, 61, "Code", "ExpressionUUID" -> \
+Cell[2662990, 43954, 219, 5, 61, "Code", "ExpressionUUID" -> \
 "c19c712c-ace5-41eb-a29b-8672b266d7be"],
-Cell[2662539, 43943, 7554, 166, 526, "Output", "ExpressionUUID" -> \
-"a769ef2e-5f37-4d4b-8888-cdf89b3c87de"]
+Cell[2663212, 43961, 7657, 168, 526, "Output", "ExpressionUUID" -> \
+"a4cb78c0-f9f9-4114-a286-fcadffc4f50b"]
 }, Open  ]],
-Cell[2670108, 44112, 2151, 61, 74, "Text", "ExpressionUUID" -> \
+Cell[2670884, 44132, 2151, 61, 74, "Text", "ExpressionUUID" -> \
 "c5741caa-323d-4976-ae87-5953bbe4f2a5"],
 Cell[CellGroupData[{
-Cell[2672284, 44177, 224, 5, 61, "Code", "ExpressionUUID" -> \
+Cell[2673060, 44197, 224, 5, 61, "Code", "ExpressionUUID" -> \
 "748000fa-f200-4166-9a9d-fe3b508ce699"],
-Cell[2672511, 44184, 3157, 68, 360, "Output", "ExpressionUUID" -> \
-"09deb9a0-6a73-4845-86f4-23f3ae1d7734"]
+Cell[2673287, 44204, 3176, 69, 360, "Output", "ExpressionUUID" -> \
+"b26d484c-2f8a-44dd-9b5c-5d9f9819d46f"]
 }, Open  ]],
-Cell[2675683, 44255, 4986, 173, 278, "Text", "ExpressionUUID" -> \
+Cell[2676478, 44276, 4986, 173, 278, "Text", "ExpressionUUID" -> \
 "2645e9b6-c371-44ab-996b-0f142b07d7b5"],
-Cell[2680672, 44430, 163, 3, 30, "Text", "ExpressionUUID" -> \
+Cell[2681467, 44451, 163, 3, 30, "Text", "ExpressionUUID" -> \
 "c3794a6d-a99f-4f2a-9ba6-19668b9df497"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2680872, 44438, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2681667, 44459, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "127890ed-ba16-42ab-81a5-d1a4c0887359",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2681087, 44447, 307, 7, 61, "Code", "ExpressionUUID" -> \
+Cell[2681882, 44468, 307, 7, 61, "Code", "ExpressionUUID" -> \
 "33addc57-ad12-4f54-96f0-eae9c73c3a21"],
-Cell[2681397, 44456, 448, 9, 44, "Output", "ExpressionUUID" -> \
-"dc1b6bec-8041-49d7-a981-132fd7492c90"]
+Cell[2682192, 44477, 514, 10, 44, "Output", "ExpressionUUID" -> \
+"a86eba76-58e0-4913-a5ad-5c7b3feb4b8b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2681882, 44470, 340, 7, 61, "Code", "ExpressionUUID" -> \
+Cell[2682743, 44492, 340, 7, 61, "Code", "ExpressionUUID" -> \
 "f76284ba-c14e-4f2b-be14-65067bf316cf"],
-Cell[2682225, 44479, 3622, 84, 762, "Output", "ExpressionUUID" -> \
-"73b0db34-11f6-4df4-ad9b-2904297d6b1e"]
+Cell[2683086, 44501, 3523, 83, 537, "Output", "ExpressionUUID" -> \
+"85d94e88-50c8-4c42-bec5-11f48f772728"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2685896, 44569, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2686658, 44590, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "98a57774-de45-4b81-a33b-d9999ffbe613",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2686111, 44578, 335, 7, 75, "Section", "ExpressionUUID" -> \
+Cell[2686873, 44599, 335, 7, 75, "Section", "ExpressionUUID" -> \
 "4a909eba-d39c-41e1-bc4f-4eef9e871f13"],
 Cell[CellGroupData[{
-Cell[2686471, 44589, 252, 5, 61, "Code", "ExpressionUUID" -> \
+Cell[2687233, 44610, 252, 5, 61, "Code", "ExpressionUUID" -> \
 "97f5c21a-9e14-4727-adf9-8df6050a1352"],
-Cell[2686726, 44596, 9015, 199, 526, "Output", "ExpressionUUID" -> \
-"4c29fb24-a92b-4fba-9412-d31fd7d44c55"]
+Cell[2687488, 44617, 9104, 201, 526, "Output", "ExpressionUUID" -> \
+"b13a2514-6065-4727-ba4c-f87adcd04c7b"]
 }, Open  ]],
-Cell[2695756, 44798, 3408, 102, 424, "Text", "ExpressionUUID" -> \
+Cell[2696607, 44821, 3408, 102, 424, "Text", "ExpressionUUID" -> \
 "836f6f18-d2f8-48fe-bffe-a214b300080f"],
-Cell[2699167, 44902, 1042, 28, 70, "Text", "ExpressionUUID" -> \
+Cell[2700018, 44925, 1042, 28, 70, "Text", "ExpressionUUID" -> \
 "2bf07270-1912-4699-923c-ee8fb2d42906"],
-Cell[2700212, 44932, 519, 11, 69, "Text", "ExpressionUUID" -> \
+Cell[2701063, 44955, 519, 11, 69, "Text", "ExpressionUUID" -> \
 "5bef2238-4789-4189-afec-9112323252f1"],
 Cell[CellGroupData[{
-Cell[2700756, 44947, 266, 6, 22, "Code", "ExpressionUUID" -> \
+Cell[2701607, 44970, 266, 6, 22, "Code", "ExpressionUUID" -> \
 "9a2a6b6f-ab27-4436-ba1a-4478d7087c35",
  CellOpen->False],
-Cell[2701025, 44955, 625, 15, 59, "Output", "ExpressionUUID" -> \
-"8cc4d04d-8a0a-4251-8acc-b4807cff9c04"]
+Cell[2701876, 44978, 697, 16, 59, "Output", "ExpressionUUID" -> \
+"1de6aa3f-453b-4dd2-83fb-21cfdec94440"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2701711, 44977, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2702634, 45001, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "cc4718d5-2b71-428d-a73c-de37ed219aa1",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2701926, 44986, 376, 8, 75, "Section", "ExpressionUUID" -> \
+Cell[2702849, 45010, 376, 8, 75, "Section", "ExpressionUUID" -> \
 "a2480c7b-8e5d-4e6f-acaf-d308d914fe90"],
-Cell[2702305, 44996, 413, 8, 77, "Text", "ExpressionUUID" -> \
+Cell[2703228, 45020, 461, 9, 77, "Text", "ExpressionUUID" -> \
 "31dcc374-c919-4869-91e7-bbffcd4ad6a5"],
 Cell[CellGroupData[{
-Cell[2702743, 45008, 224, 5, 61, "Code", "ExpressionUUID" -> \
+Cell[2703714, 45033, 224, 5, 61, "Code", "ExpressionUUID" -> \
 "c501c8a0-49ec-4378-b83f-00cdd4e80b80"],
-Cell[2702970, 45015, 6976, 160, 576, "Output", "ExpressionUUID" -> \
-"a74b178a-c9fb-4002-91b0-5b9ac1b3090c"]
+Cell[2703941, 45040, 7075, 162, 586, "Output", "ExpressionUUID" -> \
+"5cbef8b8-b9d5-4997-aff5-5f361c5eb5a7"]
 }, Open  ]],
-Cell[2709961, 45178, 325, 7, 44, "Text", "ExpressionUUID" -> \
+Cell[2711031, 45205, 383, 8, 44, "Text", "ExpressionUUID" -> \
 "60be76d6-ed4a-4a8e-8801-eec71ebe2ff6"],
 Cell[CellGroupData[{
-Cell[2710311, 45189, 224, 5, 61, "Code", "ExpressionUUID" -> \
+Cell[2711439, 45217, 224, 5, 61, "Code", "ExpressionUUID" -> \
 "ab55440f-ac1f-45fd-b75b-d96cddc0285f"],
-Cell[2710538, 45196, 6946, 159, 588, "Output", "ExpressionUUID" -> \
-"8f187bd7-123a-4600-b3c7-9b202ff49cf7"]
+Cell[2711666, 45224, 7031, 161, 584, "Output", "ExpressionUUID" -> \
+"496d042f-4f6b-4b2c-a2f5-c8c19b6eb710"]
 }, Open  ]],
-Cell[2717499, 45358, 590, 11, 77, "Text", "ExpressionUUID" -> \
+Cell[2718712, 45388, 628, 12, 77, "Text", "ExpressionUUID" -> \
 "f1685c28-9bf0-4503-b03d-60cf4829d5f7"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2718138, 45375, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2719389, 45406, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "e8a7e8c2-b615-4317-9e1e-aa9eb67abda8",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2718353, 45384, 394, 8, 75, "Section", "ExpressionUUID" -> \
+Cell[2719604, 45415, 394, 8, 75, "Section", "ExpressionUUID" -> \
 "3f4b87f1-9332-4017-8ad3-9d4f2811442d"],
-Cell[2718750, 45394, 5523, 175, 572, "Text", "ExpressionUUID" -> \
+Cell[2720001, 45425, 5970, 188, 572, "Text", "ExpressionUUID" -> \
 "f3499736-a878-42fe-b2aa-286ec6d48717"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2724322, 45575, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2726020, 45619, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "eaf6e525-c36e-4362-8f56-a8581be1a2d8",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2724537, 45584, 307, 7, 61, "Code", "ExpressionUUID" -> \
+Cell[2726235, 45628, 307, 7, 61, "Code", "ExpressionUUID" -> \
 "764634c7-7c1b-491d-b259-41bbb1e4184e"],
-Cell[2724847, 45593, 17171, 405, 2852, "Output", "ExpressionUUID" -> \
-"2d48a5ae-0f1d-4310-bcad-3d5532bdeea3"]
+Cell[2726545, 45637, 18661, 439, 1665, "Output", "ExpressionUUID" -> \
+"6e70c683-20ed-4755-a886-ee8f603e93f9"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2742067, 46004, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2745255, 46082, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "97f35bd5-8e5b-47c6-b08c-2c23589bf25f",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2742282, 46013, 307, 7, 61, "Code", "ExpressionUUID" -> \
+Cell[2745470, 46091, 307, 7, 61, "Code", "ExpressionUUID" -> \
 "eaa3ea4a-3bcd-4de4-bc0c-7b345c1db612"],
-Cell[2742592, 46022, 16444, 411, 1230, "Output", "ExpressionUUID" -> \
-"8beebc0b-4c1c-4d18-9ea7-bea0a44ff6a7"]
+Cell[2745780, 46100, 16518, 413, 1260, "Output", "ExpressionUUID" -> \
+"7e190e9f-609c-4086-bac3-69403776443a"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2759085, 46439, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2762347, 46519, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "c44748c8-a41f-40d2-bf07-d3ea0c0187a5",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2759300, 46448, 335, 7, 75, "Section", "ExpressionUUID" -> \
+Cell[2762562, 46528, 335, 7, 75, "Section", "ExpressionUUID" -> \
 "a33b1612-b74e-48f9-9c46-ec96819a1e28"],
 Cell[CellGroupData[{
-Cell[2759660, 46459, 733, 20, 80, "Subsection", "ExpressionUUID" -> \
+Cell[2762922, 46539, 733, 20, 80, "Subsection", "ExpressionUUID" -> \
 "948e0298-4cf3-4236-a7c8-678768c04e0e"],
 Cell[CellGroupData[{
-Cell[2760418, 46483, 224, 5, 61, "Code", "ExpressionUUID" -> \
+Cell[2763680, 46563, 224, 5, 61, "Code", "ExpressionUUID" -> \
 "869e5c9f-96e6-4903-8c35-700a9f6ba94c"],
-Cell[2760645, 46490, 9969, 210, 426, "Output", "ExpressionUUID" -> \
-"35d7c5dd-3e7d-4f1f-8c72-fcafd52a50c7"]
+Cell[2763907, 46570, 10041, 211, 426, "Output", "ExpressionUUID" -> \
+"d014e3c4-f426-4904-8ed2-c297e582aa88"]
 }, Open  ]],
-Cell[2770629, 46703, 210, 4, 72, "Input", "ExpressionUUID" -> \
+Cell[2773963, 46784, 210, 4, 72, "Input", "ExpressionUUID" -> \
 "aa506e30-f01b-4780-af5b-7f929886411b"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2770900, 46714, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2774234, 46795, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "b98afe31-6ef7-4b77-a0fb-93070ade76b3",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2771115, 46723, 333, 7, 56, "Subsubsection", "ExpressionUUID" -> \
+Cell[2774449, 46804, 333, 7, 56, "Subsubsection", "ExpressionUUID" -> \
 "6c5cc4b5-938b-4641-9638-b1ccbef0334c"],
 Cell[CellGroupData[{
-Cell[2771473, 46734, 280, 6, 61, "Code", "ExpressionUUID" -> \
+Cell[2774807, 46815, 280, 6, 61, "Code", "ExpressionUUID" -> \
 "b16aeae3-4dc1-42e5-b134-d1de75b55fd5"],
-Cell[2771756, 46742, 8631, 185, 526, "Output", "ExpressionUUID" -> \
-"b8409424-205f-4838-98c0-f1c690d1e5f3"]
+Cell[2775090, 46823, 8700, 186, 526, "Output", "ExpressionUUID" -> \
+"23e5931c-ba72-4062-b065-c7969950b55b"]
 }, Open  ]],
-Cell[2780402, 46930, 385, 7, 40, "Input", "ExpressionUUID" -> \
+Cell[2783805, 47012, 385, 7, 40, "Input", "ExpressionUUID" -> \
 "6b21ac7e-1579-441b-bd6b-3e374443d6b9"],
-Cell[2780790, 46939, 2967, 78, 706, "Text", "ExpressionUUID" -> \
+Cell[2784193, 47021, 2850, 73, 706, "Text", "ExpressionUUID" -> \
 "89c0288f-674d-490d-b69b-1ff57ab443c0"],
 Cell[CellGroupData[{
-Cell[2783782, 47021, 251, 5, 61, "Code", "ExpressionUUID" -> \
+Cell[2787068, 47098, 251, 5, 61, "Code", "ExpressionUUID" -> \
 "fd50934b-7a52-4480-8d01-fe61c0223ebf"],
-Cell[2784036, 47028, 10978, 231, 526, "Output", "ExpressionUUID" -> \
-"c60727c1-0dc3-4c64-a74d-3f5f6b3999d8"]
+Cell[2787322, 47105, 11046, 232, 526, "Output", "ExpressionUUID" -> \
+"6fa060e3-b93d-4dd8-abab-4e4d51700b82"]
 }, Open  ]],
-Cell[2795029, 47262, 868, 14, 110, "Text", "ExpressionUUID" -> \
+Cell[2798383, 47340, 868, 14, 110, "Text", "ExpressionUUID" -> \
 "0a8d95fe-8362-4a7a-a06b-68d0bbae9100"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2795946, 47282, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2799300, 47360, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "8198f957-0f2c-442d-bc21-b3ff3c00aa7b",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2796161, 47291, 309, 7, 61, "Code", "ExpressionUUID" -> \
+Cell[2799515, 47369, 309, 7, 61, "Code", "ExpressionUUID" -> \
 "003c7e99-2f7d-4eee-b667-e219ae97d5dd"],
-Cell[2796473, 47300, 6199, 151, 794, "Output", "ExpressionUUID" -> \
-"dc95f1e5-e916-4a90-bc25-599ca3585179"]
+Cell[2799827, 47378, 6377, 155, 794, "Output", "ExpressionUUID" -> \
+"265c07fe-5bc0-4103-bb7a-b62f8dad8ef5"]
 }, Open  ]],
-Cell[2802687, 47454, 281, 6, 40, "Input", "ExpressionUUID" -> \
+Cell[2806219, 47536, 281, 6, 40, "Input", "ExpressionUUID" -> \
 "8827ca64-945d-4275-8c6b-ced38b47898b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2803005, 47465, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2806537, 47547, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "79411d95-75b5-41f9-913f-49a0af07715d",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2803220, 47474, 311, 7, 61, "Code", "ExpressionUUID" -> \
+Cell[2806752, 47556, 311, 7, 61, "Code", "ExpressionUUID" -> \
 "bb8e7eba-a2ea-45da-92b6-976392ca2708"],
-Cell[2803534, 47483, 8079, 199, 722, "Output", "ExpressionUUID" -> \
-"c2caa21c-7d02-4b52-9737-fb6256604e42"]
+Cell[2807066, 47565, 8428, 206, 724, "Output", "ExpressionUUID" -> \
+"bd173207-b0d1-4a89-b713-844688eb7748"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2811662, 47688, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2815543, 47777, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "e5ff2ab5-1c1b-45c2-87ef-ae5888966edf",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2811877, 47697, 332, 7, 75, "Section", "ExpressionUUID" -> \
+Cell[2815758, 47786, 332, 7, 75, "Section", "ExpressionUUID" -> \
 "27ab370e-739a-45e8-9525-f17fa8be66d2"],
-Cell[2812212, 47706, 261, 6, 44, "Text", "ExpressionUUID" -> \
+Cell[2816093, 47795, 287, 6, 44, "Text", "ExpressionUUID" -> \
 "46ad9e4a-aba3-4fdb-8c94-d9d3f4d56e75"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2812510, 47717, 1390, 43, 82, "Section", "ExpressionUUID" -> \
+Cell[2816417, 47806, 1390, 43, 82, "Section", "ExpressionUUID" -> \
 "16f3095b-68ec-4752-9f11-56c8106feb7b"],
 Cell[CellGroupData[{
-Cell[2813925, 47764, 223, 5, 61, "Code", "ExpressionUUID" -> \
+Cell[2817832, 47853, 223, 5, 61, "Code", "ExpressionUUID" -> \
 "c8db4ac1-8e83-47f7-9518-6293f0117750"],
-Cell[2814151, 47771, 4187, 85, 426, "Output", "ExpressionUUID" -> \
-"4593639c-c7ae-41d4-a080-17aab8820154"]
+Cell[2818058, 47860, 4125, 85, 426, "Output", "ExpressionUUID" -> \
+"539e942b-444c-4efd-afe6-5644474f82c9"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2818399, 47863, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2822244, 47952, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "d900f154-99e5-4186-9c3f-acf46c69304a",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2818614, 47872, 448, 11, 91, "Subsection", "ExpressionUUID" -> \
+Cell[2822459, 47961, 448, 11, 91, "Subsection", "ExpressionUUID" -> \
 "f6dd1530-c906-48ab-8df0-dac3cf9e9a8f"],
 Cell[CellGroupData[{
-Cell[2819087, 47887, 249, 5, 61, "Code", "ExpressionUUID" -> \
+Cell[2822932, 47976, 249, 5, 61, "Code", "ExpressionUUID" -> \
 "c69a4915-9ce9-44d5-952a-7032f81beb0f"],
-Cell[2819339, 47894, 4088, 84, 426, "Output", "ExpressionUUID" -> \
-"dfe76b9a-c62f-409f-8846-45636ba53782"]
+Cell[2823184, 47983, 4100, 85, 426, "Output", "ExpressionUUID" -> \
+"d3787db0-e815-4dbf-afbb-ebbfe0ca7a72"]
 }, Open  ]],
-Cell[2823442, 47981, 3400, 106, 410, "Text", "ExpressionUUID" -> \
+Cell[2827299, 48071, 3263, 102, 410, "Text", "ExpressionUUID" -> \
 "ac658347-7d30-4ff0-99e3-98593d227af8"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2826891, 48093, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2830611, 48179, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "a6df3a26-7079-41ed-8c66-4b9dc53eec51",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2827106, 48102, 308, 7, 61, "Code", "ExpressionUUID" -> \
+Cell[2830826, 48188, 308, 7, 61, "Code", "ExpressionUUID" -> \
 "d7e410e7-863b-4609-a910-75d6ec17b29d"],
-Cell[2827417, 48111, 10650, 256, 1230, "Output", "ExpressionUUID" -> \
-"92febfe9-1f96-4659-8244-5ff29f1f628f"]
+Cell[2831137, 48197, 10694, 258, 1608, "Output", "ExpressionUUID" -> \
+"429165e2-cf33-4b25-96fb-2c36b609ac11"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2838116, 48373, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2841880, 48461, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "74e0ba1b-538d-45b1-8a09-0f50e5f2eb50",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2838331, 48382, 309, 7, 61, "Code", "ExpressionUUID" -> \
+Cell[2842095, 48470, 309, 7, 61, "Code", "ExpressionUUID" -> \
 "9bc6c068-7a23-4af2-ad10-50a1af786ef2"],
-Cell[2838643, 48391, 10245, 245, 580, "Output", "ExpressionUUID" -> \
-"0c7f07c4-96b2-4475-ad6d-26a44ab60e0a"]
+Cell[2842407, 48479, 10593, 255, 626, "Output", "ExpressionUUID" -> \
+"24115d58-74a1-46ce-81c0-0533f0658305"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2848937, 48642, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2853049, 48740, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "41b2bb30-5cfd-49e3-962d-49993bc646a3",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2849152, 48651, 371, 8, 75, "Section", "ExpressionUUID" -> \
+Cell[2853264, 48749, 371, 8, 75, "Section", "ExpressionUUID" -> \
 "878e6daa-fd72-45fd-8bb5-2fe5df3102dc"],
 Cell[CellGroupData[{
-Cell[2849548, 48663, 1997, 60, 80, "Subsection", "ExpressionUUID" -> \
+Cell[2853660, 48761, 1997, 60, 80, "Subsection", "ExpressionUUID" -> \
 "6d6b9555-e62c-4ed6-9dc3-4b7744ce43b6"],
 Cell[CellGroupData[{
-Cell[2851570, 48727, 225, 5, 61, "Code", "ExpressionUUID" -> \
+Cell[2855682, 48825, 225, 5, 61, "Code", "ExpressionUUID" -> \
 "ba1b0424-5eb7-49f3-83ec-04763b5b49b0"],
-Cell[2851798, 48734, 4476, 97, 360, "Output", "ExpressionUUID" -> \
-"5681d9b2-db8a-44f2-8bf3-7e5c4a4f94bf"]
+Cell[2855910, 48832, 4478, 98, 360, "Output", "ExpressionUUID" -> \
+"baf4c583-c9c9-4e57-a785-ce28215c2f0b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2856311, 48836, 408, 14, 22, "Code", "ExpressionUUID" -> \
+Cell[2860425, 48935, 408, 14, 19, "Code", "ExpressionUUID" -> \
 "190c9301-1e24-4f63-bffd-3810ef14cb36",
  CellOpen->False],
-Cell[2856722, 48852, 404, 10, 59, "Output", "ExpressionUUID" -> \
-"2eef00b7-149f-48f5-8e51-3882b3c38df0"]
+Cell[2860836, 48951, 475, 11, 59, "Output", "ExpressionUUID" -> \
+"e471af90-6081-46eb-b971-95cdf016fd71"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2857199, 48870, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2861384, 48970, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "bd142521-b6a4-4440-8eb7-a4085abbf0ed",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2857414, 48879, 329, 7, 64, "Subsection", "ExpressionUUID" -> \
+Cell[2861599, 48979, 329, 7, 64, "Subsection", "ExpressionUUID" -> \
 "5fb87b21-48b6-4a1f-87af-a39e4d8ccfe6"],
 Cell[CellGroupData[{
-Cell[2857768, 48890, 228, 5, 61, "Code", "ExpressionUUID" -> \
+Cell[2861953, 48990, 228, 5, 61, "Code", "ExpressionUUID" -> \
 "9ef48162-8491-4ae1-b73f-4cd34e9e1e64"],
-Cell[2857999, 48897, 5639, 120, 360, "Output", "ExpressionUUID" -> \
-"1ed215f5-e073-47f8-abab-8f9e8d5dbd22"]
+Cell[2862184, 48997, 5708, 121, 360, "Output", "ExpressionUUID" -> \
+"5da734e7-bafc-4a13-83d0-c5f0cce5955f"]
 }, Open  ]],
-Cell[2863653, 49020, 9873, 319, 600, "Text", "ExpressionUUID" -> \
+Cell[2867907, 49121, 9873, 319, 600, "Text", "ExpressionUUID" -> \
 "9e536f31-3215-4808-8224-af383e3b4fac"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2873575, 49345, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2877829, 49446, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "33cfab2c-7ae8-42ef-80e9-26e97505bbe9",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2873790, 49354, 309, 7, 61, "Code", "ExpressionUUID" -> \
+Cell[2878044, 49455, 309, 7, 61, "Code", "ExpressionUUID" -> \
 "550579ec-d37c-4f1f-bcd1-6c9407aa7f66"],
-Cell[2874102, 49363, 8963, 210, 844, "Output", "ExpressionUUID" -> \
-"5c4f88fc-15e6-406b-a15b-753c904ab185"]
+Cell[2878356, 49464, 8955, 210, 842, "Output", "ExpressionUUID" -> \
+"d274d49f-47be-4a26-9a67-0dfa18b9fc83"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2883114, 49579, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2887360, 49680, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "7550307c-13c6-4e02-9ff1-913f87ebb124",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2883329, 49588, 307, 7, 61, "Code", "ExpressionUUID" -> \
+Cell[2887575, 49689, 307, 7, 61, "Code", "ExpressionUUID" -> \
 "b416cb98-c1a4-42e0-9f72-6d8b42c45421"],
-Cell[2883639, 49597, 8070, 184, 862, "Output", "ExpressionUUID" -> \
-"7255e956-56df-455c-a934-d01c33f5ccf4"]
+Cell[2887885, 49698, 8314, 191, 1092, "Output", "ExpressionUUID" -> \
+"efd308f8-cfe2-41ba-89b2-80493a723969"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2891758, 49787, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2896248, 49895, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "c9f68e56-5109-4e91-93f2-37ac61b83c84",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2891973, 49796, 309, 7, 61, "Code", "ExpressionUUID" -> \
+Cell[2896463, 49904, 309, 7, 61, "Code", "ExpressionUUID" -> \
 "381db649-3665-4d99-abf5-aae9acb787e5"],
-Cell[2892285, 49805, 3530, 87, 512, "Output", "ExpressionUUID" -> \
-"8d37d30e-fbed-4f11-a6b3-1745c3e016b4"]
+Cell[2896775, 49913, 3467, 85, 457, "Output", "ExpressionUUID" -> \
+"02659047-7a0c-46cb-9382-c0a530a57ebe"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2895864, 49898, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2900291, 50004, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "0f88e0b8-3ce3-4fa1-9a35-135d50c33eb3",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2896079, 49907, 310, 7, 61, "Code", "ExpressionUUID" -> \
+Cell[2900506, 50013, 310, 7, 61, "Code", "ExpressionUUID" -> \
 "df940de0-e5d9-4dd9-bf14-d9431f1b034d"],
-Cell[2896392, 49916, 4311, 109, 524, "Output", "ExpressionUUID" -> \
-"98f3d61b-f262-49b5-9aab-b8da148f5499"]
+Cell[2900819, 50022, 4346, 111, 522, "Output", "ExpressionUUID" -> \
+"4a271409-7cc4-4f82-b54b-702a0e348304"]
 }, Open  ]]
 }, Open  ]],
-Cell[2900730, 50029, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
+Cell[2905192, 50137, 190, 5, 74, "SlideShowNavigationBar", "ExpressionUUID" \
 -> "0b0d8546-a0e6-4e8e-8c13-213784e15ec2",
  CellTags->"SlideShowHeader"]
 }
