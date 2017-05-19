@@ -79,6 +79,10 @@ bottonepitagora[]:=
 Button["Teorema di Pitagora",MessageDialog[  pitagora[] ,WindowSize->All,Editable->False]]
 
 
+bottonecalcolatrice[]:=
+Button["Calcolatrice",MessageDialog[  Calcolatrice[] ,WindowSize->All,Editable->False]]
+
+
 (* Grafico Seno *)
 graficoseno[] := 
 Manipulate[
