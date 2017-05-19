@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   3442820,      59229]
-NotebookOptionsPosition[   3430179,      58842]
-NotebookOutlinePosition[   3433160,      58916]
-CellTagsIndexPosition[   3433078,      58911]
+NotebookDataLength[   3444726,      59256]
+NotebookOptionsPosition[   3432085,      58869]
+NotebookOutlinePosition[   3435066,      58943]
+CellTagsIndexPosition[   3434984,      58938]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -42768,7 +42768,9 @@ rx4hBkD4zjs4gJqeygeH0vYQ/pW3Bl/3ryS3s5J56d//AF0Kx8c=
    3.7041964632105064`*^9, 3.704196475059869*^9}, {3.704196689858615*^9, 
    3.7041966953481894`*^9}, {3.7041967566717453`*^9, 3.704196759603521*^9}, 
    3.704196937746228*^9, {3.704197171203198*^9, 3.7041971769174824`*^9}, {
-   3.704197241145878*^9, 3.704197245623144*^9}},
+   3.704197241145878*^9, 3.704197245623144*^9}, {3.704199971082223*^9, 
+   3.704199973728962*^9}},
+ TextAlignment->Center,
  ExpressionUUID -> "e270da07-3d6a-4e31-9f2e-dd2c22bbbafa"]
 }, Open  ]],
 
@@ -42967,7 +42969,7 @@ Cell[BoxData[
   Method->"Preemptive"]], "Output",
  CellChangeTimes->{{3.704196253219351*^9, 3.7041962724220886`*^9}, 
    3.704196475078164*^9, 3.7041966953616996`*^9, 3.7041967596182294`*^9, 
-   3.704197177000227*^9, 3.7041972456767845`*^9},
+   3.704197177000227*^9, 3.7041972456767845`*^9, 3.7041999737800665`*^9},
  TextAlignment->Center,
  Background->RGBColor[1, 0.85, 0.85]]
 }, Open  ]],
@@ -43117,12 +43119,12 @@ Cell[BoxData[
        Hold[Trigonometria`ptctrl$$], Rational[1, 6] Pi, "Angle"}, 0, 2 Pi}}, 
     Typeset`size$$ = {478., {198.5, 207.5}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
-    Trigonometria`ptctrl$15372$$ = 0}, 
+    Trigonometria`ptctrl$26386$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {Trigonometria`ptctrl$$ = Rational[1, 6] Pi}, 
       "ControllerVariables" :> {
-        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$15372$$, 0]}, 
+        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$26386$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -43249,7 +43251,7 @@ Cell[BoxData[
    3.7041964641850963`*^9, 3.7041964751137295`*^9}, {3.704196690013813*^9, 
    3.704196695402812*^9}, {3.704196756745466*^9, 3.704196759649825*^9}, {
    3.704197171343067*^9, 3.704197177054308*^9}, {3.704197241316327*^9, 
-   3.704197245855239*^9}},
+   3.704197245855239*^9}, {3.704199971175003*^9, 3.7041999738131857`*^9}},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
@@ -43296,7 +43298,8 @@ Cell[BoxData[
    3.704196260211737*^9, 3.704196272703596*^9}, {3.704196464975134*^9, 
    3.7041964753608866`*^9}, {3.7041966901541605`*^9, 3.704196695564739*^9}, {
    3.704196756892518*^9, 3.7041967597990646`*^9}, {3.704197171512041*^9, 
-   3.7041971773960733`*^9}, {3.7041972415975747`*^9, 3.704197245891836*^9}},
+   3.7041971773960733`*^9}, {3.7041972415975747`*^9, 3.704197245891836*^9}, {
+   3.704199971289754*^9, 3.704199973971049*^9}},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
@@ -43332,7 +43335,7 @@ Cell[BoxData[
    3.7041964649987025`*^9, 3.704196475383447*^9}, {3.704196690167672*^9, 
    3.70419669559181*^9}, {3.704196756910063*^9, 3.7041967598136053`*^9}, {
    3.7041971715386105`*^9, 3.7041971774231453`*^9}, {3.704197241624367*^9, 
-   3.7041972459064083`*^9}},
+   3.7041972459064083`*^9}, {3.7041999713022857`*^9, 3.704199973999153*^9}},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
@@ -43461,12 +43464,12 @@ Cell[BoxData[
        Hold[Trigonometria`ptctrl$$], Rational[1, 6] Pi, "angle"}, 0, 2 Pi}}, 
     Typeset`size$$ = {462., {198.5, 207.5}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
-    Trigonometria`ptctrl$15418$$ = 0}, 
+    Trigonometria`ptctrl$26432$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {Trigonometria`ptctrl$$ = Rational[1, 6] Pi}, 
       "ControllerVariables" :> {
-        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$15418$$, 0]}, 
+        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$26432$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -43619,7 +43622,8 @@ Cell[BoxData[
    3.7041962727687435`*^9}, {3.7041964650648637`*^9, 
    3.7041964754235535`*^9}, {3.7041966902082777`*^9, 3.70419669566451*^9}, {
    3.704196756942155*^9, 3.7041967598485975`*^9}, {3.704197171602789*^9, 
-   3.7041971774868355`*^9}, {3.704197241680429*^9, 3.7041972459374895`*^9}},
+   3.7041971774868355`*^9}, {3.704197241680429*^9, 3.7041972459374895`*^9}, {
+   3.70419997133019*^9, 3.7041999740546923`*^9}},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
@@ -43770,7 +43774,8 @@ Cell[BoxData[
    3.7041962729049263`*^9}, {3.704196465194705*^9, 3.704196475553336*^9}, {
    3.7041966903421335`*^9, 3.704196696017421*^9}, {3.70419675708905*^9, 
    3.704196759991417*^9}, {3.704197171858576*^9, 3.70419717787459*^9}, {
-   3.704197241994119*^9, 3.7041972460878825`*^9}},
+   3.704197241994119*^9, 3.7041972460878825`*^9}, {3.704199971469059*^9, 
+   3.704199974214146*^9}},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
@@ -43995,7 +44000,8 @@ Cell[BoxData[
    3.7041962730324497`*^9}, {3.704196465514621*^9, 3.70419647573034*^9}, {
    3.7041966904627676`*^9, 3.7041966962645617`*^9}, {3.704196757220915*^9, 
    3.7041967601127634`*^9}, {3.704197171899724*^9, 3.704197177909707*^9}, {
-   3.7041972343769655`*^9, 3.7041972461044416`*^9}},
+   3.7041972343769655`*^9, 3.7041972461044416`*^9}, {3.70419997148761*^9, 
+   3.7041999742452116`*^9}},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
@@ -44131,7 +44137,8 @@ Rule[FontFamily, \\\"sans sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\"\>",
    3.7041964757779775`*^9}, {3.7041966904929514`*^9, 
    3.7041966963031826`*^9}, {3.7041967572550244`*^9, 
    3.7041967601498632`*^9}, {3.704197171959383*^9, 3.704197177950286*^9}, {
-   3.7041972420397396`*^9, 3.7041972461319995`*^9}},
+   3.7041972420397396`*^9, 3.7041972461319995`*^9}, {3.7041999715101995`*^9, 
+   3.704199974279297*^9}},
  ExpressionUUID -> "85d94e88-50c8-4c42-bec5-11f48f772728"]
 }, Open  ]]
 }, Open  ]],
@@ -44176,12 +44183,12 @@ Cell[BoxData[
        Hold[Trigonometria`ptctrl$$], Rational[1, 6] Pi, "angle"}, 0, 2 Pi}}, 
     Typeset`size$$ = {478., {198.5, 207.5}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
-    Trigonometria`ptctrl$15475$$ = 0}, 
+    Trigonometria`ptctrl$26489$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {Trigonometria`ptctrl$$ = Rational[1, 6] Pi}, 
       "ControllerVariables" :> {
-        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$15475$$, 0]}, 
+        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$26489$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -44367,7 +44374,8 @@ Cell[BoxData[
    3.7041962731016574`*^9}, {3.704196465972967*^9, 3.7041964758436613`*^9}, {
    3.7041966905311036`*^9, 3.704196696407412*^9}, {3.704196757293147*^9, 
    3.704196760202004*^9}, {3.704197172081517*^9, 3.7041971780704594`*^9}, {
-   3.704197242073369*^9, 3.7041972461725826`*^9}},
+   3.704197242073369*^9, 3.7041972461725826`*^9}, {3.704199971547297*^9, 
+   3.704199974331403*^9}},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
@@ -44547,7 +44555,8 @@ Cell[BoxData[
    3.7041962732856236`*^9}, {3.7041964661243687`*^9, 
    3.7041964761433125`*^9}, {3.704196690689242*^9, 3.7041966967259893`*^9}, {
    3.7041967574550667`*^9, 3.7041967603756275`*^9}, {3.7041971724645557`*^9, 
-   3.7041971784155526`*^9}, {3.7041972424219246`*^9, 3.704197246341065*^9}},
+   3.7041971784155526`*^9}, {3.7041972424219246`*^9, 3.704197246341065*^9}, {
+   3.704199971663577*^9, 3.704199974501336*^9}},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
@@ -44610,12 +44619,12 @@ Cell[BoxData[
        Hold[Trigonometria`ptctrl$$], Rational[1, 6] Pi, ""}, 0, 2 Pi, 
       Rational[1, 6] Pi}}, Typeset`size$$ = {561., {219., 248.}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
-    Trigonometria`ptctrl$15520$$ = 0}, 
+    Trigonometria`ptctrl$26534$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {Trigonometria`ptctrl$$ = Rational[1, 6] Pi}, 
       "ControllerVariables" :> {
-        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$15520$$, 0]}, 
+        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$26534$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -44763,7 +44772,8 @@ Cell[BoxData[
    3.704196466180527*^9, 3.7041964761869535`*^9}, {3.7041966907724442`*^9, 
    3.7041966968003206`*^9}, {3.7041967574919033`*^9, 3.704196760414181*^9}, {
    3.704197172542733*^9, 3.7041971784754515`*^9}, {3.7041972424650335`*^9, 
-   3.7041972463956785`*^9}},
+   3.7041972463956785`*^9}, {3.7041999716901464`*^9, 3.7041999745655327`*^9}},
+ 
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
@@ -44801,12 +44811,12 @@ Cell[BoxData[
        Hold[Trigonometria`ptctrl$$], Rational[1, 4] Pi, ""}, 0, 2 Pi, 
       Rational[1, 4] Pi}}, Typeset`size$$ = {561., {219., 248.}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
-    Trigonometria`ptctrl$15578$$ = 0}, 
+    Trigonometria`ptctrl$26592$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {Trigonometria`ptctrl$$ = Rational[1, 4] Pi}, 
       "ControllerVariables" :> {
-        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$15578$$, 0]}, 
+        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$26592$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -44953,7 +44963,7 @@ Cell[BoxData[
    3.7041964670030203`*^9, 3.704196476520617*^9}, {3.704196691187976*^9, 
    3.704196697066265*^9}, {3.7041967576779003`*^9, 3.704196760641153*^9}, {
    3.7041971729458*^9, 3.704197179118641*^9}, {3.7041972427798758`*^9, 
-   3.7041972469000044`*^9}},
+   3.7041972469000044`*^9}, {3.704199971844056*^9, 3.704199974821452*^9}},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
@@ -45641,7 +45651,7 @@ ottengo:\"",FractionBox[
    3.7041964769436436`*^9}, {3.7041966915747137`*^9, 
    3.7041966973840475`*^9}, {3.704196757899017*^9, 3.704196760838422*^9}, {
    3.704197173392982*^9, 3.704197179544675*^9}, {3.704197242994913*^9, 
-   3.704197247409786*^9}},
+   3.704197247409786*^9}, {3.7041999719995527`*^9, 3.704199975052555*^9}},
  ExpressionUUID -> "6e70c683-20ed-4755-a886-ee8f603e93f9"]
 }, Open  ]]
 }, Open  ]],
@@ -45780,7 +45790,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
        StyleBox[
         RowBox[{GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`catAd$15747], {"A"},
+            RadioButtonBox[Dynamic[Trigonometria`catAd$26761], {"A"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"A\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -45801,7 +45811,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`catAd$15747], {"B"},
+            RadioButtonBox[Dynamic[Trigonometria`catAd$26761], {"B"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"B\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -45822,7 +45832,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`catAd$15747], {"C"},
+            RadioButtonBox[Dynamic[Trigonometria`catAd$26761], {"C"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"C\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -45843,12 +45853,12 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}]}], "Deploy"],
        RadioButtonBar[
-        Dynamic[Trigonometria`catAd$15747], {"A", "B", "C"}]],
+        Dynamic[Trigonometria`catAd$26761], {"A", "B", "C"}]],
       StripOnInput->False,
       Magnification->2 Inherited], 
      StyleBox[
       DynamicBox[ToBoxes[
-        Trigonometria`CheckAnswer[Trigonometria`catAd$15747, "A"], 
+        Trigonometria`CheckAnswer[Trigonometria`catAd$26761, "A"], 
         StandardForm],
        ImageSizeCache->{0., {9., 38.}}],
       StripOnInput->False,
@@ -45867,7 +45877,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
        StyleBox[
         RowBox[{GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`catOp$15747], {"A"},
+            RadioButtonBox[Dynamic[Trigonometria`catOp$26761], {"A"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"A\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -45888,7 +45898,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`catOp$15747], {"B"},
+            RadioButtonBox[Dynamic[Trigonometria`catOp$26761], {"B"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"B\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -45909,7 +45919,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`catOp$15747], {"C"},
+            RadioButtonBox[Dynamic[Trigonometria`catOp$26761], {"C"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"C\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -45930,12 +45940,12 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}]}], "Deploy"],
        RadioButtonBar[
-        Dynamic[Trigonometria`catOp$15747], {"A", "B", "C"}]],
+        Dynamic[Trigonometria`catOp$26761], {"A", "B", "C"}]],
       StripOnInput->False,
       Magnification->2 Inherited], 
      StyleBox[
       DynamicBox[ToBoxes[
-        Trigonometria`CheckAnswer[Trigonometria`catOp$15747, "B"], 
+        Trigonometria`CheckAnswer[Trigonometria`catOp$26761, "B"], 
         StandardForm],
        ImageSizeCache->{0., {9., 38.}}],
       StripOnInput->False,
@@ -45952,10 +45962,10 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
           Style["tan\[Beta] = "]]],FractionBox[
          TemplateBox[{
            InputFieldBox[
-            Dynamic[Trigonometria`catOp2$15747], String, FieldSize -> 1], 
+            Dynamic[Trigonometria`catOp2$26761], String, FieldSize -> 1], 
            DynamicBox[
             ToBoxes[
-             Trigonometria`CheckAnswer[Trigonometria`catOp2$15747, "B"], 
+             Trigonometria`CheckAnswer[Trigonometria`catOp2$26761, "B"], 
              StandardForm]]}, "RowDefault"], 
          TemplateBox[{
            InputFieldBox[
@@ -45992,7 +46002,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
        StyleBox[
         RowBox[{GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`A$15747], {"50"},
+            RadioButtonBox[Dynamic[Trigonometria`A$26761], {"50"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"50\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -46013,7 +46023,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`A$15747], {"18"},
+            RadioButtonBox[Dynamic[Trigonometria`A$26761], {"18"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"18\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -46034,7 +46044,7 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`A$15747], {"2"},
+            RadioButtonBox[Dynamic[Trigonometria`A$26761], {"2"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"2\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -46055,12 +46065,12 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}]}], "Deploy"],
        RadioButtonBar[
-        Dynamic[Trigonometria`A$15747], {"50", "18", "2"}]],
+        Dynamic[Trigonometria`A$26761], {"50", "18", "2"}]],
       StripOnInput->False,
       Magnification->2 Inherited], 
      StyleBox[
       DynamicBox[ToBoxes[
-        Trigonometria`CheckAnswer[Trigonometria`A$15747, "50"], StandardForm],
+        Trigonometria`CheckAnswer[Trigonometria`A$26761, "50"], StandardForm],
        
        ImageSizeCache->{0., {9., 38.}}],
       StripOnInput->False,
@@ -46078,7 +46088,8 @@ opposto\)\), \(cateto\\ adiacente\)]\)", Bold, 20]]], "", ""},
    3.704196273820485*^9}, {3.7041964677505045`*^9, 3.7041964770914783`*^9}, {
    3.7041966918624706`*^9, 3.704196697539951*^9}, {3.7041967580112047`*^9, 
    3.70419676095725*^9}, {3.7041971737085786`*^9, 3.704197179727945*^9}, {
-   3.704197243095143*^9, 3.704197247624213*^9}},
+   3.704197243095143*^9, 3.704197247624213*^9}, {3.7041999721157017`*^9, 
+   3.7041999752022705`*^9}},
  FontFamily->"OpenDyslexic",
  FontSize->14,
  FontWeight->"Regular",
@@ -46351,7 +46362,8 @@ Cell[BoxData[
    3.704196273918707*^9}, {3.7041964686084185`*^9, 3.7041964772311563`*^9}, {
    3.704196692039379*^9, 3.7041966976277094`*^9}, {3.704196758096407*^9, 
    3.70419676105485*^9}, {3.7041971739085207`*^9, 3.7041971798923855`*^9}, {
-   3.7041972431848836`*^9, 3.704197248084478*^9}},
+   3.7041972431848836`*^9, 3.704197248084478*^9}, {3.7041999722269974`*^9, 
+   3.704199975320057*^9}},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
@@ -46410,12 +46422,12 @@ Cell[BoxData[
        Hold[Trigonometria`ptctrl$$], 3.641592653589793, "angle"}, 0, 2 Pi}}, 
     Typeset`size$$ = {504., {198.5, 207.5}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
-    Trigonometria`ptctrl$15794$$ = 0}, 
+    Trigonometria`ptctrl$26807$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {Trigonometria`ptctrl$$ = 3.641592653589793}, 
       "ControllerVariables" :> {
-        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$15794$$, 0]}, 
+        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$26807$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -46436,7 +46448,11 @@ Cell[BoxData[
                Cos[Trigonometria`th] - Part[Trigonometria`b, 1])]}; Show[
              Graphics[{{
                 Lighter[Gray, 0.5], 
-                Circle[{0, 0}, 1]}, {
+                Circle[{0, 0}, 1]}, {Purple, Thick, 
+                
+                Circle[{0, 0}, 1, {
+                 Pi/2 - Part[Trigonometria`a, 1], 2 Pi + 
+                  Part[Trigonometria`b, 2]}]}, {
                 If[
                  And[
                  Cos[Trigonometria`th] > Part[Trigonometria`b, 1], 
@@ -46587,7 +46603,8 @@ Cell[BoxData[
    3.7041964686575475`*^9, 3.7041964772893395`*^9}, {3.704196692119578*^9, 
    3.7041966976767445`*^9}, {3.704196758130999*^9, 3.704196761098794*^9}, {
    3.7041971739596567`*^9, 3.704197180112998*^9}, {3.704197243214469*^9, 
-   3.7041972484474545`*^9}},
+   3.7041972484474545`*^9}, {3.7041999722621207`*^9, 3.7041999754391565`*^9}},
+ 
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
@@ -46693,18 +46710,18 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{Trigonometria`ptctrl$$ = 0.4, Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{{
+   DynamicModuleBox[{Trigonometria`ptctrl$$ = 0.673613728530277, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[Trigonometria`ptctrl$$], 0.4, "angle"}, 0, 2 Pi}}, 
     Typeset`size$$ = {507., {198.5, 207.5}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
-    Trigonometria`ptctrl$15838$$ = 0}, 
+    Trigonometria`ptctrl$26851$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {Trigonometria`ptctrl$$ = 0.4}, 
       "ControllerVariables" :> {
-        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$15838$$, 0]}, 
+        Hold[Trigonometria`ptctrl$$, Trigonometria`ptctrl$26851$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -46728,6 +46745,9 @@ Cell[BoxData[
              Graphics[{{
                 Lighter[Gray, 0.5], 
                 Circle[{0, 0}, 1]}, {
+                Lighter[Magenta, 0.5], Thick, 
+                Circle[{0, 0}, 1, {Pi/2, 
+                  Part[Trigonometria`b, 2]}]}, {
                 If[
                  And[
                  Cos[Trigonometria`th] > Part[Trigonometria`b, 1], 
@@ -46923,7 +46943,8 @@ Cell[BoxData[
    3.704196469075204*^9, 3.7041964775615854`*^9}, {3.7041966925710015`*^9, 
    3.704196697990594*^9}, {3.7041967583639603`*^9, 3.7041967612705746`*^9}, {
    3.7041971742760153`*^9, 3.7041971804749546`*^9}, {3.7041972435739517`*^9, 
-   3.7041972489899354`*^9}},
+   3.7041972489899354`*^9}, {3.7041999724095135`*^9, 3.7041999756660585`*^9}},
+ 
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
@@ -47124,8 +47145,8 @@ Cell[BoxData[
    3.704196264875696*^9, 3.7041962742906857`*^9}, {3.7041964694777336`*^9, 
    3.704196477725387*^9}, {3.7041966930356264`*^9, 3.704196698156947*^9}, {
    3.704196758610083*^9, 3.7041967614465427`*^9}, {3.7041971745266314`*^9, 
-   3.7041971806785316`*^9}, {3.7041972439925766`*^9, 3.7041972496638536`*^9}},
- 
+   3.7041971806785316`*^9}, {3.7041972439925766`*^9, 
+   3.7041972496638536`*^9}, {3.704199972572917*^9, 3.704199975921667*^9}},
  FontFamily->"OpenDyslexic",
  FontSize->14,
  FontWeight->"Regular",
@@ -47148,7 +47169,7 @@ Cell[BoxData[
   RowBox[{"-", "0.8775825618903728`"}], "}"}]], "Output",
  CellChangeTimes->{3.704196274358899*^9, 3.704196477769472*^9, 
   3.7041966981995163`*^9, 3.704196761491661*^9, 3.7041971807226486`*^9, 
-  3.704197249939602*^9}]
+  3.704197249939602*^9, 3.7041999759878235`*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -47261,7 +47282,7 @@ Cell[BoxData[
         RowBox[{GridBox[{
            {
             
-            RadioButtonBox[Dynamic[Trigonometria`AB2$15926], {
+            RadioButtonBox[Dynamic[Trigonometria`AB2$26939], {
              "\!\(\*FractionBox[\(5\), \(2\)]\)"},
              DefaultBaseStyle->"RadioButtonBar"], 
             
@@ -47286,7 +47307,7 @@ Cell[BoxData[
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
             
-            RadioButtonBox[Dynamic[Trigonometria`AB2$15926], {
+            RadioButtonBox[Dynamic[Trigonometria`AB2$26939], {
              "\!\(\*FractionBox[\(5\), \(2\)]\)\!\(\*SqrtBox[\(3\)]\)"},
              DefaultBaseStyle->"RadioButtonBar"], 
             
@@ -47310,7 +47331,7 @@ Cell[BoxData[
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`AB2$15926], {"5"},
+            RadioButtonBox[Dynamic[Trigonometria`AB2$26939], {"5"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"5\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -47331,7 +47352,7 @@ Cell[BoxData[
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
-            RadioButtonBox[Dynamic[Trigonometria`AB2$15926], {"30"},
+            RadioButtonBox[Dynamic[Trigonometria`AB2$26939], {"30"},
              DefaultBaseStyle->"RadioButtonBar"], 
             StyleBox["\<\"30\"\>", "RadioButtonBarLabel",
              StripOnInput->False]}
@@ -47352,7 +47373,7 @@ Cell[BoxData[
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}]}], "Deploy"],
        RadioButtonBar[
-        Dynamic[Trigonometria`AB2$15926], {
+        Dynamic[Trigonometria`AB2$26939], {
         "\!\(\*FractionBox[\(5\), \(2\)]\)", 
          "\!\(\*FractionBox[\(5\), \(2\)]\)\!\(\*SqrtBox[\(3\)]\)", "5", 
          "30"}]],
@@ -47360,7 +47381,7 @@ Cell[BoxData[
       Magnification->2 Inherited], 
      StyleBox[
       DynamicBox[ToBoxes[
-        Trigonometria`CheckAnswer[Trigonometria`AB2$15926, "5"], StandardForm],
+        Trigonometria`CheckAnswer[Trigonometria`AB2$26939, "5"], StandardForm],
        ImageSizeCache->{0., {9., 38.}}],
       StripOnInput->False,
       Magnification->3 Inherited], ""}
@@ -47377,7 +47398,8 @@ Cell[BoxData[
    3.704196274403404*^9}, {3.7041964699098053`*^9, 3.7041964777960505`*^9}, {
    3.704196693193554*^9, 3.7041966982160916`*^9}, {3.7041967586727495`*^9, 
    3.7041967615171523`*^9}, {3.7041971747170563`*^9, 
-   3.7041971807422037`*^9}, {3.704197244066809*^9, 3.7041972500548277`*^9}},
+   3.7041971807422037`*^9}, {3.704197244066809*^9, 3.7041972500548277`*^9}, {
+   3.704199972644558*^9, 3.7041999760193777`*^9}},
  FontFamily->"OpenDyslexic",
  FontSize->14,
  FontWeight->"Regular",
@@ -47557,7 +47579,8 @@ Cell[BoxData[
    3.7041962744485235`*^9}, {3.7041964700647306`*^9, 
    3.7041964778276343`*^9}, {3.704196693325386*^9, 3.7041966982468967`*^9}, {
    3.7041967587163677`*^9, 3.7041967615597887`*^9}, {3.7041971747967987`*^9, 
-   3.704197180770769*^9}, {3.704197244118413*^9, 3.704197250158584*^9}},
+   3.704197180770769*^9}, {3.704197244118413*^9, 3.704197250158584*^9}, {
+   3.704199972693568*^9, 3.704199976075505*^9}},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
@@ -47687,7 +47710,7 @@ Cell[BoxData[
    3.7041964701303697`*^9, 3.7041964778492208`*^9}, {3.704196693378026*^9, 
    3.7041966982664204`*^9}, {3.7041967587494817`*^9, 3.704196761589372*^9}, {
    3.7041971748494406`*^9, 3.7041971807896256`*^9}, {3.704197244149998*^9, 
-   3.704197250273887*^9}},
+   3.704197250273887*^9}, {3.704199972718167*^9, 3.704199976105583*^9}},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
@@ -48084,7 +48107,7 @@ sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\"\>",
    3.7041964778772974`*^9}, {3.7041966940953007`*^9, 
    3.7041966982914877`*^9}, {3.704196758784046*^9, 3.7041967616474175`*^9}, {
    3.704197174940199*^9, 3.7041971808322706`*^9}, {3.7041972441976213`*^9, 
-   3.704197250317035*^9}},
+   3.704197250317035*^9}, {3.7041999727527227`*^9, 3.7041999761537094`*^9}},
  FontFamily->"OpenDyslexic",
  FontSize->14,
  FontWeight->"Regular",
@@ -48238,7 +48261,7 @@ False]]\\)\"\>",
         RowBox[{GridBox[{
            {
             
-            RadioButtonBox[Dynamic[Trigonometria`res4$16036], {
+            RadioButtonBox[Dynamic[Trigonometria`res4$27048], {
              "\!\(\*FractionBox[\(3\), \(2\)]\)"},
              DefaultBaseStyle->"RadioButtonBar"], 
             
@@ -48263,7 +48286,7 @@ False]]\\)\"\>",
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
             
-            RadioButtonBox[Dynamic[Trigonometria`res4$16036], {
+            RadioButtonBox[Dynamic[Trigonometria`res4$27048], {
              "\!\(\*FractionBox[\(2\), \(3\)]\)"},
              DefaultBaseStyle->"RadioButtonBar"], 
             
@@ -48288,7 +48311,7 @@ False]]\\)\"\>",
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
             
-            RadioButtonBox[Dynamic[Trigonometria`res4$16036], {
+            RadioButtonBox[Dynamic[Trigonometria`res4$27048], {
              "\!\(\*FractionBox[\(2\), \(3\)]\)\!\(\*SqrtBox[\(3\)]\)"},
              DefaultBaseStyle->"RadioButtonBar"], 
             
@@ -48313,7 +48336,7 @@ False]]\\)\"\>",
               Offset[0.2]}, "RowsIndexed" -> {}}], "  ", GridBox[{
            {
             
-            RadioButtonBox[Dynamic[Trigonometria`res4$16036], {
+            RadioButtonBox[Dynamic[Trigonometria`res4$27048], {
              "\!\(\*FractionBox[\(3\), \(2\)]\)\!\(\*SqrtBox[\(3\)]\)"},
              DefaultBaseStyle->"RadioButtonBar"], 
             
@@ -48337,7 +48360,7 @@ False]]\\)\"\>",
                Offset[0.4]}, 
               Offset[0.2]}, "RowsIndexed" -> {}}]}], "Deploy"],
        RadioButtonBar[
-        Dynamic[Trigonometria`res4$16036], {
+        Dynamic[Trigonometria`res4$27048], {
         "\!\(\*FractionBox[\(3\), \(2\)]\)", 
          "\!\(\*FractionBox[\(2\), \(3\)]\)", 
          "\!\(\*FractionBox[\(2\), \(3\)]\)\!\(\*SqrtBox[\(3\)]\)", 
@@ -48347,7 +48370,7 @@ False]]\\)\"\>",
      StyleBox[
       DynamicBox[ToBoxes[
         Trigonometria`CheckAnswer[
-        Trigonometria`res4$16036, "\!\(\*FractionBox[\(2\), \(3\)]\)"], 
+        Trigonometria`res4$27048, "\!\(\*FractionBox[\(2\), \(3\)]\)"], 
         StandardForm],
        ImageSizeCache->{0., {9., 38.}}],
       StripOnInput->False,
@@ -48365,8 +48388,8 @@ False]]\\)\"\>",
    3.7041962672079687`*^9, 3.704196274622457*^9}, {3.7041964709940605`*^9, 
    3.7041964779850936`*^9}, {3.704196694301838*^9, 3.704196698406296*^9}, {
    3.704196758926408*^9, 3.70419676174584*^9}, {3.7041971752094283`*^9, 
-   3.7041971809036818`*^9}, {3.7041972443812313`*^9, 3.7041972505517015`*^9}},
- 
+   3.7041971809036818`*^9}, {3.7041972443812313`*^9, 
+   3.7041972505517015`*^9}, {3.7041999728543987`*^9, 3.704199976252255*^9}},
  FontFamily->"OpenDyslexic",
  FontSize->14,
  FontWeight->"Regular",
@@ -48568,7 +48591,7 @@ Cell[BoxData[
    3.7041964713070602`*^9, 3.704196478071288*^9}, {3.7041966944711275`*^9, 
    3.704196698497037*^9}, {3.7041967589992833`*^9, 3.704196761797991*^9}, {
    3.7041971754049993`*^9, 3.704197180948269*^9}, {3.7041972444714518`*^9, 
-   3.704197250612891*^9}},
+   3.704197250612891*^9}, {3.7041999729290657`*^9, 3.7041999763149567`*^9}},
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
@@ -48606,8 +48629,8 @@ Cell[BoxData[
    3.7041964713832164`*^9, 3.704196478089338*^9}, {3.7041966945152445`*^9, 
    3.7041966985672207`*^9}, {3.7041967590173025`*^9, 
    3.7041967618130045`*^9}, {3.7041971754325757`*^9, 
-   3.7041971809988728`*^9}, {3.7041972445737257`*^9, 3.7041972506319413`*^9}},
- 
+   3.7041971809988728`*^9}, {3.7041972445737257`*^9, 
+   3.7041972506319413`*^9}, {3.704199972954168*^9, 3.7041999763658886`*^9}},
  TextAlignment->Center,
  Background->RGBColor[1, 0.85, 0.85],
  ExpressionUUID -> "e471af90-6081-46eb-b971-95cdf016fd71"]
@@ -48767,7 +48790,8 @@ Cell[BoxData[
    3.7041964714935093`*^9, 3.7041964781164083`*^9}, {3.704196694625521*^9, 
    3.704196698606327*^9}, {3.7041967590493183`*^9, 3.7041967618400764`*^9}, {
    3.7041971755107975`*^9, 3.7041971810389786`*^9}, {3.7041972446102753`*^9, 
-   3.7041972506569805`*^9}},
+   3.7041972506569805`*^9}, {3.7041999729952383`*^9, 3.7041999764255824`*^9}},
+ 
  TextAlignment->Center,
  FontFamily->"OpenDyslexic",
  FontSize->14,
@@ -49238,11 +49262,11 @@ Rule[FontFamily, \\\"sans sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\"\>",
          ToBoxes[
           Trigonometria`CheckAnswer[Trigonometria`B8, "B"], StandardForm]],
         "\" \[CenterDot] cos(\"","",PopupMenuBox[
-         Dynamic[Trigonometria`G7$16077], {
+         Dynamic[Trigonometria`G7$27089], {
          "\[Alpha]" -> "\"\[Alpha]\"", "\[Beta]" -> "\"\[Beta]\"", "\[Gamma]" -> 
           "\"\[Gamma]\""}],DynamicBox[
          ToBoxes[
-          Trigonometria`CheckAnswer[Trigonometria`G7$16077, "\[Gamma]"], 
+          Trigonometria`CheckAnswer[Trigonometria`G7$27089, "\[Gamma]"], 
           StandardForm]],"\")\""},
        "RowDefault"],
       StripOnInput->False,
@@ -49325,8 +49349,8 @@ Rule[FontFamily, \\\"sans sarif\\\"], Bold, Rule[StripOnInput, False]]\\)\"\>",
    3.7041962747718525`*^9}, {3.704196471545675*^9, 3.704196478163992*^9}, {
    3.704196694701456*^9, 3.7041966986664357`*^9}, {3.7041967590974464`*^9, 
    3.7041967618872023`*^9}, {3.7041971756446824`*^9, 
-   3.7041971810860405`*^9}, {3.7041972446580963`*^9, 3.7041972506990924`*^9}},
- 
+   3.7041971810860405`*^9}, {3.7041972446580963`*^9, 
+   3.7041972506990924`*^9}, {3.704199973038389*^9, 3.704199976524437*^9}},
  FontFamily->"OpenDyslexic",
  FontSize->14,
  FontWeight->"Regular",
@@ -49473,7 +49497,7 @@ cos(\[Gamma])\"\>",
           RowBox[{
             GridBox[{{
                RadioButtonBox[
-                Dynamic[Trigonometria`res5$16125], {
+                Dynamic[Trigonometria`res5$27137], {
                 "\!\(\*FractionBox[\(1\), \(2\)]\)"}, DefaultBaseStyle -> 
                 "RadioButtonBar"], 
                StyleBox[
@@ -49484,7 +49508,7 @@ cos(\[Gamma])\"\>",
              ColumnAlignments -> Left, ColumnSpacings -> 0.3], "  ", 
             GridBox[{{
                RadioButtonBox[
-                Dynamic[Trigonometria`res5$16125], {
+                Dynamic[Trigonometria`res5$27137], {
                 "\!\(\*FractionBox[SqrtBox[\(3\)], \(2\)]\)"}, 
                 DefaultBaseStyle -> "RadioButtonBar"], 
                StyleBox[
@@ -49495,7 +49519,7 @@ cos(\[Gamma])\"\>",
              ColumnAlignments -> Left, ColumnSpacings -> 0.3], "  ", 
             GridBox[{{
                RadioButtonBox[
-                Dynamic[Trigonometria`res5$16125], {
+                Dynamic[Trigonometria`res5$27137], {
                 "-\!\(\*FractionBox[\(1\), \(2\)]\)"}, DefaultBaseStyle -> 
                 "RadioButtonBar"], 
                StyleBox[
@@ -49506,7 +49530,7 @@ cos(\[Gamma])\"\>",
              ColumnAlignments -> Left, ColumnSpacings -> 0.3], "  ", 
             GridBox[{{
                RadioButtonBox[
-                Dynamic[Trigonometria`res5$16125], {
+                Dynamic[Trigonometria`res5$27137], {
                 "-\!\(\*FractionBox[SqrtBox[\(3\)], \(2\)]\)"}, 
                 DefaultBaseStyle -> "RadioButtonBar"], 
                StyleBox[
@@ -49516,7 +49540,7 @@ cos(\[Gamma])\"\>",
               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
              ColumnAlignments -> Left, ColumnSpacings -> 0.3]}], "Deploy"], 
          RadioButtonBar[
-          Dynamic[Trigonometria`res5$16125], {
+          Dynamic[Trigonometria`res5$27137], {
           "\!\(\*FractionBox[\(1\), \(2\)]\)", 
            "\!\(\*FractionBox[SqrtBox[\(3\)], \(2\)]\)", 
            "-\!\(\*FractionBox[\(1\), \(2\)]\)", 
@@ -49524,7 +49548,7 @@ cos(\[Gamma])\"\>",
         DynamicBox[
          ToBoxes[
           Trigonometria`CheckAnswer[
-          Trigonometria`res5$16125, "\!\(\*FractionBox[\(1\), \(2\)]\)"], 
+          Trigonometria`res5$27137, "\!\(\*FractionBox[\(1\), \(2\)]\)"], 
           StandardForm]]},
        "RowDefault"],
       StripOnInput->False,
@@ -49543,7 +49567,8 @@ cos(\[Gamma])\"\>",
    3.7041964782431693`*^9}, {3.7041966947591095`*^9, 
    3.7041966987225847`*^9}, {3.704196759162812*^9, 3.704196761938357*^9}, {
    3.7041971758050036`*^9, 3.704197181148739*^9}, {3.704197244727313*^9, 
-   3.7041972507562447`*^9}},
+   3.7041972507562447`*^9}, {3.7041999731050644`*^9, 3.7041999766101246`*^9}},
+ 
  FontFamily->"OpenDyslexic",
  FontSize->14,
  FontWeight->"Regular",
@@ -50683,7 +50708,8 @@ u4QRiE3WabJCPwvnAfyj7c8QgrghmMj/BQwO6XE=
    3.704196271575998*^9, 3.7041962749981527`*^9}, {3.7041964742878733`*^9, 
    3.7041964784526415`*^9}, {3.704196694989596*^9, 3.7041966988998966`*^9}, {
    3.704196759314528*^9, 3.7041967620894003`*^9}, {3.704197176149943*^9, 
-   3.7041971814074078`*^9}, {3.7041972449819117`*^9, 3.704197250965726*^9}},
+   3.7041971814074078`*^9}, {3.7041972449819117`*^9, 3.704197250965726*^9}, {
+   3.7041999732630334`*^9, 3.70419997677995*^9}},
  ExpressionUUID -> "02659047-7a0c-46cb-9382-c0a530a57ebe"]
 }, Open  ]]
 }, Open  ]],
@@ -58825,7 +58851,8 @@ decimale\\n\\n\"", FontColor -> RGBColor[1, 0, 0], 10, StripOnInput -> False],
    3.704196275251111*^9}, 3.7041964748939533`*^9, {3.7041966952389927`*^9, 
    3.7041966992525682`*^9}, {3.7041967594857993`*^9, 
    3.7041967622665634`*^9}, {3.704197176626707*^9, 3.704197181585379*^9}, {
-   3.7041972452982817`*^9, 3.704197251361277*^9}},
+   3.7041972452982817`*^9, 3.704197251361277*^9}, {3.704199973504525*^9, 
+   3.7041999769632673`*^9}},
  FontFamily->"OpenDyslexic",
  FontSize->14,
  FontWeight->"Regular",
@@ -58854,63 +58881,63 @@ CellTagsIndex->{
  "SlideShowHeader"->{
   Cell[580, 22, 4510, 102, 77, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2606011, 42787, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2606085, 42789, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2607758, 42827, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2607832, 42829, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2610554, 42909, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2610628, 42911, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2615305, 43026, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2615403, 43028, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2628133, 43347, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2628377, 43350, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2650345, 43963, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2650690, 43968, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2657395, 44140, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2657843, 44147, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2673987, 44562, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2674535, 44571, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2691381, 44981, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2692027, 44991, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2698013, 45194, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2698659, 45204, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2716731, 45650, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2717425, 45660, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2733782, 46090, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2734530, 46101, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2745941, 46373, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2746741, 46385, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2771632, 46953, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2772863, 46974, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2779308, 47156, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2780611, 47177, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2788402, 47389, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2789757, 47411, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2795366, 47571, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2796771, 47594, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2804039, 47813, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2805490, 47836, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2815190, 48096, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2816691, 48119, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2826367, 48378, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2827918, 48401, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2835264, 48620, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2836915, 48643, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2851924, 49102, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2853627, 49126, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2861392, 49338, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2863143, 49362, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2870348, 49555, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2872151, 49580, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[2936856, 50692, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[2938710, 50718, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[3429984, 58835, 191, 5, 76, "SlideShowNavigationBar",
+  Cell[3431890, 58862, 191, 5, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"SlideShowHeader", 3430520, 58853}
+ {"SlideShowHeader", 3432426, 58880}
  }
 *)
 (*NotebookFileOutline
@@ -58920,316 +58947,316 @@ Cell[580, 22, 4510, 102, 77, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[5093, 126, 361, 8, 103, "Title"],
 Cell[CellGroupData[{
-Cell[5479, 138, 277, 5, 19, "Code",
+Cell[5479, 138, 277, 5, 22, "Code",
  CellOpen->False],
-Cell[5759, 145, 2599770, 42626, 786, "Output"]
+Cell[5759, 145, 2599844, 42628, 786, "Output"]
 }, Open  ]],
-Cell[2605544, 42774, 430, 8, 87, "Subtitle"]
+Cell[2605618, 42776, 430, 8, 87, "Subtitle"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2606011, 42787, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2606085, 42789, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
-Cell[2606205, 42794, 1516, 28, 400, "Section"]
+Cell[2606279, 42796, 1516, 28, 400, "Section"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2607758, 42827, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2607832, 42829, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2607974, 42836, 387, 8, 73, "Section"],
-Cell[2608364, 42846, 711, 13, 123, "Text"]
+Cell[2608048, 42838, 387, 8, 73, "Section"],
+Cell[2608438, 42848, 711, 13, 123, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2609112, 42864, 377, 8, 73, "Section"],
-Cell[2609492, 42874, 1013, 29, 571, "Text"]
+Cell[2609186, 42866, 377, 8, 73, "Section"],
+Cell[2609566, 42876, 1013, 29, 571, "Text"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2610554, 42909, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2610628, 42911, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2610770, 42918, 1492, 34, 19, "Input",
+Cell[2610844, 42920, 1492, 34, 19, "Input",
  CellOpen->False],
-Cell[2612265, 42954, 723, 17, 58, "Output"]
+Cell[2612339, 42956, 747, 17, 58, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2613025, 42976, 608, 14, 117, "Section"],
-Cell[2613636, 42992, 1620, 28, 459, "Text"]
+Cell[2613123, 42978, 608, 14, 117, "Section"],
+Cell[2613734, 42994, 1620, 28, 459, "Text"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2615305, 43026, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2615403, 43028, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2615521, 43035, 439, 9, 73, "Section"],
-Cell[2615963, 43046, 1570, 48, 117, "Text"],
+Cell[2615619, 43037, 439, 9, 73, "Section"],
+Cell[2616061, 43048, 1570, 48, 117, "Text"],
 Cell[CellGroupData[{
-Cell[2617558, 43098, 425, 9, 61, "Code"],
-Cell[2617986, 43109, 6689, 147, 528, "Output"]
+Cell[2617656, 43100, 425, 9, 61, "Code"],
+Cell[2618084, 43111, 6737, 147, 528, "Output"]
 }, Open  ]],
-Cell[2624690, 43259, 473, 8, 46, "Text"],
+Cell[2624836, 43261, 473, 8, 46, "Text"],
 Cell[CellGroupData[{
-Cell[2625188, 43271, 376, 9, 19, "Code",
+Cell[2625334, 43273, 376, 9, 22, "Code",
  CellOpen->False],
-Cell[2625567, 43282, 1118, 22, 58, "Output"]
+Cell[2625713, 43284, 1168, 23, 58, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2626722, 43309, 272, 7, 19, "Code",
+Cell[2626918, 43312, 272, 7, 22, "Code",
  CellOpen->False],
-Cell[2626997, 43318, 1075, 22, 58, "Output"]
+Cell[2627193, 43321, 1123, 22, 58, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2628133, 43347, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2628377, 43350, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
-Cell[2628327, 43354, 527, 10, 56, "Text"],
-Cell[2628857, 43366, 2223, 75, 122, "Text"],
+Cell[2628571, 43357, 527, 10, 56, "Text"],
+Cell[2629101, 43369, 2223, 75, 122, "Text"],
 Cell[CellGroupData[{
-Cell[2631105, 43445, 223, 6, 61, "Code"],
-Cell[2631331, 43453, 7954, 173, 528, "Output"]
+Cell[2631349, 43448, 223, 6, 61, "Code"],
+Cell[2631575, 43456, 8005, 174, 528, "Output"]
 }, Open  ]],
-Cell[2639300, 43629, 2151, 61, 74, "Text"],
+Cell[2639595, 43633, 2151, 61, 74, "Text"],
 Cell[CellGroupData[{
-Cell[2641476, 43694, 228, 6, 61, "Code"],
-Cell[2641707, 43702, 3434, 75, 359, "Output"]
+Cell[2641771, 43698, 228, 6, 61, "Code"],
+Cell[2642002, 43706, 3484, 76, 359, "Output"]
 }, Open  ]],
-Cell[2645156, 43780, 4986, 173, 263, "Text"],
-Cell[2650145, 43955, 163, 3, 30, "Text"]
+Cell[2645501, 43785, 4986, 173, 263, "Text"],
+Cell[2650490, 43960, 163, 3, 30, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2650345, 43963, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2650690, 43968, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2650561, 43972, 386, 9, 19, "Code",
+Cell[2650906, 43977, 386, 9, 22, "Code",
  CellOpen->False],
-Cell[2650950, 43983, 941, 20, 58, "Output"]
+Cell[2651295, 43988, 992, 21, 58, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2651928, 44008, 344, 8, 61, "Code"],
-Cell[2652275, 44018, 5071, 116, 539, "Output"]
+Cell[2652324, 44014, 344, 8, 61, "Code"],
+Cell[2652671, 44024, 5123, 117, 539, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2657395, 44140, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2657843, 44147, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2657611, 44149, 335, 7, 73, "Section"],
+Cell[2658059, 44156, 335, 7, 73, "Section"],
 Cell[CellGroupData[{
-Cell[2657971, 44160, 256, 6, 61, "Code"],
-Cell[2658230, 44168, 9400, 206, 528, "Output"]
+Cell[2658419, 44167, 256, 6, 61, "Code"],
+Cell[2658678, 44175, 9450, 207, 528, "Output"]
 }, Open  ]],
-Cell[2667645, 44377, 3408, 102, 411, "Text"],
-Cell[2671056, 44481, 1042, 28, 68, "Text"],
-Cell[2672101, 44511, 519, 11, 67, "Text"],
+Cell[2668143, 44385, 3408, 102, 411, "Text"],
+Cell[2671554, 44489, 1042, 28, 68, "Text"],
+Cell[2672599, 44519, 519, 11, 67, "Text"],
 Cell[CellGroupData[{
-Cell[2672645, 44526, 270, 7, 19, "Code",
+Cell[2673143, 44534, 270, 7, 22, "Code",
  CellOpen->False],
-Cell[2672918, 44535, 1008, 20, 58, "Output"]
+Cell[2673416, 44543, 1058, 21, 58, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2673987, 44562, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2674535, 44571, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2674203, 44571, 376, 8, 73, "Section"],
-Cell[2674582, 44581, 461, 9, 73, "Text"],
+Cell[2674751, 44580, 376, 8, 73, "Section"],
+Cell[2675130, 44590, 461, 9, 73, "Text"],
 Cell[CellGroupData[{
-Cell[2675068, 44594, 228, 6, 61, "Code"],
-Cell[2675299, 44602, 7395, 168, 588, "Output"]
+Cell[2675616, 44603, 228, 6, 61, "Code"],
+Cell[2675847, 44611, 7447, 169, 588, "Output"]
 }, Open  ]],
-Cell[2682709, 44773, 383, 8, 42, "Text"],
+Cell[2683309, 44783, 383, 8, 42, "Text"],
 Cell[CellGroupData[{
-Cell[2683117, 44785, 228, 6, 61, "Code"],
-Cell[2683348, 44793, 7341, 167, 588, "Output"]
+Cell[2683717, 44795, 228, 6, 61, "Code"],
+Cell[2683948, 44803, 7387, 167, 588, "Output"]
 }, Open  ]],
-Cell[2690704, 44963, 628, 12, 73, "Text"]
+Cell[2691350, 44973, 628, 12, 73, "Text"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2691381, 44981, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2692027, 44991, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2691597, 44990, 394, 8, 73, "Section"],
-Cell[2691994, 45000, 5970, 188, 556, "Text"]
+Cell[2692243, 45000, 394, 8, 73, "Section"],
+Cell[2692640, 45010, 5970, 188, 556, "Text"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2698013, 45194, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2698659, 45204, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2698229, 45203, 311, 8, 61, "Code"],
-Cell[2698543, 45213, 18139, 431, 1891, "Output"]
+Cell[2698875, 45213, 311, 8, 61, "Code"],
+Cell[2699189, 45223, 18187, 431, 1891, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2716731, 45650, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2717425, 45660, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2716947, 45659, 311, 8, 61, "Code"],
-Cell[2717261, 45669, 16472, 415, 1247, "Output"]
+Cell[2717641, 45669, 311, 8, 61, "Code"],
+Cell[2717955, 45679, 16526, 416, 1247, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2733782, 46090, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2734530, 46101, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2733998, 46099, 335, 7, 73, "Section"],
+Cell[2734746, 46110, 335, 7, 73, "Section"],
 Cell[CellGroupData[{
-Cell[2734358, 46110, 733, 20, 78, "Subsection"],
+Cell[2735106, 46121, 733, 20, 78, "Subsection"],
 Cell[CellGroupData[{
-Cell[2735116, 46134, 228, 6, 61, "Code"],
-Cell[2735347, 46142, 10304, 216, 426, "Output"]
+Cell[2735864, 46145, 228, 6, 61, "Code"],
+Cell[2736095, 46153, 10356, 217, 426, "Output"]
 }, Open  ]],
-Cell[2745666, 46361, 214, 5, 73, "Input"]
+Cell[2746466, 46373, 214, 5, 73, "Input"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2745941, 46373, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2746741, 46385, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2746157, 46382, 333, 7, 54, "Subsubsection"],
+Cell[2746957, 46394, 333, 7, 54, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[2746515, 46393, 284, 7, 61, "Code"],
-Cell[2746802, 46402, 9002, 192, 528, "Output"]
+Cell[2747315, 46405, 284, 7, 61, "Code"],
+Cell[2747602, 46414, 9229, 197, 528, "Output"]
 }, Open  ]],
-Cell[2755819, 46597, 389, 8, 40, "Input"],
-Cell[2756211, 46607, 2850, 73, 668, "Text"],
+Cell[2756846, 46614, 389, 8, 40, "Input"],
+Cell[2757238, 46624, 2850, 73, 668, "Text"],
 Cell[CellGroupData[{
-Cell[2759086, 46684, 255, 6, 61, "Code"],
-Cell[2759344, 46692, 11356, 238, 528, "Output"]
+Cell[2760113, 46701, 255, 6, 61, "Code"],
+Cell[2760371, 46709, 11560, 242, 528, "Output"]
 }, Open  ]],
-Cell[2770715, 46933, 868, 14, 104, "Text"]
+Cell[2771946, 46954, 868, 14, 104, "Text"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2771632, 46953, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2772863, 46974, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2771848, 46962, 313, 8, 61, "Code"],
-Cell[2772164, 46972, 6522, 159, 787, "Output"]
+Cell[2773079, 46983, 313, 8, 61, "Code"],
+Cell[2773395, 46993, 6570, 159, 787, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2778723, 47136, 285, 7, 40, "Input"],
-Cell[2779011, 47145, 248, 5, 30, "Output"]
+Cell[2780002, 47157, 285, 7, 40, "Input"],
+Cell[2780290, 47166, 272, 5, 30, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2779308, 47156, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2780611, 47177, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2779524, 47165, 315, 8, 61, "Code"],
-Cell[2779842, 47175, 8511, 208, 723, "Output"]
+Cell[2780827, 47186, 315, 8, 61, "Code"],
+Cell[2781145, 47196, 8563, 209, 723, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2788402, 47389, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2789757, 47411, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2788618, 47398, 332, 7, 73, "Section"],
-Cell[2788953, 47407, 287, 6, 42, "Text"]
+Cell[2789973, 47420, 332, 7, 73, "Section"],
+Cell[2790308, 47429, 287, 6, 42, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2789277, 47418, 1390, 43, 81, "Section"],
+Cell[2790632, 47440, 1390, 43, 81, "Section"],
 Cell[CellGroupData[{
-Cell[2790692, 47465, 227, 6, 61, "Code"],
-Cell[2790922, 47473, 4383, 91, 426, "Output"]
+Cell[2792047, 47487, 227, 6, 61, "Code"],
+Cell[2792277, 47495, 4433, 92, 426, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2795366, 47571, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2796771, 47594, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2795582, 47580, 448, 11, 88, "Subsection"],
+Cell[2796987, 47603, 448, 11, 88, "Subsection"],
 Cell[CellGroupData[{
-Cell[2796055, 47595, 253, 6, 61, "Code"],
-Cell[2796311, 47603, 4358, 91, 426, "Output"]
+Cell[2797460, 47618, 253, 6, 61, "Code"],
+Cell[2797716, 47626, 4404, 91, 426, "Output"]
 }, Open  ]],
-Cell[2800684, 47697, 3306, 110, 409, "Text"]
+Cell[2802135, 47720, 3306, 110, 409, "Text"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2804039, 47813, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2805490, 47836, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2804255, 47822, 312, 8, 61, "Code"],
-Cell[2804570, 47832, 10571, 258, 1199, "Output"]
+Cell[2805706, 47845, 312, 8, 61, "Code"],
+Cell[2806021, 47855, 10621, 258, 1199, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2815190, 48096, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2816691, 48119, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2815406, 48105, 313, 8, 61, "Code"],
-Cell[2815722, 48115, 10596, 257, 628, "Output"]
+Cell[2816907, 48128, 313, 8, 61, "Code"],
+Cell[2817223, 48138, 10646, 257, 628, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2826367, 48378, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2827918, 48401, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2826583, 48387, 371, 8, 73, "Section"],
+Cell[2828134, 48410, 371, 8, 73, "Section"],
 Cell[CellGroupData[{
-Cell[2826979, 48399, 1997, 60, 78, "Subsection"],
+Cell[2828530, 48422, 1997, 60, 78, "Subsection"],
 Cell[CellGroupData[{
-Cell[2829001, 48463, 229, 6, 61, "Code"],
-Cell[2829233, 48471, 4720, 104, 359, "Output"]
+Cell[2830552, 48486, 229, 6, 61, "Code"],
+Cell[2830784, 48494, 4770, 104, 359, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2833990, 48580, 407, 13, 19, "Code",
+Cell[2835591, 48603, 407, 13, 22, "Code",
  CellOpen->False],
-Cell[2834400, 48595, 791, 17, 58, "Output"]
+Cell[2836001, 48618, 841, 17, 58, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2835264, 48620, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2836915, 48643, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2835480, 48629, 329, 7, 62, "Subsection"],
+Cell[2837131, 48652, 329, 7, 62, "Subsection"],
 Cell[CellGroupData[{
-Cell[2835834, 48640, 232, 6, 61, "Code"],
-Cell[2836069, 48648, 5918, 126, 359, "Output"]
+Cell[2837485, 48663, 232, 6, 61, "Code"],
+Cell[2837720, 48671, 5970, 127, 359, "Output"]
 }, Open  ]],
-Cell[2842002, 48777, 9873, 319, 563, "Text"]
+Cell[2843705, 48801, 9873, 319, 563, "Text"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2851924, 49102, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2853627, 49126, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2852140, 49111, 313, 8, 61, "Code"],
-Cell[2852456, 49121, 8887, 211, 826, "Output"]
+Cell[2853843, 49135, 313, 8, 61, "Code"],
+Cell[2854159, 49145, 8935, 211, 826, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2861392, 49338, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2863143, 49362, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2861608, 49347, 311, 8, 61, "Code"],
-Cell[2861922, 49357, 8377, 192, 981, "Output"]
+Cell[2863359, 49371, 311, 8, 61, "Code"],
+Cell[2863673, 49381, 8429, 193, 981, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2870348, 49555, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2872151, 49580, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2870564, 49564, 313, 8, 61, "Code"],
-Cell[2870880, 49574, 65927, 1112, 429, "Output"]
+Cell[2872367, 49589, 313, 8, 61, "Code"],
+Cell[2872683, 49599, 65978, 1113, 429, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2936856, 50692, 191, 5, 76, "SlideShowNavigationBar",
+Cell[2938710, 50718, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[2937072, 50701, 314, 8, 61, "Code"],
-Cell[2937389, 50711, 492568, 8120, 689, "Output"]
+Cell[2938926, 50727, 314, 8, 61, "Code"],
+Cell[2939243, 50737, 492620, 8121, 689, "Output"]
 }, Open  ]]
 }, Open  ]],
-Cell[3429984, 58835, 191, 5, 76, "SlideShowNavigationBar",
+Cell[3431890, 58862, 191, 5, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"]
 }
 ]

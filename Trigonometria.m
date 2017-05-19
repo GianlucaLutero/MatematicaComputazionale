@@ -732,6 +732,7 @@ Graphics[{
 
 (* CIRCONFERENZA *)
 {Lighter[Gray,0.5],Circle[{0,0},1]},
+{Purple,Thick,Circle[{0, 0},1, {Pi/2-a[[1]], 2Pi+b[[2]]}]},
 
 {If[ Cos[th] >b[[1]] && Cos[th] > a[[1]],
 {
@@ -817,6 +818,7 @@ Graphics[{
 
 (* CIRCONFERENZA *)
 {Lighter[Gray,0.5],Circle[{0,0},1]},
+{Lighter[Magenta,0.5],Thick,Circle[{0, 0},1, {Pi/2, b[[2]]}]},
 
 {If[ Cos[th] >b[[1]] && Cos[th] > a[[1]],
 {
