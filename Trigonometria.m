@@ -1502,8 +1502,8 @@ Grid[{{Text[Style["Esercizio 6:",20,FontColor-> Red]]},
   {Darker[Green,0.2], Circle[{2, 0}, 0.2, angolo[{0, 0}, {1.3,1}, {2, 0}]+Pi]},
 
   (* ANGOLO IN (1.3,1) *)
-  {Opacity[0.2], Darker[Green,0.3], Disk[{1.3, 1}, 0.2, angolo[{2, 0}, {0, 0}, {1.3, 1}]-Pi/2]},
-  {Darker[Green,0.2], Circle[{1.3, 1}, 0.2, angolo[{2, 0}, {0, 0}, {1.3, 1}]-Pi/2]},
+  {Opacity[0.2], Darker[Green,0.3], Disk[{1.3, 1}, 0.2, {angolo[{2, 0}, {0, 0}, {1.3, 1}][[1]], angolo[{2, 0}, {0, 0}, {1.3, 1}][[2]]-Pi}]},
+  {Darker[Green,0.2], Circle[{1.3, 1}, 0.2, {angolo[{2, 0}, {0, 0}, {1.3, 1}][[1]], angolo[{2, 0}, {0, 0}, {1.3, 1}][[2]]-Pi}]},
   
    (* triangle *)
  {Opacity[0],EdgeForm[Directive[Black]], Triangle[{{0, 0}, {1.3,1}, {2, 0}}]},
@@ -1553,31 +1553,31 @@ datiEsercizio7 = StringJoin[Style["A = 2 \nB = 3\n\[Gamma] = \!\(\*SuperscriptBo
 Grid[{{Text[Style["Esercizio 7:",20,FontColor-> Red]]},
 {Magnify[Graphics[{
 
-  (* ANGOLO RETTANGOLO *)
-  {Opacity[0.2],Darker[Green,0.3],Polygon[{{0, 0.1}, {0.1, 0.1}, {0.1, 0},{0, 0}}]},
-  {Darker[Green,0.3],Line[{{0, 0.1}, {0.1, 0.1}, {0.1, 0}}]},
+   (* ANGOLO IN (0,0) *)
+  {Opacity[0.2], Darker[Green,0.3], Disk[{0, 0}, 0.2, angolo[{1.8, 0}, {0.8, 1}, {0, 0}]]},
+  {Darker[Green,0.2], Circle[{0, 0}, 0.2, angolo[{1.8, 0}, {0.8, 1}, {0, 0}]]},
   
-  (* ANGOLO IN (2,0) *)
-  {Opacity[0.2], Darker[Green,0.3], Disk[{2, 0}, 0.2, angolo[{0, 0}, {0,1}, {2, 0}]+Pi]},
-  {Darker[Green,0.2], Circle[{2, 0}, 0.2, angolo[{0, 0}, {0,1}, {2, 0}]+Pi]},
+  (* ANGOLO IN (1.8,0) *)
+  {Opacity[0.2], Darker[Green,0.3], Disk[{1.8, 0}, 0.2, angolo[{0, 0}, {0.8, 1}, {1.8, 0}]+Pi]},
+  {Darker[Green,0.2], Circle[{1.8, 0}, 0.2, angolo[{0, 0}, {0.8,1}, {1.8, 0}]+Pi]},
 
-  (* ANGOLO IN (0,1) *)
-  {Opacity[0.2], Darker[Green,0.3], Disk[{0, 1}, 0.2, {angolo[{2, 0}, {0, 0}, {0, 1}][[1]]+2Pi,3Pi/2}]},
-  {Darker[Green,0.2], Circle[{0, 1}, 0.2, {angolo[{2, 0}, {0, 0}, {0, 1}][[1]]+2Pi,3Pi/2}]},
+  (* ANGOLO IN (0.8,1) *)
+  {Opacity[0.2], Darker[Green,0.3], Disk[{0.8, 1}, 0.2, {angolo[{1.8, 0}, {0, 0}, {0.8, 1}][[1]], angolo[{1.8, 0}, {0, 0}, {0.8, 1}][[2]]-Pi}]},
+  {Darker[Green,0.2], Circle[{0.8, 1}, 0.2, {angolo[{1.8, 0}, {0, 0}, {0.8, 1}][[1]], angolo[{1.8, 0}, {0, 0}, {0.8, 1}][[2]]-Pi}]},
   
    (* triangle *)
- {Opacity[0],EdgeForm[Directive[Black]], Triangle[{{0, 0}, {0,1}, {2, 0}}]},
+ {Opacity[0],EdgeForm[Directive[Black]], Triangle[{{0, 0}, {0.8,1}, {1.8, 0}}]},
   (* labels *)
   Rotate[
    Text[Style["B", 10],
-    {-0.1, 0.5}], 0 Degree],
+    {0.3, 0.6}], 0 Degree],
   Text[Style["C", 10],
    {0.7, -0.1}],
   Text[Style["A", 10],
-   {1, 0.6}, {-1, 0}],
- Text[Style["\[Beta]", 10, 10,Darker[Green,0.3]], {1.7, 0.08}],
- Text[Style["\[Gamma]",10, 10,Darker[Green,0.3]],{0.085,0.75}],
- Text[Style["\[Alpha]",10, 10,Darker[Green,0.3]],{0.2,0.2}]
+   {1.4, 0.6}, {-1, 0}],
+ Text[Style["\[Beta]", 10, 10,Darker[Green,0.3]], {1.5, 0.1}],
+ Text[Style["\[Gamma]",10, 10,Darker[Green,0.3]],{0.8,0.75}],
+ Text[Style["\[Alpha]",10, 10,Darker[Green,0.3]],{0.3,0.1}]
   }],2]
 ,Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizio7],1.4],Text[""]},
 {Text[Style["Procedimento:",17,FontColor -> Red]]},
