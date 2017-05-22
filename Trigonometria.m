@@ -9,6 +9,53 @@
 BeginPackage["Trigonometria`"]
 
 (* Funzioni *)
+angolo::usage = "Calcola i due angoli Subscript[\[Theta], 1], Subscript[\[Theta], 2] necessari\n
+				 per poter disegnare una arco di circonferenza tramite Disk[{x,y},{Subscript[\[Theta], 1],Subscript[\[Theta], 2]}] "; 
+
+bottonesen::usage = "Funzione che genera il bottone che richiama la fiunzione grafiseno[]";
+
+bottonecos::usage = "Funzione che genera il bottone che richiama la fiunzione graficocoseno[]";
+
+bottonetan::usage = "Funzione che genera il bottone che richiama la fiunzione graficotangente[]";
+
+bottonepitagora::usage = "Funzione che genera il bottone che richiama la fiunzione bottonepitagora[]";
+
+bottonecalcolatrice::usage = "Funzione che genera il bottone che richiama la fiunzione bottonecalcolatrice[]";
+
+grafiseno::usage = "Illustrazione del seno e della sua funzione";
+
+graficocoseno::usage = "Illustrazione del coseno e della sua funzione";
+
+graficotangente::usage = "Illustrazione della tangente e della sua funzione";
+
+defsencos::usage = "Illustrazione del seno e del coseno sulla circonferenza unitaria";
+
+rapporti::usage = "Illustrazione dei rapporti tra seno e del coseno";
+
+triangolorett::usage = "Illustrazione del un triangolo rettangolo formato da seno e coseno";
+
+tangent::usage = "Illustrazione della tangente sulla circonferenza unitaria";
+
+definizionetangente::usage = "Illustrazione della tangente sulla circonferenza unitaria con rapporti";
+
+angolinoti30::usage = "Illustrazione angoli noti multipli di 30\[Degree]";
+
+angolinoti45::usage = "Illustrazione angoli noti multipli di 45\[Degree]";
+
+teoremacorda::usage = "Illustrazione del teorema della corda";
+
+teoremacorda2::usage = "Illustrazione del teorema della corda interattivo pt.1";
+
+teoremacorda3::usage = "Illustrazione del teorema della corda interattivo pt.2";
+
+teoremaseni::usage = "Illustrazione del teorema dei seni";
+
+teoremacoseno::usage = "Illustrazione del teorema dei coseni pt.1";
+
+teoremacoseno2::usage = "Illustrazione del teorema dei coseni pt.2";
+
+pitagora::usage = "Illustrazione del teorema di pitagora con testo";
+
 EsercizioEsempio::usage = "Stampa un'esercizio d'esempio per calcolare Sen(\[Alpha])";
 
 Esercizio1::usage= "Esercizio su seno coseno tangente";
@@ -36,7 +83,7 @@ CheckAnswer::usage = "Modulo che compara i parametri answer_ e correct_ passati 
 
 Calcolatrice::usage = "Calcolatrice semplice per il calcolo di funzioni trigonometriche";
 
-TPitagora::usage = "suggerimento Teorema di pitagora";
+TPitagora::usage = "Suggerimento Teorema di pitagora";
 
 ClearAll["Global`*"]
 
@@ -50,7 +97,7 @@ If[(p3[[1]]-p2[[1]])!=0, ArcTan[(p3[[2]] -p2[[2]])/(p3[[1]]-p2[[1]])],0] }
 
 
 
-(* PUNTI GENERICI *)
+(* PUNTI GENERICI GLOBALI*)
 pa = {Cos[(Pi/2)+0.3], Sin[(Pi/2)+0.3]};
 pb = {Cos[-0.2], Sin[-0.2]};
 pc = {Cos[Pi +0.5], Sin[Pi +0.5]};
@@ -66,18 +113,26 @@ bottonesen[]:=
 Button["Funzione Seno",MessageDialog[  graficoseno[] ,WindowSize->All,Editable->False]]
 
 
+(* GENERA BOTTONE *)
+(* Funzione che genera il bottone che richiama la fiunzione graficocoseno[] *)
 bottonecos[]:=
 Button["Funzione Coseno",MessageDialog[  graficocoseno[] ,WindowSize->All,Editable->False]]
 
 
+(* GENERA BOTTONE *)
+(* Funzione che genera il bottone che richiama la fiunzione graficotangente[] *)
 bottonetan[]:=
 Button["Funzione Tangente",MessageDialog[  graficotangente[] ,WindowSize->All,Editable->False]]
 
 
+(* GENERA BOTTONE *)
+(* Funzione che genera il bottone che richiama la fiunzione pitagora[] *)
 bottonepitagora[]:=
 Button["Teorema di Pitagora",MessageDialog[  pitagora[] ,WindowSize->All,Editable->False]]
 
 
+(* GENERA BOTTONE *)
+(* Funzione che genera il bottone che richiama la fiunzione Calcolatrice[] *)
 bottonecalcolatrice[]:=
 Button["Calcolatrice",MessageDialog[  Calcolatrice[] ,WindowSize->All,Editable->False]]
 
@@ -85,6 +140,7 @@ Button["Calcolatrice",MessageDialog[  Calcolatrice[] ,WindowSize->All,Editable->
 (* Grafico Seno *)
 graficoseno[] := 
 Manipulate[
+(* genero disegno *)
 Module[{anglegraph,maingraph},
 anglegraph[th_]:=Show[
 Graphics[{
@@ -95,15 +151,24 @@ Graphics[{
 {Red,Thick,Line[{{Cos[th],0},{Cos[th],Sin[th]}}]},
 (* yp *)
 {Black,Disk[{0, Sin[th]},0.02]},
-(* sin *){Red,Thick,Dashing[Medium],Line[{{0,0},{0,Sin[th]}}]},
-(* retta punto *) {Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
-(* angolo *) {Opacity[0.2],Darker[Green,0.3],Thick,Disk[{0,0},0.3,{0,th}]},
-			  {Darker[Green,0.3],Circle[{0,0},0.3,{0,th}]},
-(* linea tratteggiata per cos *){Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th]-3,Sin[th]},{3,Sin[th]}}]},
-(* linea tratteggiata per sin *){Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th],Sin[th]-3},{Cos[th],3}}]},
+
+(* sin *)
+{Red,Thick,Dashing[Medium],Line[{{0,0},{0,Sin[th]}}]},
+
+(* retta punto *)
+{Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
+
+(* angolo *)
+{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{0,0},0.3,{0,th}]},
+{Darker[Green,0.3],Circle[{0,0},0.3,{0,th}]},
+
+(* linea tratteggiata per cos *)
+{Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th]-3,Sin[th]},{3,Sin[th]}}]},
+
+(* linea tratteggiata per sin *)
+{Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th],Sin[th]-3},{Cos[th],3}}]},
 
 (* TESTO *)
-
 Text["Yp",{0.1,Sin[th]+0.1}],
 Text["P",{Cos[th] +0.1,Sin[th]+0.1}],
 Text[Style["\[Theta]",Darker[Green,0.3]],{0.2,0.1}],
@@ -112,27 +177,30 @@ Rotate[Text[Style["Sin(\[Theta])",Red],{-0.1,Sin[th]/2}],90\[Degree]]
 }],
 PlotRange->1,ImageSize->400,BaseStyle->{15},Axes->True,PlotRange->{{-1,1},{-1,1}},PlotRangePadding->0.25];
 
+(* genero grafico *)
 maingraph[th_]:=Module[{},
-Show[Plot[{Sin[x]},{x,0.0001,th},PlotRange->{{0,2Pi},{-1,1}},ImageSize->650,PlotRangePadding->{0,0.25},ImagePadding->{{30,12},{0,0}},PlotRangeClipping->False,PlotStyle->Darker[Red,0.6],
-Ticks->{Table[{n Pi/4,n Pi/4},{n,0,8}],Table[n,{n,-1,1,1/2}]},
-GridLines->{Table[{n Pi/4,Lighter[Gray,0.7]},{n,-2,8}],Table[{n,Lighter[Gray,0.7]},{n,-1,1,1/2}]},ImageSize->{Automatic,145}],
-Graphics[{
-{Darker[Green,0.2],Thick,Line[{{0,0},{th,0}}]},
-{Red,Thick,Line[{{th,0},{th,Sin[th]}}]}
-}],AspectRatio->Automatic,BaseStyle->{12}]];
+	Show[Plot[{Sin[x]},{x,0.0001,th},PlotRange->{{0,2Pi},{-1,1}},ImageSize->650,PlotRangePadding->{0,0.25},ImagePadding->{{30,12},{0,0}},PlotRangeClipping->False,PlotStyle->Darker[Red,0.6],
+	Ticks->{Table[{n Pi/4,n Pi/4},{n,0,8}],Table[n,{n,-1,1,1/2}]},
+	GridLines->{Table[{n Pi/4,Lighter[Gray,0.7]},{n,-2,8}],Table[{n,Lighter[Gray,0.7]},{n,-1,1,1/2}]},ImageSize->{Automatic,145}],
+	Graphics[{
+		{Darker[Green,0.2],Thick,Line[{{0,0},{th,0}}]},
+		{Red,Thick,Line[{{th,0},{th,Sin[th]}}]}
+	}],
+	AspectRatio->Automatic,BaseStyle->{12}]];
 
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
 Labeled[Grid[{
 
 {LocatorPane[Dynamic[pt,
-{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
-(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
-(pt=Normalize[#];ptctrl=pt2[[1]])&}],
+	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
+	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
+	(pt=Normalize[#];ptctrl=pt2[[1]])&}],
 Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]],
+
 LocatorPane[Dynamic[pt2,
-{(pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]],0})&,
-(pt2={#[[1]],0};pt={Cos[#[[1]]],Sin[#[[1]]]})&,
-(pt2={#[[1]],0};ptctrl=#[[1]])&}],
+	{(pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]],0})&,
+	(pt2={#[[1]],0};pt={Cos[#[[1]]],Sin[#[[1]]]})&,
+	(pt2={#[[1]],0};ptctrl=#[[1]])&}],
 Dynamic[maingraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]]}},Spacings->0],{Row[{Style["Funzione ","Label",22,Gray],Text@Style["Seno",Red,22]}],
 Style["",10,Lighter[Gray,0.7],"Label"]},{{Top,Center},{Bottom,Right}}]]
 ],
@@ -141,6 +209,7 @@ Style["",10,Lighter[Gray,0.7],"Label"]},{{Top,Center},{Bottom,Right}}]]
 
 graficotangente[]:=
 Manipulate[
+(* genero disegno *)
 Module[{anglegraph,maingraph},
 anglegraph[th_]:=Show[
 Graphics[{
@@ -149,15 +218,24 @@ Graphics[{
 {Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
 
 {Lighter[Gray,0.5],Line[{{0,0},{Cos[th],Sin[th]}}]},
+(* punti *)
 {Black,Disk[{1, Tan[th]},0.02]},
 {Black,Disk[{Cos[th], Sin[th]},0.02]},
 {Black,Disk[{0, Tan[th]},0.02]},
 {Black,Disk[{1,0},0.02]},
-(* tangente punto *) {Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
-(* angolo *) {Opacity[0.2],Darker[Green,0.3],Thick,Disk[{0,0},0.3,{0,th}]},
-			  {Darker[Green,0.3],Circle[{0,0},0.3,{0,th}]},
-(* linea tratteggiata per Tan *){Lighter[Gray,0.5],Dashing[Medium],Line[{{1,3},{1,Tan[th]-3}}]},
-(* linea tratteggiata per Tan 2*){Lighter[Gray,0.5],Dashing[Medium],Line[{{-3,Tan[th]},{3,Tan[th]}}]},
+
+(* tangente punto *)
+{Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
+
+(* angolo *)
+{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{0,0},0.3,{0,th}]},
+{Darker[Green,0.3],Circle[{0,0},0.3,{0,th}]},
+
+(* linea tratteggiata per Tan *)
+{Lighter[Gray,0.5],Dashing[Medium],Line[{{1,3},{1,Tan[th]-3}}]},
+
+(* linea tratteggiata per Tan 2*)
+{Lighter[Gray,0.5],Dashing[Medium],Line[{{-3,Tan[th]},{3,Tan[th]}}]},
 
 (* TESTO *)
 Text["P",{Cos[th] +0.1,Sin[th]+0.1}],
@@ -174,27 +252,30 @@ Rotate[Text[Style["Tan(\[Theta])",Orange],{1.1,Tan[th]/2}],90\[Degree]],
 }],
 PlotRange->1,ImageSize->400,BaseStyle->{15},Axes->True,PlotRange->{{-1,1},{-1,1}},PlotRangePadding->0.25];
 
+(* genero grafico *)
 maingraph[th_]:=Module[{},
-Show[Plot[{Tan[x]},{x,0.0001,th},PlotRange->{{0,2Pi},{-2.2,2.2}},ImageSize->650,PlotRangePadding->{0,0},ImagePadding->{{30,12},{0,0}},PlotRangeClipping->False,PlotStyle->Darker[Orange,0.5],
-Ticks->{Table[{n Pi/4,n Pi/4},{n,0,8}],Table[n,{n,-2,2,1/2}]},
-GridLines->{Table[{n Pi/4,Lighter[Gray,0.7]},{n,-2,8}],Table[{n,Lighter[Gray,0.7]},{n,-2,2,1/2}]},ImageSize->{Automatic,145}],
-Graphics[{
-{Darker[Green,0.2],Thick,Line[{{0,0},{th,0}}]},
-{Orange,Thick,Line[{{th,0},{th,Tan[th]}}]}
-}],AspectRatio->Automatic,BaseStyle->{12}]];
+	Show[Plot[{Tan[x]},{x,0.0001,th},PlotRange->{{0,2Pi},{-2.2,2.2}},ImageSize->650,PlotRangePadding->{0,0},ImagePadding->{{30,12},{0,0}},PlotRangeClipping->False,PlotStyle->Darker[Orange,0.5],
+	Ticks->{Table[{n Pi/4,n Pi/4},{n,0,8}],Table[n,{n,-2,2,1/2}]},
+	GridLines->{Table[{n Pi/4,Lighter[Gray,0.7]},{n,-2,8}],Table[{n,Lighter[Gray,0.7]},{n,-2,2,1/2}]},ImageSize->{Automatic,145}],
+	Graphics[{
+		{Darker[Green,0.2],Thick,Line[{{0,0},{th,0}}]},
+		{Orange,Thick,Line[{{th,0},{th,Tan[th]}}]}
+	}],
+	AspectRatio->Automatic,BaseStyle->{12}]];
 
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
 Labeled[Grid[{
 
 {LocatorPane[Dynamic[pt,
-{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
-(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
-(pt=Normalize[#];ptctrl=pt2[[1]])&}],
+	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
+	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
+	(pt=Normalize[#];ptctrl=pt2[[1]])&}],
 Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]],
+
 LocatorPane[Dynamic[pt2,
-{(pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]],0})&,
-(pt2={#[[1]],0};pt={Cos[#[[1]]],Sin[#[[1]]]})&,
-(pt2={#[[1]],0};ptctrl=#[[1]])&}],
+	{(pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]],0})&,
+	(pt2={#[[1]],0};pt={Cos[#[[1]]],Sin[#[[1]]]})&,
+	(pt2={#[[1]],0};ptctrl=#[[1]])&}],
 Dynamic[maingraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]]}},Spacings->0],{Row[{Style["Funzione ","Label",22,Gray],Text@Style["Tangente",Orange,22]}],
 Style["",10,Lighter[Gray,0.7],"Label"]},{{Top,Center},{Bottom,Right}}]]
 ],
@@ -204,6 +285,7 @@ Style["",10,Lighter[Gray,0.7],"Label"]},{{Top,Center},{Bottom,Right}}]]
 (* Grafico Coseno *)
 graficocoseno[] := 
 Manipulate[
+(* genero disegno *)
 Module[{anglegraph,maingraph},
 anglegraph[th_]:=Show[
 Graphics[{
@@ -215,17 +297,25 @@ Graphics[{
 
 (* yp *)
 {Black,Disk[{Cos[th], 0},0.02]},
+
 (* cos *)
 {Blue,Thick,Dashing[Medium],Line[{{0,Sin[th]},{Cos[th],Sin[th]}}]},
 {Blue,Thick,Line[{{0,0},{Cos[th],0}}]},
+
 (* retta punto *) 
 {Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
-(* angolo *)
- {Opacity[0.2],Darker[Green,0.3],Thick,Disk[{0,0},0.3,{0,th}]},
-  {Darker[Green,0.3],Circle[{0,0},0.3,{0,th}]},
-(* linea tratteggiata per cos *){Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th]-3,Sin[th]},{3,Sin[th]}}]},
-(* linea tratteggiata per sin *){Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th],Sin[th]-3},{Cos[th],3}}]},
 
+(* angolo *)
+{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{0,0},0.3,{0,th}]},
+{Darker[Green,0.3],Circle[{0,0},0.3,{0,th}]},
+  
+(* linea tratteggiata per cos *)
+{Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th]-3,Sin[th]},{3,Sin[th]}}]},
+
+(* linea tratteggiata per sin *)
+{Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th],Sin[th]-3},{Cos[th],3}}]},
+
+(* testo *)
 Text["Xp",{Cos[th]+0.1,0.1}],
 Text["P",{Cos[th] +0.1,Sin[th]+0.1}],
 Text[Style["\[Theta]",Darker[Green,0.3]],{0.2,0.1}],
@@ -234,28 +324,32 @@ Text[Style["Cos(\[Theta])",Blue],{Cos[th]/2,-0.1}]
 }],
 PlotRange->1,ImageSize->400,BaseStyle->{15},Axes->True,PlotRange->{{-1,1},{-1,1}},PlotRangePadding->0.25];
 
+(*genero grafico*)
 maingraph[th_]:=Module[{},
-Show[Plot[{Cos[x]},{x,0.0001,th},PlotRange->{{0,2Pi},{-1,1}},ImageSize->650,PlotRangePadding->{0,0.25},ImagePadding->{{30,12},{0,0}},PlotRangeClipping->False,PlotStyle->Darker[Blue,0.9],
-Ticks->{Table[{n Pi/4,n Pi/4},{n,0,8}],Table[n,{n,-1,1,1/2}]},
-GridLines->{Table[{n Pi/4,Lighter[Gray,0.7]},{n,-2,8}],Table[{n,Lighter[Gray,0.7]},{n,-1,1,1/2}]},ImageSize->{Automatic,145}],
-Graphics[{
-{Darker[Green,0.2],Thick,Line[{{0,0},{th,0}}]},
-{Blue,Thick,Line[{{th,0},{th,Cos[th]}}]}
-}],AspectRatio->Automatic,BaseStyle->{12}]];
+	Show[
+		Plot[{Cos[x]},{x,0.0001,th},PlotRange->{{0,2Pi},{-1,1}},ImageSize->650,PlotRangePadding->{0,0.25},ImagePadding->{{30,12},{0,0}},PlotRangeClipping->False,PlotStyle->Darker[Blue,0.9],
+		Ticks->{Table[{n Pi/4,n Pi/4},{n,0,8}],Table[n,{n,-1,1,1/2}]},
+		GridLines->{Table[{n Pi/4,Lighter[Gray,0.7]},{n,-2,8}],Table[{n,Lighter[Gray,0.7]},{n,-1,1,1/2}]},ImageSize->{Automatic,145}],
+		Graphics[{
+			{Darker[Green,0.2],Thick,Line[{{0,0},{th,0}}]},
+			{Blue,Thick,Line[{{th,0},{th,Cos[th]}}]}
+	}],
+	AspectRatio->Automatic,BaseStyle->{12}]];
 
 
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
 Labeled[Grid[{
 
 {LocatorPane[Dynamic[pt,
-{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
-(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
-(pt=Normalize[#];ptctrl=pt2[[1]])&}],
+	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
+	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
+	(pt=Normalize[#];ptctrl=pt2[[1]])&}],
 Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]],
+
 LocatorPane[Dynamic[pt2,
-{(pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]],0})&,
-(pt2={#[[1]],0};pt={Cos[#[[1]]],Sin[#[[1]]]})&,
-(pt2={#[[1]],0};ptctrl=#[[1]])&}],
+	{(pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]],0})&,
+	(pt2={#[[1]],0};pt={Cos[#[[1]]],Sin[#[[1]]]})&,
+	(pt2={#[[1]],0};ptctrl=#[[1]])&}],
 Dynamic[maingraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]]}},Spacings->0],{Row[{Style["Funzione ","Label",22,Gray],Text@Style["Coseno",Blue,22]}],
 Style["",10,Lighter[Gray,0.7],"Label"]},{{Top,Center},{Bottom,Right}}]]
 ],
@@ -269,15 +363,24 @@ Module[{anglegraph,maingraph},
 anglegraph[th_]:=Show[
 Graphics[{
 {Lighter[Gray,0.5],Circle[{0,0},1]},
-(* {Darker[Green,0.2],Thick,Circle[{0,0},1,{0,th}]}, *)
 {Lighter[Gray,0.5],Line[{{0,0},{Cos[th],Sin[th]}}]},
+
+(* punti *)
 {Black,Disk[{Cos[th], 0},0.02]},
 {Black,Disk[{0, Sin[th]},0.02]},
-(* tangente punto *) {Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
-(* angolo *) {Opacity[0.2],Darker[Green,0.3],Thick,Disk[{0,0},0.3,{0,th}]},
-			  {Darker[Green,0.3],Circle[{0,0},0.3,{0,th}]},
-(* linea tratteggiata per cos *){Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th]-3,Sin[th]},{3,Sin[th]}}]},
-(* linea tratteggiata per sin *){Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th],Sin[th]-3},{Cos[th],3}}]},
+
+(* tangente punto *) 
+{Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
+
+(* angolo *) 
+{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{0,0},0.3,{0,th}]},
+{Darker[Green,0.3],Circle[{0,0},0.3,{0,th}]},
+			  
+(* linea tratteggiata per cos *)
+{Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th]-3,Sin[th]},{3,Sin[th]}}]},
+
+(* linea tratteggiata per sin *){
+Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th],Sin[th]-3},{Cos[th],3}}]},
 
 (* TESTO *)
 Text["Xp",{Cos[th]+0.1,0.1}],
@@ -289,11 +392,15 @@ Text[Style["Cos(\[Theta])",Blue],{Cos[th]/2,-0.1}],
 Rotate[Text[Style["Sin(\[Theta])",Red],{-0.1,Sin[th]/2}],90\[Degree]],
 
 (* SEN COS TAN *)
-(* sin *) {Red,Thickness[0.008],Line[{{0,0},{0,Sin[th]}}]},
-		    {Red,,Dashing[Medium],Line[{{Cos[th],0},{Cos[th],Sin[th]}}]},
-(* cos *) {Blue,Thickness[0.008],Line[{{0, 0},{Cos[th],0}}]},
-		     {Blue,Dashing[Medium],Line[{{0,Sin[th]},{Cos[th],Sin[th]}}]},
-(* tan  {Orange,Thick,Line[{{1,0},{1,Tan[th]}}]}, *)
+
+(* sin *)
+{Red,Thickness[0.008],Line[{{0,0},{0,Sin[th]}}]},
+{Red,,Dashing[Medium],Line[{{Cos[th],0},{Cos[th],Sin[th]}}]},
+
+(* cos *) 
+{Blue,Thickness[0.008],Line[{{0, 0},{Cos[th],0}}]},
+{Blue,Dashing[Medium],Line[{{0,Sin[th]},{Cos[th],Sin[th]}}]}
+
 
 }],
 PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->Automatic,PlotRangePadding->0.25];
@@ -301,11 +408,13 @@ PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->Automatic,PlotRan
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
 Grid[{
 {LocatorPane[Dynamic[pt,
-{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
-(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
-(pt=Normalize[#];ptctrl=pt2[[1]])&}],
-   Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]],
-     LineLegend[{Red, Blue,Darker[Green,0.3]},{"Sin","Cos", "\[Theta]"}]
+	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
+	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
+	(pt=Normalize[#];ptctrl=pt2[[1]])&}],
+     Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]
+     ],
+   
+	LineLegend[{Red, Blue,Darker[Green,0.3]},{"Sin","Cos", "\[Theta]"}]
 }},Alignment->{Center,Center}]]
 ],
 {{ptctrl,Pi/6,"Angle"},0,2Pi},TrackedSymbols:>{ptctrl}]
@@ -335,24 +444,24 @@ Graphics[{
 
 (* angolo 90\[Degree]*)  
 If[th<= Pi/2 ,
-{
-{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{Cos[th]-0.1, 0},{Cos[th]-0.1, 0.1},{Cos[th], 0.1},{Cos[th], 0}}]},
-{Darker[Green,0.3],Line[{{Cos[th]-0.1, 0},{Cos[th]-0.1, 0.1},{Cos[th], 0.1}}]}
-},
-{If[ th <= Pi,
-{
-{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{Cos[th]+0.1, 0},{Cos[th]+0.1, 0.1},{Cos[th], 0.1},{Cos[th], 0}}]},
-{Darker[Green,0.3],Line[{{Cos[th]+0.1, 0},{Cos[th]+0.1, 0.1},{Cos[th], 0.1}}]}
-},
-{If[  th <=(3*Pi)/2,
-{
-{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{Cos[th]+0.1, 0},{Cos[th]+0.1, -0.1},{Cos[th], -0.1},{Cos[th], 0}}]},
-{Darker[Green,0.3],Line[{{Cos[th]+0.1, 0},{Cos[th]+0.1, -0.1},{Cos[th], -0.1}}]}
-},
-{{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{Cos[th]-0.1, 0},{Cos[th]-0.1, -0.1},{Cos[th], -0.1},{Cos[th], 0}}]},
-{Darker[Green,0.3],Line[{{Cos[th]-0.1, 0},{Cos[th]-0.1, -0.1},{Cos[th], -0.1}}]}
-}]
-}]
+	{
+		{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{Cos[th]-0.1, 0},{Cos[th]-0.1, 0.1},{Cos[th], 0.1},{Cos[th], 0}}]},
+		{Darker[Green,0.3],Line[{{Cos[th]-0.1, 0},{Cos[th]-0.1, 0.1},{Cos[th], 0.1}}]}
+	},
+		{If[ th <= Pi,
+		{
+			{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{Cos[th]+0.1, 0},{Cos[th]+0.1, 0.1},{Cos[th], 0.1},{Cos[th], 0}}]},
+			{Darker[Green,0.3],Line[{{Cos[th]+0.1, 0},{Cos[th]+0.1, 0.1},{Cos[th], 0.1}}]}
+		},
+			{If[  th <=(3*Pi)/2,
+			{
+				{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{Cos[th]+0.1, 0},{Cos[th]+0.1, -0.1},{Cos[th], -0.1},{Cos[th], 0}}]},
+				{Darker[Green,0.3],Line[{{Cos[th]+0.1, 0},{Cos[th]+0.1, -0.1},{Cos[th], -0.1}}]}
+			},
+				{{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{Cos[th]-0.1, 0},{Cos[th]-0.1, -0.1},{Cos[th], -0.1},{Cos[th], 0}}]},
+				{Darker[Green,0.3],Line[{{Cos[th]-0.1, 0},{Cos[th]-0.1, -0.1},{Cos[th], -0.1}}]}
+			}]
+		}]
 }],
 
 (* linea tratteggiata per sin *)
@@ -370,10 +479,12 @@ PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->Automatic,PlotRan
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
 Grid[{
 {LocatorPane[Dynamic[pt,
-{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
-(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
-(pt=Normalize[#];ptctrl=pt2[[1]])&}],
-   Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]],
+	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
+	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
+	(pt=Normalize[#];ptctrl=pt2[[1]])&}],
+     Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]
+     ],
+     
      LineLegend[{Darker[Green,0.3]},{ "\[Theta]"}]
 }},Alignment->{Center,Center}]]
 ],
@@ -423,30 +534,38 @@ Module[{anglegraph,maingraph},
 anglegraph[th_]:=Show[
 Graphics[{
 {Lighter[Gray,0.5],Circle[{0,0},1]},
-(* {Darker[Green,0.2],Thick,Circle[{0,0},1,{0,th}]}, *)
 {Lighter[Gray,0.5],Line[{{0,0},{Cos[th],Sin[th]}}]},
+
+(* punti *)
 {Black,Disk[{1, Tan[th]},0.02]},
 {Black,Disk[{0, Tan[th]},0.02]},
 {Black,Disk[{1,0},0.02]},
-(* tangente punto *) {Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
-(* angolo *) {Opacity[0.2],Darker[Green,0.3],Thick,Disk[{0,0},0.3,{0,th}]},
-			  {Darker[Green,0.3],Circle[{0,0},0.3,{0,th}]},
-(* linea tratteggiata per Tan *){Lighter[Gray,0.5],Dashing[Medium],Line[{{1,3},{1,Tan[th]-3}}]},
-(* linea tratteggiata per Tan 2*){Lighter[Gray,0.5],Dashing[Medium],Line[{{-3,Tan[th]},{3,Tan[th]}}]},
+
+(* tangente punto *) 
+{Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
+
+(* angolo *) 
+{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{0,0},0.3,{0,th}]},
+{Darker[Green,0.3],Circle[{0,0},0.3,{0,th}]},
+			  
+(* linea tratteggiata per Tan *)
+{Lighter[Gray,0.5],Dashing[Medium],Line[{{1,3},{1,Tan[th]-3}}]},
+
+(* linea tratteggiata per Tan 2*)
+{Lighter[Gray,0.5],Dashing[Medium],Line[{{-3,Tan[th]},{3,Tan[th]}}]},
 
 (* TESTO *)
 Text["P",{Cos[th] +0.1,Sin[th]+0.1}],
 Text["T",{1.1,Tan[th]+0.1}],
-
 Text["Xt",{1.1,0.1}],
 Text["Yt",{0.1,Tan[th]+0.1}],
-
 Text[Style["\[Theta]",Darker[Green,0.3]],{0.2,0.1}],
 Rotate[Text[Style["Tan(\[Theta])",Orange],{1.1,Tan[th]/2}],90\[Degree]],
 
 (* TAN *)
-(* tan *)  {Orange,Thick,Line[{{1,0},{1,Tan[th]}}]},
-		{Orange,Thickness[0.008],Dashing[Medium],Line[{{0,0},{0,Tan[th]}}]},
+(* tan *)  
+{Orange,Thick,Line[{{1,0},{1,Tan[th]}}]},
+{Orange,Thickness[0.008],Dashing[Medium],Line[{{0,0},{0,Tan[th]}}]},
 
 }],
 PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->Automatic,PlotRangePadding->0.25];
@@ -454,10 +573,12 @@ PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->Automatic,PlotRan
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
 Grid[{
 {LocatorPane[Dynamic[pt,
-{(pt={1,Tan[ptctrl]})&,
-(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
-(pt=Normalize[#];ptctrl=pt2[[1]])&}],
-   Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]],
+	{(pt={1,Tan[ptctrl]})&,
+	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
+	(pt=Normalize[#];ptctrl=pt2[[1]])&}],
+     Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]
+     ],
+     
      LineLegend[{Orange},{"Tan"}]
 }},Alignment->{Center,Center}]]
 ],
@@ -472,11 +593,13 @@ anglegraph[th_]:=Show[
 Graphics[{
 {Lighter[Gray,0.5],Circle[{0,0},1]},
 {Lighter[Gray,0.5],Line[{{0,0},{Cos[th],Sin[th]}}]},
+
+(* punti *)
 {Black,Disk[{Cos[th], 0},0.02]},
 {Black,Disk[{1, Tan[th]},0.02]},
 {Black,Disk[{0, 0},0.02]},
 {Black,Disk[{1, 0},0.02]},
-(* {Darker[Green,0.2],Thick,Circle[{0,0},1,{0,th}]}, *)
+
 
 (* tangente punto *) 
 {Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
@@ -493,34 +616,35 @@ Graphics[{
 
 (* cos sin angolo 90\[Degree] *)  
 If[th<= Pi/2 ,
-{
-{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{Cos[th]-0.1, 0},{Cos[th]-0.1, 0.1},{Cos[th], 0.1},{Cos[th], 0}}]},
-{Darker[Green,0.3],Line[{{Cos[th]-0.1, 0},{Cos[th]-0.1, 0.1},{Cos[th], 0.1}}]}
-},
-{If[ th <= Pi,
-{
-{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{Cos[th]+0.1, 0},{Cos[th]+0.1, 0.1},{Cos[th], 0.1},{Cos[th], 0}}]},
-{Darker[Green,0.3],Line[{{Cos[th]+0.1, 0},{Cos[th]+0.1, 0.1},{Cos[th], 0.1}}]}
-},
-{If[  th <=(3*Pi)/2,
-{
-{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{Cos[th]+0.1, 0},{Cos[th]+0.1, -0.1},{Cos[th], -0.1},{Cos[th], 0}}]},
-{Darker[Green,0.3],Line[{{Cos[th]+0.1, 0},{Cos[th]+0.1, -0.1},{Cos[th], -0.1}}]}
-},
-{{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{Cos[th]-0.1, 0},{Cos[th]-0.1, -0.1},{Cos[th], -0.1},{Cos[th], 0}}]},
-{Darker[Green,0.3],Line[{{Cos[th]-0.1, 0},{Cos[th]-0.1, -0.1},{Cos[th], -0.1}}]}
-}]
-}]
+	{
+		{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{Cos[th]-0.1, 0},{Cos[th]-0.1, 0.1},{Cos[th], 0.1},{Cos[th], 0}}]},
+		{Darker[Green,0.3],Line[{{Cos[th]-0.1, 0},{Cos[th]-0.1, 0.1},{Cos[th], 0.1}}]}
+	},
+		{If[ th <= Pi,
+		{
+			{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{Cos[th]+0.1, 0},{Cos[th]+0.1, 0.1},{Cos[th], 0.1},{Cos[th], 0}}]},
+			{Darker[Green,0.3],Line[{{Cos[th]+0.1, 0},{Cos[th]+0.1, 0.1},{Cos[th], 0.1}}]}
+		},
+			{If[  th <=(3*Pi)/2,
+			{
+				{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{Cos[th]+0.1, 0},{Cos[th]+0.1, -0.1},{Cos[th], -0.1},{Cos[th], 0}}]},
+				{Darker[Green,0.3],Line[{{Cos[th]+0.1, 0},{Cos[th]+0.1, -0.1},{Cos[th], -0.1}}]}
+			},
+				{{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{Cos[th]-0.1, 0},{Cos[th]-0.1, -0.1},{Cos[th], -0.1},{Cos[th], 0}}]},
+				{Darker[Green,0.3],Line[{{Cos[th]-0.1, 0},{Cos[th]-0.1, -0.1},{Cos[th], -0.1}}]
+			}
+		}]
+	}]
 }],
 
 (* tan angolo 90\[Degree] *)
 If[th<= Pi/2  || (th > Pi  && th <= (3*Pi)/2),
 {
-{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{0.9, 0},{0.9, 0.1},{1, 0.1},{1, 0}}]},
-{Darker[Green,0.3],Line[{{0.9, 0},{0.9, 0.1},{1, 0.1}}]}
-},
-{{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{0.9, 0},{0.9, -0.1},{1, -0.1},{1, 0}}]},
-{Darker[Green,0.3],Line[{{0.9, 0},{0.9, -0.1},{1, -0.1}}]}
+	{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{0.9, 0},{0.9, 0.1},{1, 0.1},{1, 0}}]},
+	{Darker[Green,0.3],Line[{{0.9, 0},{0.9, 0.1},{1, 0.1}}]}
+	},
+	{{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{0.9, 0},{0.9, -0.1},{1, -0.1},{1, 0}}]},
+	{Darker[Green,0.3],Line[{{0.9, 0},{0.9, -0.1},{1, -0.1}}]}
 }],
 
 (* retta tratteggiata passante per P *)
@@ -546,10 +670,12 @@ PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->Automatic,PlotRan
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
 Grid[{
 {LocatorPane[Dynamic[pt,
-{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
-(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
-(pt=Normalize[#];ptctrl=pt2[[1]])&}],
-   Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]],
+	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
+	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
+	(pt=Normalize[#];ptctrl=pt2[[1]])&}],
+     Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]
+     ],
+     
      LineLegend[{Orange,Darker[Green,0.3]},{"Tan", "\[Theta]"}]
 }},Alignment->{Center,Center}]]
 ],
@@ -562,15 +688,24 @@ Module[{anglegraph,maingraph},
 anglegraph[th_]:=Show[
 Graphics[{
 {Lighter[Gray,0.5],Circle[{0,0},1]},
-(* {Darker[Green,0.2],Thick,Circle[{0,0},1,{0,th}]}, *)
 {Lighter[Gray,0.5],Line[{{0,0},{Cos[th],Sin[th]}}]},
+
+(* punti *)
 {Black,Disk[{Cos[th], 0},0.02]},
 {Black,Disk[{0, Sin[th]},0.02]},
-(* tangente punto *) {Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
-(* angolo *) {Opacity[0.2],Darker[Green,0.3],Thick,Disk[{0,0},0.3,{0,th}]},
-			  {Darker[Green,0.3],Circle[{0,0},0.3,{0,th}]},
-(* linea tratteggiata per cos *){Lighter[Gray,0.5],,Dashing[Medium],Line[{{Cos[th]-3,Sin[th]},{3,Sin[th]}}]},
-(* linea tratteggiata per sin *){Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th],Sin[th]-3},{Cos[th],3}}]},
+
+(* tangente punto *)
+{Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
+
+(* angolo *)
+{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{0,0},0.3,{0,th}]},
+{Darker[Green,0.3],Circle[{0,0},0.3,{0,th}]},
+
+(* linea tratteggiata per cos *)
+{Lighter[Gray,0.5],,Dashing[Medium],Line[{{Cos[th]-3,Sin[th]},{3,Sin[th]}}]},
+
+(* linea tratteggiata per sin *)
+{Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th],Sin[th]-3},{Cos[th],3}}]},
 
 (* TESTO *)
 Text["Xp",{Cos[th]+0.1,0.1}],
@@ -582,18 +717,22 @@ Text[Style["Cos(\[Theta])",Blue],{Cos[th]/2,-0.1}],
 Rotate[Text[Style["Sin(\[Theta])",Red],{-0.1,Sin[th]/2}],90\[Degree]],
 
 (* SEN COS TAN *)
-(* sin *) {Red,Thickness[0.008],Line[{{0,0},{0,Sin[th]}}]},
-		    {Red,,Dashing[Medium],Line[{{Cos[th],0},{Cos[th],Sin[th]}}]},
-(* cos *) {Blue,Thickness[0.008],Line[{{0, 0},{Cos[th],0}}]},
-		     {Blue,Dashing[Medium],Line[{{0,Sin[th]},{Cos[th],Sin[th]}}]},
+(* sin *) 
+{Red,Thickness[0.008],Line[{{0,0},{0,Sin[th]}}]},
+{Red,,Dashing[Medium],Line[{{Cos[th],0},{Cos[th],Sin[th]}}]},
+
+(* cos *) 
+{Blue,Thickness[0.008],Line[{{0, 0},{Cos[th],0}}]},
+{Blue,Dashing[Medium],Line[{{0,Sin[th]},{Cos[th],Sin[th]}}]},
 
 {
 If[th != Pi/2 && th != 3Pi/2,
-(* tan *)  {
-{Orange,Thick,Line[{{1,0},{1,Tan[th]}}]},
-		{Orange,Thickness[0.008],Dashing[Medium],Line[{{0,0},{0,Tan[th]}}]}
-},{}
-]},
+	(* tan *)  {
+	{Orange,Thick,Line[{{1,0},{1,Tan[th]}}]},
+	{Orange,Thickness[0.008],Dashing[Medium],Line[{{0,0},{0,Tan[th]}}]}
+	},
+	{}
+]}
 
 
 }],
@@ -602,10 +741,10 @@ PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->Automatic,PlotRan
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]}},
 Labeled[Grid[{
 {LocatorPane[Dynamic[pt,
-{(pt=Normalize[#]) &,
-(pt=Normalize[#])&,
-(pt=Normalize[#];ptctrl=If[#=={2Pi,0},Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]])&}],
-   Dynamic[anglegraph[Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]],Enabled->False],
+	{(pt=Normalize[#]) &,
+	(pt=Normalize[#])&,
+	(pt=Normalize[#];ptctrl=If[#=={2Pi,0},Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]])&}],
+     Dynamic[anglegraph[Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]],Enabled->False],
 
      LineLegend[{Darker[Green,0.3],Red, Blue,Orange},{Row[{Style["\[Theta]"]}],Row@{"Sin(\[Theta]) = ",pt[[2]]},Row@{"Cos(\[Theta]) = ",pt[[1]]}, Row@{"Tan(\[Theta]) = ",Tan[ptctrl]}},LegendMarkerSize->40, LabelStyle->15]
 
@@ -661,11 +800,12 @@ PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->Automatic,PlotRan
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]}},
 Labeled[Grid[{
 {LocatorPane[Dynamic[pt,
-{(pt=Normalize[#]) &,
-(pt=Normalize[#])&,
-(pt=Normalize[#];ptctrl=If[#=={2Pi,0},Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]])&}],
-   Dynamic[anglegraph[Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]],Enabled->False],
-         LineLegend[{Darker[Green,0.3],Red, Blue,Orange},{Row[{Style["\[Theta]"]}],Row@{"Sin(\[Theta]) = ",pt[[2]]},Row@{"Cos(\[Theta]) = ",pt[[1]]}, Row@{"Tan(\[Theta]) = ",Tan[ptctrl]}},LegendMarkerSize->40, LabelStyle->15]
+	{(pt=Normalize[#]) &,
+	(pt=Normalize[#])&,
+	(pt=Normalize[#];ptctrl=If[#=={2Pi,0},Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]])&}],
+	Dynamic[anglegraph[Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]],Enabled->False],
+	
+    LineLegend[{Darker[Green,0.3],Red, Blue,Orange},{Row[{Style["\[Theta]"]}],Row@{"Sin(\[Theta]) = ",pt[[2]]},Row@{"Cos(\[Theta]) = ",pt[[1]]}, Row@{"Tan(\[Theta]) = ",Tan[ptctrl]}},LegendMarkerSize->40, LabelStyle->15]
 }},Alignment->{Center,Center}],
 {Row[{Style["","Label",20,Gray],Text@Style["\[Theta] = ",Darker[Green,0.3],20],Style[ptctrl,Darker[Green,0.3],25]}],
 
@@ -734,30 +874,29 @@ Graphics[{
 {Purple,Thick,Circle[{0, 0},1, {Pi/2-a[[1]], 2Pi+b[[2]]}]},
 
 {If[ Cos[th] >b[[1]] && Cos[th] > a[[1]],
-{
-{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{Cos[th], Sin[th]},0.2,{anga[[1]]+Pi,anga[[2]]+Pi } ]},
-Darker[Green,0.2],Thick,Circle[{Cos[th], Sin[th]},0.2,{anga[[1]]+Pi,anga[[2]]+Pi } ]
-},
-{If[ Cos[th] <b[[1]] &&   Cos[th] < a[[1]],
-{
-{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{Cos[th], Sin[th]},0.2,{anga[[1]],anga[[2]] } ]},
-Darker[Green,0.2],Thick,Circle[{Cos[th], Sin[th]},0.2,{anga[[1]],anga[[2]]} ]
-},{{If[ Sin[th] <b[[2]] &&   Cos[th] > a[[1]] && Cos[th]< b[[1]],
-{
-{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{Cos[th], Sin[th]},0.2,{anga[[1]]+Pi,anga[[2]] } ]},
-Darker[Green,0.2],Thick,Circle[{Cos[th], Sin[th]},0.2,{anga[[1]] +Pi,anga[[2]]} ]
-},
-{If[ Sin[th] >b[[2]] &&   Cos[th] > a[[1]] && Cos[th]< b[[1]],
-{
-{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{Cos[th], Sin[th]},0.2,{anga[[1]]-Pi,anga[[2]] } ]},
-Darker[Green,0.2],Thick,Circle[{Cos[th], Sin[th]},0.2,{anga[[1]]-Pi,anga[[2]]} ]
-},{}
-]}
-]}}
-]}
+	{
+		{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{Cos[th], Sin[th]},0.2,{anga[[1]]+Pi,anga[[2]]+Pi } ]},
+		Darker[Green,0.2],Thick,Circle[{Cos[th], Sin[th]},0.2,{anga[[1]]+Pi,anga[[2]]+Pi } ]
+	},
+		{If[ Cos[th] <b[[1]] &&   Cos[th] < a[[1]],
+		{
+			{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{Cos[th], Sin[th]},0.2,{anga[[1]],anga[[2]] } ]},
+			Darker[Green,0.2],Thick,Circle[{Cos[th], Sin[th]},0.2,{anga[[1]],anga[[2]]} ]
+		},
+			{If[ Sin[th] <b[[2]] &&   Cos[th] > a[[1]] && Cos[th]< b[[1]],
+			{
+				{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{Cos[th], Sin[th]},0.2,{anga[[1]]+Pi,anga[[2]] } ]},
+				Darker[Green,0.2],Thick,Circle[{Cos[th], Sin[th]},0.2,{anga[[1]] +Pi,anga[[2]]} ]
+			},
+				{If[ Sin[th] >b[[2]] &&   Cos[th] > a[[1]] && Cos[th]< b[[1]],
+				{
+					{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{Cos[th], Sin[th]},0.2,{anga[[1]]-Pi,anga[[2]] } ]},
+					Darker[Green,0.2],Thick,Circle[{Cos[th], Sin[th]},0.2,{anga[[1]]-Pi,anga[[2]]} ]
+				},{}
+			]}
+		]}
+	]}
 ]},
-
-
 
 
 (* TRIANGOLO *)
@@ -769,7 +908,9 @@ Darker[Green,0.2],Thick,Circle[{Cos[th], Sin[th]},0.2,{anga[[1]]-Pi,anga[[2]]} ]
 (* CORDA *)
 {Red,Thick,Line[{a,b}]},
 
+(* PUNTO *)
 {Black,Disk[{0, 0},0.02]},
+
 (* PUNTI *)
 (* A *)
 {Black,Disk[a,0.02]},
@@ -793,11 +934,12 @@ Text[Style["\[Theta]",Darker[Green,0.3]], {Cos[th]+0.1, Sin[th]+0.1}]
 DynamicModule[{pt={Cos[ptctrl], Sin[ptctrl]},pt2={ptctrl,0}},
 Grid[{
 {LocatorPane[Dynamic[pt,
-{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
-(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
-(pt=Normalize[#];ptctrl=pt2[[1]])&}],
-Dynamic[anglegraph[pa,pb,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]],
-pcc ={Sin[ ptctrl], Cos[ptctrl]};
+	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
+	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
+	(pt=Normalize[#];ptctrl=pt2[[1]])&}],
+	Dynamic[anglegraph[pa,pb,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]],
+	
+	pcc ={Sin[ ptctrl], Cos[ptctrl]};
 LineLegend[{Darker[Green,0.3],Red,},{"\[Theta]","Corda"},LegendMarkerSize->40, LabelStyle->15]
 }},Spacings->0]]
 
@@ -820,31 +962,32 @@ Graphics[{
 {Lighter[Magenta,0.5],Thick,Circle[{0, 0},1, {Pi/2, b[[2]]}]},
 
 {If[ Cos[th] >b[[1]] && Cos[th] > a[[1]],
-{
-{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{Cos[th], Sin[th]},0.2,{anga[[1]]+Pi,anga[[2]]+Pi } ]},
-Darker[Green,0.2],Thick,Circle[{Cos[th], Sin[th]},0.2,{anga[[1]]+Pi,anga[[2]]+Pi } ]
-},
-{If[ Cos[th] <b[[1]] &&   Cos[th] < a[[1]],
-{
-{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{Cos[th], Sin[th]},0.2,{anga[[1]],anga[[2]] } ]},
-Darker[Green,0.2],Thick,Circle[{Cos[th], Sin[th]},0.2,{anga[[1]],anga[[2]]} ]
-},{{If[ Sin[th] <b[[2]] &&   Cos[th] > a[[1]] && Cos[th]< b[[1]],
-{
-{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{Cos[th], Sin[th]},0.2,{anga[[1]]+Pi,anga[[2]] } ]},
-Darker[Green,0.2],Thick,Circle[{Cos[th], Sin[th]},0.2,{anga[[1]] +Pi,anga[[2]]} ]
-},
-{If[ Sin[th] >b[[2]] &&   Cos[th] > a[[1]] && Cos[th]< b[[1]],
-{
-{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{Cos[th], Sin[th]},0.2,{anga[[1]]-Pi,anga[[2]] } ]},
-Darker[Green,0.2],Thick,Circle[{Cos[th], Sin[th]},0.2,{anga[[1]]-Pi,anga[[2]]} ]
-},{}
-]}
-]}}
-]}
+	{
+	{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{Cos[th], Sin[th]},0.2,{anga[[1]]+Pi,anga[[2]]+Pi } ]},
+	Darker[Green,0.2],Thick,Circle[{Cos[th], Sin[th]},0.2,{anga[[1]]+Pi,anga[[2]]+Pi } ]
+	},
+		{If[ Cos[th] <b[[1]] &&   Cos[th] < a[[1]],
+			{
+			{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{Cos[th], Sin[th]},0.2,{anga[[1]],anga[[2]] } ]},
+			Darker[Green,0.2],Thick,Circle[{Cos[th], Sin[th]},0.2,{anga[[1]],anga[[2]]} ]
+		},
+			{{If[ Sin[th] <b[[2]] &&   Cos[th] > a[[1]] && Cos[th]< b[[1]],
+				{
+				{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{Cos[th], Sin[th]},0.2,{anga[[1]]+Pi,anga[[2]] } ]},
+				Darker[Green,0.2],Thick,Circle[{Cos[th], Sin[th]},0.2,{anga[[1]] +Pi,anga[[2]]} ]
+			},
+				{If[ Sin[th] >b[[2]] &&   Cos[th] > a[[1]] && Cos[th]< b[[1]],
+					{
+					{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{Cos[th], Sin[th]},0.2,{anga[[1]]-Pi,anga[[2]] } ]},
+					Darker[Green,0.2],Thick,Circle[{Cos[th], Sin[th]},0.2,{anga[[1]]-Pi,anga[[2]]} ]
+				},{}
+			]}
+		]}}
+	]}
 ]},
 
 
-
+(* ANGOLO C*)
 {Opacity[0.2],Darker[Green,0.3],Thick,Disk[c,0.2,{Pi/2, ArcTan[(c[[2]] -b[[2]])/(c[[1]]-b[[1]])]} ]},
 {Darker[Green,0.2],Thick,Circle[c,0.2,{Pi/2, ArcTan[(c[[2]] -b[[2]])/(c[[1]]-b[[1]])]} ]},
 
@@ -852,12 +995,12 @@ Darker[Green,0.2],Thick,Circle[{Cos[th], Sin[th]},0.2,{anga[[1]]-Pi,anga[[2]]} ]
 {Opacity[0],Black ,EdgeForm[Black], Triangle[{a,b,c}]},
 {Opacity[0],Black ,EdgeForm[Black], Triangle[{a,b,{Cos[th], Sin[th]}}]},
 
-
+(* ANGOLO RETTO *)
 {Rotate[
-{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{b[[1]]-0.1,b[[2]]},{b[[1]]-0.1,b[[2]]+0.1},{b[[1]],b[[2]]+0.1},b}]},ArcTan[(b[[2]] -c[[2]])/(b[[1]]-c[[1]])],b
-]},
-{Rotate[{Darker[Green,0.3],Line[{{b[[1]]-0.1,b[[2]]},{b[[1]]-0.1,b[[2]]+0.1},{b[[1]],b[[2]]+0.1}}]},
-ArcTan[(b[[2]] -c[[2]])/(b[[1]]-c[[1]])],b
+	{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{b[[1]]-0.1,b[[2]]},{b[[1]]-0.1,b[[2]]+0.1},{b[[1]],b[[2]]+0.1},b}]},ArcTan[(b[[2]] -c[[2]])/(b[[1]]-c[[1]])],b
+	]},
+{Rotate[
+	{Darker[Green,0.3],Line[{{b[[1]]-0.1,b[[2]]},{b[[1]]-0.1,b[[2]]+0.1},{b[[1]],b[[2]]+0.1}}]}, ArcTan[(b[[2]] -c[[2]])/(b[[1]]-c[[1]])],b
 ]},
 
 (* RAGGIO *)
@@ -866,21 +1009,19 @@ ArcTan[(b[[2]] -c[[2]])/(b[[1]]-c[[1]])],b
 (* CORDA *)
 {Red,Thick,Line[{a,b}]},
 
+(* PUNTO *)
 {Black,Disk[{0, 0},0.02]},
+
 (* PUNTI *)
-(* A *)
-{Black,Disk[a,0.02]},
-(* B *)
-{Black,Disk[b,0.02]},
-(* C *)
-{Black,Disk[c,0.02]},
+(* A *) {Black,Disk[a,0.02]},
+(* B *) {Black,Disk[b,0.02]},
+(* C *) {Black,Disk[c,0.02]},
 
 (* TESTO *)
 Text["  A",{ a[[1]],a[[2]]+0.1}],
 Text["   B",{ b[[1]]+0.1,b[[2]]}],
 Text["   C",{ c[[1]],c[[2]]-0.1}],
 Text["   D", {Cos[th]+ 0.1, Sin[th]}],
-
 Text[Style["\[Delta]",Darker[Green,0.3]], {Cos[th]-0.1, Sin[th]-0.1}],
 Text[Style["\[Theta]",Darker[Green,0.3]], c+0.1],
 Text["r",{0.4,-0.15}]
@@ -890,11 +1031,12 @@ Text["r",{0.4,-0.15}]
 DynamicModule[{pt={Cos[ptctrl], Sin[ptctrl]},pt2={ptctrl,0}},
 Grid[{
 {LocatorPane[Dynamic[pt,
-{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
-(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
-(pt=Normalize[#];ptctrl=pt2[[1]])&}],
-Dynamic[anglegraph[pa2,pb2,pc2,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]],
-pcc ={Sin[ ptctrl], Cos[ptctrl]};
+	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
+	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
+	(pt=Normalize[#];ptctrl=pt2[[1]])&}],
+	Dynamic[anglegraph[pa2,pb2,pc2,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]],
+	
+	pcc ={Sin[ ptctrl], Cos[ptctrl]};
   LineLegend[{Darker[Green,0.3],Red},{Row@{"\[Delta]"},"Coda"},LegendMarkerSize->40]
 }},Alignment->{Center,Center}]]
 
@@ -1078,7 +1220,6 @@ hp33 = {p33[[1]],0};
 Text["A",{p33[[1]], p33[[2]]+0.1}],
 Text["C",{p11[[1]]-0.1, p11[[2]]}],
 Text["B",{hp33[[1]], hp33[[2]]-0.1}],
-
 Text[Style["\[Alpha]",Darker[Green,0.3]], {p33[[1]]-0.05, p33[[2]]-0.1}],
 Text[Style["\[Beta]",Darker[Green,0.3]], {hp33[[1]]-0.15, hp33[[2]]+0.15}],
 Text[Style["\[Gamma]",Darker[Green,0.3]], {p11[[1]]+0.3, p11[[2]]+0.06}]
