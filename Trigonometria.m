@@ -1892,7 +1892,7 @@ Module[{},
 esercizio10testo = Text[Style["",Bold,20]];
 Grid[{{Text[Style["Esercizio 10:",20,FontColor-> Red]]},
 
-{esercizio10testo},
+(*{esercizio10testo},*)
 
 (* Stampo foto scivolo *)
 { Magnify[Sharpen[Import["scivolo.jpeg"]],3],
