@@ -9,6 +9,53 @@
 BeginPackage["Trigonometria`"]
 
 (* Funzioni *)
+angolo::usage = "Calcola i due angoli Subscript[\[Theta], 1], Subscript[\[Theta], 2] necessari\n
+				 per poter disegnare una arco di circonferenza tramite Disk[{x,y},{Subscript[\[Theta], 1],Subscript[\[Theta], 2]}] "; 
+
+bottonesen::usage = "Funzione che genera il bottone che richiama la fiunzione grafiseno[]";
+
+bottonecos::usage = "Funzione che genera il bottone che richiama la fiunzione graficocoseno[]";
+
+bottonetan::usage = "Funzione che genera il bottone che richiama la fiunzione graficotangente[]";
+
+bottonepitagora::usage = "Funzione che genera il bottone che richiama la fiunzione bottonepitagora[]";
+
+bottonecalcolatrice::usage = "Funzione che genera il bottone che richiama la fiunzione bottonecalcolatrice[]";
+
+grafiseno::usage = "Illustrazione del seno e della sua funzione";
+
+graficocoseno::usage = "Illustrazione del coseno e della sua funzione";
+
+graficotangente::usage = "Illustrazione della tangente e della sua funzione";
+
+defsencos::usage = "Illustrazione del seno e del coseno sulla circonferenza unitaria";
+
+rapporti::usage = "Illustrazione dei rapporti tra seno e del coseno";
+
+triangolorett::usage = "Illustrazione del un triangolo rettangolo formato da seno e coseno";
+
+tangent::usage = "Illustrazione della tangente sulla circonferenza unitaria";
+
+definizionetangente::usage = "Illustrazione della tangente sulla circonferenza unitaria con rapporti";
+
+angolinoti30::usage = "Illustrazione angoli noti multipli di 30\[Degree]";
+
+angolinoti45::usage = "Illustrazione angoli noti multipli di 45\[Degree]";
+
+teoremacorda::usage = "Illustrazione del teorema della corda";
+
+teoremacorda2::usage = "Illustrazione del teorema della corda interattivo pt.1";
+
+teoremacorda3::usage = "Illustrazione del teorema della corda interattivo pt.2";
+
+teoremaseni::usage = "Illustrazione del teorema dei seni";
+
+teoremacoseno::usage = "Illustrazione del teorema dei coseni pt.1";
+
+teoremacoseno2::usage = "Illustrazione del teorema dei coseni pt.2";
+
+pitagora::usage = "Illustrazione del teorema di pitagora con testo";
+
 EsercizioEsempio::usage = "Stampa un'esercizio d'esempio per calcolare Sen(\[Alpha])";
 
 Esercizio1::usage= "Esercizio su seno coseno tangente";
@@ -36,7 +83,7 @@ CheckAnswer::usage = "Modulo che compara i parametri answer_ e correct_ passati 
 
 Calcolatrice::usage = "Calcolatrice semplice per il calcolo di funzioni trigonometriche";
 
-TPitagora::usage = "suggerimento Teorema di pitagora";
+TPitagora::usage = "Suggerimento Teorema di pitagora";
 
 ClearAll["Global`*"]
 
