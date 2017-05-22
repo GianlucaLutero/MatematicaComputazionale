@@ -1388,7 +1388,7 @@ Text["r",{0.4,-0.15}]
 
 ,Magnify[Row[{"r = 5\n\[Theta] = \!\(\*SuperscriptBox[\(60\), \(o\)]\)\n",Style["Trovare \!\(\*OverscriptBox[\(AB\), \(_\)]\)",FontColor->Red,FontFamily-> "sans sarif",Bold]}],2],Text[""]},
 {Text[Style["Quindi il lato \!\(\*OverscriptBox[\(AB\), \(_\)]\) misura:",17,FontColor -> Red]]},
-{Magnify[RadioButtonBar[Dynamic[AB2],{"\!\(\*FractionBox[\(5\), \(2\)]\)","\!\(\*FractionBox[\(5\), \(2\)]\)\!\(\*SqrtBox[\(3\)]\)","5","30"}],2],Magnify[Dynamic[CheckAnswer[AB2,"5"]],3]}
+{Magnify[RadioButtonBar[Dynamic[AB2],{"\!\(\*FractionBox[\(5\), \(2\)]\)","\!\(\*FractionBox[\(5\), \(2\)]\)\!\(\*SqrtBox[\(3\)]\)","5(\*SqrtBox[\(3\)])","30"}],2],Magnify[Dynamic[CheckAnswer[AB2,"5"]],3]}
 
 },Alignment-> {Left,Center},Spacings -> {10,5}] 
 ]
@@ -1443,7 +1443,6 @@ Grid[{{Text[Style["Esercizio 5:",20,FontColor-> Red]]},
 
 
 
-
 (* ARCO SU (0,0) *)
 {Opacity[0.2],Darker[Green,0.3],Disk[{0, 0}, 0.12, {angolo[{0.7, 0}, {-1,1}, {0, 0}][[2]]+Pi, 0} ]},
 {Darker[Green,0.2],Circle[{0, 0} ,0.12, {angolo[{0.7, 0}, {-1,1}, {0, 0}][[2]]+Pi, 0}]},
@@ -1486,7 +1485,7 @@ Row[{InputField[Dynamic[num6],String,FieldSize->1],Dynamic[CheckAnswer[num6,"1"]
 (*Esercizio 6*)
 Esercizio6[]:=
 Module[{res4=""},
-datiEsercizio6 = StringJoin[Style["A = 12 \nB = 9\n\[Alpha] = \!\(\*SuperscriptBox[\(30\), \(o\)]\)",FontFamily-> "sans sarif",Bold],Style["\nTrovare sen(\[Alpha])",FontColor->Red,FontFamily-> "sans sarif",Bold]];
+datiEsercizio6 = StringJoin[Style["A = 12 \nB = 9\n\[Beta] = \!\(\*SuperscriptBox[\(30\), \(o\)]\)",FontFamily-> "sans sarif",Bold],Style["\nTrovare sen(\[Alpha])",FontColor->Red,FontFamily-> "sans sarif",Bold]];
 
 Grid[{{Text[Style["Esercizio 6:",20,FontColor-> Red]]},
 {Magnify[Graphics[{
@@ -1685,7 +1684,7 @@ Grid[{{Text[Style["Esercizio 10:",20,FontColor-> Red]]},
 {esercizio10testo},
          { Magnify[Sharpen[Import["scivolo.jpeg"]],2],
 Magnify[
-Row[{Style["Trovare \[Alpha]\n",FontColor->Red],Style["Approssima il risultato per difetto alla prima cifra decimale\n\n",FontColor->Red,10],Style[""], Row[{InputField[Dynamic[alpha2],String,FieldSize->2],Dynamic[CheckAnswer[alpha2,"2.5"]]}]/("sen(\[Alpha])")," = ",Row[{InputField[Dynamic[gamma3],String,FieldSize->1],Dynamic[CheckAnswer[gamma3,"3" ]]}]/Row[{"sen(",InputField[Dynamic[gamma2],String,FieldSize->1],"\[Degree])",Dynamic[CheckAnswer[gamma2,"60"]]}]," \[LongRightArrow] ",
+Row[{Style["Trovare \[Alpha]\n",FontColor->Red],Style["Approssima il risultato per difetto alla prima cifra decimale\n\n",FontColor->Red,10],Style[""], Row[{InputField[Dynamic[alpha2],String,FieldSize->2],Dynamic[CheckAnswer[alpha2,"2.5"]]}]/("sen(\[Alpha])")," = ",Row[{InputField[Dynamic[gamma3],String,FieldSize->1],Dynamic[CheckAnswer[gamma3,"3" ]]}]/Row[{"sen(",InputField[Dynamic[gamma2],String,FieldSize->1.8],"\[Degree])",Dynamic[CheckAnswer[gamma2,"60"]]}]," \[LongRightArrow] ",
 "sen(\[Alpha]) = ",Row[{InputField[Dynamic[latob],String,FieldSize->2],Dynamic[CheckAnswer[latob,"2.5"]]}]/Row[{InputField[Dynamic[latoc],String,FieldSize->1],Dynamic[CheckAnswer[latoc,"3"]]}]," \[CenterDot] ",Row[{SqrtBox[InputField[Dynamic[num10],String,FieldSize->1]]//DisplayForm,Dynamic[CheckAnswer[num10,"3"]] }] /Row[{InputField[Dynamic[den10],String,FieldSize->1],Dynamic[CheckAnswer[den10,"2"]]}],
 " = ",Row[{InputField[Dynamic[res10],String,FieldSize->2],Dynamic[CheckAnswer[res10,"0.7"]]}]
 
