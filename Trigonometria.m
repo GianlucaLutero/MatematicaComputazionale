@@ -30,8 +30,6 @@ Esercizio8::usage = "Esercizio: trovare cos(\[Gamma]) usando il teorema del cose
 Esercizio9::usage = "Esercizio: campanile";
 
 Esercizio10::usage = "Esercizio: scivolo";
-
-
 CheckAnswer::usage = "Modulo che compara i parametri answer_ e correct_ passati in input.\n
                       Il risultato della valutazione \[EGrave] \[Checkmark] se i parametri sono uguali\n
                       X altrimenti ";
@@ -40,6 +38,7 @@ Calcolatrice::usage = "Calcolatrice semplice per il calcolo di funzioni trigonom
 
 TPitagora::usage = "suggerimento Teorema di pitagora";
 
+ClearAll["Global`*"]
 
 
 (* FUNZIONE CALCOLO ANGOLO *)
@@ -1335,13 +1334,13 @@ Text["  A",{Cos[(Pi/2)+0.4], Sin[(Pi/2)]}],
 Text["   B",{Cos[0], Sin[0-0.3]}],
 Text["   C",{Cos[Pi+0.2], Sin[Pi+0.6]}],
 Text[Style["\[Theta]",Darker[Green,0.2]],{Cos[Pi+0.9],Sin[11/6 Pi+0.2]}],
-Text["2",{0.4,-0.15}]
+Text["r",{0.4,-0.15}]
 
 },PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->0.25]
 
 ,Magnify[Row[{"r = 2\n\[Theta] = \!\(\*SuperscriptBox[\(60\), \(o\)]\)\n",Style["Trovare \!\(\*OverscriptBox[\(AB\), \(_\)]\)",FontColor->Red,FontFamily-> "sans sarif",Bold]}],2]},
 {Text[Style["Procedimento:",17,FontColor -> Red]]},
-{Magnify[Row[{Text[Style["\!\(\*OverscriptBox[\(AB\), \(_\)]\) = 2\[CenterDot] "]],Row[{InputField[Dynamic[raggio],String,FieldSize->1],Dynamic[CheckAnswer[raggio,"2"]]}]," \[CenterDot] sen(",Row[{InputField[Dynamic[angolo],String,FieldSize->1],"\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)",Dynamic[CheckAnswer[angolo,"60"]]}],") = ",Row[{InputField[Dynamic[AB],String,FieldSize->1],Dynamic[CheckAnswer[AB,"4"]]}],"\[CenterDot]",Row[{SqrtBox[InputField[Dynamic[num],String,FieldSize->1]]// DisplayForm,Dynamic[CheckAnswer[num,"3"]]}] /Row[{InputField[Dynamic[den],String,FieldSize->1],Dynamic[CheckAnswer[den,"2"]]}]," = ",
+{Magnify[Row[{Text[Style["\!\(\*OverscriptBox[\(AB\), \(_\)]\) = 2\[CenterDot] "]],Row[{InputField[Dynamic[raggio],String,FieldSize->1],Dynamic[CheckAnswer[raggio,"2"]]}]," \[CenterDot] sen(",Row[{InputField[Dynamic[angolo],String,FieldSize->1.8],"\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)",Dynamic[CheckAnswer[angolo,"60"]]}],") = ",Row[{InputField[Dynamic[AB],String,FieldSize->1],Dynamic[CheckAnswer[AB,"4"]]}],"\[CenterDot]",Row[{SqrtBox[InputField[Dynamic[num],String,FieldSize->1]]// DisplayForm,Dynamic[CheckAnswer[num,"3"]]}] /Row[{InputField[Dynamic[den],String,FieldSize->1],Dynamic[CheckAnswer[den,"2"]]}]," = ",
 Row[{InputField[Dynamic[coef],String,FieldSize->1],Dynamic[CheckAnswer[coef,"2"]]}]," \[CenterDot]",Row[{SqrtBox[InputField[Dynamic[coef2],String,FieldSize->1]]// DisplayForm,Dynamic[CheckAnswer[coef2,"3"]]}]
 }],2]}
 },Alignment-> {Left,Center},Spacings -> {10,5}] 
@@ -1383,7 +1382,7 @@ Text["  A",{Cos[(Pi/2)+0.4], Sin[(Pi/2)]}],
 Text["   B",{Cos[0], Sin[0-0.3]}],
 Text["   C",{Cos[Pi+0.2], Sin[Pi+0.6]}],
 Text[Style["\[Theta]",Darker[Green,0.3]],{Cos[Pi+0.9],Sin[11/6 Pi+0.2]}],
-Text["5",{0.4,-0.15}]
+Text["r",{0.4,-0.15}]
 
 },PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->0.25]
 
