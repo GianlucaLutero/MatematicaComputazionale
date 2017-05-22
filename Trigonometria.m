@@ -1348,8 +1348,8 @@ Grid[{{Text[Style["Esercizio 2:",20,FontColor-> Red]]},
        Text[Style["C", 15],
        {0.5, 0.6}, {-1, 0}],
         Text[Style["\[Beta]",10, Darker[Green,0.3]],{0.085,1.0}],
-         Text[Style["\[Alpha]", 10,Darker[Green,0.3]], {0.6, 0.08}],
-         Text[Style["90\[Degree]",10,Darker[Green,0.3]],{0.15,0.15}]
+        Text[Style["\[Alpha]", 10,Darker[Green,0.3]], {0.6, 0.08}],
+        Text[Style["90\[Degree]",10,Darker[Green,0.3]],{0.15,0.15}]
   }],2],
 Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizio2],1.4]},
 
@@ -1517,10 +1517,10 @@ Grid[{{Text[Style["Esercizio 8:",20,FontColor-> Red]]},
 {Opacity[0.2],Darker[Green,0.3],Thick,Disk[{1, 0}, 0.15, angolo[{-0.2, 0}, {-0.5, 1}, {1, 0}]+Pi]},
 {Darker[Green,0.2],Circle[{1, 0}, 0.15, angolo[{-0.2, 0}, {-0.5, 1}, {1, 0}]+Pi]},
 
-   (* triangle *)
+ (* triangle *)
 {Opacity[0],EdgeForm[Directive[Black]], Triangle[{{-0.2, 0}, {-0.5, 1}, {1, 0}, {-0.2, 0}}]},
 
-  (* labels *)
+ (* labels *)
   Rotate[
    Text[Style["C", 10],
     {-0.4, 0.4}], 0 Degree],
@@ -1531,7 +1531,7 @@ Grid[{{Text[Style["Esercizio 8:",20,FontColor-> Red]]},
   Text[Style["\[Gamma]",10,Darker[Green,0.3]],{0.8,0.08}]
   }],2]
   
-  (* Vengono stampati i dati dell'esercizio *)
+(* Vengono stampati i dati dell'esercizio *)
 ,Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizio8],1.4],Text[""]},
 {Text[Style["Procedimento:",17,FontColor -> Red]]},
 
@@ -1553,7 +1553,7 @@ Grid[{{Text[Style["Esercizio 8:",20,FontColor-> Red]]},
 
 
 Esercizio5[] := 
-Module[{},
+Module[{esatt3 = ""},
 
 datiEsercizio5 = StringJoin[Style["A = 6 \n\[Alpha] = \!\(\*SuperscriptBox[\(30\), \(o\)]\)\n\[Beta] = \!\(\*SuperscriptBox[\(105\), \(o\)]\)",FontFamily-> "sans sarif",Bold],Style["\nTrovare C",FontColor->Red,FontFamily-> "sans sarif",Bold]];
 
@@ -1591,13 +1591,32 @@ Grid[{{Text[Style["Esercizio 5:",20,FontColor-> Red]]},
 
 (* Primo passo dell'esercizio *)
 {Magnify[Row[{Text[Style["Calcolare l'ampiezza dell'angolo \[Gamma]:\!\(\*SuperscriptBox[\(180\), \(o\)]\)-("]],
-               InputField[Dynamic[ott],String,FieldSize->3],
+               InputField[Dynamic[ott],String,FieldSize->2],
                Style["\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)"],
-               Dynamic[CheckAnswer[ott,"105"]],
+               (* Dynamic[CheckAnswer[ott,"105"]], *)
+               
+               Dynamic[esatt3],
+               
                Style["+"],
                InputField[Dynamic[al],String,FieldSize->2],
                "\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)",
-               Dynamic[CheckAnswer[al,"30"]],
+               (* Dynamic[CheckAnswer[al,"30"]], *)
+              
+               (* Per la propriet\[AGrave] commutativa *)
+               Dynamic[  If[(ott == "") || (al == ""),
+                           esatt3 = Text[""];
+                           Text[""],
+                           If[(ott == "105" && al == "30") || (ott == "30" && al == "105"),
+                              esatt3 = Style["\[Checkmark]",FontColor->Green];                    
+                              Style["\[Checkmark]",FontColor->Green],
+                              esatt3 = Style["X",FontColor->Red,Bold];
+                              Style["X",FontColor->Red,Bold],
+                              esatt3 = Text[""];
+                              Text[""]],
+                           esatt3 = Text[""];   
+                           Text[""]]   
+               ],
+               
                Style[") = "],
                InputField[Dynamic[res2],String,FieldSize->2],
                Dynamic[CheckAnswer[res2,"45"]],
@@ -1725,7 +1744,7 @@ Grid[{{Text[Style["Esercizio 9:",20,FontColor-> Red]]},
 
 (*Esercizio 7*)
 Esercizio7[] := 
-Module[{G7=""},
+Module[{G7="",esatt = "",esatt2 = ""},
 
 datiEsercizio7 = StringJoin[Style["A = 2 \nB = 3\n\[Gamma] = \!\(\*SuperscriptBox[\(60\), \(o\)]\)",FontFamily-> "sans sarif",Bold],Style["\nTrovare C",FontColor->Red,FontFamily-> "sans sarif",Bold]];
 
@@ -1768,11 +1787,28 @@ Grid[{{Text[Style["Esercizio 7:",20,FontColor-> Red]]},
  Magnify[Row[{"\!\(\*SuperscriptBox[\(C\), \(2\)]\) = ",
            InputField[Dynamic[A7],String,FieldSize->1],
            "\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\)",
-           Dynamic[CheckAnswer[A7,"A"]],
+          (* Dynamic[CheckAnswer[A7,"A"]], *)
+           Dynamic[esatt],
            " + ",
            InputField[Dynamic[B7],String,FieldSize->1],
            "\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\)",
-           Dynamic[CheckAnswer[B7,"B"]],
+           (* Dynamic[CheckAnswer[B7,"B"]], *)
+           
+           (* Per la propriet\[AGrave] commutativa *)
+            Dynamic[  If[(A7 == "") || (B7 == ""),
+                           esatt = Text[""];   
+                           Text[""],
+                           If[(A7 == "A" && B7 == "B") || (A7 == "B" && B7 == "A"),
+                              esatt = Style["\[Checkmark]",FontColor->Green];
+                              Style["\[Checkmark]",FontColor->Green],
+                              esatt = Style["X",FontColor->Red,Bold];     
+                              Style["X",FontColor->Red,Bold],
+                              esatt = Text[""];     
+                              Text[""]],
+                           esatt = Text[""];      
+                           Text[""]]   
+               ],
+           
            " - 2 \[CenterDot] A \[CenterDot] " ,
            InputField[Dynamic[B8],String,FieldSize->1],
            Dynamic[CheckAnswer[B8,"B"]],
@@ -1784,11 +1820,28 @@ Grid[{{Text[Style["Esercizio 7:",20,FontColor-> Red]]},
  Magnify[Row[{"\!\(\*SuperscriptBox[\(C\), \(2\)]\) = ",
           InputField[Dynamic[Val7],String,FieldSize->1],
           "\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\)",
-          Dynamic[CheckAnswer[Val7,"2"]],
+          (* Dynamic[CheckAnswer[Val7,"2"]], *)
+          Dynamic[esatt2],
           " + ",
           InputField[Dynamic[Val8],String,FieldSize->1],
           "\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\)",
-          Dynamic[CheckAnswer[Val8,"3"]]," - 12 \[CenterDot] " ,
+          (* Dynamic[CheckAnswer[Val8,"3"]], *)
+          
+          Dynamic[  If[(Val7 == "") || (Val8 == ""),
+                           esatt2 = Text[""];   
+                           Text[""],
+                           If[(Val7 == "2" && Val8 == "3") || (Val7 == "3" && Val8 == "2"),
+                              esatt2 = Style["\[Checkmark]",FontColor->Green];
+                              Style["\[Checkmark]",FontColor->Green],
+                              esatt2 = Style["X",FontColor->Red,Bold];     
+                              Style["X",FontColor->Red,Bold],
+                              esatt2 = Text[""];     
+                              Text[""]],
+                           esatt2 = Text[""];      
+                           Text[""]]   
+               ],
+          
+          " - 12 \[CenterDot] " ,
           Row[{InputField[Dynamic[Val9],String,FieldSize->1],Dynamic[CheckAnswer[Val9,"1"]]}]/Row[{InputField[Dynamic[Val11],String,FieldSize->1],Dynamic[CheckAnswer[Val11,"2"]]}],
           " = ",
           InputField[Dynamic[Val10],String,FieldSize->1],
