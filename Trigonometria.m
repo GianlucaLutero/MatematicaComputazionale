@@ -2,9 +2,11 @@
 
 (* :Title: Trigonometria *)
 
-(* :Context: Trigonometria Disegni *)
-(* :Author: ... *)
-(* :Summary: ... *)
+(* :Context: Trigonometria *)
+(* :Author: Gianluca Lutero, Filippo Soncini, Adele Valerii, Sara Gattari  *)
+(* :Summary: Insieme di illustrazioni ed esercizzi interattivi sulla trigonometria *)
+(* :Package Version: 11.0.1.0 *)
+(* :Mathematica Version: 11.0.1.0 *)
 
 BeginPackage["Trigonometria`"]
 
@@ -2093,7 +2095,7 @@ Grid[{{Text[Style["Esercizio 10:",20,FontColor-> Red]]},
 
 (* Svolgimento esercizio *)
 Magnify[
-      Row[{Style["Trovare \[Alpha]\n",FontColor->Red],Style["Approssima il risultato per difetto alla prima cifra decimale\n\n",FontColor->Red,10],
+      Row[{Style["Trovare \[Alpha]\n",FontColor->Red],Style["Approssima il risultato per\ndifetto alla prima cifra decimale\n\n",FontColor->Red,8],
       Style[""],
       Row[{InputField[Dynamic[alpha2],String,FieldSize->2],Dynamic[CheckAnswer[alpha2,"2.5"]]}]/("sen(\[Alpha])"),
       " = ",
