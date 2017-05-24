@@ -1319,7 +1319,8 @@ Module[{},
 datiEsercizioGuidato = StringJoin[Style["A = 40 \nB = 110",FontFamily-> "OpenDyslexic",Bold],
                                    Style["\nTrovare sen(\[Alpha]),cos(\[Alpha]),tan(\[Alpha]) e l'angolo \[Alpha]",FontColor->Red,FontFamily-> "OpenDyslexic",Bold,FontSize->14]];
 
-risoluzioneEsercizioGuidatoPasso1 = Row[{TPitagora[],Style[
+risoluzioneEsercizioGuidatoPasso1 = Row[{TPitagora[],
+									(*Style[
                                     "\n",
                                     "Applico il teorema \[LongRightArrow] \!\(\*SuperscriptBox[\(A\), \(2\)]\) + ",FontFamily-> "OpenDyslexic"],
                                     Dynamic[InputField[Dynamic[catetoNome],String,FieldSize-> 1]],
@@ -1329,7 +1330,18 @@ risoluzioneEsercizioGuidatoPasso1 = Row[{TPitagora[],Style[
                                     InputField[Dynamic[ipotenusaNome],String,FieldSize-> 1] ,
                                    "\!\(\*SuperscriptBox[\(\\\ \), \(\(2\)\(\\\ \\\ \\\ \)\)]\)",
                                     Dynamic[CheckAnswer[ipotenusaNome,"C"]],
-                                    Style["\n \n",FontFamily-> "OpenDyslexic"],
+                                    Style["\n \n",FontFamily-> "OpenDyslexic"],*)
+                                    
+                                   "\n",
+                                    "Applico il teorema \[LongRightArrow] \!\(\*SuperscriptBox[\(A\), \(2\)]\) + ",
+                                    Dynamic[InputField[Dynamic[catetoNome],String,FieldSize-> 1]],
+                                    "\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\) ",
+                                    Dynamic[CheckAnswer[catetoNome,"B"]],
+                                    " = ",
+                                    InputField[Dynamic[ipotenusaNome],String,FieldSize-> 1] ,
+                                    "\!\(\*SuperscriptBox[\(\\\ \), \(\(2\)\(\\\ \\\ \\\ \)\)]\)",
+                                    Dynamic[CheckAnswer[ipotenusaNome,"C"]],
+                                    "\n \n",
                                     Style["Sostituisco i valori \[LongRightArrow] \!\(\*SuperscriptBox[\(40\), \(2\)]\) + ",FontFamily-> "OpenDyslexic"],
                                     InputField[Dynamic[catetoValore],String,FieldSize-> 3],
                                     "\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\) ",
