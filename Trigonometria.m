@@ -1753,7 +1753,7 @@ Grid[{{Text[Style["Esercizio 5:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]
 (* Primo passo dell'esercizio *)
 {Magnify[Row[{Text[Style["Calcolare l'ampiezza dell'angolo \[Gamma]: \!\(\*SuperscriptBox[\(180\), \(o\)]\)-(",FontFamily-> "OpenDyslexic",Bold]],
                InputField[Dynamic[ott],String,FieldSize->4],
-               Style["\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)",FontFamily-> "OpenDyslexic"],
+               Style["\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)",Z],
                (* Dynamic[CheckAnswer[ott,"105"]], *)
                
                Dynamic[esatt3],
