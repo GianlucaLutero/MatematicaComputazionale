@@ -1248,7 +1248,7 @@ EsercizioEsempio[]:=
 
 Module[{},
 
-datiEsempio = StringJoin[Style["A = 25 \nC = 50",FontFamily-> "OpenDyslexic",Bold],Style["\nTrovare Sen(\[Alpha])",FontColor->Red,FontFamily-> "OpenDyslexic",Bold]];
+datiEsempio = StringJoin[Style["A = 25 \nC = 50",FontFamily-> "OpenDyslexic",Bold],Style["\nTrovare sen(\[Alpha])",FontColor->Red,FontFamily-> "OpenDyslexic",Bold]];
 risoluzioneEsempio =Panel[Style[" Sin(\[Alpha]) = \!\(\*FractionBox[\(A\), \(C\)]\) = \!\(\*FractionBox[\(\(\\\ \\\ \)\(25\)\(\\\ \)\), \(\(\\\ \)\(50\)\)]\) = \!\(\*FractionBox[\(\(\\\ \)\(1\)\(\\\ \)\), \(2\)]\)",FontFamily-> "OpenDyslexic"]];
 
 Grid[{{Text[Style["Esempio 1:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]]}, 
@@ -1316,7 +1316,8 @@ If[answer == "",
 (*Esercizio1 *)
 Esercizio1[]:=
 Module[{},
-datiEsercizioGuidato = StringJoin[Style["A = 40 \nB = 110",FontFamily-> "OpenDyslexic",Bold],Style["\nTrovare Sen(\[Alpha]),Cos(\[Alpha]),Tan(\[Alpha]) e l'angolo \[Alpha]",FontColor->Red,FontFamily-> "OpenDyslexic",Bold]];
+datiEsercizioGuidato = StringJoin[Style["A = 40 \nB = 110",FontFamily-> "OpenDyslexic",Bold],
+                                   Style["\nTrovare sen(\[Alpha]),cos(\[Alpha]),tan(\[Alpha]) e l'angolo \[Alpha]",FontColor->Red,FontFamily-> "OpenDyslexic",Bold,FontSize->14]];
 
 risoluzioneEsercizioGuidatoPasso1 = Row[{TPitagora[],Style[
                                     "\n",
@@ -1636,9 +1637,9 @@ Text[Style["r",FontFamily-> "OpenDyslexic"],{0.4,-0.15}]
  Text[""]},
  
  (* Domanda a risposta multipla *)
-{Text[Style["Quindi il lato \!\(\*OverscriptBox[\(AB\), \(_\)]\) misura:",17,FontColor -> Red,FontFamily-> "OpenDyslexic"]]},
+{Text[Style["Quindi il lato \!\(\*OverscriptBox[\(AB\), \(_\)]\) misura:",20,FontFamily-> "OpenDyslexic",Bold]],
 
-{Magnify[RadioButtonBar[Dynamic[AB2],{"\!\(\*FractionBox[\(5\), \(2\)]\)","\!\(\*FractionBox[\(5\), \(2\)]\)\!\(\*SqrtBox[\(3\)]\)","5(\*SqrtBox[\(3\)])","30"}],2],
+Magnify[RadioButtonBar[Dynamic[AB2],{"\!\(\*FractionBox[\(5\), \(2\)]\)","\!\(\*FractionBox[\(5\), \(2\)]\)\!\(\*SqrtBox[\(3\)]\)","5(\*SqrtBox[\(3\)])","30"}],2],
  Magnify[Dynamic[CheckAnswer[AB2,"5(\*SqrtBox[\(3\)])"]],3]}
 
 },Alignment-> {Left,Center},Spacings -> {10,5}] 
