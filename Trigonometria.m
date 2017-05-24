@@ -1283,8 +1283,8 @@ Grid[{{Text[Style["Esempio 1:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]]}
     Text[Style["A", 15,FontFamily-> "OpenDyslexic"],{-0.1, 0.5}], 0 Degree],
     Text[Style["B", 15,FontFamily-> "OpenDyslexic"],{0.7, -0.1}],
     Text[Style["C", 15,FontFamily-> "OpenDyslexic"],{1, 0.6}, {-1, 0}],
-    Text[Style["\[Theta]", 10,Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {1.7, 0.08}],
-    Text[Style["\[Alpha]",10,Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.085,0.75}],
+    Text[Style["\[Alpha]", 10,Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {1.7, 0.08}],
+    Text[Style["\[Theta]",10,Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.085,0.75}],
     Text[Style["90\[Degree]",10,Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.2,0.2}]
   }],2],
   
@@ -1733,7 +1733,7 @@ Grid[{{Text[Style["Esercizio 5:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]
 {Text[Style["Procedimento:",17,FontColor -> Red,FontFamily-> "OpenDyslexic"]]},
 
 (* Primo passo dell'esercizio *)
-{Magnify[Row[{Text[Style["Calcolare l'ampiezza dell'angolo \[Gamma]:\!\(\*SuperscriptBox[\(180\), \(o\)]\)-(",FontFamily-> "OpenDyslexic"]],
+{Magnify[Row[{Text[Style["Calcolare l'ampiezza dell'angolo \[Gamma]: \!\(\*SuperscriptBox[\(180\), \(o\)]\)-(",FontFamily-> "OpenDyslexic",Bold]],
                InputField[Dynamic[ott],String,FieldSize->4],
                Style["\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)",FontFamily-> "OpenDyslexic"],
                (* Dynamic[CheckAnswer[ott,"105"]], *)
@@ -1767,7 +1767,7 @@ Grid[{{Text[Style["Esercizio 5:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]
  
  1.5],SpanFromLeft},
 (* Suggerimento *)
-{Magnify[Text[Style["Utilizzare la relazione \!\(\*FractionBox[\(\(A\)\(\\\ \)\), \(sen \((\[Alpha])\)\)]\) =\!\(\*FractionBox[\(\(\\\ \)\(C\)\), \(sen \((\[Gamma])\)\)]\)",FontFamily-> "OpenDyslexic"]],1.5]},
+{Magnify[Text[Style["Utilizzare la relazione \!\(\*FractionBox[\(\(A\)\(\\\ \)\), \(sen \((\[Alpha])\)\)]\) =\!\(\*FractionBox[\(\(\\\ \)\(C\)\), \(sen \((\[Gamma])\)\)]\)",FontFamily-> "OpenDyslexic",Bold]],1.5]},
 
 
 (* Secondo passo dell'esercizio *)
@@ -1785,7 +1785,7 @@ Grid[{{Text[Style["Esercizio 5:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]
 
 
  (* Terzo passo dell'esercizio *)
-{Magnify[Text[Style["Ricavare:",FontFamily-> "OpenDyslexic"]],1.5]},
+{Magnify[Text[Style["Ricavare:",FontFamily-> "OpenDyslexic",Bold]],1.5]},
 {Text[""],
 Magnify[  Panel[
           Row[{Style["C = 6",FontFamily-> "OpenDyslexic"],
