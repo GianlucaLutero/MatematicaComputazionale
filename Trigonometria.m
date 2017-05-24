@@ -750,7 +750,7 @@ Labeled[Grid[{
 
      LineLegend[{Darker[Green,0.3],Red, Blue,Orange},{Row[{Style["\[Theta]"]}],Row@{"Sin(\[Theta]) = ",pt[[2]]},Row@{"Cos(\[Theta]) = ",pt[[1]]}, Row@{"Tan(\[Theta]) = ",Tan[ptctrl]}},LegendMarkerSize->40, LabelStyle->15]
 
-}},Alignment->{Center,Center}],{Row[{Style["","Label",20,Gray],Text@Style["\[Theta] = ",Darker[Green,0.3],20],Style[ptctrl,Darker[Green,0.3],25]}],
+}},Alignment->{Center,Center}],{Row[{Style["","Label",20,Gray],Text@Style["\[Theta] = ",Darker[Green,0.3],20],Style[(ptctrl*360)/(2*Pi),Darker[Green,0.3],25]}],
 
 Style["",10,Lighter[Gray,0.7],"Label"]},{{Top,Left},{Bottom,Right}}]]
 ],
@@ -809,7 +809,7 @@ Labeled[Grid[{
 	
     LineLegend[{Darker[Green,0.3],Red, Blue,Orange},{Row[{Style["\[Theta]"]}],Row@{"Sin(\[Theta]) = ",pt[[2]]},Row@{"Cos(\[Theta]) = ",pt[[1]]}, Row@{"Tan(\[Theta]) = ",Tan[ptctrl]}},LegendMarkerSize->40, LabelStyle->15]
 }},Alignment->{Center,Center}],
-{Row[{Style["","Label",20,Gray],Text@Style["\[Theta] = ",Darker[Green,0.3],20],Style[ptctrl,Darker[Green,0.3],25]}],
+{Row[{Style["","Label",20,Gray],Text@Style["\[Theta] = ",Darker[Green,0.3],20],Style[(ptctrl*360)/(2*Pi),Darker[Green,0.3],25]}],
 
 Style["",10,Lighter[Gray,0.7],"Label"]},{{Top,Left},{Bottom,Right}}]]
 ],
@@ -1721,6 +1721,10 @@ Grid[{{Text[Style["Esercizio 5:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]
 {Opacity[0.2],Darker[Green,0.3],Disk[{0, 0}, 0.12, {angolo[{0.7, 0}, {-1,1}, {0, 0}][[2]]+Pi, 0} ]},
 {Darker[Green,0.2],Circle[{0, 0} ,0.12, {angolo[{0.7, 0}, {-1,1}, {0, 0}][[2]]+Pi, 0}]},
 
+(* ARCO SU (0.7, 0) *)
+{Opacity[0.2],Darker[Green,0.3],Disk[{0.7, 0}, 0.2, angolo[{0, 0}, {-1,1}, {0.7, 0}]+Pi]},
+{Darker[Green,0.2],Circle[{0.7, 0}, 0.2, angolo[{0, 0}, {-1,1}, {0.7, 0}]+Pi]},
+
 (* ARCO SU (-1,1) *)
 {Opacity[0.2],Darker[Green,0.3],Disk[{-1,1}, 0.2, angolo[{0, 0}, {0.7, 0}, {-1,1}]]},
 {Darker[Green,0.2],Circle[{-1,1}, 0.2, angolo[{0, 0}, {0.7, 0}, {-1,1}]]},
@@ -1738,7 +1742,8 @@ Grid[{{Text[Style["Esercizio 5:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]
   Text[Style["B", 10,FontFamily-> "OpenDyslexic"],
    {0.1, 0.6}, {-0.5, 0}],
   Text[Style["\[Alpha]",10,Darker[Green,0.2],FontFamily-> "OpenDyslexic"],{-0.8,1.0}],
-  Text[Style["\[Beta]",10,Darker[Green,0.2],FontFamily-> "OpenDyslexic"],{0.1,0.15}]
+  Text[Style["\[Beta]",10,Darker[Green,0.2],FontFamily-> "OpenDyslexic"],{0.1,0.15}],
+   Text[Style["\[Gamma]",10,Darker[Green,0.2],FontFamily-> "OpenDyslexic"],{0.4,0.1}]
   }],2]
   
  (* Stampo i dati dell'esercizio *) 
