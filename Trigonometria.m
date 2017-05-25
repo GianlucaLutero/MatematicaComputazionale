@@ -146,11 +146,17 @@ Manipulate[
 Module[{anglegraph,maingraph},
 anglegraph[th_]:=Show[
 Graphics[{
+(* DETTAGLI *)
+(* Circonferenza *)
 {Lighter[Gray,0.5],Circle[{0,0},1]},
+
+(* Arco di circonferenza *)
 {Darker[Green,0.2],Thick,Circle[{0,0},1,{0,th}]},
 
+(* Linee di dettaglio *)
 {Lighter[Gray,0.5],Line[{{0,0},{Cos[th],Sin[th]}}]},
 {Red,Thick,Line[{{Cos[th],0},{Cos[th],Sin[th]}}]},
+
 (* yp *)
 {Black,Disk[{0, Sin[th]},0.02]},
 
@@ -181,31 +187,49 @@ PlotRange->1,ImageSize->400,BaseStyle->{15},Axes->True,PlotRange->{{-1,1},{-1,1}
 
 (* genero grafico *)
 maingraph[th_]:=Module[{},
+	(* plot della funzione seno *)
 	Show[Plot[{Sin[x]},{x,0.0001,th},PlotRange->{{0,2Pi},{-1,1}},ImageSize->650,PlotRangePadding->{0,0.25},ImagePadding->{{30,12},{0,0}},PlotRangeClipping->False,PlotStyle->Darker[Red,0.6],
+	
+	(* GRIGLIA *)
+	(* Valori asse x, y *)
 	Ticks->{Table[{n Pi/4,n Pi/4},{n,0,8}],Table[n,{n,-1,1,1/2}]},
+	
+	(* Linee sulla griglia*)
 	GridLines->{Table[{n Pi/4,Lighter[Gray,0.7]},{n,-2,8}],Table[{n,Lighter[Gray,0.7]},{n,-1,1,1/2}]},ImageSize->{Automatic,145}],
+	
+	(* DETTAGLI *)
 	Graphics[{
+		(* Linea di dettaglio asse x *)
 		{Darker[Green,0.2],Thick,Line[{{0,0},{th,0}}]},
+		
+		(* Linea di dettaglio asse y *)
 		{Red,Thick,Line[{{th,0},{th,Sin[th]}}]}
 	}],
 	AspectRatio->Automatic,BaseStyle->{12}]];
 
+(* Variabile diamica *)
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
-Labeled[Grid[{
+Labeled[
+	Grid[{
+	(* INIZIALIZAZIONE LOCATOR *)
+	(* http://mathworld.wolfram.com/Circle.html *)
+	{LocatorPane[Dynamic[pt,
+		{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
+		(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
+		(pt=Normalize[#];ptctrl=pt2[[1]])&}],
+	(* Disegno circonferenza *)	
+	Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]],
 
-{LocatorPane[Dynamic[pt,
-	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
-	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
-	(pt=Normalize[#];ptctrl=pt2[[1]])&}],
-Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]],
+	(* INIZIALIZAZIONE LOCATOR *)
+	LocatorPane[Dynamic[pt2,
+		{(pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]],0})&,
+		(pt2={#[[1]],0};pt={Cos[#[[1]]],Sin[#[[1]]]})&,
+		(pt2={#[[1]],0};ptctrl=#[[1]])&}],
+	(* Disegno grafico *)	
+	Dynamic[maingraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]]}},Spacings->0]
 
-LocatorPane[Dynamic[pt2,
-	{(pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]],0})&,
-	(pt2={#[[1]],0};pt={Cos[#[[1]]],Sin[#[[1]]]})&,
-	(pt2={#[[1]],0};ptctrl=#[[1]])&}],
-Dynamic[maingraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]]}},Spacings->0],{Row[{Style["Funzione ","Label",22,Gray],Text@Style["Seno",Red,22]}],
-Style["",10,Lighter[Gray,0.7],"Label"]},{{Top,Center},{Bottom,Right}}]]
-],
+	,{Row[{Style["Funzione ","Label",22,Gray],Text@Style["Seno",Red,22]}], Style["",10,Lighter[Gray,0.7],"Label"]},{{Top,Center},{Bottom,Right}}
+]]],
 {{ptctrl,Pi/6,"angle"},0,2Pi},TrackedSymbols:>{ptctrl}]
 
 
