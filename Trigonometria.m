@@ -1404,7 +1404,8 @@ Text[Style["\[Gamma]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {p11[[1]]+
 },
 (* MISURE PLOT*)
 PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->{0.20,0}]
-}, { Row[{"      Se l'angolo \[EGrave] retto il coseno ha valore = 1, \nquindi otteniamo il teorema di pitagora: \!\(\*SuperscriptBox[\(AB\), \(2\)]\) + \!\(\*SuperscriptBox[\(BC\), \(2\)]\) = \!\(\*SuperscriptBox[\(AC\), \(2\)]\)"}]}},Frame->Directive[Lighter[Gray,0.5]]]
+(* Scrivo testo sotto la figura nel popup*)
+}, { Row@{Style["      Se l'angolo \[EGrave] retto il coseno ha valore = 1, \nquindi otteniamo il teorema di pitagora: \!\(\*SuperscriptBox[\(AB\), \(2\)]\) + \!\(\*SuperscriptBox[\(BC\), \(2\)]\) = \!\(\*SuperscriptBox[\(AC\), \(2\)]\)",16,FontFamily-> "OpenDyslexic"]}}},Frame->Directive[Lighter[Gray,0.5]]]
 
 
 (*######################### ESERCIZI ##############################*)
