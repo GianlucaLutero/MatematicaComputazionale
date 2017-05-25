@@ -112,25 +112,25 @@ pc2 = {Cos[3Pi/2], Sin[3Pi/2]}
 (* GENERA BOTTONE *)
 (* Funzione che genera il bottone che richiama la fiunzione grafiseno[] *)
 bottonesen[]:=
-Button["Funzione Seno",MessageDialog[  graficoseno[] ,WindowSize->All,Editable->False]]
+Button[Style["Funzione Seno",FontFamily-> "OpenDyslexic"],MessageDialog[  graficoseno[] ,WindowSize->All,Editable->False]]
 
 
 (* GENERA BOTTONE *)
 (* Funzione che genera il bottone che richiama la fiunzione graficocoseno[] *)
 bottonecos[]:=
-Button["Funzione Coseno",MessageDialog[  graficocoseno[] ,WindowSize->All,Editable->False]]
+Button[Style["Funzione Coseno",FontFamily-> "OpenDyslexic"],MessageDialog[  graficocoseno[] ,WindowSize->All,Editable->False]]
 
 
 (* GENERA BOTTONE *)
 (* Funzione che genera il bottone che richiama la fiunzione graficotangente[] *)
 bottonetan[]:=
-Button["Funzione Tangente",MessageDialog[  graficotangente[] ,WindowSize->All,Editable->False]]
+Button[Style["Funzione Tangente",FontFamily-> "OpenDyslexic"],MessageDialog[  graficotangente[] ,WindowSize->All,Editable->False]]
 
 
 (* GENERA BOTTONE *)
 (* Funzione che genera il bottone che richiama la fiunzione pitagora[] *)
 bottonepitagora[]:=
-Button["Teorema di Pitagora",MessageDialog[  pitagora[] ,WindowSize->All,Editable->False]]
+Button[Style["Teorema di Pitagora",FontFamily-> "OpenDyslexic"],MessageDialog[  pitagora[] ,WindowSize->All,Editable->False]]
 
 
 (* GENERA BOTTONE *)
@@ -146,17 +146,11 @@ Manipulate[
 Module[{anglegraph,maingraph},
 anglegraph[th_]:=Show[
 Graphics[{
-(* DETTAGLI *)
-(* Circonferenza *)
 {Lighter[Gray,0.5],Circle[{0,0},1]},
-
-(* Arco di circonferenza *)
 {Darker[Green,0.2],Thick,Circle[{0,0},1,{0,th}]},
 
-(* Linee di dettaglio *)
 {Lighter[Gray,0.5],Line[{{0,0},{Cos[th],Sin[th]}}]},
 {Red,Thick,Line[{{Cos[th],0},{Cos[th],Sin[th]}}]},
-
 (* yp *)
 {Black,Disk[{0, Sin[th]},0.02]},
 
@@ -177,59 +171,41 @@ Graphics[{
 {Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th],Sin[th]-3},{Cos[th],3}}]},
 
 (* TESTO *)
-Text["Yp",{0.1,Sin[th]+0.1}],
-Text["P",{Cos[th] +0.1,Sin[th]+0.1}],
-Text[Style["\[Theta]",Darker[Green,0.3]],{0.2,0.1}],
-Rotate[Text[Style["Sin(\[Theta])",Red],{-0.1,Sin[th]/2}],90\[Degree]]
+Text[Style["Yp",FontFamily-> "OpenDyslexic"],{0.1,Sin[th]+0.1}],
+Text[Style["P",FontFamily-> "OpenDyslexic"],{Cos[th] +0.1,Sin[th]+0.1}],
+Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.2,0.1}],
+Rotate[Text[Style["Sin(\[Theta])",Red,FontFamily-> "OpenDyslexic"],{-0.1,Sin[th]/2}],90\[Degree]]
 
 }],
 PlotRange->1,ImageSize->400,BaseStyle->{15},Axes->True,PlotRange->{{-1,1},{-1,1}},PlotRangePadding->0.25];
 
 (* genero grafico *)
 maingraph[th_]:=Module[{},
-	(* plot della funzione seno *)
 	Show[Plot[{Sin[x]},{x,0.0001,th},PlotRange->{{0,2Pi},{-1,1}},ImageSize->650,PlotRangePadding->{0,0.25},ImagePadding->{{30,12},{0,0}},PlotRangeClipping->False,PlotStyle->Darker[Red,0.6],
-	
-	(* GRIGLIA *)
-	(* Valori asse x, y *)
 	Ticks->{Table[{n Pi/4,n Pi/4},{n,0,8}],Table[n,{n,-1,1,1/2}]},
-	
-	(* Linee sulla griglia*)
 	GridLines->{Table[{n Pi/4,Lighter[Gray,0.7]},{n,-2,8}],Table[{n,Lighter[Gray,0.7]},{n,-1,1,1/2}]},ImageSize->{Automatic,145}],
-	
-	(* DETTAGLI *)
 	Graphics[{
-		(* Linea di dettaglio asse x *)
 		{Darker[Green,0.2],Thick,Line[{{0,0},{th,0}}]},
-		
-		(* Linea di dettaglio asse y *)
 		{Red,Thick,Line[{{th,0},{th,Sin[th]}}]}
 	}],
 	AspectRatio->Automatic,BaseStyle->{12}]];
 
-(* Variabile diamica *)
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
-Labeled[
-	Grid[{
-	(* INIZIALIZAZIONE LOCATOR *)
-	(* http://mathworld.wolfram.com/Circle.html *)
-	{LocatorPane[Dynamic[pt,
-		{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
-		(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
-		(pt=Normalize[#];ptctrl=pt2[[1]])&}],
-	(* Disegno circonferenza *)	
-	Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]],
+Labeled[Grid[{
 
-	(* INIZIALIZAZIONE LOCATOR *)
-	LocatorPane[Dynamic[pt2,
-		{(pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]],0})&,
-		(pt2={#[[1]],0};pt={Cos[#[[1]]],Sin[#[[1]]]})&,
-		(pt2={#[[1]],0};ptctrl=#[[1]])&}],
-	(* Disegno grafico *)	
-	Dynamic[maingraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]]}},Spacings->0]
+{LocatorPane[Dynamic[pt,
+	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
+	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
+	(pt=Normalize[#];ptctrl=pt2[[1]])&}],
+Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]],
 
-	,{Row[{Style["Funzione ","Label",22,Gray],Text@Style["Seno",Red,22]}], Style["",10,Lighter[Gray,0.7],"Label"]},{{Top,Center},{Bottom,Right}}
-]]],
+LocatorPane[Dynamic[pt2,
+	{(pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]],0})&,
+	(pt2={#[[1]],0};pt={Cos[#[[1]]],Sin[#[[1]]]})&,
+	(pt2={#[[1]],0};ptctrl=#[[1]])&}],
+Dynamic[maingraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]]}},Spacings->0],{Row[{Style["Funzione ","Label",22,Gray,FontFamily-> "OpenDyslexic"],Text@Style["Seno",Red,22,FontFamily-> "OpenDyslexic"]}],
+Style["",10,Lighter[Gray,0.7],"Label",FontFamily-> "OpenDyslexic"]},{{Top,Center},{Bottom,Right}}]]
+],
 {{ptctrl,Pi/6,"angle"},0,2Pi},TrackedSymbols:>{ptctrl}]
 
 
@@ -264,12 +240,12 @@ Graphics[{
 {Lighter[Gray,0.5],Dashing[Medium],Line[{{-3,Tan[th]},{3,Tan[th]}}]},
 
 (* TESTO *)
-Text["P",{Cos[th] +0.1,Sin[th]+0.1}],
-Text["T",{1.1,Tan[th]+0.1}],
-Text["Xt",{1.1,0.1}],
-Text["Yt",{0.1,Tan[th]+0.1}],
-Text[Style["\[Theta]",Darker[Green,0.3]],{0.2,0.1}],
-Rotate[Text[Style["Tan(\[Theta])",Orange],{1.1,Tan[th]/2}],90\[Degree]],
+Text[Style["P",FontFamily-> "OpenDyslexic"],{Cos[th] +0.1,Sin[th]+0.1}],
+Text[Style["T",FontFamily-> "OpenDyslexic"],{1.1,Tan[th]+0.1}],
+Text[Style["Xt",FontFamily-> "OpenDyslexic"],{1.1,0.1}],
+Text[Style["Yt",FontFamily-> "OpenDyslexic"],{0.1,Tan[th]+0.1}],
+Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.2,0.1}],
+Rotate[Text[Style["Tan(\[Theta])",Orange,FontFamily-> "OpenDyslexic"],{1.1,Tan[th]/2}],90\[Degree]],
 
 (* TAN *)
 (* tan *)  {Orange,Thick,Line[{{1,0},{1,Tan[th]}}]},
@@ -302,8 +278,8 @@ LocatorPane[Dynamic[pt2,
 	{(pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]],0})&,
 	(pt2={#[[1]],0};pt={Cos[#[[1]]],Sin[#[[1]]]})&,
 	(pt2={#[[1]],0};ptctrl=#[[1]])&}],
-Dynamic[maingraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]]}},Spacings->0],{Row[{Style["Funzione ","Label",22,Gray],Text@Style["Tangente",Orange,22]}],
-Style["",10,Lighter[Gray,0.7],"Label"]},{{Top,Center},{Bottom,Right}}]]
+Dynamic[maingraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]]}},Spacings->0],{Row[{Style["Funzione ","Label",22,Gray,FontFamily-> "OpenDyslexic"],Text@Style["Tangente",Orange,22,FontFamily-> "OpenDyslexic"]}],
+Style["",10,Lighter[Gray,0.7],"Label",FontFamily-> "OpenDyslexic"]},{{Top,Center},{Bottom,Right}}]]
 ],
 {{ptctrl,Pi/6,"angle"},0,2Pi},TrackedSymbols:>{ptctrl}]
 
@@ -342,10 +318,10 @@ Graphics[{
 {Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th],Sin[th]-3},{Cos[th],3}}]},
 
 (* testo *)
-Text["Xp",{Cos[th]+0.1,0.1}],
-Text["P",{Cos[th] +0.1,Sin[th]+0.1}],
-Text[Style["\[Theta]",Darker[Green,0.3]],{0.2,0.1}],
-Text[Style["Cos(\[Theta])",Blue],{Cos[th]/2,-0.1}]
+Text[Style["Xp",FontFamily-> "OpenDyslexic"],{Cos[th]+0.1,0.1}],
+Text[Style["P",FontFamily-> "OpenDyslexic"],{Cos[th] +0.1,Sin[th]+0.1}],
+Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.2,0.1}],
+Text[Style["Cos(\[Theta])",Blue,FontFamily-> "OpenDyslexic"],{Cos[th]/2,-0.1}]
 
 }],
 PlotRange->1,ImageSize->400,BaseStyle->{15},Axes->True,PlotRange->{{-1,1},{-1,1}},PlotRangePadding->0.25];
@@ -376,8 +352,8 @@ LocatorPane[Dynamic[pt2,
 	{(pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]],0})&,
 	(pt2={#[[1]],0};pt={Cos[#[[1]]],Sin[#[[1]]]})&,
 	(pt2={#[[1]],0};ptctrl=#[[1]])&}],
-Dynamic[maingraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]]}},Spacings->0],{Row[{Style["Funzione ","Label",22,Gray],Text@Style["Coseno",Blue,22]}],
-Style["",10,Lighter[Gray,0.7],"Label"]},{{Top,Center},{Bottom,Right}}]]
+Dynamic[maingraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]]}},Spacings->0],{Row[{Style["Funzione ","Label",22,Gray,FontFamily-> "OpenDyslexic"],Text@Style["Coseno",Blue,22,FontFamily-> "OpenDyslexic"]}],
+Style["",10,Lighter[Gray,0.7],"Label",FontFamily-> "OpenDyslexic"]},{{Top,Center},{Bottom,Right}}]]
 ],
 {{ptctrl,Pi/6,"angle"},0,2Pi},TrackedSymbols:>{ptctrl}]
 
@@ -409,13 +385,13 @@ Graphics[{
 Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th],Sin[th]-3},{Cos[th],3}}]},
 
 (* TESTO *)
-Text["Xp",{Cos[th]+0.1,0.1}],
-Text["Yp",{0.1,Sin[th]+0.1}],
-Text["P",{Cos[th] +0.1,Sin[th]+0.1}],
-Text[Style["\[Theta]",Darker[Green,0.3]],{0.2,0.1}],
+Text[Style["Xp",FontFamily-> "OpenDyslexic"],{Cos[th]+0.1,0.1}],
+Text[Style["Yp",FontFamily-> "OpenDyslexic"],{0.1,Sin[th]+0.1}],
+Text[Style["P",FontFamily-> "OpenDyslexic"],{Cos[th] +0.1,Sin[th]+0.1}],
+Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.2,0.1}],
 
-Text[Style["Cos(\[Theta])",Blue],{Cos[th]/2,-0.1}],
-Rotate[Text[Style["Sin(\[Theta])",Red],{-0.1,Sin[th]/2}],90\[Degree]],
+Text[Style["Cos(\[Theta])",Blue,FontFamily-> "OpenDyslexic"],{Cos[th]/2,-0.1}],
+Rotate[Text[Style["Sin(\[Theta])",Red,FontFamily-> "OpenDyslexic"],{-0.1,Sin[th]/2}],90\[Degree]],
 
 (* SEN COS TAN *)
 
@@ -440,10 +416,10 @@ Grid[{
      Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]
      ],
    
-	LineLegend[{Red, Blue,Darker[Green,0.3]},{"Sin","Cos", "\[Theta]"}]
+	LineLegend[{Red, Blue,Darker[Green,0.3]},{Style["Sin",FontFamily-> "OpenDyslexic"],Style["Cos",FontFamily-> "OpenDyslexic"],Style["\[Theta]",FontFamily-> "OpenDyslexic"]}]
 }},Alignment->{Center,Center}]]
 ],
-{{ptctrl,Pi/6,"Angle"},0,2Pi},TrackedSymbols:>{ptctrl}]
+{{ptctrl,Pi/6,Style["Angle",FontFamily-> "OpenDyslexic"]},0,2Pi},TrackedSymbols:>{ptctrl}]
 
 
 (* Definizione rapporti *)
@@ -494,10 +470,10 @@ If[th<= Pi/2 ,
 {Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th],Sin[th]-3},{Cos[th],3}}]},
 
 (* TESTO *)
-Text["H",{Cos[th]+0.1,0.1}],
-Text["P",{Cos[th] +0.1,Sin[th]+0.1}],
-Text["O",{-0.1,0.1}],
-Text[Style["\[Theta]",Darker[Green,0.3]],{0.2,0.1}]
+Text[Style["H",FontFamily-> "OpenDyslexic"],{Cos[th]+0.1,0.1}],
+Text[Style["P",FontFamily-> "OpenDyslexic"],{Cos[th] +0.1,Sin[th]+0.1}],
+Text[Style["O",FontFamily-> "OpenDyslexic"],{-0.1,0.1}],
+Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.2,0.1}]
 
 }],
 PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->Automatic,PlotRangePadding->0.25];
@@ -511,10 +487,10 @@ Grid[{
      Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]
      ],
      
-     LineLegend[{Darker[Green,0.3]},{ "\[Theta]"}]
+     LineLegend[{Darker[Green,0.3]},{ Style["\[Theta]",FontFamily-> "OpenDyslexic"]}]
 }},Alignment->{Center,Center}]]
 ],
-{{ptctrl,Pi/6,"angle"},0,2Pi},TrackedSymbols:>{ptctrl}]
+{{ptctrl,Pi/6,Style["angle",FontFamily-> "OpenDyslexic"]},0,2Pi},TrackedSymbols:>{ptctrl}]
 
 
 triangolorett[] :=
@@ -544,10 +520,10 @@ hp33 = {p33[[1]],0};
 (* C *) {Black,Disk[p11,0.02]},
 
 (* TESTO *)
-Text["A",{p33[[1]], p33[[2]]+0.1}],
-Text["C",{p11[[1]]-0.1, p11[[2]]}],
-Text["B",{hp33[[1]], hp33[[2]]-0.1}],
-Text[Style["\[Theta]",Darker[Green,0.3]], {p11[[1]]+0.3, p11[[2]]+0.06}]
+Text[Style["A",FontFamily-> "OpenDyslexic"],{p33[[1]], p33[[2]]+0.1}],
+Text[Style["C",FontFamily-> "OpenDyslexic"],{p11[[1]]-0.1, p11[[2]]}],
+Text[Style["B",FontFamily-> "OpenDyslexic"],{hp33[[1]], hp33[[2]]-0.1}],
+Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {p11[[1]]+0.3, p11[[2]]+0.06}]
 
 },PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->{0.20,0}]
 }},Frame->Directive[Lighter[Gray,0.5]]]
@@ -581,12 +557,12 @@ Graphics[{
 {Lighter[Gray,0.5],Dashing[Medium],Line[{{-3,Tan[th]},{3,Tan[th]}}]},
 
 (* TESTO *)
-Text["P",{Cos[th] +0.1,Sin[th]+0.1}],
-Text["T",{1.1,Tan[th]+0.1}],
-Text["Xt",{1.1,0.1}],
-Text["Yt",{0.1,Tan[th]+0.1}],
-Text[Style["\[Theta]",Darker[Green,0.3]],{0.2,0.1}],
-Rotate[Text[Style["Tan(\[Theta])",Orange],{1.1,Tan[th]/2}],90\[Degree]],
+Text[Style["P",FontFamily-> "OpenDyslexic"],{Cos[th] +0.1,Sin[th]+0.1}],
+Text[Style["T",FontFamily-> "OpenDyslexic"],{1.1,Tan[th]+0.1}],
+Text[Style["Xt",FontFamily-> "OpenDyslexic"],{1.1,0.1}],
+Text[Style["Yt",FontFamily-> "OpenDyslexic"],{0.1,Tan[th]+0.1}],
+Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.2,0.1}],
+Rotate[Text[Style["Tan(\[Theta])",Orange,FontFamily-> "OpenDyslexic"],{1.1,Tan[th]/2}],90\[Degree]],
 
 (* TAN *)
 (* tan *)  
@@ -605,10 +581,10 @@ Grid[{
      Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]
      ],
      
-     LineLegend[{Orange},{"Tan"}]
+     LineLegend[{Orange},{Style["Tan",FontFamily-> "OpenDyslexic"]}]
 }},Alignment->{Center,Center}]]
 ],
-{{ptctrl,Pi/6,"angle"},0,2Pi},TrackedSymbols:>{showvalue,ptctrl}]
+{{ptctrl,Pi/6,Style["angle",FontFamily-> "OpenDyslexic"]},0,2Pi},TrackedSymbols:>{showvalue,ptctrl}]
 
 
 
@@ -679,13 +655,13 @@ If[th<= Pi/2  || (th > Pi  && th <= (3*Pi)/2),
 {Lighter[Gray,0.5],Dashing[Medium],Line[{{1, -3},{1, 3}}]},
 
 (* TESTO *)
-Text["H",{Cos[th]+0.1,0.1}],
-Text["P",{Cos[th] +0.1,Sin[th]+0.1}],
-Text["O",{-0.1,0.1}],
-Text["K",{1.1,0.1}],
+Text[Style["H",FontFamily-> "OpenDyslexic"],{Cos[th]+0.1,0.1}],
+Text[Style["P",FontFamily-> "OpenDyslexic"],{Cos[th] +0.1,Sin[th]+0.1}],
+Text[Style["O",FontFamily-> "OpenDyslexic"],{-0.1,0.1}],
+Text[Style["K",FontFamily-> "OpenDyslexic"],{1.1,0.1}],
 Text["T",{1.1,Tan[th]+0.1}],
-Text[Style["\[Theta]",Darker[Green,0.3]],{0.2,0.1}],
-Rotate[Text[Style["Tan(\[Theta])",Orange],{1.1,Tan[th]/2}],90\[Degree]],
+Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.2,0.1}],
+Rotate[Text[Style["Tan(\[Theta])",Orange,FontFamily-> "OpenDyslexic"],{1.1,Tan[th]/2}],90\[Degree]],
 
 (* TAN *)
 {Orange,Thick,Line[{{1,0},{1,Tan[th]}}]}, 
@@ -702,10 +678,10 @@ Grid[{
      Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]
      ],
      
-     LineLegend[{Orange,Darker[Green,0.3]},{"Tan", "\[Theta]"}]
+     LineLegend[{Orange,Darker[Green,0.3]},{Style["Tan",FontFamily-> "OpenDyslexic"],Style["\[Theta]",FontFamily-> "OpenDyslexic"]}]
 }},Alignment->{Center,Center}]]
 ],
-{{ptctrl,Pi/6,"angle"},0,2Pi},TrackedSymbols:>{showvalue,ptctrl}]
+{{ptctrl,Pi/6,Style["angle",FontFamily-> "OpenDyslexic"]},0,2Pi},TrackedSymbols:>{showvalue,ptctrl}]
 
 
 angolinoti30[] :=
@@ -734,13 +710,13 @@ Graphics[{
 {Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th],Sin[th]-3},{Cos[th],3}}]},
 
 (* TESTO *)
-Text["Xp",{Cos[th]+0.1,0.1}],
-Text["Yp",{0.1,Sin[th]+0.1}],
-Text["P",{Cos[th] +0.1,Sin[th]+0.1}],
-Text[Style["\[Theta]",Darker[Green,0.3]],{0.2,0.1}],
+Text[Style["Xp",FontFamily-> "OpenDyslexic"],{Cos[th]+0.1,0.1}],
+Text[Style["Yp",FontFamily-> "OpenDyslexic"],{0.1,Sin[th]+0.1}],
+Text[Style["P",FontFamily-> "OpenDyslexic"],{Cos[th] +0.1,Sin[th]+0.1}],
+Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.2,0.1}],
 
-Text[Style["Cos(\[Theta])",Blue],{Cos[th]/2,-0.1}],
-Rotate[Text[Style["Sin(\[Theta])",Red],{-0.1,Sin[th]/2}],90\[Degree]],
+Text[Style["Cos(\[Theta])",Blue,FontFamily-> "OpenDyslexic"],{Cos[th]/2,-0.1}],
+Rotate[Text[Style["Sin(\[Theta])",Red,FontFamily-> "OpenDyslexic"],{-0.1,Sin[th]/2}],90\[Degree]],
 
 (* SEN COS TAN *)
 (* sin *) 
@@ -772,11 +748,11 @@ Labeled[Grid[{
 	(pt=Normalize[#];ptctrl=If[#=={2Pi,0},Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]])&}],
      Dynamic[anglegraph[Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]],Enabled->False],
 
-     LineLegend[{Darker[Green,0.3],Red, Blue,Orange},{Row[{Style["\[Theta]"]}],Row@{"Sin(\[Theta]) = ",pt[[2]]},Row@{"Cos(\[Theta]) = ",pt[[1]]}, Row@{"Tan(\[Theta]) = ",Tan[ptctrl]}},LegendMarkerSize->40, LabelStyle->15]
+     LineLegend[{Darker[Green,0.3],Red, Blue,Orange},{Row[{Style["\[Theta]",FontFamily-> "OpenDyslexic"]}],Row@{Style["Sin(\[Theta]) = ",FontFamily-> "OpenDyslexic"],pt[[2]]},Row@{Style["Cos(\[Theta]) = ",FontFamily-> "OpenDyslexic"],pt[[1]]}, Row@{Style["Tan(\[Theta]) = ",FontFamily-> "OpenDyslexic"],Tan[ptctrl]}},LegendMarkerSize->40, LabelStyle->15]
 
-}},Alignment->{Center,Center}],{Row[{Style["","Label",20,Gray],Text@Style["\[Theta] = ",Darker[Green,0.3],20],Style[(ptctrl*360)/(2*Pi),Darker[Green,0.3],25]}],
+}},Alignment->{Center,Center}],{Row[{Style["","Label",20,Gray,FontFamily-> "OpenDyslexic"],Text@Style["\[Theta] = ",Darker[Green,0.3],20,FontFamily-> "OpenDyslexic"],Style[(ptctrl*360)/(2*Pi),Darker[Green,0.3],25,FontFamily-> "OpenDyslexic"]}],
 
-Style["",10,Lighter[Gray,0.7],"Label"]},{{Top,Left},{Bottom,Right}}]]
+Style["",10,Lighter[Gray,0.7],"Label",FontFamily-> "OpenDyslexic"]},{{Top,Left},{Bottom,Right}}]]
 ],
 {{ptctrl,Pi/6,""},0,2Pi,Pi/6},TrackedSymbols:>{showvalue,ptctrl}]
 
@@ -798,13 +774,13 @@ Graphics[{
 (* linea tratteggiata per sin *){Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th],Sin[th]-3},{Cos[th],3}}]},
 
 (* TESTO *)
-Text["Xp",{Cos[th]+0.1,0.1}],
-Text["Yp",{0.1,Sin[th]+0.1}],
-Text["P",{Cos[th] +0.1,Sin[th]+0.1}],
-Text[Style["\[Theta]",Darker[Green,0.3]],{0.2,0.1}],
+Text[Style["Xp",FontFamily-> "OpenDyslexic"],{Cos[th]+0.1,0.1}],
+Text[Style["Yp",FontFamily-> "OpenDyslexic"],{0.1,Sin[th]+0.1}],
+Text[Style["P",FontFamily-> "OpenDyslexic"],{Cos[th] +0.1,Sin[th]+0.1}],
+Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.2,0.1}],
 
-Text[Style["Cos(\[Theta])",Blue],{Cos[th]/2,-0.1}],
-Rotate[Text[Style["Sin(\[Theta])",Red],{-0.1,Sin[th]/2}],90\[Degree]],
+Text[Style["Cos(\[Theta])",Blue,FontFamily-> "OpenDyslexic"],{Cos[th]/2,-0.1}],
+Rotate[Text[Style["Sin(\[Theta])",Red,FontFamily-> "OpenDyslexic"],{-0.1,Sin[th]/2}],90\[Degree]],
 
 (* SEN COS TAN *)
 (* sin *) {Red,Thickness[0.008],Line[{{0,0},{0,Sin[th]}}]},
@@ -831,11 +807,11 @@ Labeled[Grid[{
 	(pt=Normalize[#];ptctrl=If[#=={2Pi,0},Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]])&}],
 	Dynamic[anglegraph[Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]],Enabled->False],
 	
-    LineLegend[{Darker[Green,0.3],Red, Blue,Orange},{Row[{Style["\[Theta]"]}],Row@{"Sin(\[Theta]) = ",pt[[2]]},Row@{"Cos(\[Theta]) = ",pt[[1]]}, Row@{"Tan(\[Theta]) = ",Tan[ptctrl]}},LegendMarkerSize->40, LabelStyle->15]
+    LineLegend[{Darker[Green,0.3],Red, Blue,Orange},{Row[{Style["\[Theta]",FontFamily-> "OpenDyslexic"]}],Row@{Style["Sin(\[Theta]) = ",FontFamily-> "OpenDyslexic"],pt[[2]]},Row@{Style["Cos(\[Theta]) = ",FontFamily-> "OpenDyslexic"],pt[[1]]}, Row@{Style["Tan(\[Theta]) = ",FontFamily-> "OpenDyslexic"],Tan[ptctrl]}},LegendMarkerSize->40, LabelStyle->15]
 }},Alignment->{Center,Center}],
-{Row[{Style["","Label",20,Gray],Text@Style["\[Theta] = ",Darker[Green,0.3],20],Style[(ptctrl*360)/(2*Pi),Darker[Green,0.3],25]}],
+{Row[{Style["","Label",20,Gray,FontFamily-> "OpenDyslexic"],Text@Style["\[Theta] = ",Darker[Green,0.3],20,FontFamily-> "OpenDyslexic"],Style[(ptctrl*360)/(2*Pi),Darker[Green,0.3],25,FontFamily-> "OpenDyslexic"]}],
 
-Style["",10,Lighter[Gray,0.7],"Label"]},{{Top,Left},{Bottom,Right}}]]
+Style["",10,Lighter[Gray,0.7],"Label",FontFamily-> "OpenDyslexic"]},{{Top,Left},{Bottom,Right}}]]
 ],
 {{ptctrl,Pi/4,""},0,2Pi,Pi/4},TrackedSymbols:>{ptctrl}]
 
@@ -872,16 +848,16 @@ Graphics[{
 {Black,Disk[pc,0.02]},
 
 (* TESTO *)
-Text["  A",{pa[[1]],pa[[2]]+0.1}],
-Text["   B",{Cos[0], Sin[-0.3]}],
-Text["   C", {pc[[1]]-0.15, pc[[2]]}],
-Text["r",{0.4,-0.15}],
-Text[Style["\[Theta]",Darker[Green,0.3]], {pc[[1]]+0.1, pc[[2]]+0.1}]
+Text[Style["  A",FontFamily-> "OpenDyslexic"],{pa[[1]],pa[[2]]+0.1}],
+Text[Style["   B",FontFamily-> "OpenDyslexic"],{Cos[0], Sin[-0.3]}],
+Text[Style["   C",FontFamily-> "OpenDyslexic"], {pc[[1]]-0.15, pc[[2]]}],
+Text[Style["r",FontFamily-> "OpenDyslexic"],{0.4,-0.15}],
+Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {pc[[1]]+0.1, pc[[2]]+0.1}]
 
 
 },PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->0.25]
 
-, LineLegend[{Darker[Green,0.3],Red},{"\[Theta]","Corda"},LegendMarkerSize->40, LabelStyle->15]
+, LineLegend[{Darker[Green,0.3],Red},{Style["\[Theta]",FontFamily-> "OpenDyslexic"],Style["Corda",FontFamily-> "OpenDyslexic"]},LegendMarkerSize->40, LabelStyle->15]
 
 }},Frame->Directive[Lighter[Gray,0.5]]]
 
@@ -946,11 +922,11 @@ Graphics[{
 {Black,Disk[{Cos[th], Sin[th]},0.02]},
 
 (* TESTO *)
-Text["  A",{a[[1]],a[[2]]+0.1}],
-Text["   B",{Cos[0], Sin[-0.3]}],
-Text["   C", {Cos[th]-0.15, Sin[th]}],
-Text["r",{0.4,-0.15}],
-Text[Style["\[Theta]",Darker[Green,0.3]], {Cos[th]+0.1, Sin[th]+0.1}]
+Text[Style["  A",FontFamily-> "OpenDyslexic"],{a[[1]],a[[2]]+0.1}],
+Text[Style["   B",FontFamily-> "OpenDyslexic"],{Cos[0], Sin[-0.3]}],
+Text[Style["   C",FontFamily-> "OpenDyslexic"], {Cos[th]-0.15, Sin[th]}],
+Text[Style["r",FontFamily-> "OpenDyslexic"],{0.4,-0.15}],
+Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {Cos[th]+0.1, Sin[th]+0.1}]
 
 
 }],PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->0.25]];
@@ -966,12 +942,12 @@ Grid[{
 	Dynamic[anglegraph[pa,pb,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]],
 	
 	pcc ={Sin[ ptctrl], Cos[ptctrl]};
-LineLegend[{Darker[Green,0.3],Red,},{"\[Theta]","Corda"},LegendMarkerSize->40, LabelStyle->15]
+LineLegend[{Darker[Green,0.3],Red,},{Style["\[Theta]",FontFamily-> "OpenDyslexic"],Style["Corda",FontFamily-> "OpenDyslexic"]},LegendMarkerSize->40, LabelStyle->15]
 }},Spacings->0]]
 
 ],
 
-{{ptctrl,Pi +0.5,"angle"},0,2Pi},TrackedSymbols:>{ptctrl}]
+{{ptctrl,Pi +0.5,Style["angle",FontFamily-> "OpenDyslexic"]},0,2Pi},TrackedSymbols:>{ptctrl}]
 
 
 teoremacorda3[]:=
@@ -1044,13 +1020,13 @@ Graphics[{
 (* C *) {Black,Disk[c,0.02]},
 
 (* TESTO *)
-Text["  A",{ a[[1]],a[[2]]+0.1}],
-Text["   B",{ b[[1]]+0.1,b[[2]]}],
-Text["   C",{ c[[1]],c[[2]]-0.1}],
-Text["   D", {Cos[th]+ 0.1, Sin[th]}],
-Text[Style["\[Delta]",Darker[Green,0.3]], {Cos[th]-0.1, Sin[th]-0.1}],
-Text[Style["\[Theta]",Darker[Green,0.3]], c+0.1],
-Text["r",{0.4,-0.15}]
+Text[Style["  A",FontFamily-> "OpenDyslexic"],{ a[[1]],a[[2]]+0.1}],
+Text[Style["   B",FontFamily-> "OpenDyslexic"],{ b[[1]]+0.1,b[[2]]}],
+Text[Style["   C",FontFamily-> "OpenDyslexic"],{ c[[1]],c[[2]]-0.1}],
+Text[Style["   D",FontFamily-> "OpenDyslexic"], {Cos[th]+ 0.1, Sin[th]}],
+Text[Style["\[Delta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {Cos[th]-0.1, Sin[th]-0.1}],
+Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], c+0.1],
+Text[Style["r",FontFamily-> "OpenDyslexic"],{0.4,-0.15}]
 
 }],PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->0.25]];
 
@@ -1063,10 +1039,10 @@ Grid[{
 	Dynamic[anglegraph[pa2,pb2,pc2,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]],
 	
 	pcc ={Sin[ ptctrl], Cos[ptctrl]};
-  LineLegend[{Darker[Green,0.3],Red},{Row@{"\[Delta]"},"Coda"},LegendMarkerSize->40]
+  LineLegend[{Darker[Green,0.3],Red},{Row@{Style["\[Delta]",FontFamily-> "OpenDyslexic"]},Style["Coda",FontFamily-> "OpenDyslexic"]},LegendMarkerSize->40]
 }},Alignment->{Center,Center}]]
 
-],{{ptctrl,0.4,"angle"},0,2Pi},TrackedSymbols:>{ptctrl}]
+],{{ptctrl,0.4,Style["angle",FontFamily-> "OpenDyslexic"]},0,2Pi},TrackedSymbols:>{ptctrl}]
 
 
 teoremaseni[] :=
@@ -1101,13 +1077,13 @@ Graphics[{
 (* C *) {Black,Disk[pc,0.02]},
 
 (* TESTO *)
-Text["A",{pa[[1]],pa[[2]]+0.1}],
-Text["B",{pb[[1]]+0.1, pb[[2]]}],
-Text["C", {pc[[1]]-0.1, pc[[2]]}],
-Text["r",{0.4,-0.15}],
-Text[Style["\[Theta]",Darker[Green,0.3]], {pc[[1]]+0.1, pc[[2]]+0.1}],
-Text[Style["\[Beta]",Darker[Green,0.3]], {pb[[1]]-0.1, pb[[2]]+0.1}],
-Text[Style["\[Alpha]",Darker[Green,0.3]], {pa[[1]]+0.05, pa[[2]]-0.1}]
+Text[Style["A",FontFamily-> "OpenDyslexic"],{pa[[1]],pa[[2]]+0.1}],
+Text[Style["B",FontFamily-> "OpenDyslexic"],{pb[[1]]+0.1, pb[[2]]}],
+Text[Style["C",FontFamily-> "OpenDyslexic"], {pc[[1]]-0.1, pc[[2]]}],
+Text[Style["r",FontFamily-> "OpenDyslexic"],{0.4,-0.15}],
+Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {pc[[1]]+0.1, pc[[2]]+0.1}],
+Text[Style["\[Beta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {pb[[1]]-0.1, pb[[2]]+0.1}],
+Text[Style["\[Alpha]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {pa[[1]]+0.05, pa[[2]]-0.1}]
 
 },
 (* MISURE PLOT *)
@@ -1145,12 +1121,12 @@ p33 = {Cos[Pi/4],Sin[Pi/4]};
 (* C *) {Black,Disk[p11,0.02]},
 
 (* TESTO *)
-Text["A",{p33[[1]], p33[[2]]+0.1}],
-Text["B",{p22[[1]]+0.1, p22[[2]]}],
-Text["C",{p11[[1]]-0.1, p11[[2]]}],
-Text[Style["\[Alpha]",Darker[Green,0.3]], {p33[[1]]-0.05, p33[[2]]-0.1}],
-Text[Style["\[Beta]",Darker[Green,0.3]], {p22[[1]]-0.1, p22[[2]]+0.1}],
-Text[Style["\[Gamma]",Darker[Green,0.3]], {p11[[1]]+0.3, p11[[2]]+0.06}]
+Text[Style["A",FontFamily-> "OpenDyslexic"],{p33[[1]], p33[[2]]+0.1}],
+Text[Style["B",FontFamily-> "OpenDyslexic"],{p22[[1]]+0.1, p22[[2]]}],
+Text[Style["C",FontFamily-> "OpenDyslexic"],{p11[[1]]-0.1, p11[[2]]}],
+Text[Style["\[Alpha]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {p33[[1]]-0.05, p33[[2]]-0.1}],
+Text[Style["\[Beta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {p22[[1]]-0.1, p22[[2]]+0.1}],
+Text[Style["\[Gamma]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {p11[[1]]+0.3, p11[[2]]+0.06}]
 
 },
 (* MISURE PLOT *)
@@ -1195,14 +1171,14 @@ hp33 = {p33[[1]],0};
 (* C *) {Black,Disk[p11,0.02]},
 
 (* TESTO *)
-Text["A",{p33[[1]], p33[[2]]+0.1}],
-Text["B",{p22[[1]]+0.1, p22[[2]]}],
-Text["C",{p11[[1]]-0.1, p11[[2]]}],
-Text["D",{hp33[[1]], hp33[[2]]-0.1}],
-Text["h",{hp33[[1]]-0.05, p33[[2]]/2}],
-Text[Style["\[Alpha]",Darker[Green,0.3]], {p33[[1]]-0.05, p33[[2]]-0.1}],
-Text[Style["\[Beta]",Darker[Green,0.3]], {p22[[1]]-0.1, p22[[2]]+0.1}],
-Text[Style["\[Gamma]",Darker[Green,0.3]], {p11[[1]]+0.3, p11[[2]]+0.06}]
+Text[Style["A",FontFamily-> "OpenDyslexic"],{p33[[1]], p33[[2]]+0.1}],
+Text[Style["B",FontFamily-> "OpenDyslexic"],{p22[[1]]+0.1, p22[[2]]}],
+Text[Style["C",FontFamily-> "OpenDyslexic"],{p11[[1]]-0.1, p11[[2]]}],
+Text[Style["D",FontFamily-> "OpenDyslexic"],{hp33[[1]], hp33[[2]]-0.1}],
+Text[Style["h",FontFamily-> "OpenDyslexic"],{hp33[[1]]-0.05, p33[[2]]/2}],
+Text[Style["\[Alpha]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {p33[[1]]-0.05, p33[[2]]-0.1}],
+Text[Style["\[Beta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {p22[[1]]-0.1, p22[[2]]+0.1}],
+Text[Style["\[Gamma]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {p11[[1]]+0.3, p11[[2]]+0.06}]
 
 },
 (* MISURE PLOT *)
@@ -1243,12 +1219,12 @@ hp33 = {p33[[1]],0};
 (* C *) {Black,Disk[p11,0.02]},
 
 (* TESTO *)
-Text["A",{p33[[1]], p33[[2]]+0.1}],
-Text["C",{p11[[1]]-0.1, p11[[2]]}],
-Text["B",{hp33[[1]], hp33[[2]]-0.1}],
-Text[Style["\[Alpha]",Darker[Green,0.3]], {p33[[1]]-0.05, p33[[2]]-0.1}],
-Text[Style["\[Beta]",Darker[Green,0.3]], {hp33[[1]]-0.15, hp33[[2]]+0.15}],
-Text[Style["\[Gamma]",Darker[Green,0.3]], {p11[[1]]+0.3, p11[[2]]+0.06}]
+Text[Style["A",FontFamily-> "OpenDyslexic"],{p33[[1]], p33[[2]]+0.1}],
+Text[Style["C",FontFamily-> "OpenDyslexic"],{p11[[1]]-0.1, p11[[2]]}],
+Text[Style["B",FontFamily-> "OpenDyslexic"],{hp33[[1]], hp33[[2]]-0.1}],
+Text[Style["\[Alpha]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {p33[[1]]-0.05, p33[[2]]-0.1}],
+Text[Style["\[Beta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {hp33[[1]]-0.15, hp33[[2]]+0.15}],
+Text[Style["\[Gamma]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {p11[[1]]+0.3, p11[[2]]+0.06}]
 
 },
 (* MISURE PLOT*)

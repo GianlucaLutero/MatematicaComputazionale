@@ -146,11 +146,17 @@ Manipulate[
 Module[{anglegraph,maingraph},
 anglegraph[th_]:=Show[
 Graphics[{
+(* DETTAGLI *)
+(* Circonferenza *)
 {Lighter[Gray,0.5],Circle[{0,0},1]},
+
+(* Arco di circonferenza *)
 {Darker[Green,0.2],Thick,Circle[{0,0},1,{0,th}]},
 
+(* Linee di dettaglio *)
 {Lighter[Gray,0.5],Line[{{0,0},{Cos[th],Sin[th]}}]},
 {Red,Thick,Line[{{Cos[th],0},{Cos[th],Sin[th]}}]},
+
 (* yp *)
 {Black,Disk[{0, Sin[th]},0.02]},
 
@@ -181,31 +187,49 @@ PlotRange->1,ImageSize->400,BaseStyle->{15},Axes->True,PlotRange->{{-1,1},{-1,1}
 
 (* genero grafico *)
 maingraph[th_]:=Module[{},
+	(* plot della funzione seno *)
 	Show[Plot[{Sin[x]},{x,0.0001,th},PlotRange->{{0,2Pi},{-1,1}},ImageSize->650,PlotRangePadding->{0,0.25},ImagePadding->{{30,12},{0,0}},PlotRangeClipping->False,PlotStyle->Darker[Red,0.6],
+	
+	(* GRIGLIA *)
+	(* Valori asse x, y *)
 	Ticks->{Table[{n Pi/4,n Pi/4},{n,0,8}],Table[n,{n,-1,1,1/2}]},
+	
+	(* Linee sulla griglia*)
 	GridLines->{Table[{n Pi/4,Lighter[Gray,0.7]},{n,-2,8}],Table[{n,Lighter[Gray,0.7]},{n,-1,1,1/2}]},ImageSize->{Automatic,145}],
+	
+	(* DETTAGLI *)
 	Graphics[{
+		(* Linea di dettaglio asse x *)
 		{Darker[Green,0.2],Thick,Line[{{0,0},{th,0}}]},
+		
+		(* Linea di dettaglio asse y *)
 		{Red,Thick,Line[{{th,0},{th,Sin[th]}}]}
 	}],
 	AspectRatio->Automatic,BaseStyle->{12}]];
 
+(* Variabile diamica *)
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
-Labeled[Grid[{
+Labeled[
+	Grid[{
+	(* INIZIALIZAZIONE LOCATOR *)
+	(* http://mathworld.wolfram.com/Circle.html *)
+	{LocatorPane[Dynamic[pt,
+		{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
+		(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
+		(pt=Normalize[#];ptctrl=pt2[[1]])&}],
+	(* Disegno circonferenza *)	
+	Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]],
 
-{LocatorPane[Dynamic[pt,
-	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
-	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
-	(pt=Normalize[#];ptctrl=pt2[[1]])&}],
-Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]],
+	(* INIZIALIZAZIONE LOCATOR *)
+	LocatorPane[Dynamic[pt2,
+		{(pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]],0})&,
+		(pt2={#[[1]],0};pt={Cos[#[[1]]],Sin[#[[1]]]})&,
+		(pt2={#[[1]],0};ptctrl=#[[1]])&}],
+	(* Disegno grafico *)	
+	Dynamic[maingraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]]}},Spacings->0]
 
-LocatorPane[Dynamic[pt2,
-	{(pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]],0})&,
-	(pt2={#[[1]],0};pt={Cos[#[[1]]],Sin[#[[1]]]})&,
-	(pt2={#[[1]],0};ptctrl=#[[1]])&}],
-Dynamic[maingraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]]}},Spacings->0],{Row[{Style["Funzione ","Label",22,Gray],Text@Style["Seno",Red,22]}],
-Style["",10,Lighter[Gray,0.7],"Label"]},{{Top,Center},{Bottom,Right}}]]
-],
+	,{Row[{Style["Funzione ","Label",22,Gray],Text@Style["Seno",Red,22]}], Style["",10,Lighter[Gray,0.7],"Label"]},{{Top,Center},{Bottom,Right}}
+]]],
 {{ptctrl,Pi/6,"angle"},0,2Pi},TrackedSymbols:>{ptctrl}]
 
 
@@ -750,7 +774,7 @@ Labeled[Grid[{
 
      LineLegend[{Darker[Green,0.3],Red, Blue,Orange},{Row[{Style["\[Theta]"]}],Row@{"Sin(\[Theta]) = ",pt[[2]]},Row@{"Cos(\[Theta]) = ",pt[[1]]}, Row@{"Tan(\[Theta]) = ",Tan[ptctrl]}},LegendMarkerSize->40, LabelStyle->15]
 
-}},Alignment->{Center,Center}],{Row[{Style["","Label",20,Gray],Text@Style["\[Theta] = ",Darker[Green,0.3],20],Style[ptctrl,Darker[Green,0.3],25]}],
+}},Alignment->{Center,Center}],{Row[{Style["","Label",20,Gray],Text@Style["\[Theta] = ",Darker[Green,0.3],20],Style[(ptctrl*360)/(2*Pi),Darker[Green,0.3],25]}],
 
 Style["",10,Lighter[Gray,0.7],"Label"]},{{Top,Left},{Bottom,Right}}]]
 ],
@@ -809,7 +833,7 @@ Labeled[Grid[{
 	
     LineLegend[{Darker[Green,0.3],Red, Blue,Orange},{Row[{Style["\[Theta]"]}],Row@{"Sin(\[Theta]) = ",pt[[2]]},Row@{"Cos(\[Theta]) = ",pt[[1]]}, Row@{"Tan(\[Theta]) = ",Tan[ptctrl]}},LegendMarkerSize->40, LabelStyle->15]
 }},Alignment->{Center,Center}],
-{Row[{Style["","Label",20,Gray],Text@Style["\[Theta] = ",Darker[Green,0.3],20],Style[ptctrl,Darker[Green,0.3],25]}],
+{Row[{Style["","Label",20,Gray],Text@Style["\[Theta] = ",Darker[Green,0.3],20],Style[(ptctrl*360)/(2*Pi),Darker[Green,0.3],25]}],
 
 Style["",10,Lighter[Gray,0.7],"Label"]},{{Top,Left},{Bottom,Right}}]]
 ],
@@ -1248,10 +1272,10 @@ EsercizioEsempio[]:=
 
 Module[{},
 
-datiEsempio = StringJoin[Style["A = 25 \nC = 50",FontFamily-> "sans sarif",Bold],Style["\nTrovare Sen(\[Alpha])",FontColor->Red,FontFamily-> "sans sarif",Bold]];
-risoluzioneEsempio =Panel[" Sin(\[Alpha]) = \!\(\*FractionBox[\(A\), \(C\)]\) = \!\(\*FractionBox[\(\(\\\ \\\ \)\(25\)\(\\\ \)\), \(\(\\\ \)\(50\)\)]\) = \!\(\*FractionBox[\(\(\\\ \)\(1\)\(\\\ \)\), \(2\)]\)"];
+datiEsempio = StringJoin[Style["A = 25 \nC = 50",FontFamily-> "OpenDyslexic",Bold],Style["\nTrovare sen(\[Alpha])",FontColor->Red,FontFamily-> "OpenDyslexic",Bold]];
+risoluzioneEsempio =Panel[Style[" Sin(\[Alpha]) = \!\(\*FractionBox[\(A\), \(C\)]\) = \!\(\*FractionBox[\(\(\\\ \\\ \)\(25\)\(\\\ \)\), \(\(\\\ \)\(50\)\)]\) = \!\(\*FractionBox[\(\(\\\ \)\(1\)\(\\\ \)\), \(2\)]\)",FontFamily-> "OpenDyslexic"]];
 
-Grid[{{Text[Style["Esempio 1:",20,FontColor-> Red]]}, 
+Grid[{{Text[Style["Esempio 1:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]]}, 
 
 (*Disegno del triangolo*)
 {Magnify[Graphics[{
@@ -1280,19 +1304,19 @@ Grid[{{Text[Style["Esempio 1:",20,FontColor-> Red]]},
   
   (* labels *)
   Rotate[
-    Text[Style["A", 15],{-0.1, 0.5}], 0 Degree],
-    Text[Style["B", 15],{0.7, -0.1}],
-    Text[Style["C", 15],{1, 0.6}, {-1, 0}],
-    Text[Style["\[Theta]", 10,Darker[Green,0.3]], {1.7, 0.08}],
-    Text[Style["\[Alpha]",10,Darker[Green,0.3]],{0.085,0.75}],
-    Text[Style["90\[Degree]",10,Darker[Green,0.3]],{0.2,0.2}]
+    Text[Style["A", 15,FontFamily-> "OpenDyslexic"],{-0.1, 0.5}], 0 Degree],
+    Text[Style["B", 15,FontFamily-> "OpenDyslexic"],{0.7, -0.1}],
+    Text[Style["C", 15,FontFamily-> "OpenDyslexic"],{1, 0.6}, {-1, 0}],
+    Text[Style["\[Alpha]", 10,Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {1.7, 0.08}],
+    Text[Style["\[Theta]",10,Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.085,0.75}],
+    Text[Style["90\[Degree]",10,Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.2,0.2}]
   }],2],
   
   (*Vengono stampati i dati del problema*)
-  Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsempio],1.4],Text[""]},
+  Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsempio],1],Text[""]},
   
   (*Viene stampata la risoluzione dell'esempio*)
-  {Text[Style["Procedimento:",17,FontColor -> Red]]},{Text[" "],Magnify[risoluzioneEsempio,2]}}
+  {Text[Style["Procedimento:",17,FontColor -> Red,FontFamily-> "OpenDyslexic"]]},{Text[" "],Magnify[risoluzioneEsempio,2]}}
 
 ,Alignment-> {Left,Center},Spacings -> {5,5},Dividers->{{},{3 -> Red}}]
 
@@ -1316,11 +1340,24 @@ If[answer == "",
 (*Esercizio1 *)
 Esercizio1[]:=
 Module[{},
-datiEsercizioGuidato = StringJoin[Style["A = 40 \nB = 110",FontFamily-> "sans sarif",Bold],Style["\nTrovare Sen(\[Alpha]),Cos(\[Alpha]),Tan(\[Alpha]) e l'angolo \[Alpha]",FontColor->Red,FontFamily-> "sans sarif",Bold]];
+datiEsercizioGuidato = StringJoin[Style["A = 40 \nB = 110",FontFamily-> "OpenDyslexic",Bold],
+                                   Style["\nTrovare sen(\[Alpha]),cos(\[Alpha]),tan(\[Alpha]) e l'angolo \[Alpha]",FontColor->Red,FontFamily-> "OpenDyslexic",Bold,FontSize->14]];
 
 risoluzioneEsercizioGuidatoPasso1 = Row[{TPitagora[],
+									(*Style[
                                     "\n",
-                                    "Applico il teorema \[LongRightArrow] \!\(\*SuperscriptBox[\(A\), \(2\)]\) + ",
+                                    "Applico il teorema \[LongRightArrow] \!\(\*SuperscriptBox[\(A\), \(2\)]\) + ",FontFamily-> "OpenDyslexic"],
+                                    Dynamic[InputField[Dynamic[catetoNome],String,FieldSize-> 1]],
+                                    "\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\) ",
+                                    Dynamic[CheckAnswer[catetoNome,"B"]],
+                                    " = ",
+                                    InputField[Dynamic[ipotenusaNome],String,FieldSize-> 1] ,
+                                   "\!\(\*SuperscriptBox[\(\\\ \), \(\(2\)\(\\\ \\\ \\\ \)\)]\)",
+                                    Dynamic[CheckAnswer[ipotenusaNome,"C"]],
+                                    Style["\n \n",FontFamily-> "OpenDyslexic"],*)
+                                    
+                                   "\n",
+                                    Style["Applico il teorema \[LongRightArrow] \!\(\*SuperscriptBox[\(A\), \(2\)]\) + ",FontFamily->"OpenDyslexic"],
                                     Dynamic[InputField[Dynamic[catetoNome],String,FieldSize-> 1]],
                                     "\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\) ",
                                     Dynamic[CheckAnswer[catetoNome,"B"]],
@@ -1329,19 +1366,19 @@ risoluzioneEsercizioGuidatoPasso1 = Row[{TPitagora[],
                                     "\!\(\*SuperscriptBox[\(\\\ \), \(\(2\)\(\\\ \\\ \\\ \)\)]\)",
                                     Dynamic[CheckAnswer[ipotenusaNome,"C"]],
                                     "\n \n",
-                                    "Sostituisco i valori \[LongRightArrow] \!\(\*SuperscriptBox[\(40\), \(2\)]\) + ",
+                                    Style["Sostituisco i valori \[LongRightArrow] \!\(\*SuperscriptBox[\(40\), \(2\)]\) + ",FontFamily-> "OpenDyslexic"],
                                     InputField[Dynamic[catetoValore],String,FieldSize-> 3],
                                     "\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\) ",
                                     Dynamic[CheckAnswer[catetoValore,"110"]],
                                     " = \!\(\*SuperscriptBox[\(C\), \(2\)]\)\n",
                                     "\n",
-                                    "Ricavo C \[LongRightArrow] C = ",
+                                    Style["Ricavo C \[LongRightArrow] C = ",FontFamily-> "OpenDyslexic"],
                                     SqrtBox[Row[{"\!\(\*SuperscriptBox[\(A\), \(2\)]\) + ",
                                     InputField[Dynamic[catetoBNome],String,FieldSize-> 1],
                                     "\!\(\*SuperscriptBox[\(\\\ \), \(\(2\)\(\\\ \\\ \\\ \\\ \)\)]\)"}]] // DisplayForm,
                                     Dynamic[CheckAnswer[catetoBNome,"B"]],"\n \n",
-                                    "Approssima il risultato per difetto!\n\n",
-                                    "Calcolo C \[LongRightArrow] C = ", 
+                                    Style["Approssima il risultato per difetto!\n\n",FontFamily-> "OpenDyslexic"],
+                                    Style["Calcolo C \[LongRightArrow] C = ",FontFamily-> "OpenDyslexic"], 
                                     SqrtBox[Row[{InputField[Dynamic[catetoAValore],String,FieldSize-> 2],
                                     "\!\(\*SuperscriptBox[\(\\\ \), \(\(2\)\(\\\ \\\ \\\ \\\ \)\)]\)",
                                     Dynamic[CheckAnswer[catetoAValore,"40"]],
@@ -1354,48 +1391,48 @@ risoluzioneEsercizioGuidatoPasso1 = Row[{TPitagora[],
                                     Dynamic[CheckAnswer[ipotenusaValore,"117"]]
 }];
 
-risoluzioneEsercizioGuidatoPasso2 = Row[{"sen(\[Alpha]) = ",
-                                    ("A")/InputField[Dynamic[ipotenusaSenCNome],String,FieldSize->2],
+risoluzioneEsercizioGuidatoPasso2 = Row[{Style["sen(\[Alpha]) = ",FontFamily-> "OpenDyslexic"],
+                                    (Style["A",FontFamily-> "OpenDyslexic"])/InputField[Dynamic[ipotenusaSenCNome],String,FieldSize->2],
                                     Dynamic[CheckAnswer[ipotenusaSenCNome,"C"]],
                                     " = ",
-                                    ("40")/InputField[Dynamic[ipotenusaSenValore],String,FieldSize->3],
+                                    (Style["40",FontFamily-> "OpenDyslexic"])/InputField[Dynamic[ipotenusaSenValore],String,FieldSize->3],
                                     Dynamic[CheckAnswer[ipotenusaSenValore,"117"]]}];
 
-risoluzioneEsercizioGuidatoPasso3 = Row[{"cos(\[Alpha]) = ",
-                                    ("B")/InputField[Dynamic[ipotenusaCosCNome],String,FieldSize->2],
+risoluzioneEsercizioGuidatoPasso3 = Row[{Style["cos(\[Alpha]) = ",FontFamily-> "OpenDyslexic"],
+                                    (Style["B",FontFamily-> "OpenDyslexic"])/InputField[Dynamic[ipotenusaCosCNome],String,FieldSize->2],
                                     Dynamic[CheckAnswer[ipotenusaCosCNome,"C"]],
                                     " = ",
-                                    ("110")/InputField[Dynamic[ipotenusaCosValore],String,FieldSize->3],
+                                    (Style["110",FontFamily-> "OpenDyslexic"])/InputField[Dynamic[ipotenusaCosValore],String,FieldSize->3],
                                     Dynamic[CheckAnswer[ipotenusaCosValore,"117"]]}];
 
 
-risoluzioneEsercizioGuidatoPasso4 = Row[{"tan(\[Alpha]) = ",
-                                       Row[{InputField[Dynamic[senNome],String,FieldSize->3],"(\[Alpha])"}]/("cos(\[Alpha])"),
+risoluzioneEsercizioGuidatoPasso4 = Row[{Style["tan(\[Alpha]) = ",FontFamily-> "OpenDyslexic"],
+                                       Row[{InputField[Dynamic[senNome],String,FieldSize->3],Style["(\[Alpha])",FontFamily-> "OpenDyslexic"]}]/(Style["cos(\[Alpha])",FontFamily-> "OpenDyslexic"]),
                                        Dynamic[CheckAnswer[senNome,"sen"]],
                                        "\n",
-                                       "Sostituisco i valori di seno e coseno trovati ai passi 2 e 3: ",
+                                       Style["Sostituisco i valori di seno e coseno trovati ai passi 2 e 3: ",FontFamily-> "OpenDyslexic"],
                                        Row[{InputField[Dynamic[senValoreNum],String,FieldSize->3],Dynamic[CheckAnswer[senValoreNum,"40"]]}]/Row[ {InputField[Dynamic[senValoreDen],String,FieldSize->3],Dynamic[CheckAnswer[senValoreDen,"117"]]}],
                                        "/",
                                        Row[{InputField[Dynamic[cosValoreNum],String,FieldSize->3],Dynamic[CheckAnswer[cosValoreNum,"110"]]}]/Row[{InputField[Dynamic[cosValoreDen],String,FieldSize->3],Dynamic[CheckAnswer[cosValoreDen,"117"]]}],
                                        "\n",
-                                       "Ricorda! La divisione tra due frazioni\ndiventa la prima frazione moltiplicata per l'inversa della seconda:",
+                                       Style["Ricorda! La divisione tra due frazioni\ndiventa la prima frazione moltiplicata per l'inversa della seconda:",FontFamily-> "OpenDyslexic"],
                                        Row[{InputField[Dynamic[senValoreNum2],String,FieldSize->3],Dynamic[CheckAnswer[senValoreNum2,"40"]]}]/Row[ {InputField[Dynamic[senValoreDen2],String,FieldSize->3],Dynamic[CheckAnswer[senValoreDen2,"117"]]}],
                                        "\[CenterDot]",
                                        Row[{InputField[Dynamic[cosValoreNum2],String,FieldSize->3],Dynamic[CheckAnswer[cosValoreNum2,"117"]]}]/Row[{InputField[Dynamic[cosValoreDen2],String,FieldSize->3],Dynamic[CheckAnswer[cosValoreDen2,"110"]]}],
                                        "\n",
-                                       "Dopo aver eseguito la moltiplicazione tra le due frazioni ottengo:",
+                                       Style["Dopo aver eseguito la moltiplicazione tra le due frazioni ottengo:",FontFamily-> "OpenDyslexic"],
                                        Row[{InputField[Dynamic[resNum],String,FieldSize->3],Dynamic[CheckAnswer[resNum,"40"]]}]/Row[{InputField[Dynamic[resDen],String,FieldSize->3],Dynamic[CheckAnswer[resDen,"110"]]}],
                                        "\n",
-                                       "Semplifico ai minimi termini la frazione e ottengo:",
+                                       Style["Semplifico ai minimi termini la frazione e ottengo:",FontFamily-> "OpenDyslexic"],
                                        Row[{InputField[Dynamic[resNum2],String,FieldSize->3],Dynamic[CheckAnswer[resNum2,"4"]]}]/Row[{InputField[Dynamic[resDen2],String,FieldSize->3],Dynamic[CheckAnswer[resDen2,"11"]]}]
 }];
 
-risoluzioneEsercizioGuidatoPasso5 =Row[{"\[Alpha] = \!\(\*SuperscriptBox[\(sen\), \(-1\)]\)(",
+risoluzioneEsercizioGuidatoPasso5 =Row[{Style["\[Alpha] = \!\(\*SuperscriptBox[\(sen\), \(-1\)]\)(",FontFamily-> "OpenDyslexic"],
                                        Row[{InputField[Dynamic[senValoreNum3],String,FieldSize->3],Dynamic[CheckAnswer[senValoreNum3,"40"]]}]/Row[{InputField[Dynamic[senValoreDen3],String,FieldSize->3],Dynamic[CheckAnswer[senValoreDen3,"117"]]}],")"}];
 
 
 
-Grid[{{Text[Style["Esercizio Guidato:",20,FontColor-> Red]]},
+Grid[{{Text[Style["Esercizio Guidato:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]]},
 
 (*Disegno del triangolo *)
 {Magnify[Graphics[{
@@ -1418,38 +1455,38 @@ Grid[{{Text[Style["Esercizio Guidato:",20,FontColor-> Red]]},
   
   (* labels *)
   Rotate[
-   Text[Style["A", 15],
+   Text[Style["A", 15,FontFamily-> "OpenDyslexic"],
     {-0.1, 0.5}], 0 Degree],
-  Text[Style["B", 15],
+  Text[Style["B", 15,FontFamily-> "OpenDyslexic"],
    {0.7, -0.1}],
-  Text[Style["C", 15],
+  Text[Style["C", 15,FontFamily-> "OpenDyslexic"],
    {1, 0.6}, {-1, 0}],
- Text[Style["\[Alpha]", 10,Darker[Green,0.3]], {1.7, 0.08}],
- Text[Style["\[Beta]",10,Darker[Green,0.3]],{0.085,0.75}],
- Text[Style["90\[Degree]",10,Darker[Green,0.3]],{0.2,0.2}]
+ Text[Style["\[Alpha]", 10,Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {1.7, 0.08}],
+ Text[Style["\[Beta]",10,Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.085,0.75}],
+ Text[Style["90\[Degree]",10,Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.2,0.2}]
   }],2]
   
   (*Vengono stampati i dati dell'esercizio*)
-,Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizioGuidato],1.4],Text[""]},
-{Text[Style["Procedimento:",17,FontColor -> Red]]},
+,Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizioGuidato],1],Text[""]},
+{Text[Style["Procedimento:",17,FontColor -> Red,FontFamily-> "OpenDyslexic"]]},
 (*Viene stampato il passo 1 dell'esercizio*)
-{Text[Style["Passo 1: Cerchiamo l'ipotenusa C.\n Applico il Teorema di Pitagora:",Bold,15]]},
+{Text[Style["Passo 1: Cerchiamo l'ipotenusa C.\n Applico il Teorema di Pitagora:",Bold,15,FontFamily-> "OpenDyslexic"]]},
 {Text[""],Panel[Magnify[risoluzioneEsercizioGuidatoPasso1,2]]},
 
 (*Viene stampato il passo 2 dell'esercizio*)
-{Text[Style["Passo 2: Cerchiamo sen(\[Alpha]).",Bold,15]]},
+{Text[Style["Passo 2: Cerchiamo sen(\[Alpha]).\nAttenzione: nei passaggi,\nprima sostituisci le lettere,\npoi i valori corrispondenti.",Bold,15,FontFamily-> "OpenDyslexic"]]},
 {Text[""],Panel[Magnify[risoluzioneEsercizioGuidatoPasso2,2]]},
 
 (*Viene stampato il passo 3 dell'esercizio*)
-{Text[Style["Passo 3: Cerchiamo cos(\[Alpha]).",Bold,15]]},
+{Text[Style["Passo 3: Cerchiamo cos(\[Alpha]).",Bold,15,FontFamily-> "OpenDyslexic"]]},
 {Text[""],Panel[Magnify[risoluzioneEsercizioGuidatoPasso3,2]]},
 
 (*Viene stampato il passo 4 dell'esercizio*)
-{Text[Style["Passo 4: Cerchiamo tan(\[Alpha]).",Bold,15]]},
+{Text[Style["Passo 4: Cerchiamo tan(\[Alpha]).",Bold,15,FontFamily-> "OpenDyslexic"]]},
 {Text[""],Panel[Magnify[risoluzioneEsercizioGuidatoPasso4,2]]},
 
 (*Viene stampato il passo 5 dell'esercizio*)
-{Text[Style["Passo 5: Cerchiamo \[Alpha].",Bold,15]]},
+{Text[Style["Passo 5: Cerchiamo \[Alpha].",Bold,15,FontFamily-> "OpenDyslexic"]]},
 {Text[""],Panel[Magnify[risoluzioneEsercizioGuidatoPasso5,2]]}
 },Alignment-> {Left,Center},Spacings -> {1,1}] 
 
@@ -1459,9 +1496,9 @@ Grid[{{Text[Style["Esercizio Guidato:",20,FontColor-> Red]]},
 Esercizio2[]:=
 Module[{catAd = "",catOp = "",catOp2= "",A= ""},
 
-datiEsercizio2 = StringJoin[Style["B = 30 \ntan(\[Beta]) = \!\(\*FractionBox[\(3\), \(5\)]\)",FontFamily-> "sans sarif",Bold],Style["\nTrovare A",FontColor->Red,FontFamily-> "sans sarif",Bold]];
+datiEsercizio2 = StringJoin[Style["B = 30 \ntan(\[Beta]) = \!\(\*FractionBox[\(3\), \(5\)]\)",FontFamily-> "OpenDyslexic",Bold],Style["\nTrovare A",FontColor->Red,FontFamily-> "OpenDyslexic",Bold]];
 
-Grid[{{Text[Style["Esercizio 2:",20,FontColor-> Red]]},
+Grid[{{Text[Style["Esercizio 2:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]]},
 
  (* Disegno il triangolo  *)
  {Magnify[Graphics[{
@@ -1484,51 +1521,52 @@ Grid[{{Text[Style["Esercizio 2:",20,FontColor-> Red]]},
 
   (* labels *)
    Rotate[
-       Text[Style["A", 15],
+       Text[Style["A", 15,FontFamily-> "OpenDyslexic"],
        {-0.1, 0.5}], 0 Degree],
-       Text[Style["B", 15],
+       Text[Style["B", 15,FontFamily-> "OpenDyslexic"],
        {0.3, -0.1}],
-       Text[Style["C", 15],
+       Text[Style["C", 15,FontFamily-> "OpenDyslexic"],
        {0.5, 0.6}, {-1, 0}],
-        Text[Style["\[Beta]",10, Darker[Green,0.3]],{0.085,1.0}],
-        Text[Style["\[Alpha]", 10,Darker[Green,0.3]], {0.6, 0.08}],
-        Text[Style["90\[Degree]",10,Darker[Green,0.3]],{0.15,0.15}]
+        Text[Style["\[Beta]",10, Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.085,1.0}],
+        Text[Style["\[Alpha]", 10,Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {0.6, 0.08}],
+        Text[Style["90\[Degree]",10,Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.15,0.15}]
   }],2],
-Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizio2],1.4]},
+Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizio2],1]},
 
- {Text[Style["Procedimento:",17,FontColor -> Red]]},
+ {Text[Style["Procedimento:",17,FontColor -> Red,FontFamily-> "OpenDyslexic"]]},
 
  (* Viene stampato il suggerimento *)
- {Text[Style["Ricorda! tan\[Beta] =\!\(\*FractionBox[\(\(\\\ \)\(cateto\\\ opposto\)\), \(cateto\\\ adiacente\)]\)",Bold,20]]},
+ {Text[Style["Ricorda! tan\[Beta] =\!\(\*FractionBox[\(\(\\\ \)\(cateto\\\ opposto\)\), \(cateto\\\ adiacente\)]\)",Bold,20,FontFamily-> "OpenDyslexic"]]},
 
  (* Prima domanda *)
- {Text[Style["Qual \[EGrave] il cateto adiacente?",Bold,20]],
-              Magnify[RadioButtonBar[Dynamic[catAd],{"A","B","C"}],2],
+ {Text[Style["Qual \[EGrave] il cateto adiacente?",Bold,20,FontFamily-> "OpenDyslexic"]],
+              Magnify[RadioButtonBar[Dynamic[catAd],{"A","B","C"}],1.5],
               Magnify[Dynamic[CheckAnswer[catAd,"A"]],3]},
 
- (* Serconda domanda *)
- {Text[Style["Qual \[EGrave] il cateto opposto?",Bold,20]],
-             Magnify[RadioButtonBar[Dynamic[catOp],{"A","B","C"}],2],
+ (* Seconda domanda *)
+ {Text[Style["Qual \[EGrave] il cateto opposto?",Bold,20,FontFamily-> "OpenDyslexic"]],
+             Magnify[RadioButtonBar[Dynamic[catOp],{"A","B","C"}],1.5],
              Magnify[Dynamic[CheckAnswer[catOp,"B"]],3]},
 
  (* Terza domanda *)
- {Magnify[Row[{Text[Style["tan\[Beta] = "]],
+ {Style["Completa i passaggi\ned osserva i suggerimenti proposti: ",FontFamily->"OpenDyslexic",Bold,FontSize->20]},
+ {Magnify[Row[{Text[Style["tan\[Beta] = ",FontFamily-> "OpenDyslexic"]],
           Row[{InputField[Dynamic[catOp2],String,FieldSize->1],Dynamic[CheckAnswer[catOp2,"B"]]}]/Row[{InputField[Dynamic[catAd2],String,FieldSize->1],Dynamic[CheckAnswer[catAd2,"A"]]}],
-          Text[Style["\[LongRightArrow] A tan(\[Beta]) = B \[LongRightArrow] A = \!\(\*FractionBox[\(\(\\\ \)\(B\)\), \(tan \((\[Beta])\)\)]\)"]]}],2]},
+          Text[Style["    \[LongRightArrow]    A\[CenterDot]tan(\[Beta]) = B    \[LongRightArrow]    A = \!\(\*FractionBox[\(\(\\\ \)\(B\)\), \(tan \((\[Beta])\)\)]\)",FontFamily-> "OpenDyslexic"]]}],1.5],SpanFromLeft},
 
  (* Quarta domanda *)
- {Text[Style["Quanto vale A?",Bold,20]],
-       Magnify[RadioButtonBar[Dynamic[A],{"50","18","2"}],2],
+ {Text[Style["Quanto vale A?",Bold,20,FontFamily-> "OpenDyslexic"]],
+       Magnify[RadioButtonBar[Dynamic[A],{"50","18","2"}],1.5],
        Magnify[Dynamic[CheckAnswer[A,"50"]],3]}
  
-},Alignment-> {Left,Center},Spacings -> {10,5}] 
+},Alignment-> {Left,Center},Spacings -> {10,1}] 
 ]
 
 
 Esercizio3[]:=
 Module[{},
 
-Grid[{{Text[Style["Esercizio 3:",20,FontColor-> Red]]},
+Grid[{{Text[Style["Esercizio 3:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]]},
 (* Disegno del triangolo inscritto nella circonferenza*)
 {Graphics[{
 
@@ -1558,30 +1596,30 @@ Grid[{{Text[Style["Esercizio 3:",20,FontColor-> Red]]},
 {Black,Disk[{Cos[Pi+0.5], Sin[Pi+0.5]},0.02]},
 
 (* TESTO *)
-Text["  A",{Cos[(Pi/2)+0.4], Sin[(Pi/2)]}],
-Text["   B",{Cos[0], Sin[0-0.3]}],
-Text["   C",{Cos[Pi+0.2], Sin[Pi+0.6]}],
-Text[Style["\[Theta]",Darker[Green,0.2]],{Cos[Pi+0.9],Sin[11/6 Pi+0.2]}],
-Text["r",{0.4,-0.15}]
+Text[Style["  A",FontFamily-> "OpenDyslexic"],{Cos[(Pi/2)+0.4], Sin[(Pi/2)]}],
+Text[Style["   B",FontFamily-> "OpenDyslexic"],{Cos[0], Sin[0-0.3]}],
+Text[Style["   C",FontFamily-> "OpenDyslexic"],{Cos[Pi+0.2], Sin[Pi+0.6]}],
+Text[Style["\[Theta]",Darker[Green,0.2],FontFamily-> "OpenDyslexic"],{Cos[Pi+0.9],Sin[11/6 Pi+0.2]}],
+Text[Style["r",FontFamily-> "OpenDyslexic"],{0.4,-0.15}]
 
 },PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->0.25]
 
  (* Vengono stampati i dati dell'esercizio *)
-,Magnify[Row[{"r = 2\n\[Theta] = \!\(\*SuperscriptBox[\(60\), \(o\)]\)\n",Style["Trovare \!\(\*OverscriptBox[\(AB\), \(_\)]\)",FontColor->Red,FontFamily-> "sans sarif",Bold]}],2]},
-{Text[Style["Procedimento:",17,FontColor -> Red]]},
+,Magnify[Row[{Style["r = 2\n\[Theta] = \!\(\*SuperscriptBox[\(60\), \(o\)]\)\n",FontFamily->"OpenDyslexic",Bold],Style["Trovare \!\(\*OverscriptBox[\(AB\), \(_\)]\)",FontColor->Red,FontFamily ->  "OpenDyslexic",Bold]}],1.5]},
+{Text[Style["Procedimento:",17,FontColor -> Red,FontFamily-> "OpenDyslexic"]]},
 
 (* Risoluzione dell'esercizio *)
 {Magnify[ Panel[
-          Row[{Text[Style["\!\(\*OverscriptBox[\(AB\), \(_\)]\) = 2\[CenterDot] "]],
+          Row[{Text[Style["\!\(\*OverscriptBox[\(AB\), \(_\)]\) = 2\[CenterDot] ",FontFamily-> "OpenDyslexic"]],
                Row[{InputField[Dynamic[raggio],String,FieldSize->1],Dynamic[CheckAnswer[raggio,"2"]]}],
-               " \[CenterDot] sen(",
+               Style[" \[CenterDot] sen(",FontFamily-> "OpenDyslexic"],
                Row[{InputField[Dynamic[angolo],String,FieldSize->1.8],"\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)",Dynamic[CheckAnswer[angolo,"60"]]}],
                ") = ",
                Row[{InputField[Dynamic[AB],String,FieldSize->1],Dynamic[CheckAnswer[AB,"4"]]}],
                "\[CenterDot]",
                Row[{SqrtBox[InputField[Dynamic[num],String,FieldSize->1]]// DisplayForm,Dynamic[CheckAnswer[num,"3"]]}] /Row[{InputField[Dynamic[den],String,FieldSize->1],Dynamic[CheckAnswer[den,"2"]]}],
                " = ",
-               Row[{InputField[Dynamic[coef],String,FieldSize->1],Dynamic[CheckAnswer[coef,"5"]]}],
+               Row[{InputField[Dynamic[coef],String,FieldSize->1],Dynamic[CheckAnswer[coef,"2"]]}],
                " \[CenterDot]",
                Row[{SqrtBox[InputField[Dynamic[coef2],String,FieldSize->1]]// DisplayForm,Dynamic[CheckAnswer[coef2,"3"]]}]
 }]],2]}
@@ -1592,7 +1630,7 @@ Text["r",{0.4,-0.15}]
 Esercizio4[]:=
 Module[{AB2=""},
 
-Grid[{{Text[Style["Esercizio 4:",20,FontColor-> Red]]},
+Grid[{{Text[Style["Esercizio 4:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]]},
 (*Disegno del triangolo inscritto nella circonferenza *)
 {Graphics[{
 
@@ -1621,36 +1659,36 @@ Grid[{{Text[Style["Esercizio 4:",20,FontColor-> Red]]},
 {Black,Disk[{Cos[Pi+0.5], Sin[Pi+0.5]},0.02]},
 
 (* TESTO *)
-Text["  A",{Cos[(Pi/2)+0.4], Sin[(Pi/2)]}],
-Text["   B",{Cos[0], Sin[0-0.3]}],
-Text["   C",{Cos[Pi+0.2], Sin[Pi+0.6]}],
-Text[Style["\[Theta]",Darker[Green,0.3]],{Cos[Pi+0.9],Sin[11/6 Pi+0.2]}],
-Text["r",{0.4,-0.15}]
+Text[Style["  A",FontFamily-> "OpenDyslexic"],{Cos[(Pi/2)+0.4], Sin[(Pi/2)]}],
+Text[Style["   B",FontFamily-> "OpenDyslexic"],{Cos[0], Sin[0-0.3]}],
+Text[Style["   C",FontFamily-> "OpenDyslexic"],{Cos[Pi+0.2], Sin[Pi+0.6]}],
+Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{Cos[Pi+0.9],Sin[11/6 Pi+0.2]}],
+Text[Style["r",FontFamily-> "OpenDyslexic"],{0.4,-0.15}]
 
 },PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->0.25]
 
  (* Dati del problema*)
-,Magnify[Row[{"r = 5\n\[Theta] = \!\(\*SuperscriptBox[\(60\), \(o\)]\)\n",
-              Style["Trovare \!\(\*OverscriptBox[\(AB\), \(_\)]\)",FontColor->Red,FontFamily-> "sans sarif",Bold]}]           
-        ,2],
+,Magnify[Row[{Style["r = 5\n\[Theta] = \!\(\*SuperscriptBox[\(60\), \(o\)]\)\n",FontFamily -> "OpenDyslexic",Bold],
+              Style["Trovare \!\(\*OverscriptBox[\(AB\), \(_\)]\)",FontColor->Red,FontFamily -> "OpenDyslexic",Bold]}]           
+        ,1],
  Text[""]},
  
  (* Domanda a risposta multipla *)
-{Text[Style["Quindi il lato \!\(\*OverscriptBox[\(AB\), \(_\)]\) misura:",17,FontColor -> Red]]},
+{Text[Style["Quindi il lato \!\(\*OverscriptBox[\(AB\), \(_\)]\) misura:",20,FontFamily-> "OpenDyslexic",Bold]],
 
-{Magnify[RadioButtonBar[Dynamic[AB2],{"\!\(\*FractionBox[\(5\), \(2\)]\)","\!\(\*FractionBox[\(5\), \(2\)]\)\!\(\*SqrtBox[\(3\)]\)","5(\*SqrtBox[\(3\)])","30"}],2],
- Magnify[Dynamic[CheckAnswer[AB2,"5"]],3]}
+Magnify[RadioButtonBar[Dynamic[AB2],{"\!\(\*FractionBox[\(5\), \(2\)]\)","\!\(\*FractionBox[\(5\), \(2\)]\)\!\(\*SqrtBox[\(3\)]\)","5\*SqrtBox[\(3\)]","30"}],1.5],
+ Magnify[Dynamic[CheckAnswer[AB2,"5\*SqrtBox[\(3\)]"]],3]}
 
-},Alignment-> {Left,Center},Spacings -> {10,5}] 
+},Alignment-> {Left,Center},Spacings -> {1,5}] 
 ]
 
 
 Esercizio8[]:=
 Module[{res5 ="",val13="",val14=""},
-datiEsercizio8 = StringJoin[Style["A = 24 \nC = 12\!\(\*SqrtBox[\(3\)]\)\nB = 12",FontFamily-> "sans sarif",Bold],Style["\nTrovare cos(\[Gamma])",FontColor->Red,FontFamily-> "sans sarif",Bold]];
+datiEsercizio8 = StringJoin[Style["A = 24 \nC = 12\!\(\*SqrtBox[\(3\)]\)\nB = 12",FontFamily -> "OpenDyslexic",Bold],Style["\nTrovare cos(\[Gamma])",FontColor -> Red,FontFamily -> "OpenDyslexic",Bold]];
 
 
-Grid[{{Text[Style["Esercizio 8:",20,FontColor-> Red]]},
+Grid[{{Text[Style["Esercizio 8:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]]},
 
 (* Disegno del triangolo *)
 {Magnify[Graphics[{
@@ -1665,31 +1703,31 @@ Grid[{{Text[Style["Esercizio 8:",20,FontColor-> Red]]},
 
  (* labels *)
   Rotate[
-   Text[Style["C", 10],
+   Text[Style["C", 10,FontFamily-> "OpenDyslexic"],
     {-0.4, 0.4}], 0 Degree],
-  Text[Style["A", 10],
+  Text[Style["A", 10,FontFamily-> "OpenDyslexic"],
    {0.3, -0.1}],
-  Text[Style["B", 10],
+  Text[Style["B", 10,FontFamily-> "OpenDyslexic"],
    {0.2, 0.6}, {-0.4, 0}],
-  Text[Style["\[Gamma]",10,Darker[Green,0.3]],{0.8,0.08}]
+  Text[Style["\[Gamma]",10,Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.8,0.08}]
   }],2]
   
 (* Vengono stampati i dati dell'esercizio *)
-,Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizio8],1.4],Text[""]},
-{Text[Style["Procedimento:",17,FontColor -> Red]]},
+,Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizio8],1.2],Text[""]},
+{Text[Style["Procedimento:",17,FontColor -> Red,FontFamily-> "OpenDyslexic"]]},
 
 (* Suggerimento del teorema  di Carnot *)
-{Text[Style["Ricorda! \!\(\*SuperscriptBox[\(C\), \(2\)]\) = \!\(\*SuperscriptBox[\(B\), \(2\)]\) + \!\(\*SuperscriptBox[\(A\), \(2\)]\) - 2A\[CenterDot]B cos(\[Gamma])",Bold,20]]},
+{Text[Style["Ricorda! \!\(\*SuperscriptBox[\(C\), \(2\)]\) = \!\(\*SuperscriptBox[\(B\), \(2\)]\) + \!\(\*SuperscriptBox[\(A\), \(2\)]\) - 2A\[CenterDot]B cos(\[Gamma])",Bold,20,FontFamily-> "OpenDyslexic"]]},
 
 (* Primo passaggio dell'esercizio *)
-{Magnify[Row[{"cos(\[Gamma]) = \!\(\*FractionBox[\(\(\\\ \)\(\*SuperscriptBox[\(B\), \(2\)]\\\  + \\\ \*SuperscriptBox[\(A\), \(2\)]\\\  - \\\ \*SuperscriptBox[\(C\), \(2\)]\)\), \(2  A\[CenterDot]B\)]\) = ",
-             Row[{InputField[Dynamic[val13],String,FieldSize->2],Dynamic[CheckAnswer[val13,"12"]],"\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\) + 576 - 472"}]/Row[{"2 \[CenterDot]", InputField[Dynamic[val14],String,FieldSize->3],Dynamic[CheckAnswer[val14,"288"]]}] 
-             }],2]},
+{Magnify[Row[{Style["cos(\[Gamma]) = \!\(\*FractionBox[\(\(\\\ \)\(\*SuperscriptBox[\(B\), \(2\)]\\\  + \\\ \*SuperscriptBox[\(A\), \(2\)]\\\  - \\\ \*SuperscriptBox[\(C\), \(2\)]\)\), \(2  A\[CenterDot]B\)]\) = ",FontFamily-> "OpenDyslexic",Bold],
+             Row[{InputField[Dynamic[val13],String,FieldSize->2],Dynamic[CheckAnswer[val13,"12"]],Style["\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\) + 576 - 432",FontFamily->"OpenDyslexic",Bold]}]/Row[{Style["2 \[CenterDot]",Bold,FontFamily->"OpenDyslexic"], InputField[Dynamic[val14],String,FieldSize->3],Dynamic[CheckAnswer[val14,"288"]]}] 
+             }],1]},
  
 (* Conclusione delle'esercizio *)            
-{Style["Quindi cos(\[Gamma]) misura:",17,Bold],
+{Style["Quindi cos(\[Gamma]) misura:",17,Bold,FontFamily-> "OpenDyslexic"],
  Magnify[Row[{RadioButtonBar[Dynamic[res5],{"\!\(\*FractionBox[\(1\), \(2\)]\)","\!\(\*FractionBox[SqrtBox[\(3\)], \(2\)]\)","-\!\(\*FractionBox[\(1\), \(2\)]\)","-\!\(\*FractionBox[SqrtBox[\(3\)], \(2\)]\)"}],"         ",Dynamic[CheckAnswer[res5,"\!\(\*FractionBox[\(1\), \(2\)]\)"]]
-         }],2]}
+         }],1]}
 
 
 },Alignment->{Left,Center},Spacings -> {10,5}]]
@@ -1698,15 +1736,19 @@ Grid[{{Text[Style["Esercizio 8:",20,FontColor-> Red]]},
 Esercizio5[] := 
 Module[{esatt3 = ""},
 
-datiEsercizio5 = StringJoin[Style["A = 6 \n\[Alpha] = \!\(\*SuperscriptBox[\(30\), \(o\)]\)\n\[Beta] = \!\(\*SuperscriptBox[\(105\), \(o\)]\)",FontFamily-> "sans sarif",Bold],Style["\nTrovare C",FontColor->Red,FontFamily-> "sans sarif",Bold]];
+datiEsercizio5 = StringJoin[Style["A = 6 \n\[Alpha] = \!\(\*SuperscriptBox[\(30\), \(o\)]\)\n\[Beta] = \!\(\*SuperscriptBox[\(105\), \(o\)]\)",FontFamily-> "OpenDyslexic",Bold],Style["\nTrovare C",FontColor->Red,FontFamily-> "OpenDyslexic",Bold]];
 
-Grid[{{Text[Style["Esercizio 5:",20,FontColor-> Red]]},
+Grid[{{Text[Style["Esercizio 5:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]]},
 (* Disegno il triangolo *)
 {Magnify[Graphics[{
 
 (* ARCO SU (0,0) *)
 {Opacity[0.2],Darker[Green,0.3],Disk[{0, 0}, 0.12, {angolo[{0.7, 0}, {-1,1}, {0, 0}][[2]]+Pi, 0} ]},
 {Darker[Green,0.2],Circle[{0, 0} ,0.12, {angolo[{0.7, 0}, {-1,1}, {0, 0}][[2]]+Pi, 0}]},
+
+(* ARCO SU (0.7, 0) *)
+{Opacity[0.2],Darker[Green,0.3],Disk[{0.7, 0}, 0.2, angolo[{0, 0}, {-1,1}, {0.7, 0}]+Pi]},
+{Darker[Green,0.2],Circle[{0.7, 0}, 0.2, angolo[{0, 0}, {-1,1}, {0.7, 0}]+Pi]},
 
 (* ARCO SU (-1,1) *)
 {Opacity[0.2],Darker[Green,0.3],Disk[{-1,1}, 0.2, angolo[{0, 0}, {0.7, 0}, {-1,1}]]},
@@ -1718,29 +1760,30 @@ Grid[{{Text[Style["Esercizio 5:",20,FontColor-> Red]]},
  
   (* labels *)
   Rotate[
-   Text[Style["C", 10],
+   Text[Style["C", 10,FontFamily-> "OpenDyslexic"],
     {-0.6, 0.4}], 0 Degree],
-  Text[Style["A", 10],
+  Text[Style["A", 10,FontFamily-> "OpenDyslexic"],
    {0.3, -0.1}],
-  Text[Style["B", 10],
+  Text[Style["B", 10,FontFamily-> "OpenDyslexic"],
    {0.1, 0.6}, {-0.5, 0}],
-  Text[Style["\[Alpha]",10,Darker[Green,0.2]],{-0.8,1.0}],
-  Text[Style["\[Beta]",10,Darker[Green,0.2]],{0.1,0.15}]
+  Text[Style["\[Alpha]",10,Darker[Green,0.2],FontFamily-> "OpenDyslexic"],{-0.8,1.0}],
+  Text[Style["\[Beta]",10,Darker[Green,0.2],FontFamily-> "OpenDyslexic"],{0.1,0.15}],
+   Text[Style["\[Gamma]",10,Darker[Green,0.2],FontFamily-> "OpenDyslexic"],{0.4,0.1}]
   }],2]
   
  (* Stampo i dati dell'esercizio *) 
-,Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizio5],1.4],Text[""]},
-{Text[Style["Procedimento:",17,FontColor -> Red]]},
+,Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizio5],1],Text[""]},
+{Text[Style["Procedimento:",17,FontColor -> Red,FontFamily-> "OpenDyslexic"]]},
 
 (* Primo passo dell'esercizio *)
-{Magnify[Row[{Text[Style["Calcolare l'ampiezza dell'angolo \[Gamma]:\!\(\*SuperscriptBox[\(180\), \(o\)]\)-("]],
+{Magnify[Row[{Text[Style["Calcolare l'ampiezza dell'angolo \[Gamma]: \!\(\*SuperscriptBox[\(180\), \(o\)]\)-(",FontFamily-> "OpenDyslexic",Bold]],
                InputField[Dynamic[ott],String,FieldSize->2],
-               Style["\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)"],
+               Style["\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)",FontFamily-> "OpenDyslexic"],
                (* Dynamic[CheckAnswer[ott,"105"]], *)
                
                Dynamic[esatt3],
                
-               Style["+"],
+               Style["+",FontFamily-> "OpenDyslexic"],
                InputField[Dynamic[al],String,FieldSize->2],
                "\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)",
                (* Dynamic[CheckAnswer[al,"30"]], *)
@@ -1760,35 +1803,35 @@ Grid[{{Text[Style["Esercizio 5:",20,FontColor-> Red]]},
                            Text[""]]   
                ],
                
-               Style[") = "],
+               Style[") = ",FontFamily-> "OpenDyslexic"],
                InputField[Dynamic[res2],String,FieldSize->2],
                Dynamic[CheckAnswer[res2,"45"]],
-               Style["\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)"]}],
+               Style["\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)",FontFamily-> "OpenDyslexic"]}],
  
- 1.5],SpanFromLeft},
+ 1],SpanFromLeft},
 (* Suggerimento *)
-{Magnify[Text[Style["Utilizzare la relazione \!\(\*FractionBox[\(\(A\)\(\\\ \)\), \(sen \((\[Alpha])\)\)]\) =\!\(\*FractionBox[\(\(\\\ \)\(C\)\), \(sen \((\[Gamma])\)\)]\)"]],1.5]},
+{Magnify[Text[Style["Utilizzare la relazione \!\(\*FractionBox[\(\(A\)\(\\\ \)\), \(sen \((\[Alpha])\)\)]\) =\!\(\*FractionBox[\(\(\\\ \)\(C\)\), \(sen \((\[Gamma])\)\)]\)",FontFamily-> "OpenDyslexic",Bold]],1]},
 
 
 (* Secondo passo dell'esercizio *)
 {Text[""],
  Magnify[  Panel[
-           Row[{"6"/Row[{"sen(",InputField[Dynamic[al2],String,FieldSize->2],"\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\))",Dynamic[CheckAnswer[al2,"30"]]}],
-           " = ",
-           Row[{InputField[Dynamic[c],String,FieldSize->2],Dynamic[CheckAnswer[c,"C"]]}]/("sen(\!\(\*SuperscriptBox[\(45\), \(o\)]\))")," \[LongRightArrow] ", " 6 / ",
+           Row[{Style["6",FontFamily-> "OpenDyslexic"]/Row[{Style["sen(",FontFamily-> "OpenDyslexic"],InputField[Dynamic[al2],String,FieldSize->2],"\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\))",Dynamic[CheckAnswer[al2,"30"]]}],
+           Style[" = ",FontFamily-> "OpenDyslexic"],
+           Row[{InputField[Dynamic[c],String,FieldSize->2],Dynamic[CheckAnswer[c,"C"]]}]/(Style["sen(\!\(\*SuperscriptBox[\(45\), \(o\)]\))",FontFamily-> "OpenDyslexic"]),Style[" \[LongRightArrow] ",FontFamily-> "OpenDyslexic"], Style[" 6 / ",FontFamily-> "OpenDyslexic"],
            Row[{InputField[Dynamic[num3],String,FieldSize->1],Dynamic[CheckAnswer[num3,"1"]]}]/Row[{InputField[Dynamic[den3],String,FieldSize->1],Dynamic[CheckAnswer[den3,"2"]]}],
-           " = ",
+           Style[" = ",FontFamily-> "OpenDyslexic"],
            Row[{InputField[Dynamic[num4],String,FieldSize->1],Dynamic[CheckAnswer[num4,"C"]]}],
-           " /\!\(\*FractionBox[\(\(\\\ \)\*SqrtBox[\(2\)]\), \(2\)]\)"}]],
+           Style[" /\!\(\*FractionBox[\(\(\\\ \)\*SqrtBox[\(2\)]\), \(2\)]\)",FontFamily-> "OpenDyslexic"]}]],
            
            2]},
 
 
  (* Terzo passo dell'esercizio *)
-{Magnify[Text[Style["Ricavare:"]],1.5]},
+{Magnify[Text[Style["Ricavare:",FontFamily-> "OpenDyslexic",Bold]],1]},
 {Text[""],
 Magnify[  Panel[
-          Row[{"C = 6",
+          Row[{Style["C = 6",FontFamily-> "OpenDyslexic"],
           Row[{SqrtBox[InputField[Dynamic[num5],String,FieldSize->1]]//DisplayForm,Dynamic[CheckAnswer[num5,"2"]]}]/Row[{InputField[Dynamic[den5],String,FieldSize->1],Dynamic[CheckAnswer[den5,"2"]]}],
           " / ",
           Row[{InputField[Dynamic[num6],String,FieldSize->1],Dynamic[CheckAnswer[num6,"1"]]}]/Row[{InputField[Dynamic[den6],String,FieldSize->1],Dynamic[CheckAnswer[den6,"2"]]}],
@@ -1802,15 +1845,15 @@ Magnify[  Panel[
 
 
 
-},Alignment->{Left,Center},Spacings -> {10,5}]
+},Alignment->{Left,Center},Spacings -> {1,5}]
 ]
 
 (*Esercizio 6*)
 Esercizio6[]:=
 Module[{res4=""},
-datiEsercizio6 = StringJoin[Style["A = 12 \nB = 9\n\[Beta] = \!\(\*SuperscriptBox[\(30\), \(o\)]\)",FontFamily-> "sans sarif",Bold],Style["\nTrovare sen(\[Alpha])",FontColor->Red,FontFamily-> "sans sarif",Bold]];
+datiEsercizio6 = StringJoin[Style["A = 12 \nB = 9\n\[Beta] = \!\(\*SuperscriptBox[\(30\), \(o\)]\)",FontFamily-> "OpenDyslexic",Bold],Style["\nTrovare sen(\[Alpha])",FontColor->Red,FontFamily-> "OpenDyslexic",Bold]];
 
-Grid[{{Text[Style["Esercizio 6:",20,FontColor-> Red]]},
+Grid[{{Text[Style["Esercizio 6:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]]},
 
 (* Disegno del triangolo *)
 {Magnify[Graphics[{
@@ -1833,26 +1876,26 @@ Grid[{{Text[Style["Esercizio 6:",20,FontColor-> Red]]},
  
   (* labels *)
   Rotate[
-   Text[Style["B", 10],
+   Text[Style["B", 10,FontFamily-> "OpenDyslexic"],
     {0.6, 0.6}], 0 Degree],
-  Text[Style["C", 10],
+  Text[Style["C", 10,FontFamily-> "OpenDyslexic"],
    {1, -0.1}],
-  Text[Style["A", 10],
+  Text[Style["A", 10,FontFamily-> "OpenDyslexic"],
    {1.65, 0.6}, {-1, 0}],
-  Text[Style["\[Beta]", 10,Darker[Green,0.3]], {1.7, 0.1}],
-  Text[Style["\[Gamma]",10,Darker[Green,0.3]],{1.3,0.75}],
-  Text[Style["\[Alpha]",10,Darker[Green,0.3]],{0.3, 0.1}]
+  Text[Style["\[Beta]", 10,Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {1.7, 0.1}],
+  Text[Style["\[Gamma]",10,Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{1.3,0.75}],
+  Text[Style["\[Alpha]",10,Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.3, 0.1}]
   }],2]
 
  (* Stampo i dati dell'esercizio *)
 ,Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizio6],1.4],Text[""]},
-{Text[Style["Procedimento:",17,FontColor -> Red]]},
+{Text[Style["Procedimento:",17,FontColor -> Red,FontFamily-> "OpenDyslexic"]]},
 
 (* Suggerimento *)
-{Text[Style["Ricorda! \!\(\*FractionBox[\(A\), \(sen \((\[Alpha])\)\)]\) =\!\(\*FractionBox[\(\(B\)\(\\\ \)\), \(sen \((\[Beta])\)\)]\) =\!\(\*FractionBox[\(\(\\\ \)\(C\)\), \(sen \((\[Gamma])\)\)]\)",FontSize->17,Bold]]},
+{Text[Style["Ricorda! \!\(\*FractionBox[\(A\), \(sen \((\[Alpha])\)\)]\) =\!\(\*FractionBox[\(\(B\)\(\\\ \)\), \(sen \((\[Beta])\)\)]\) =\!\(\*FractionBox[\(\(\\\ \)\(C\)\), \(sen \((\[Gamma])\)\)]\)",FontSize->20,Bold,FontFamily-> "OpenDyslexic"]]},
 
 (* Domanda a risposta multipla*)
-{Text[Style["Quanto misura sen(\[Alpha])?",Bold,20]],
+{Text[Style["Quanto misura sen(\[Alpha])?",Bold,20,FontFamily-> "OpenDyslexic"]],
  Magnify[RadioButtonBar[Dynamic[res4],{"\!\(\*FractionBox[\(3\), \(2\)]\)","\!\(\*FractionBox[\(2\), \(3\)]\)","\!\(\*FractionBox[\(2\), \(3\)]\)\!\(\*SqrtBox[\(3\)]\)","\!\(\*FractionBox[\(3\), \(2\)]\)\!\(\*SqrtBox[\(3\)]\)"}],2],
  Magnify[Dynamic[CheckAnswer[res4,"\!\(\*FractionBox[\(2\), \(3\)]\)"]],3]}
 
@@ -1862,25 +1905,25 @@ Grid[{{Text[Style["Esercizio 6:",20,FontColor-> Red]]},
 (*Esercizio 9*)
 Esercizio9[]:=
 Module[{},
-esercizio9testo = Text[Style["Sia H l'altezza del campanile",Bold,20]];
 
-Grid[{{Text[Style["Esercizio 9:",20,FontColor-> Red]]},
-      {esercizio9testo},
+
+Grid[{{Text[Style["Esercizio 9:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]]},
+      
       
        (* Stampo foto esercizio *)
-      {Magnify[Sharpen[Import["campanile.jpeg"]],5],
+      {Magnify[Sharpen[Import["campanile.jpeg"]],4],
        Magnify[
-         Row[{Style["Trovare H, dove H \[EGrave] l'altezza del campanile\n",FontFamily-> "sans sarif",FontColor->Red],
-            Style["Approssimare il risultato per difetto\n",FontFamily->"sans sarif",FontColor->Red,8],
-            "tan(",InputField[Dynamic[tang],String,FieldSize->1],
+         Row[{Style["Trovare H,\ndove H \[EGrave] l'altezza\ndel campanile\n",FontFamily-> "OpenDyslexic",FontColor->Red,FontFamily->  "OpenDyslexic"],
+            Style["Approssimare il risultato per difetto\n",FontFamily ->  "OpenDyslexic",FontColor-> Red,8],
+            Style["tan(",FontFamily->  "OpenDyslexic"],InputField[Dynamic[tang],String,FieldSize-> 2],
             Dynamic[CheckAnswer[tang,"42"]],"\!\(\*SuperscriptBox[\(\\\ \), \(\[Degree]\)]\)) = ", 
-            Row[{InputField[Dynamic[altezza],String,FieldSize->1],Dynamic[CheckAnswer[altezza,"H"]]}]/Row[{InputField[Dynamic[base],String,FieldSize->1],Dynamic[CheckAnswer[base,"80"]]}],
-            " \nH = ",Row[{InputField[Dynamic[base2],String,FieldSize->1],Dynamic[CheckAnswer[base2,"80"]]}],
-            " \[CenterDot] tan(",
-            Row[{InputField[Dynamic[altezza2],String,FieldSize->1],Dynamic[CheckAnswer[altezza2,"42"]]}],
+            Row[{InputField[Dynamic[altezza],String,FieldSize->2],Dynamic[CheckAnswer[altezza,"H"]]}]/Row[{InputField[Dynamic[base],String,FieldSize-> 2],Dynamic[CheckAnswer[base,"80"]]}],
+            Style[" \nH = ",FontFamily->  "OpenDyslexic"],Row[{InputField[Dynamic[base2],String,FieldSize-> 2],Dynamic[CheckAnswer[base2,"80"]]}],
+            Style[" \[CenterDot] tan(",FontFamily->  "OpenDyslexic"],
+            Row[{InputField[Dynamic[altezza2],String,FieldSize-> 2],Dynamic[CheckAnswer[altezza2,"42"]]}],
             "\!\(\*SuperscriptBox[\(\\\ \), \(\[Degree]\)]\)) = ",
-            Row[{InputField[Dynamic[altezza3],String,FieldSize->1],Dynamic[CheckAnswer[altezza3,"72"]]}]}],
-       2]}
+            Row[{InputField[Dynamic[altezza3],String,FieldSize-> 2],Dynamic[CheckAnswer[altezza3,"72"]]}]}],
+       1.5]}
 
 },Alignment->{Left,Center},Spacings -> {10,5}]
 ]
@@ -1889,9 +1932,9 @@ Grid[{{Text[Style["Esercizio 9:",20,FontColor-> Red]]},
 Esercizio7[] := 
 Module[{G7="",esatt = "",esatt2 = ""},
 
-datiEsercizio7 = StringJoin[Style["A = 2 \nB = 3\n\[Gamma] = \!\(\*SuperscriptBox[\(60\), \(o\)]\)",FontFamily-> "sans sarif",Bold],Style["\nTrovare C",FontColor->Red,FontFamily-> "sans sarif",Bold]];
+datiEsercizio7 = StringJoin[Style["A = 2 \nB = 3\n\[Gamma] = \!\(\*SuperscriptBox[\(60\), \(o\)]\)",FontFamily -> "OpenDyslexic",Bold],Style["\nTrovare C",FontColor->Red,FontFamily ->  "OpenDyslexic",Bold]];
 
-Grid[{{Text[Style["Esercizio 7:",20,FontColor-> Red]]},
+Grid[{{Text[Style["Esercizio 7:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]]},
 {Magnify[Graphics[{
 
    (* ANGOLO IN (0,0) *)
@@ -1910,30 +1953,30 @@ Grid[{{Text[Style["Esercizio 7:",20,FontColor-> Red]]},
  {Opacity[0],EdgeForm[Directive[Black]], Triangle[{{0, 0}, {0.8,1}, {1.8, 0}}]},
   (* labels *)
   Rotate[
-   Text[Style["B", 10],
+   Text[Style["B", 10,FontFamily-> "OpenDyslexic"],
     {0.3, 0.6}], 0 Degree],
-  Text[Style["C", 10],
+  Text[Style["C", 10,FontFamily-> "OpenDyslexic"],
    {0.7, -0.1}],
-  Text[Style["A", 10],
+  Text[Style["A", 10,FontFamily-> "OpenDyslexic"],
    {1.4, 0.6}, {-1, 0}],
- Text[Style["\[Beta]", 10, 10,Darker[Green,0.3]], {1.5, 0.1}],
- Text[Style["\[Gamma]",10, 10,Darker[Green,0.3]],{0.8,0.75}],
- Text[Style["\[Alpha]",10, 10,Darker[Green,0.3]],{0.3,0.1}]
+ Text[Style["\[Beta]", 10, 10,Darker[Green,0.3],FontFamily->  "OpenDyslexic"], {1.5, 0.1}],
+ Text[Style["\[Gamma]",10, 10,Darker[Green,0.3],FontFamily->  "OpenDyslexic"],{0.8,0.75}],
+ Text[Style["\[Alpha]",10, 10,Darker[Green,0.3],FontFamily->  "OpenDyslexic"],{0.3,0.1}]
   }],2]
   
  (* Stampo i dati dell'esercizio *) 
 ,Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizio7],1.4],Text[""]},
-{Text[Style["Procedimento:",17,FontColor -> Red]]},
+{Text[Style["Procedimento:",17,FontColor ->  Red,FontFamily->  "OpenDyslexic"]]},
 
 (* Primo passo dell'esercizio *)
-{Text[Style["Applicare il teorema del coseno:",Bold,20]],
+{Text[Style["Applicare il teorema del coseno:",Bold,20,FontFamily->  "OpenDyslexic"]],
  Magnify[Row[{"\!\(\*SuperscriptBox[\(C\), \(2\)]\) = ",
-           InputField[Dynamic[A7],String,FieldSize->1],
+           InputField[Dynamic[A7],String,FieldSize-> 1],
            "\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\)",
           (* Dynamic[CheckAnswer[A7,"A"]], *)
            Dynamic[esatt],
            " + ",
-           InputField[Dynamic[B7],String,FieldSize->1],
+           InputField[Dynamic[B7],String,FieldSize-> 1],
            "\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\)",
            (* Dynamic[CheckAnswer[B7,"B"]], *)
            
@@ -1959,8 +2002,8 @@ Grid[{{Text[Style["Esercizio 7:",20,FontColor-> Red]]},
            PopupMenu[Dynamic[G7],{"\[Alpha]","\[Beta]","\[Gamma]"}],Dynamic[CheckAnswer[G7,"\[Gamma]"]],")" }]]},
            
 (* Secondo passo dell'esercizio *)           
-{Text[Style["Quindi:",Bold,20]],
- Magnify[Row[{"\!\(\*SuperscriptBox[\(C\), \(2\)]\) = ",
+{Text[Style["Quindi, sostituendo i valori numerici:",Bold,20,FontFamily-> "OpenDyslexic"]],
+ Magnify[Row[{Style["\!\(\*SuperscriptBox[\(C\), \(2\)]\) = ",FontFamily -> "OpenDyslexic"],
           InputField[Dynamic[Val7],String,FieldSize->1],
           "\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\)",
           (* Dynamic[CheckAnswer[Val7,"2"]], *)
@@ -1991,10 +2034,10 @@ Grid[{{Text[Style["Esercizio 7:",20,FontColor-> Red]]},
           Dynamic[CheckAnswer[Val10,"7"]] }]]},
 
 (* Terzo passo dell'esercizio *)
-{Text[Style["Da cui: ",Bold,20]],Magnify[Row[{"C = ",SqrtBox[Row[{InputField[Dynamic[Val12],String,FieldSize->1],Dynamic[CheckAnswer[Val12,"7"]]}]]}] // DisplayForm,2]}
+{Text[Style["Da cui: ",Bold,20,FontFamily-> "OpenDyslexic"]],Magnify[Row[{"C = ",SqrtBox[Row[{InputField[Dynamic[Val12],String,FieldSize->1],Dynamic[CheckAnswer[Val12,"7"]]}]]}] // DisplayForm,2]}
 
 
-},Alignment->{Left,Center},Spacings -> {10,5}]
+},Alignment->{Left,Center},Spacings -> {1,5}]
 ]
 
 (*Calcolatrice*)
@@ -2006,17 +2049,17 @@ CreateDialog[{Magnify[InputField[Dynamic[espressione],String,Alignment->Right,Fi
                        Grid[{{
                       Column[{
                          Row[ {Button[" 1 ", espressione = StringJoin[espressione ,"1"],FrameMargins->7]," ",
-                                 Button[" 2 ",espressione = StringJoin[espressione ,"2"],FrameMargins->7]," ",
-                                 Button[" 3 ",espressione = StringJoin[espressione ,"3"],FrameMargins->7]}],
+                                Button[" 2 ",espressione = StringJoin[espressione ,"2"],FrameMargins->7]," ",
+                                Button[" 3 ",espressione = StringJoin[espressione ,"3"],FrameMargins->7]}],
                          Row[ {Button[" 4 ",espressione = StringJoin[espressione ,"4"],FrameMargins->7]," ",
-                                 Button[" 5 ",espressione = StringJoin[espressione ,"5"],FrameMargins->7]," ",
-                                 Button[" 6 ",espressione = StringJoin[espressione ,"6"],FrameMargins->7]}],
-                        Row[ {Button[" 7 ",espressione = StringJoin[espressione ,"7"],FrameMargins->7]," ",
-                                 Button[" 8 ",espressione = StringJoin[espressione ,"8"],FrameMargins->7]," ",
-                                 Button[" 9 ",espressione = StringJoin[espressione ,"9"],FrameMargins->7]}],
-                          Row[ {Button[" C ",If[StringLength[espressione]>0,espressione =StringDrop[espressione,-1],espressione = ""],FrameMargins->7]," ",
-                                 Button[" 0 ",espressione = StringJoin[espressione ,"0"],FrameMargins->7]," ",
-                                 Button[" = ",If[StringLength[espressione]>0,{tmp =StandardForm[ ToExpression[espressione]],espressione = ToString[tmp]}],FrameMargins->7]}]}
+                                Button[" 5 ",espressione = StringJoin[espressione ,"5"],FrameMargins->7]," ",
+                                Button[" 6 ",espressione = StringJoin[espressione ,"6"],FrameMargins->7]}],
+                         Row[ {Button[" 7 ",espressione = StringJoin[espressione ,"7"],FrameMargins->7]," ",
+                               Button[" 8 ",espressione = StringJoin[espressione ,"8"],FrameMargins->7]," ",
+                               Button[" 9 ",espressione = StringJoin[espressione ,"9"],FrameMargins->7]}],
+                         Row[ {Button[" C ",If[StringLength[espressione]>0,espressione =StringDrop[espressione,-1],espressione = ""],FrameMargins->7]," ",
+                                Button[" 0 ",espressione = StringJoin[espressione ,"0"],FrameMargins->7]," ",
+                                Button[" = ",If[StringLength[espressione]>0,{tmp =StandardForm[ ToExpression[espressione]],espressione = ToString[tmp]}],FrameMargins->7]}]}
                   ]," ",
                        Column[{
                                  Button[" + ", espressione = StringJoin[espressione ,"+"],FrameMargins->7],
@@ -2052,10 +2095,10 @@ CreateDialog[{Magnify[InputField[Dynamic[espressione],String,Alignment->Right,Fi
 ]
 
 (*Teorema di pitagora*)
-TPitagora[]:=Button["Teorema di Pitagora",
+TPitagora[]:=Button[Style["Teorema di Pitagora",FontFamily->"OpenDyslexic"],
 Module[{},
 
-CreateDialog[{Style["Teorema di Pitagora",FontSize->14,Bold],
+CreateDialog[{Style["Teorema di Pitagora",FontSize->14,Bold,FontFamily->"OpenDyslexic"],
 
          Graphics[{
          (*Triangolo*)
@@ -2064,17 +2107,17 @@ CreateDialog[{Style["Teorema di Pitagora",FontSize->14,Bold],
         (*Quadrato Cateto 1*)
         {Lighter[Green,0.5],Rectangle[{0,0},{1.5,-1.5}]},
         {Darker[Green,0.5],Line[{{0,0},{1.5,0},{1.5,-1.5},{0,-1.5},{0,0}}]},
-        Text[Style["\!\(\*SuperscriptBox[\(A\), \(2\)]\)",Bold,20],{0.8,-0.7}],
+        Text[Style["\!\(\*SuperscriptBox[\(A\), \(2\)]\)",Bold,20,FontFamily-> "OpenDyslexic"],{0.8,-0.7}],
         
         (*Quadrato Cateto 2*)
         {Lighter[Red,0.5],Rectangle[{0,0},{-1,1}]},
         {Red,Line[{{0,0},{-1,0},{-1,1},{0,1},{0,0}}]},
-        Text[Style["\!\(\*SuperscriptBox[\(B\), \(2\)]\)",Bold,20],{-0.5,0.5}],
+        Text[Style["\!\(\*SuperscriptBox[\(B\), \(2\)]\)",Bold,20,FontFamily-> "OpenDyslexic"],{-0.5,0.5}],
         
         (*Quadrato ipotenusa*)
         {Lighter[Blue,0.5],Rotate[Rectangle[{0,1},{1.8,-0.8}],Pi/3 -0.06,{0,1}]},
         {Blue,Line[{{0,1},{1.5,0},{2.5,1.5},{1,2.5},{0,1}}]},
-        Text[Style["\!\(\*SuperscriptBox[\(C\), \(2\)]\)",Bold,20],{1.3,1.3}]
+        Text[Style["\!\(\*SuperscriptBox[\(C\), \(2\)]\)",Bold,20,FontFamily-> "OpenDyslexic"],{1.3,1.3}]
 }]
 
 }]
@@ -2085,34 +2128,34 @@ CreateDialog[{Style["Teorema di Pitagora",FontSize->14,Bold],
 (*Esercizio 10*)
 Esercizio10[]:=
 Module[{},
-esercizio10testo = Text[Style["",Bold,20]];
-Grid[{{Text[Style["Esercizio 10:",20,FontColor-> Red]]},
+esercizio10testo = Text[Style["",Bold,20,FontFamily-> "OpenDyslexic"]];
+Grid[{{Text[Style["Esercizio 10:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]]},
 
 (*{esercizio10testo},*)
 
 (* Stampo foto scivolo *)
-{ Magnify[Sharpen[Import["scivolo.jpeg"]],3],
+{ Magnify[Sharpen[Import["scivolo.jpeg"]],5],
 
 (* Svolgimento esercizio *)
 Magnify[
-      Row[{Style["Trovare \[Alpha]\n",FontColor->Red],Style["Approssima il risultato per\ndifetto alla prima cifra decimale\n\n",FontColor->Red,8],
+      Row[{Style["Trovare \[Alpha]\n",FontColor -> Red,FontFamily ->  "OpenDyslexic"],Style["Approssima il risultato per\ndifetto alla prima cifra decimale\n\n",FontColor -> Red,8,FontFamily ->  "OpenDyslexic"],
       Style[""],
-      Row[{InputField[Dynamic[alpha2],String,FieldSize->2],Dynamic[CheckAnswer[alpha2,"2.5"]]}]/("sen(\[Alpha])"),
+      Row[{InputField[Dynamic[alpha2],String,FieldSize-> 2],Dynamic[CheckAnswer[alpha2,"2.5"]]}]/(Style["sen(\[Alpha])",Bold,FontFamily -> "OpenDyslexic"]),
       " = ",
-      Row[{InputField[Dynamic[gamma3],String,FieldSize->1],Dynamic[CheckAnswer[gamma3,"3" ]]}]/Row[{"sen(",InputField[Dynamic[gamma2],String,FieldSize->1.8],
-      "\[Degree])",
+      Row[{InputField[Dynamic[gamma3],String,FieldSize->2],Dynamic[CheckAnswer[gamma3,"3" ]]}]/Row[{Style["sen(",Bold,FontFamily -> "OpenDyslexic"],InputField[Dynamic[gamma2],String,FieldSize->2],
+      Style["\[Degree])",Bold,FontFamily-> "OpenDyslexic"],
       Dynamic[CheckAnswer[gamma2,"60"]]}],
       " \[LongRightArrow] ",
-      "sen(\[Alpha]) = ",
-      Row[{InputField[Dynamic[latob],String,FieldSize->2],Dynamic[CheckAnswer[latob,"2.5"]]}]/Row[{InputField[Dynamic[latoc],String,FieldSize->1],Dynamic[CheckAnswer[latoc,"3"]]}],
+      Style["sen(\[Alpha]) = ",Bold,FontFamily->"OpenDyslexic"],
+      Row[{InputField[Dynamic[latob],String,FieldSize -> 2],Dynamic[CheckAnswer[latob,"2.5"]]}]/Row[{InputField[Dynamic[latoc],String,FieldSize->2],Dynamic[CheckAnswer[latoc,"3"]]}],
       " \[CenterDot] ",
-      Row[{SqrtBox[InputField[Dynamic[num10],String,FieldSize->1]]//DisplayForm,Dynamic[CheckAnswer[num10,"3"]] }] /Row[{InputField[Dynamic[den10],String,FieldSize->1],Dynamic[CheckAnswer[den10,"2"]]}],
+      Row[{SqrtBox[InputField[Dynamic[num10],String,FieldSize->2]]//DisplayForm,Dynamic[CheckAnswer[num10,"3"]] }] /Row[{InputField[Dynamic[den10],String,FieldSize->2],Dynamic[CheckAnswer[den10,"2"]]}],
       " = ",
-      Row[{InputField[Dynamic[res10],String,FieldSize->2],Dynamic[CheckAnswer[res10,"0.7"]]}]
+      Row[{InputField[Dynamic[res10],String,FieldSize-> 2],Dynamic[CheckAnswer[res10,"0.7"]]}]
 
-}],2]}
+}],1.5]}
 
-},Alignment->{Left,Center},Spacings -> {10,5}]
+},Alignment->{Left,Center},Spacings -> {1,5}]
 ]
 
 
