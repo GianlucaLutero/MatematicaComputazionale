@@ -139,35 +139,41 @@ bottonecalcolatrice[]:=
 Button["Calcolatrice",MessageDialog[  Calcolatrice[] ,WindowSize->All,Editable->False]]
 
 
-(* Grafico Seno *)
+(* ILLUSTRAZIONE SENO *)
 graficoseno[] := 
 Manipulate[
-(* genero disegno *)
+(* GENERO DISEGNO *)
 Module[{anglegraph,maingraph},
 anglegraph[th_]:=Show[
 Graphics[{
+(* DETTAGLI *)
+(* Circonferenza *)
 {Lighter[Gray,0.5],Circle[{0,0},1]},
+
+(* Arco di circonferenza *)
 {Darker[Green,0.2],Thick,Circle[{0,0},1,{0,th}]},
 
+(* Linee di dettaglio *)
 {Lighter[Gray,0.5],Line[{{0,0},{Cos[th],Sin[th]}}]},
 {Red,Thick,Line[{{Cos[th],0},{Cos[th],Sin[th]}}]},
+
 (* yp *)
 {Black,Disk[{0, Sin[th]},0.02]},
 
-(* sin *)
+(* SIN *)
 {Red,Thick,Dashing[Medium],Line[{{0,0},{0,Sin[th]}}]},
 
-(* retta punto *)
+(* Retta punto *)
 {Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
 
-(* angolo *)
+(* Angolo *)
 {Opacity[0.2],Darker[Green,0.3],Thick,Disk[{0,0},0.3,{0,th}]},
 {Darker[Green,0.3],Circle[{0,0},0.3,{0,th}]},
 
-(* linea tratteggiata per cos *)
+(* Linea tratteggiata per cos *)
 {Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th]-3,Sin[th]},{3,Sin[th]}}]},
 
-(* linea tratteggiata per sin *)
+(* Linea tratteggiata per sin *)
 {Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th],Sin[th]-3},{Cos[th],3}}]},
 
 (* TESTO *)
@@ -179,64 +185,91 @@ Rotate[Text[Style["Sin(\[Theta])",Red,FontFamily-> "OpenDyslexic"],{-0.1,Sin[th]
 }],
 PlotRange->1,ImageSize->400,BaseStyle->{15},Axes->True,PlotRange->{{-1,1},{-1,1}},PlotRangePadding->0.25];
 
-(* genero grafico *)
+(* GENERO GRAFICO*)
 maingraph[th_]:=Module[{},
+	(* plot della funzione seno *)
 	Show[Plot[{Sin[x]},{x,0.0001,th},PlotRange->{{0,2Pi},{-1,1}},ImageSize->650,PlotRangePadding->{0,0.25},ImagePadding->{{30,12},{0,0}},PlotRangeClipping->False,PlotStyle->Darker[Red,0.6],
+	
+	(* GRIGLIA *)
+	(* Valori asse x, y *)
 	Ticks->{Table[{n Pi/4,n Pi/4},{n,0,8}],Table[n,{n,-1,1,1/2}]},
+	
+	(* Linee sulla griglia*)
 	GridLines->{Table[{n Pi/4,Lighter[Gray,0.7]},{n,-2,8}],Table[{n,Lighter[Gray,0.7]},{n,-1,1,1/2}]},ImageSize->{Automatic,145}],
+	
+	(* DETTAGLI *)
 	Graphics[{
+		(* Linea di dettaglio asse x *)
 		{Darker[Green,0.2],Thick,Line[{{0,0},{th,0}}]},
+		
+		(* Linea di dettaglio asse y *)
 		{Red,Thick,Line[{{th,0},{th,Sin[th]}}]}
 	}],
 	AspectRatio->Automatic,BaseStyle->{12}]];
-
+	
+(* Variabile diamica *)
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
-Labeled[Grid[{
+Labeled[
+	Grid[{
+	(* INIZIALIZAZIONE LOCATOR *)
+	(* http://mathworld.wolfram.com/Circle.html *)
+	{LocatorPane[Dynamic[pt,
+		{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
+		(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
+		(pt=Normalize[#];ptctrl=pt2[[1]])&}],
+	(* Disegno circonferenza *)	
+	Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]],
 
-{LocatorPane[Dynamic[pt,
-	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
-	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
-	(pt=Normalize[#];ptctrl=pt2[[1]])&}],
-Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]],
-
-LocatorPane[Dynamic[pt2,
-	{(pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]],0})&,
-	(pt2={#[[1]],0};pt={Cos[#[[1]]],Sin[#[[1]]]})&,
-	(pt2={#[[1]],0};ptctrl=#[[1]])&}],
-Dynamic[maingraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]]}},Spacings->0],{Row[{Style["Funzione ","Label",22,Gray,FontFamily-> "OpenDyslexic"],Text@Style["Seno",Red,22,FontFamily-> "OpenDyslexic"]}],
-Style["",10,Lighter[Gray,0.7],"Label",FontFamily-> "OpenDyslexic"]},{{Top,Center},{Bottom,Right}}]]
-],
+	(* INIZIALIZAZIONE LOCATOR *)
+	LocatorPane[Dynamic[pt2,
+		{(pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]],0})&,
+		(pt2={#[[1]],0};pt={Cos[#[[1]]],Sin[#[[1]]]})&,
+		(pt2={#[[1]],0};ptctrl=#[[1]])&}],
+	(* Disegno grafico *)	
+	Dynamic[maingraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]]}},Spacings->0],
+	(* TITOLO *)
+	{Row[{Style["Funzione ","Label",22,Gray,FontFamily-> "OpenDyslexic"],Text@Style["Seno",Red,22,FontFamily-> "OpenDyslexic"]}],
+	Style["",10,Lighter[Gray,0.7],"Label",FontFamily-> "OpenDyslexic"]},{{Top,Center},{Bottom,Right}}
+]]],
+(* Genero slider *)
 {{ptctrl,Pi/6,"angle"},0,2Pi},TrackedSymbols:>{ptctrl}]
 
 
+(* ILLUSTRAZIONE TANGENTE *)
 graficotangente[]:=
 Manipulate[
-(* genero disegno *)
+(* GENERO DISEGNO *)
 Module[{anglegraph,maingraph},
 anglegraph[th_]:=Show[
 Graphics[{
+(* DETTAGLI *)
+(* Circonferenza *)
 {Lighter[Gray,0.5],Circle[{0,0},1]},
-{Darker[Green,0.2],Thick,Circle[{0,0},1,{0,th}]},
-{Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
 
+(* Arco di circonferenza *)
+{Darker[Green,0.2],Thick,Circle[{0,0},1,{0,th}]},
+
+(* Linee di dettaglio *)
+{Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
 {Lighter[Gray,0.5],Line[{{0,0},{Cos[th],Sin[th]}}]},
-(* punti *)
+
+(* Punti *)
 {Black,Disk[{1, Tan[th]},0.02]},
 {Black,Disk[{Cos[th], Sin[th]},0.02]},
 {Black,Disk[{0, Tan[th]},0.02]},
 {Black,Disk[{1,0},0.02]},
 
-(* tangente punto *)
+(* Tangente punto *)
 {Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
 
-(* angolo *)
+(* Angolo *)
 {Opacity[0.2],Darker[Green,0.3],Thick,Disk[{0,0},0.3,{0,th}]},
 {Darker[Green,0.3],Circle[{0,0},0.3,{0,th}]},
 
-(* linea tratteggiata per Tan *)
+(* Linea tratteggiata per Tan *)
 {Lighter[Gray,0.5],Dashing[Medium],Line[{{1,3},{1,Tan[th]-3}}]},
 
-(* linea tratteggiata per Tan 2*)
+(* Linea tratteggiata per Tan 2*)
 {Lighter[Gray,0.5],Dashing[Medium],Line[{{-3,Tan[th]},{3,Tan[th]}}]},
 
 (* TESTO *)
@@ -247,77 +280,102 @@ Text[Style["Yt",FontFamily-> "OpenDyslexic"],{0.1,Tan[th]+0.1}],
 Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.2,0.1}],
 Rotate[Text[Style["Tan(\[Theta])",Orange,FontFamily-> "OpenDyslexic"],{1.1,Tan[th]/2}],90\[Degree]],
 
-(* TAN *)
-(* tan *)  {Orange,Thick,Line[{{1,0},{1,Tan[th]}}]},
-		{Orange,Thickness[0.008],Dashing[Medium],Line[{{0,0},{0,Tan[th]}}]}
+(* TANGENTE *)
+{Orange,Thick,Line[{{1,0},{1,Tan[th]}}]},
+{Orange,Thickness[0.008],Dashing[Medium],Line[{{0,0},{0,Tan[th]}}]}
 
 }],
 PlotRange->1,ImageSize->400,BaseStyle->{15},Axes->True,PlotRange->{{-1,1},{-1,1}},PlotRangePadding->0.25];
 
-(* genero grafico *)
+(* GENERO GRAFICO *)
 maingraph[th_]:=Module[{},
+	(* plot della funzione tangente *)
 	Show[Plot[{Tan[x]},{x,0.0001,th},PlotRange->{{0,2Pi},{-2.2,2.2}},ImageSize->650,PlotRangePadding->{0,0},ImagePadding->{{30,12},{0,0}},PlotRangeClipping->False,PlotStyle->Darker[Orange,0.5],
+	
+	(* GRIGLIA *)
+	(* Valori asse x, y *)
 	Ticks->{Table[{n Pi/4,n Pi/4},{n,0,8}],Table[n,{n,-2,2,1/2}]},
+	
+	(* Linee sulla griglia*)
 	GridLines->{Table[{n Pi/4,Lighter[Gray,0.7]},{n,-2,8}],Table[{n,Lighter[Gray,0.7]},{n,-2,2,1/2}]},ImageSize->{Automatic,145}],
+	
+	(* DETTAGLI *)
 	Graphics[{
+		(* Linea di dettaglio asse x *)
 		{Darker[Green,0.2],Thick,Line[{{0,0},{th,0}}]},
+		
+		(* Linea di dettaglio asse y *)
 		{Orange,Thick,Line[{{th,0},{th,Tan[th]}}]}
 	}],
 	AspectRatio->Automatic,BaseStyle->{12}]];
 
+(* Variabile diamica *)
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
-Labeled[Grid[{
+Labeled[
+	Grid[{
+	(* INIZIALIZAZIONE LOCATOR *)
+	(* http://mathworld.wolfram.com/Circle.html *)
+	{LocatorPane[Dynamic[pt,
+		{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
+		(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
+		(pt=Normalize[#];ptctrl=pt2[[1]])&}],
+	(* Disegno circonferenza *)	
+	Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]],
 
-{LocatorPane[Dynamic[pt,
-	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
-	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
-	(pt=Normalize[#];ptctrl=pt2[[1]])&}],
-Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]],
-
-LocatorPane[Dynamic[pt2,
-	{(pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]],0})&,
-	(pt2={#[[1]],0};pt={Cos[#[[1]]],Sin[#[[1]]]})&,
-	(pt2={#[[1]],0};ptctrl=#[[1]])&}],
-Dynamic[maingraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]]}},Spacings->0],{Row[{Style["Funzione ","Label",22,Gray,FontFamily-> "OpenDyslexic"],Text@Style["Tangente",Orange,22,FontFamily-> "OpenDyslexic"]}],
-Style["",10,Lighter[Gray,0.7],"Label",FontFamily-> "OpenDyslexic"]},{{Top,Center},{Bottom,Right}}]]
+	(* INIZIALIZAZIONE LOCATOR *)
+	LocatorPane[Dynamic[pt2,
+		{(pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]],0})&,
+		(pt2={#[[1]],0};pt={Cos[#[[1]]],Sin[#[[1]]]})&,
+		(pt2={#[[1]],0};ptctrl=#[[1]])&}],
+	(* Disegno grafico *)
+	Dynamic[maingraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]]}},
+	(* TITOLO *)
+	Spacings->0],{Row[{Style["Funzione ","Label",22,Gray,FontFamily-> "OpenDyslexic"],Text@Style["Tangente",Orange,22,FontFamily-> "OpenDyslexic"]}],
+	Style["",10,Lighter[Gray,0.7],"Label",FontFamily-> "OpenDyslexic"]},{{Top,Center},{Bottom,Right}}]]
 ],
+(* Genero slider *)
 {{ptctrl,Pi/6,"angle"},0,2Pi},TrackedSymbols:>{ptctrl}]
 
 
-(* Grafico Coseno *)
+(* ILLUSTRAZIONE COSENO *)
 graficocoseno[] := 
 Manipulate[
-(* genero disegno *)
+(* GENERO DISEGNO *)
 Module[{anglegraph,maingraph},
 anglegraph[th_]:=Show[
 Graphics[{
+(* DETTAGLI *)
+(* Circonferenza *)
 {Lighter[Gray,0.5],Circle[{0,0},1]},
+
+(* Arco di circonferenza *)
 {Darker[Green,0.2],Thick,Circle[{0,0},1,{0,th}]},
 
+(* Linee di dettaglio *)
 {Lighter[Gray,0.5],Line[{{0,0},{Cos[th],Sin[th]}}]},
 {Lighter[Gray,0.5],Line[{{Cos[th],0},{Cos[th],Sin[th]}}]},
 
 (* yp *)
 {Black,Disk[{Cos[th], 0},0.02]},
 
-(* cos *)
+(* COS *)
 {Blue,Thick,Dashing[Medium],Line[{{0,Sin[th]},{Cos[th],Sin[th]}}]},
 {Blue,Thick,Line[{{0,0},{Cos[th],0}}]},
 
-(* retta punto *) 
+(* Retta punto *) 
 {Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
 
-(* angolo *)
+(* Angolo *)
 {Opacity[0.2],Darker[Green,0.3],Thick,Disk[{0,0},0.3,{0,th}]},
 {Darker[Green,0.3],Circle[{0,0},0.3,{0,th}]},
   
-(* linea tratteggiata per cos *)
+(* Linea tratteggiata per cos *)
 {Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th]-3,Sin[th]},{3,Sin[th]}}]},
 
-(* linea tratteggiata per sin *)
+(* Linea tratteggiata per sin *)
 {Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th],Sin[th]-3},{Cos[th],3}}]},
 
-(* testo *)
+(* TESTO *)
 Text[Style["Xp",FontFamily-> "OpenDyslexic"],{Cos[th]+0.1,0.1}],
 Text[Style["P",FontFamily-> "OpenDyslexic"],{Cos[th] +0.1,Sin[th]+0.1}],
 Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.2,0.1}],
@@ -326,62 +384,83 @@ Text[Style["Cos(\[Theta])",Blue,FontFamily-> "OpenDyslexic"],{Cos[th]/2,-0.1}]
 }],
 PlotRange->1,ImageSize->400,BaseStyle->{15},Axes->True,PlotRange->{{-1,1},{-1,1}},PlotRangePadding->0.25];
 
-(*genero grafico*)
+(* GENERO GRAFICO *)
 maingraph[th_]:=Module[{},
-	Show[
-		Plot[{Cos[x]},{x,0.0001,th},PlotRange->{{0,2Pi},{-1,1}},ImageSize->650,PlotRangePadding->{0,0.25},ImagePadding->{{30,12},{0,0}},PlotRangeClipping->False,PlotStyle->Darker[Blue,0.9],
-		Ticks->{Table[{n Pi/4,n Pi/4},{n,0,8}],Table[n,{n,-1,1,1/2}]},
-		GridLines->{Table[{n Pi/4,Lighter[Gray,0.7]},{n,-2,8}],Table[{n,Lighter[Gray,0.7]},{n,-1,1,1/2}]},ImageSize->{Automatic,145}],
-		Graphics[{
-			{Darker[Green,0.2],Thick,Line[{{0,0},{th,0}}]},
-			{Blue,Thick,Line[{{th,0},{th,Cos[th]}}]}
+	(* Plot della funzione coseno *)
+	Show[Plot[{Cos[x]},{x,0.0001,th},PlotRange->{{0,2Pi},{-1,1}},ImageSize->650,PlotRangePadding->{0,0.25},ImagePadding->{{30,12},{0,0}},PlotRangeClipping->False,PlotStyle->Darker[Blue,0.9],
+	
+	(* GRIGLIA *)
+	(* Valori asse x, y *)
+	Ticks->{Table[{n Pi/4,n Pi/4},{n,0,8}],Table[n,{n,-1,1,1/2}]},
+	
+	(* Linee sulla griglia*)
+	GridLines->{Table[{n Pi/4,Lighter[Gray,0.7]},{n,-2,8}],Table[{n,Lighter[Gray,0.7]},{n,-1,1,1/2}]},ImageSize->{Automatic,145}],
+	
+	(* DETTAGLI *)
+	Graphics[{
+		(* Linea di dettaglio asse x *)
+		{Darker[Green,0.2],Thick,Line[{{0,0},{th,0}}]},
+		(* Linea di dettaglio asse y *)
+		{Blue,Thick,Line[{{th,0},{th,Cos[th]}}]}
 	}],
 	AspectRatio->Automatic,BaseStyle->{12}]];
 
-
+(* Variabile diamica *)
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
-Labeled[Grid[{
+Labeled[
+	Grid[{
+	(* INIZIALIZAZIONE LOCATOR *)
+	(* http://mathworld.wolfram.com/Circle.html *)
+	{LocatorPane[Dynamic[pt,
+		{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
+		(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
+		(pt=Normalize[#];ptctrl=pt2[[1]])&}],
+	(* Disegno circonferenza *)		
+	Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]],
 
-{LocatorPane[Dynamic[pt,
-	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
-	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
-	(pt=Normalize[#];ptctrl=pt2[[1]])&}],
-Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]],
-
-LocatorPane[Dynamic[pt2,
-	{(pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]],0})&,
-	(pt2={#[[1]],0};pt={Cos[#[[1]]],Sin[#[[1]]]})&,
-	(pt2={#[[1]],0};ptctrl=#[[1]])&}],
-Dynamic[maingraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]]}},Spacings->0],{Row[{Style["Funzione ","Label",22,Gray,FontFamily-> "OpenDyslexic"],Text@Style["Coseno",Blue,22,FontFamily-> "OpenDyslexic"]}],
-Style["",10,Lighter[Gray,0.7],"Label",FontFamily-> "OpenDyslexic"]},{{Top,Center},{Bottom,Right}}]]
-],
+	(* INIZIALIZAZIONE LOCATOR *)
+	LocatorPane[Dynamic[pt2,
+		{(pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]],0})&,
+		(pt2={#[[1]],0};pt={Cos[#[[1]]],Sin[#[[1]]]})&,
+		(pt2={#[[1]],0};ptctrl=#[[1]])&}],kd
+	(* Disegno grafico *)		
+	Dynamic[maingraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]]}},Spacings->0],
+	(* TITOLO *)
+	{Row[{Style["Funzione ","Label",22,Gray,FontFamily-> "OpenDyslexic"],Text@Style["Coseno",Blue,22,FontFamily-> "OpenDyslexic"]}],
+	Style["",10,Lighter[Gray,0.7],"Label",FontFamily-> "OpenDyslexic"]},{{Top,Center},{Bottom,Right}}
+]]],
+(* Genero slider *)
 {{ptctrl,Pi/6,"angle"},0,2Pi},TrackedSymbols:>{ptctrl}]
 
 
-(* Definizione Seno Coseno *)
+(* DEFINIZIONE SENO COSENO *)
 defsencos[] :=
 Manipulate[
 Module[{anglegraph,maingraph},
 anglegraph[th_]:=Show[
 Graphics[{
+(* DETTAGLI *)
+(* Circonferenza *)
 {Lighter[Gray,0.5],Circle[{0,0},1]},
+
+(* Arco di circonferenza *)
 {Lighter[Gray,0.5],Line[{{0,0},{Cos[th],Sin[th]}}]},
 
-(* punti *)
+(* Punti *)
 {Black,Disk[{Cos[th], 0},0.02]},
 {Black,Disk[{0, Sin[th]},0.02]},
 
-(* tangente punto *) 
+(* Tangente punto *) 
 {Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
 
-(* angolo *) 
+(* Angolo *) 
 {Opacity[0.2],Darker[Green,0.3],Thick,Disk[{0,0},0.3,{0,th}]},
 {Darker[Green,0.3],Circle[{0,0},0.3,{0,th}]},
 			  
-(* linea tratteggiata per cos *)
+(* Linea tratteggiata per cos *)
 {Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th]-3,Sin[th]},{3,Sin[th]}}]},
 
-(* linea tratteggiata per sin *){
+(* Linea tratteggiata per sin *){
 Lighter[Gray,0.5],Dashing[Medium],Line[{{Cos[th],Sin[th]-3},{Cos[th],3}}]},
 
 (* TESTO *)
@@ -389,12 +468,10 @@ Text[Style["Xp",FontFamily-> "OpenDyslexic"],{Cos[th]+0.1,0.1}],
 Text[Style["Yp",FontFamily-> "OpenDyslexic"],{0.1,Sin[th]+0.1}],
 Text[Style["P",FontFamily-> "OpenDyslexic"],{Cos[th] +0.1,Sin[th]+0.1}],
 Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.2,0.1}],
-
 Text[Style["Cos(\[Theta])",Blue,FontFamily-> "OpenDyslexic"],{Cos[th]/2,-0.1}],
 Rotate[Text[Style["Sin(\[Theta])",Red,FontFamily-> "OpenDyslexic"],{-0.1,Sin[th]/2}],90\[Degree]],
 
 (* SEN COS TAN *)
-
 (* sin *)
 {Red,Thickness[0.008],Line[{{0,0},{0,Sin[th]}}]},
 {Red,,Dashing[Medium],Line[{{Cos[th],0},{Cos[th],Sin[th]}}]},
@@ -407,32 +484,41 @@ Rotate[Text[Style["Sin(\[Theta])",Red,FontFamily-> "OpenDyslexic"],{-0.1,Sin[th]
 }],
 PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->Automatic,PlotRangePadding->0.25];
 
+(* Variabile dinamica *)
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
 Grid[{
+(* INIZIALIZAZIONE LOCATOR *)
+(* http://mathworld.wolfram.com/Circle.html *)
 {LocatorPane[Dynamic[pt,
 	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
 	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
 	(pt=Normalize[#];ptctrl=pt2[[1]])&}],
      Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]
-     ],
-   
+],
+   (* LEGENDA *)
 	LineLegend[{Red, Blue,Darker[Green,0.3]},{Style["Sin",FontFamily-> "OpenDyslexic"],Style["Cos",FontFamily-> "OpenDyslexic"],Style["\[Theta]",FontFamily-> "OpenDyslexic"]}]
 }},Alignment->{Center,Center}]]
 ],
+(* Genero slider *)
 {{ptctrl,Pi/6,Style["Angle",FontFamily-> "OpenDyslexic"]},0,2Pi},TrackedSymbols:>{ptctrl}]
 
 
-(* Definizione rapporti *)
+(* DEFINIZIONE RAPPORTI *)
 rapporti[] :=
 Manipulate[
 Module[{anglegraph,maingraph},
 anglegraph[th_]:=Show[
 Graphics[{
+(* DETTAGLI *)
+(* Circonferenza *)
 {Lighter[Gray,0.5],Circle[{0,0},1]},
+
+(* Linee di dettaglio *)
 {Lighter[Gray,0.5],Line[{{0,0},{Cos[th],Sin[th]}}]},
+
+(* Punti *)
 {Black,Disk[{Cos[th], 0},0.02]},
 {Black,Disk[{0, 0},0.02]},
-(* {Darker[Green,0.2],Thick,Circle[{0,0},1,{0,th}]}, *)
 
 (* tangente punto *) 
 {Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
@@ -444,7 +530,8 @@ Graphics[{
 (* triangolo  sin cos*) 
 {Opacity[0.2],Cyan,EdgeForm[Directive[Thick,Cyan]], Triangle[{{0,0},{Cos[th],Sin[th]},{Cos[th],0}}]},
 
-(* angolo 90\[Degree]*)  
+(* Angolo 90\[Degree]*)
+(* gestiscei vari casi a seconda del quadrante*)  
 If[th<= Pi/2 ,
 	{
 		{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{Cos[th]-0.1, 0},{Cos[th]-0.1, 0.1},{Cos[th], 0.1},{Cos[th], 0}}]},
@@ -478,21 +565,27 @@ Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.2,0.1}]
 }],
 PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->Automatic,PlotRangePadding->0.25];
 
+(* Variabile dinamica *)
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
 Grid[{
+(* INIZIALIZAZIONE LOCATOR *)
+(* http://mathworld.wolfram.com/Circle.html *)
 {LocatorPane[Dynamic[pt,
 	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
 	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
 	(pt=Normalize[#];ptctrl=pt2[[1]])&}],
+	(* Disegn *)
      Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]
      ],
-     
+     (* LEGENDA *)
      LineLegend[{Darker[Green,0.3]},{ Style["\[Theta]",FontFamily-> "OpenDyslexic"]}]
 }},Alignment->{Center,Center}]]
 ],
+(* Genero slider *)
 {{ptctrl,Pi/6,Style["angle",FontFamily-> "OpenDyslexic"]},0,2Pi},TrackedSymbols:>{ptctrl}]
 
 
+(* tRIANGOLO RETTANGOLO *)
 triangolorett[] :=
 Grid[{{
 Graphics[{
@@ -530,15 +623,20 @@ Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {p11[[1]]+
 
 
 
+(* TANGENTE *)
 tangente[] :=
 Manipulate[
 Module[{anglegraph,maingraph},
 anglegraph[th_]:=Show[
 Graphics[{
+(* DETTAGLI *)
+(* Circonferenza *)
 {Lighter[Gray,0.5],Circle[{0,0},1]},
+
+(* Linee di dettaglio *)
 {Lighter[Gray,0.5],Line[{{0,0},{Cos[th],Sin[th]}}]},
 
-(* punti *)
+(* Punti *)
 {Black,Disk[{1, Tan[th]},0.02]},
 {Black,Disk[{0, Tan[th]},0.02]},
 {Black,Disk[{1,0},0.02]},
@@ -572,28 +670,38 @@ Rotate[Text[Style["Tan(\[Theta])",Orange,FontFamily-> "OpenDyslexic"],{1.1,Tan[t
 }],
 PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->Automatic,PlotRangePadding->0.25];
 
+(* Variabile dinamica *)
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
 Grid[{
+(* INIZIALIZAZIONE LOCATOR *)
+(* http://mathworld.wolfram.com/Circle.html *)
 {LocatorPane[Dynamic[pt,
 	{(pt={1,Tan[ptctrl]})&,
 	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
 	(pt=Normalize[#];ptctrl=pt2[[1]])&}],
+	(* Disegno *)
      Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]
      ],
-     
+     (* LEGENDA *)
      LineLegend[{Orange},{Style["Tan",FontFamily-> "OpenDyslexic"]}]
 }},Alignment->{Center,Center}]]
 ],
+(* Genero slider *)
 {{ptctrl,Pi/6,Style["angle",FontFamily-> "OpenDyslexic"]},0,2Pi},TrackedSymbols:>{showvalue,ptctrl}]
 
 
 
+(* DEFINIZIONE TANGENTE *)
 definizionetangente[] :=
 Manipulate[
 Module[{anglegraph,maingraph},
 anglegraph[th_]:=Show[
 Graphics[{
+(* DETTAGLI *)
+(* Circonferenza *)
 {Lighter[Gray,0.5],Circle[{0,0},1]},
+
+(* Linee di dettaglio *)
 {Lighter[Gray,0.5],Line[{{0,0},{Cos[th],Sin[th]}}]},
 
 (* punti *)
@@ -616,7 +724,8 @@ Graphics[{
 (* triangolo tan *) 
 {Opacity[0.2],Magenta,Thick,EdgeForm[Directive[Magenta]], Triangle[{{0,0},{1,0},{1,Tan[th]}}]},
 
-(* cos sin angolo 90\[Degree] *)  
+(* Angolo 90\[Degree]*)
+(* gestiscei vari casi a seconda del quadrante*)  
 If[th<= Pi/2 ,
 	{
 		{Opacity[0.2],Darker[Green,0.3],Thick,Polygon[{{Cos[th]-0.1, 0},{Cos[th]-0.1, 0.1},{Cos[th], 0.1},{Cos[th], 0}}]},
@@ -671,25 +780,34 @@ PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->Automatic,PlotRan
 
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
 Grid[{
+(* INIZIALIZAZIONE LOCATOR *)
+(* http://mathworld.wolfram.com/Circle.html *)
 {LocatorPane[Dynamic[pt,
 	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
 	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
 	(pt=Normalize[#];ptctrl=pt2[[1]])&}],
+	(* Disegno *) 
      Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]
      ],
-     
+     (* LEGENDA *)
      LineLegend[{Orange,Darker[Green,0.3]},{Style["Tan",FontFamily-> "OpenDyslexic"],Style["\[Theta]",FontFamily-> "OpenDyslexic"]}]
 }},Alignment->{Center,Center}]]
 ],
+(* Genero slider *)
 {{ptctrl,Pi/6,Style["angle",FontFamily-> "OpenDyslexic"]},0,2Pi},TrackedSymbols:>{showvalue,ptctrl}]
 
 
+(* ANGOLI NOTI MULTIPLI DI 30 *)
 angolinoti30[] :=
 Manipulate[
 Module[{anglegraph,maingraph},
 anglegraph[th_]:=Show[
 Graphics[{
+(* DETTAGLI *)
+(* Circonferenza *)
 {Lighter[Gray,0.5],Circle[{0,0},1]},
+
+(* Linee di dettaglio *)
 {Lighter[Gray,0.5],Line[{{0,0},{Cos[th],Sin[th]}}]},
 
 (* punti *)
@@ -728,6 +846,7 @@ Rotate[Text[Style["Sin(\[Theta])",Red,FontFamily-> "OpenDyslexic"],{-0.1,Sin[th]
 {Blue,Dashing[Medium],Line[{{0,Sin[th]},{Cos[th],Sin[th]}}]},
 
 {
+(* Non disegno la tangente a Pi/2 e 3Pi/2,*)
 If[th != Pi/2 && th != 3Pi/2,
 	(* tan *)  {
 	{Orange,Thick,Line[{{1,0},{1,Tan[th]}}]},
@@ -741,33 +860,53 @@ If[th != Pi/2 && th != 3Pi/2,
 PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->Automatic,PlotRangePadding->0.25];
 
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]}},
-Labeled[Grid[{
+Labeled[
+Grid[{
+(* INIZIALIZAZIONE LOCATOR *)
+(* http://mathworld.wolfram.com/Circle.html *)
 {LocatorPane[Dynamic[pt,
 	{(pt=Normalize[#]) &,
 	(pt=Normalize[#])&,
 	(pt=Normalize[#];ptctrl=If[#=={2Pi,0},Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]])&}],
+	(* Disegno *)
      Dynamic[anglegraph[Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]],Enabled->False],
-
-     LineLegend[{Darker[Green,0.3],Red, Blue,Orange},{Row[{Style["\[Theta]",FontFamily-> "OpenDyslexic"]}],Row@{Style["Sin(\[Theta]) = ",FontFamily-> "OpenDyslexic"],pt[[2]]},Row@{Style["Cos(\[Theta]) = ",FontFamily-> "OpenDyslexic"],pt[[1]]}, Row@{Style["Tan(\[Theta]) = ",FontFamily-> "OpenDyslexic"],Tan[ptctrl]}},LegendMarkerSize->40, LabelStyle->15]
-
+     
+	(* LEGENDA *)
+	(* Con termini dinamici *)
+     LineLegend[{Darker[Green,0.3],Red, Blue,Orange},{Row[{Style["\[Theta]",FontFamily-> "OpenDyslexic"]}],
+     Row@{Style["Sin(\[Theta]) = ",FontFamily-> "OpenDyslexic"],pt[[2]]},
+     Row@{Style["Cos(\[Theta]) = ",FontFamily-> "OpenDyslexic"],pt[[1]]},
+     Row@{Style["Tan(\[Theta]) = ",FontFamily-> "OpenDyslexic"],Tan[ptctrl]}},LegendMarkerSize->40, LabelStyle->15]
+     
+(* TITOLO *)
+(* Con termine dinamici *)
 }},Alignment->{Center,Center}],{Row[{Style["","Label",20,Gray,FontFamily-> "OpenDyslexic"],Text@Style["\[Theta] = ",Darker[Green,0.3],20,FontFamily-> "OpenDyslexic"],Style[(ptctrl*360)/(2*Pi),Darker[Green,0.3],25,FontFamily-> "OpenDyslexic"]}],
-
 Style["",10,Lighter[Gray,0.7],"Label",FontFamily-> "OpenDyslexic"]},{{Top,Left},{Bottom,Right}}]]
 ],
+(* Genero slider *)
 {{ptctrl,Pi/6,""},0,2Pi,Pi/6},TrackedSymbols:>{showvalue,ptctrl}]
 
 
+(* ANGOLI NOTI MULTIPLI DI 45 *)
 angolinoti45[]:=
 Manipulate[
 Module[{anglegraph,maingraph},
 anglegraph[th_]:=Show[
 Graphics[{
+(* DETTAGLI *)
+(* Circonferenza *)
 {Lighter[Gray,0.5],Circle[{0,0},1]},
-(* {Darker[Green,0.2],Thick,Circle[{0,0},1,{0,th}]}, *)
+
+(* Linee di dettaglio *)
 {Lighter[Gray,0.5],Line[{{0,0},{Cos[th],Sin[th]}}]},
+
+(* PUNTI*)
 {Black,Disk[{Cos[th], 0},0.02]},
 {Black,Disk[{0, Sin[th]},0.02]},
-(* tangente punto *) {Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
+
+(* tangente punto *)
+{Lighter[Gray,0.5],Line[{{-6Cos[th],-6Sin[th]},{6Cos[th],6Sin[th]}}]},
+
 (* angolo *) {Opacity[0.2],Darker[Green,0.3],Thick,Disk[{0,0},0.3,{0,th}]},
 			  {Darker[Green,0.3],Circle[{0,0},0.3,{0,th}]},
 (* linea tratteggiata per cos *){Lighter[Gray,0.5],,Dashing[Medium],Line[{{Cos[th]-3,Sin[th]},{3,Sin[th]}}]},
@@ -799,24 +938,36 @@ If[th != Pi/2 && th != 3Pi/2,
 }],
 PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->Automatic,PlotRangePadding->0.25];
 
+(* Variabile dinamica*)
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]}},
-Labeled[Grid[{
+Labeled[
+Grid[{
+(* INIZIALIZAZIONE LOCATOR *)
+(* http://mathworld.wolfram.com/Circle.html *)
 {LocatorPane[Dynamic[pt,
 	{(pt=Normalize[#]) &,
 	(pt=Normalize[#])&,
 	(pt=Normalize[#];ptctrl=If[#=={2Pi,0},Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]])&}],
+	(* Disegno *)
 	Dynamic[anglegraph[Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]],Enabled->False],
 	
-    LineLegend[{Darker[Green,0.3],Red, Blue,Orange},{Row[{Style["\[Theta]",FontFamily-> "OpenDyslexic"]}],Row@{Style["Sin(\[Theta]) = ",FontFamily-> "OpenDyslexic"],pt[[2]]},Row@{Style["Cos(\[Theta]) = ",FontFamily-> "OpenDyslexic"],pt[[1]]}, Row@{Style["Tan(\[Theta]) = ",FontFamily-> "OpenDyslexic"],Tan[ptctrl]}},LegendMarkerSize->40, LabelStyle->15]
-}},Alignment->{Center,Center}],
+	(* LEGENDA *)
+	(* Con termini dinamici *)
+    LineLegend[{Darker[Green,0.3],Red, Blue,Orange},{Row[{Style["\[Theta]",FontFamily-> "OpenDyslexic"]}],
+    Row@{Style["Sin(\[Theta]) = ",FontFamily-> "OpenDyslexic"],pt[[2]]},
+    Row@{Style["Cos(\[Theta]) = ",FontFamily-> "OpenDyslexic"],pt[[1]]},
+    Row@{Style["Tan(\[Theta]) = ",FontFamily-> "OpenDyslexic"],Tan[ptctrl]}},LegendMarkerSize->40, LabelStyle->15] }},Alignment->{Center,Center}],
+(* TITOLO *)
+(* Con termini dinamici *)
 {Row[{Style["","Label",20,Gray,FontFamily-> "OpenDyslexic"],Text@Style["\[Theta] = ",Darker[Green,0.3],20,FontFamily-> "OpenDyslexic"],Style[(ptctrl*360)/(2*Pi),Darker[Green,0.3],25,FontFamily-> "OpenDyslexic"]}],
-
 Style["",10,Lighter[Gray,0.7],"Label",FontFamily-> "OpenDyslexic"]},{{Top,Left},{Bottom,Right}}]]
 ],
+(* Genero slider *)
 {{ptctrl,Pi/4,""},0,2Pi,Pi/4},TrackedSymbols:>{ptctrl}]
 
 
 
+(* TEOREMA DELLA CORDA PT.1 *)
 teoremacorda[] :=
 Grid[{{
 Graphics[{
@@ -856,12 +1007,13 @@ Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {pc[[1]]+0
 
 
 },PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->0.25]
-
+(* LEGENDA *)
 , LineLegend[{Darker[Green,0.3],Red},{Style["\[Theta]",FontFamily-> "OpenDyslexic"],Style["Corda",FontFamily-> "OpenDyslexic"]},LegendMarkerSize->40, LabelStyle->15]
 
 }},Frame->Directive[Lighter[Gray,0.5]]]
 
 
+(* TEOREMA DELLA CORDA PT.2 *)
 teoremacorda2[]:=
 
 Manipulate[
@@ -870,11 +1022,15 @@ anglegraph[a_,b_,th_]:=Module[{anga},
 anga={ArcTan[(Sin[th] -a[[2]])/(Cos[th]-a[[1]])] ,ArcTan[(Sin[th] -b[[2]])/(Cos[th]-b[[1]])] };
 Show[
 Graphics[{
-
-(* CIRCONFERENZA *)
+(* DETTAGLI *)
+(* Circonferenza *)
 {Lighter[Gray,0.5],Circle[{0,0},1]},
+
+(* Arco in evidenza *)
 {Purple,Thick,Circle[{0, 0},1, {Pi/2-a[[1]], 2Pi+b[[2]]}]},
 
+(* Arco su angolo *)
+(* gestiscei vari casi a seconda del tipo di angolo generato (acuto o ottuso), e regola l'orientamento*)  
 {If[ Cos[th] >b[[1]] && Cos[th] > a[[1]],
 	{
 		{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{Cos[th], Sin[th]},0.2,{anga[[1]]+Pi,anga[[2]]+Pi } ]},
@@ -932,24 +1088,29 @@ Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {Cos[th]+0
 }],PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->0.25]];
 
 
-
+(* Variabile dinamica*)
 DynamicModule[{pt={Cos[ptctrl], Sin[ptctrl]},pt2={ptctrl,0}},
 Grid[{
+(* INIZIALIZAZIONE LOCATOR *)
+(* http://mathworld.wolfram.com/Circle.html *)
 {LocatorPane[Dynamic[pt,
 	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
 	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
 	(pt=Normalize[#];ptctrl=pt2[[1]])&}],
+	(* Disegno *)
 	Dynamic[anglegraph[pa,pb,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]],
-	
 	pcc ={Sin[ ptctrl], Cos[ptctrl]};
+	
+(* LEGENDA*)
 LineLegend[{Darker[Green,0.3],Red,},{Style["\[Theta]",FontFamily-> "OpenDyslexic"],Style["Corda",FontFamily-> "OpenDyslexic"]},LegendMarkerSize->40, LabelStyle->15]
 }},Spacings->0]]
 
 ],
-
+(* Genero slider *)
 {{ptctrl,Pi +0.5,Style["angle",FontFamily-> "OpenDyslexic"]},0,2Pi},TrackedSymbols:>{ptctrl}]
 
 
+(* TEOREMA DELLA CORDA PT.3 *)
 teoremacorda3[]:=
 
 Manipulate[
@@ -958,11 +1119,15 @@ anglegraph[a_,b_,c_,th_]:=Module[{anga},
 anga={ArcTan[(Sin[th] -a[[2]])/(Cos[th]-a[[1]])] ,ArcTan[(Sin[th] -b[[2]])/(Cos[th]-b[[1]])] };
 Show[
 Graphics[{
-
-(* CIRCONFERENZA *)
+(* DETTAGLI *)
+(* Circonferenza *)
 {Lighter[Gray,0.5],Circle[{0,0},1]},
+
+(* Arco in evidenza *)
 {Lighter[Magenta,0.5],Thick,Circle[{0, 0},1, {Pi/2, b[[2]]}]},
 
+(* Arco su angolo *)
+(* gestiscei vari casi a seconda del tipo di angolo generato (acuto o ottuso), e regola l'orientamento*)
 {If[ Cos[th] >b[[1]] && Cos[th] > a[[1]],
 	{
 	{Opacity[0.2],Darker[Green,0.3],Thick,Disk[{Cos[th], Sin[th]},0.2,{anga[[1]]+Pi,anga[[2]]+Pi } ]},
@@ -1030,21 +1195,28 @@ Text[Style["r",FontFamily-> "OpenDyslexic"],{0.4,-0.15}]
 
 }],PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->0.25]];
 
+
+(* Variabile dinamica*)
 DynamicModule[{pt={Cos[ptctrl], Sin[ptctrl]},pt2={ptctrl,0}},
 Grid[{
+(* INIZIALIZAZIONE LOCATOR *)
+(* http://mathworld.wolfram.com/Circle.html *)
 {LocatorPane[Dynamic[pt,
 	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
 	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
 	(pt=Normalize[#];ptctrl=pt2[[1]])&}],
+	(* Disegno *)
 	Dynamic[anglegraph[pa2,pb2,pc2,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]],
 	
 	pcc ={Sin[ ptctrl], Cos[ptctrl]};
-  LineLegend[{Darker[Green,0.3],Red},{Row@{Style["\[Delta]",FontFamily-> "OpenDyslexic"]},Style["Coda",FontFamily-> "OpenDyslexic"]},LegendMarkerSize->40]
+(* LEGENDA *)	
+LineLegend[{Darker[Green,0.3],Red},{Row@{Style["\[Delta]",FontFamily-> "OpenDyslexic"]},Style["Coda",FontFamily-> "OpenDyslexic"]},LegendMarkerSize->40]
 }},Alignment->{Center,Center}]]
-
+(* Genero slider *)
 ],{{ptctrl,0.4,Style["angle",FontFamily-> "OpenDyslexic"]},0,2Pi},TrackedSymbols:>{ptctrl}]
 
 
+(* TEOREMA DEI SENI *)
 teoremaseni[] :=
 Grid[{{
 Graphics[{
@@ -1092,6 +1264,7 @@ PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->0.25]
 }},Frame->Directive[Lighter[Gray,0.5]]]
 
 
+(* TEOREMA DEI COSENI *)
 teoremacoseno[]:=
 Grid[{{
 Graphics[{
@@ -1134,6 +1307,7 @@ PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->{0.20
 }},Frame->Directive[Lighter[Gray,0.5]]]
 
 
+(* TEOREMA DEI COSENI PT.2 *)
 teoremacoseno2[]:=
 Grid[{{
 Graphics[{
@@ -1188,6 +1362,7 @@ PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->{0.20
 
 
 
+(* TEOREMA DI PITAGORA *)
 pitagora[]:=
 Grid[{{
 Graphics[{
@@ -1233,11 +1408,6 @@ PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->{0.20
 
 
 (*######################### ESERCIZI ##############################*)
-
-
-
-
-
 
 
 
