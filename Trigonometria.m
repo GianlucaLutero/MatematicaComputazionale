@@ -2329,11 +2329,33 @@ Magnify[
       Dynamic[CheckAnswer[gamma2,"60"]]}],
       " \[LongRightArrow] ",
       Style["sen(\[Alpha]) = ",Bold,FontFamily->"OpenDyslexic"],
-      Row[{InputField[Dynamic[latob],String,FieldSize -> 2],Dynamic[CheckAnswer[latob,"2.5"]]}]/Row[{InputField[Dynamic[latoc],String,FieldSize->2],Dynamic[CheckAnswer[latoc,"3"]]}],
+      Row[{InputField[Dynamic[latob],String,FieldSize -> 2],
+                                         Dynamic[If[latob == "",
+                                            Text[""],
+                                            If[latob == "2.5"|| latob == "2,5",
+                                            Style["\[Checkmark]",FontColor->Green],
+                                            Style["X",FontColor->Red,Bold],
+                                            Text[""]],
+                                            Text[""]]]
+                                        
+                                        
+                                        
+                                        }]/Row[{InputField[Dynamic[latoc],String,FieldSize->2],Dynamic[CheckAnswer[latoc,"3"]]}],
       " \[CenterDot] ",
       Row[{SqrtBox[InputField[Dynamic[num10],String,FieldSize->2]]//DisplayForm,Dynamic[CheckAnswer[num10,"3"]] }] /Row[{InputField[Dynamic[den10],String,FieldSize->2],Dynamic[CheckAnswer[den10,"2"]]}],
       " = ",
-      Row[{InputField[Dynamic[res10],String,FieldSize-> 2],Dynamic[CheckAnswer[res10,"0.7"]]}]
+      Row[{InputField[Dynamic[res10],String,FieldSize-> 2],
+      
+                      
+                      Dynamic[If[res10 == "",
+                                            Text[""],
+                                            If[res10 == "0.7"|| res10 == "0,7",
+                                            Style["\[Checkmark]",FontColor->Green],
+                                            Style["X",FontColor->Red,Bold],
+                                            Text[""]],
+                                            Text[""]]]
+      
+      }]
 
 }],1.5]}
 
