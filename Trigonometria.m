@@ -87,6 +87,7 @@ Calcolatrice::usage = "Calcolatrice semplice per il calcolo di funzioni trigonom
 
 TPitagora::usage = "Suggerimento Teorema di pitagora";
 
+Begin["Private`"]
 ClearAll["Global`*"]
 
 
@@ -2363,4 +2364,5 @@ Magnify[
 ]
 
 
+End[]
 EndPackage[]
