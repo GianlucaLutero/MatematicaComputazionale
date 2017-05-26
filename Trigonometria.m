@@ -130,7 +130,7 @@ Button[Style["Funzione Tangente",FontFamily-> "OpenDyslexic"],MessageDialog[  gr
 (* GENERA BOTTONE *)
 (* Funzione che genera il bottone che richiama la fiunzione pitagora[] *)
 bottonepitagora[]:=
-Button[Style["Teorema di Pitagora",FontFamily-> "OpenDyslexic"],MessageDialog[  pitagora[] ,WindowSize->All,Editable->False]]
+Button[Style["Osservazione",FontFamily-> "OpenDyslexic"],MessageDialog[  pitagora[] ,WindowSize->All,Editable->False]]
 
 
 (* GENERA BOTTONE *)
@@ -1405,7 +1405,7 @@ Text[Style["\[Gamma]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {p11[[1]]+
 (* MISURE PLOT*)
 PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->{0.20,0}]
 (* Scrivo testo sotto la figura nel popup*)
-}, { Row@{Style["      Se l'angolo \[EGrave] retto il coseno ha valore = 1, \nquindi otteniamo il teorema di pitagora: \!\(\*SuperscriptBox[\(AB\), \(2\)]\) + \!\(\*SuperscriptBox[\(BC\), \(2\)]\) = \!\(\*SuperscriptBox[\(AC\), \(2\)]\)",16,FontFamily-> "OpenDyslexic"]}}},Frame->Directive[Lighter[Gray,0.5]]]
+}, { Row@{Style["      Il teorema del coseno \[EGrave] una generalizzazione del teorema di Pitagora infatti se l'angolo \[EGrave] retto il coseno ha valore = 0, \nquindi otteniamo: \!\(\*SuperscriptBox[\(AB\), \(2\)]\) + \!\(\*SuperscriptBox[\(BC\), \(2\)]\) = \!\(\*SuperscriptBox[\(AC\), \(2\)]\)",16,FontFamily-> "OpenDyslexic"]}}},Frame->Directive[Lighter[Gray,0.5]]]
 
 
 (*######################### ESERCIZI ##############################*)
@@ -1628,7 +1628,7 @@ Grid[{{Text[Style["Esercizio Guidato:",20,FontColor-> Red,FontFamily-> "OpenDysl
 ,Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizioGuidato],1],Text[""]},
 {Text[Style["Procedimento:",17,FontColor -> Red,FontFamily-> "OpenDyslexic"]]},
 (*Viene stampato il passo 1 dell'esercizio*)
-{Text[Style["Passo 1: Cerchiamo l'ipotenusa C.\n Applico il Teorema di Pitagora:",Bold,15,FontFamily-> "OpenDyslexic"]]},
+{Text[Style["Passo 1: sen(\[Alpha]) = \!\(\*FractionBox[\(\(cateto\)\(\\\ \)\(opposto\)\(\\\ \)\(all'\) \(angolo\)\(\\\ \)\(\[Alpha]\)\(\\\ \)\), \(ipotenusa\)]\) quindi per prima cosa cerchiamo l'ipotenusa C.\n Applico il Teorema di Pitagora:",Bold,15,FontFamily-> "OpenDyslexic"]]},
 {Text[""],Panel[Magnify[risoluzioneEsercizioGuidatoPasso1,2]]},
 
 (*Viene stampato il passo 2 dell'esercizio*)
@@ -1697,15 +1697,15 @@ Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizio2],1]},
  {Text[Style["Procedimento:",17,FontColor -> Red,FontFamily-> "OpenDyslexic"]]},
 
  (* Viene stampato il suggerimento *)
- {Text[Style["Ricorda! tan\[Beta] =\!\(\*FractionBox[\(\(\\\ \)\(cateto\\\ opposto\)\), \(cateto\\\ adiacente\)]\)",Bold,20,FontFamily-> "OpenDyslexic"]]},
+ {Text[Style["Ricorda! tan(\[Beta]) = \!\(\*FractionBox[\(cateto\\\ opposto\\\ all' angolo\\\ \[Beta]\), \(cateto\\\ aiacente\\\ all' angolo\\\ \[Beta]\)]\)",Bold,20,FontFamily-> "OpenDyslexic"]]},
 
  (* Prima domanda *)
- {Text[Style["Qual \[EGrave] il cateto adiacente?",Bold,20,FontFamily-> "OpenDyslexic"]],
+ {Text[Style["Qual \[EGrave] il cateto adiacente all'angolo \[Beta]?",Bold,20,FontFamily-> "OpenDyslexic"]],
               Magnify[RadioButtonBar[Dynamic[catAd],{"A","B","C"}],1.5],
               Magnify[Dynamic[CheckAnswer[catAd,"A"]],3]},
 
  (* Seconda domanda *)
- {Text[Style["Qual \[EGrave] il cateto opposto?",Bold,20,FontFamily-> "OpenDyslexic"]],
+ {Text[Style["Qual \[EGrave] il cateto opposto all'angolo \[Beta]?",Bold,20,FontFamily-> "OpenDyslexic"]],
              Magnify[RadioButtonBar[Dynamic[catOp],{"A","B","C"}],1.5],
              Magnify[Dynamic[CheckAnswer[catOp,"B"]],3]},
 
@@ -1943,7 +1943,7 @@ Grid[{{Text[Style["Esercizio 5:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]
 {Text[Style["Procedimento:",17,FontColor -> Red,FontFamily-> "OpenDyslexic"]]},
 
 (* Primo passo dell'esercizio *)
-{Magnify[Row[{Text[Style["Calcolare l'ampiezza dell'angolo \[Gamma]: \!\(\*SuperscriptBox[\(180\), \(o\)]\)-(",FontFamily-> "OpenDyslexic",Bold]],
+{Magnify[Row[{Text[Style["Bisogna usare il teorema dei seni quindi \[EGrave] necessario calcolare l'ampiezza dell'angolo \[Gamma] perch\[EGrave] \[EGrave] opposto al lato C: \!\(\*SuperscriptBox[\(180\), \(o\)]\)-(",FontFamily-> "OpenDyslexic",Bold]],
                InputField[Dynamic[ott],String,FieldSize->2],
                Style["\!\(\*SuperscriptBox[\(\\\ \), \(o\)]\)",FontFamily-> "OpenDyslexic"],
                (* Dynamic[CheckAnswer[ott,"105"]], *)
@@ -2082,12 +2082,12 @@ Grid[{{Text[Style["Esercizio 9:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]
        (* Stampo foto esercizio *)
       {Magnify[Sharpen[Import["campanile.jpeg"]],4],
        Magnify[
-         Row[{Style["Trovare H,\ndove H \[EGrave] l'altezza\ndel campanile\n",FontFamily-> "OpenDyslexic",FontColor->Red,FontFamily->  "OpenDyslexic"],
+         Row[{Style["Trovare \!\(\*OverscriptBox[\(AB\), \(_\)]\),\ndove \!\(\*OverscriptBox[\(AB\), \(_\)]\) \[EGrave] l'altezza\ndel campanile\n",FontFamily-> "OpenDyslexic",FontColor->Red,FontFamily->  "OpenDyslexic"],
             Style["Approssimare il risultato per difetto\n",FontFamily ->  "OpenDyslexic",FontColor-> Red,8],
             Style["tan(",FontFamily->  "OpenDyslexic"],InputField[Dynamic[tang],String,FieldSize-> 2],
             Dynamic[CheckAnswer[tang,"42"]],"\!\(\*SuperscriptBox[\(\\\ \), \(\[Degree]\)]\)) = ", 
-            Row[{InputField[Dynamic[altezza],String,FieldSize->2],Dynamic[CheckAnswer[altezza,"H"]]}]/Row[{InputField[Dynamic[base],String,FieldSize-> 2],Dynamic[CheckAnswer[base,"80"]]}],
-            Style[" \nH = ",FontFamily->  "OpenDyslexic"],Row[{InputField[Dynamic[base2],String,FieldSize-> 2],Dynamic[CheckAnswer[base2,"80"]]}],
+            Row[{InputField[Dynamic[altezza],String,FieldSize->2],Dynamic[CheckAnswer[altezza,"AB"]]}]/Row[{InputField[Dynamic[base],String,FieldSize-> 2],Dynamic[CheckAnswer[base,"80"]]}],
+            Style[" \n\!\(\*OverscriptBox[\(AB\), \(_\)]\) = ",FontFamily->  "OpenDyslexic"],Row[{InputField[Dynamic[base2],String,FieldSize-> 2],Dynamic[CheckAnswer[base2,"80"]]}],
             Style[" \[CenterDot] tan(",FontFamily->  "OpenDyslexic"],
             Row[{InputField[Dynamic[altezza2],String,FieldSize-> 2],Dynamic[CheckAnswer[altezza2,"42"]]}],
             "\!\(\*SuperscriptBox[\(\\\ \), \(\[Degree]\)]\)) = ",
