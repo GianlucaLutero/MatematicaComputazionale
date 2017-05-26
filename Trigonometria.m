@@ -183,7 +183,7 @@ Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.2,0.1}],
 Rotate[Text[Style["Sin(\[Theta])",Red,FontFamily-> "OpenDyslexic"],{-0.1,Sin[th]/2}],90\[Degree]]
 
 }],
-PlotRange->1,ImageSize->400,BaseStyle->{15},Axes->True,PlotRange->{{-1,1},{-1,1}},PlotRangePadding->0.25];
+PlotRange-> 1,ImageSize->400, Ticks->{{-1,1},{-1,1}},BaseStyle->{15},Axes->True,PlotRangePadding->0.25];
 
 (* GENERO GRAFICO*)
 maingraph[th_]:=Module[{},
@@ -285,7 +285,7 @@ Rotate[Text[Style["Tan(\[Theta])",Orange,FontFamily-> "OpenDyslexic"],{1.1,Tan[t
 {Orange,Thickness[0.008],Dashing[Medium],Line[{{0,0},{0,Tan[th]}}]}
 
 }],
-PlotRange->1,ImageSize->400,BaseStyle->{15},Axes->True,PlotRange->{{-1,1},{-1,1}},PlotRangePadding->0.25];
+PlotRange->1,ImageSize->400,BaseStyle->{15},Axes->True,PlotRange->{{-1,1},{-1,1}}, Ticks->{{-1,1},{-1,1}},PlotRangePadding->0.25];
 
 (* GENERO GRAFICO *)
 maingraph[th_]:=Module[{},
@@ -382,7 +382,7 @@ Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.2,0.1}],
 Text[Style["Cos(\[Theta])",Blue,FontFamily-> "OpenDyslexic"],{Cos[th]/2,-0.1}]
 
 }],
-PlotRange->1,ImageSize->400,BaseStyle->{15},Axes->True,PlotRange->{{-1,1},{-1,1}},PlotRangePadding->0.25];
+PlotRange->1,ImageSize->400,BaseStyle->{15},Axes->True,PlotRange->{{-1,1},{-1,1}}, Ticks->{{-1,1},{-1,1}}, PlotRangePadding->0.25];
 
 (* GENERO GRAFICO *)
 maingraph[th_]:=Module[{},
@@ -482,7 +482,7 @@ Rotate[Text[Style["Sin(\[Theta])",Red,FontFamily-> "OpenDyslexic"],{-0.1,Sin[th]
 
 
 }],
-PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->Automatic,PlotRangePadding->0.25];
+PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->{{-1,1},{-1,1}},PlotRangePadding->0.25];
 
 (* Variabile dinamica *)
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
@@ -563,7 +563,7 @@ Text[Style["O",FontFamily-> "OpenDyslexic"],{-0.1,0.1}],
 Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"],{0.2,0.1}]
 
 }],
-PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->Automatic,PlotRangePadding->0.25];
+PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->{{-1,1},{-1,1}},PlotRangePadding->0.25];
 
 (* Variabile dinamica *)
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
@@ -668,7 +668,7 @@ Rotate[Text[Style["Tan(\[Theta])",Orange,FontFamily-> "OpenDyslexic"],{1.1,Tan[t
 {Orange,Thickness[0.008],Dashing[Medium],Line[{{0,0},{0,Tan[th]}}]},
 
 }],
-PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->Automatic,PlotRangePadding->0.25];
+PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->{{-1,1},{-1,1}},PlotRangePadding->0.25];
 
 (* Variabile dinamica *)
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
@@ -776,7 +776,7 @@ Rotate[Text[Style["Tan(\[Theta])",Orange,FontFamily-> "OpenDyslexic"],{1.1,Tan[t
 {Orange,Thick,Line[{{1,0},{1,Tan[th]}}]}, 
 
 }],
-PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->Automatic,PlotRangePadding->0.25];
+PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->{{-1,1},{-1,1}},PlotRangePadding->0.25];
 
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
 Grid[{
@@ -857,7 +857,7 @@ If[th != Pi/2 && th != 3Pi/2,
 
 
 }],
-PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->Automatic,PlotRangePadding->0.25];
+PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->{{-1,1},{-1,1}},PlotRangePadding->0.25];
 
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]}},
 Labeled[
@@ -936,7 +936,7 @@ If[th != Pi/2 && th != 3Pi/2,
 ]}
 
 }],
-PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->Automatic,PlotRangePadding->0.25];
+PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->True,Ticks->{{-1,1},{-1,1}},PlotRangePadding->0.25];
 
 (* Variabile dinamica*)
 DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]}},
@@ -1085,7 +1085,7 @@ Text[Style["r",FontFamily-> "OpenDyslexic"],{0.4,-0.15}],
 Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {Cos[th]+0.1, Sin[th]+0.1}]
 
 
-}],PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->0.25]];
+}],PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,Ticks->{{-1,1},{-1,1}},PlotRangePadding->0.25]];
 
 
 (* Variabile dinamica*)
@@ -1193,7 +1193,7 @@ Text[Style["\[Delta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], {Cos[th]-0
 Text[Style["\[Theta]",Darker[Green,0.3],FontFamily-> "OpenDyslexic"], c+0.1],
 Text[Style["r",FontFamily-> "OpenDyslexic"],{0.4,-0.15}]
 
-}],PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->0.25]];
+}],PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,Ticks->{{-1,1},{-1,1}},PlotRangePadding->0.25]];
 
 
 (* Variabile dinamica*)
