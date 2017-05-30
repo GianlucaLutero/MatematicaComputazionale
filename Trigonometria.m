@@ -8,6 +8,22 @@
 (* :Package Version: 11.0.1.0 *)
 (* :Mathematica Version: 11.0.1.0 *)
 
+
+(* :Descrizioe difficolta e scelte progettulai:  
+
+		- Disegnare gli archi su certi angoli \[EGrave] stato un problema, dato che le funzione Disk o Circle hanno bisogno 2 angoli per 
+		  poter disegnare un arco (\[Theta]1, \[Theta]2 estremi).
+		  Quindi \[EGrave] stata creata un funzione che calcola i due angoli, in particoare si \[EGrave] cercato il coefficente angolare delle 
+		  rette passanti tra ipunti d'interesse.
+		  Vedi funzione: angolo[p1_,p2_,p3_].
+		
+		- E stata sviluppata in parte una calcolatrice che doveva servire allo studente per risolvere i problemi forniti.
+		  Questa idea \[EGrave] stata poi successivamene accantonata, perch\[EGrave] particolarmente complicata la gestione delle problematiche
+		  e soprattutto perch\[EGrave] la calcolatrice segue il linguaggio di mathematica, che risulta meno intuitivo di quello delle
+		  calcolatrici normai
+		  
+*)
+
 BeginPackage["Trigonometria`"]
 
 (* Funzioni *)
@@ -91,11 +107,12 @@ Begin["Private`"]
 ClearAll["Global`*"]
 
 
+
 (* FUNZIONE CALCOLO ANGOLO *)
-(* Angolo calcola i due angoli Subscript[\[Theta], 1], Subscript[\[Theta], 2] necessari per poter disegnare una arco di circonferenza tramite Disk[{x,y},{Subscript[\[Theta], 1],Subscript[\[Theta], 2]}] *)
+(* Angolo calcola i due angoli \[Theta]1, \[Theta]2 necessari per poter disegnare una arco di circonferenza tramite Disk[{x, y},...,{\[Theta]1, \[Theta]2}] *)
 angolo[p1_,p2_,p3_]:=Module[{anga},
-anga={If[(p3[[1]]-p1[[1]])!=0, ArcTan[(p3[[2]] -p1[[2]])/(p3[[1]]-p1[[1]])] ,0] ,
-If[(p3[[1]]-p2[[1]])!=0, ArcTan[(p3[[2]] -p2[[2]])/(p3[[1]]-p2[[1]])],0] }
+anga={If[(p3[[1]]-p1[[1]])!=0, ArcTan[(p3[[2]] -p1[[2]])/(p3[[1]]-p1[[1]])], 0] ,
+	  If[(p3[[1]]-p2[[1]])!=0, ArcTan[(p3[[2]] -p2[[2]])/(p3[[1]]-p2[[1]])], 0] }
 ];
 
 
