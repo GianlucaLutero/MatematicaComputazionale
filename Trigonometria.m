@@ -1410,7 +1410,152 @@ PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->{0.20
 
 
 (*######################### ESERCIZI ##############################*)
-
+(*
+   %% Struttura generica degli esercizi %%
+   
+   EsercizioTutorial[]:=
+     
+     Module[{val1 = ""}, %% Le variabili che conterranno le risposte dell'utente vengono inizializzate con il valore ""
+     
+          %% All'inizio vengono inizializzate le variabili che contengono i dati e i passi di risoluzione dell'esercizio
+           
+          datiEsercizio = StringJoin[Style[" Qui vanno inseriti i dati del problema ",FontFamily-> "OpenDyslexic",Bold],
+                                      Style[" Qui va inserita la richiesta del problema",FontColor->Red,FontFamily-> "OpenDyslexic",Bold] ];
+                                      
+          passoNEsercizio = Panel[
+                                   Row[{
+                                     %% Parte dell'espressione da completare 
+                                     Style[" A = "],
+                                     
+                                     %% InputField da completare per gli esercizi di completamento,
+                                     %% puo' essere sostituito dal comando RadioButton negli esercizi a risposta multipla
+                                     InputField[Dynamic[var1],String,FieldSize \[Rule] 1], 
+                                     
+                                     %% Parte in cui viene controllata la risposta data dall'utente.
+                                     %% La module CheckAnswer[] stamper\[AGrave] un \[Checkmark] se var1 conterr\[AGrave] il valore "rispostaCorretta",
+                                     %% una X se conterr\[AGrave] qualcosa di diverso dal valore "rispostaCorretta" oppure
+                                     %% non stamper\[AGrave] nulla se il valore di var1 = ""
+                           
+                                     %% NOTA: per modificare il problema basta cambiare la stringa "rispostaCorretta" in accordo 
+                                     %% con i nuovi dati del problema
+                                     Dynamic[CheckAnswer[var1,"rispostaCorretta"]]
+                                   }]  
+                            ];
+          
+          %% In questa parte viene stampato l'esercizio impostandone il 
+          %% layout mediante il comando Grid[]  
+               
+          %% L'esercizio \[EGrave] strutturato come segue:
+          %%     
+          %%  _______________________________________________________________ 
+          %% | Titolo dell'esercizio         |                                   |
+          %% |_______________________________________________________________|
+          %% |                                |                                   |
+          %% |           Figura              |             Dati                   |
+          %% |       dell'esercizio          |        dell'esercizio             |
+          %% | ____________________________|_________________________________|
+          %% | Procedimento:                 |                                    |
+          %% |_____________________________|_________________________________|
+          %% | Testo per il passo N         |                                    |
+          %% |_____________________________|_________________________________|
+          %% |                               |  Passo N dell'esercizio           |
+          %% |_______________________________________________________________|
+          
+                                                                                                            
+          Grid[{
+          
+              %% Stampa del titolo dell'esercizio sulla prima riga
+             {Style["Titolo dell'esercizio :",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]},
+             
+             {
+               Magnify[Graphics[{
+               
+               %% Qui va tutto il codice per il disegno della figura
+               
+               }],2],
+             
+               %% A fianco della figura vengono stampati i dati contenuti nella variabile datiEsercizio
+               Magnify[Apply[StringJoin,ToString[#,StandardForm]&/@datiEsercizio],1]
+             },
+             
+             {Text[Style["Procedimento:",17,FontColor -> Red,FontFamily-> "OpenDyslexic"]]},
+             
+             %% Viene stampato il testo per il passo N dell'esercizio
+             {Text[Style["Testo per il passo N:",17,FontFamily-> "OpenDyslexic"]]},
+             
+             %% Di seguito viene stampato il passo N dell'esercizio
+             {Text[""],Panel[Magnify[passoNEsercizio,2]]},
+             
+          },Alignment-> {Left,Center},Spacings -> {5,5},Dividers->{{},{3 -> Red}}]                                                                           
+        
+     ]
+   
+   
+   
+   %% Note sugli esercizi %%
+   
+   ############### Propriet\[AGrave] commutativa  ################################
+   %% In alcuni esercizi \[EGrave] necessario implementare la propriet\[AGrave] commutativa
+   %% per evitare di escludere alcune soluzioni corrette del problema.
+   
+   %% Questa soluzione viene implementata con il seguente codice d'esempio per
+   %% la somma di due valori.
+   %% Es:  | 1 | + | 2 | = 3
+   
+   Row[{
+         %% Primo addendo 
+         InputField[Dynamic[add1],String],
+   
+         %% Variabile che contiene l'esito della valutazione di correttezza
+         %% del primo addendo, viene assegnata solo dopo aver completato i due InputField
+         Dynamic[es1],
+   
+         " + ",
+         %% Secondo addendo
+         InputField[Dynamic[add2],String],
+         
+         %% Valutazione di correttezza di add1 e add2.
+         %% La struttura di questa porzione di codice \[EGrave] simile al corpo della Module CheckAnswer
+         %% l'unica differenza sta nell' If pi\[UGrave] interno dove la condizione accetta come vero sia 1 + 2 che 2 + 1 
+         Dynamic[  If[(add1 == "") || (add2 == ""),
+                       es1 = Text[""];
+                       Text[""],
+                       If[(add1 == "1" && add2 == "2") || (add1 == "2" && add2 == "1"),
+                              es1 = Style["\[Checkmark]",FontColor->Green];                    
+                              Style["\[Checkmark]",FontColor->Green],
+                              es1 = Style["X",FontColor->Red,Bold];
+                              Style["X",FontColor->Red,Bold],
+                              es1 = Text[""];
+                              Text[""]],
+                        es1 = Text[""];   
+                        Text[""]] ,
+          " = 3"                   
+   }]
+   
+   ########### Valori decimali corretti sia con il punto che con la virgola ########################
+   %% In alcuni esercizi i valori da inserire negli InputField possono essere decimali i quali
+   %% vengono considerati scritti in modo corretto sia con la virgola che con il punto.
+   
+   %% Questa condizione \[EGrave] controllata dal seguente codice d'esempio
+   
+   Row[{
+       %% InputField in cui inserire il valore decimale
+       InputField[Dynamic[val],String],
+       
+       %% Valutazione di correttezza di val.
+       %% La struttura di questo codice \[EGrave] simile a quella data per 
+       %% implementare la propriet\[AGrave] commutativa con la differenza che la 
+       %% variabile da controllare \[EGrave] una sola.
+       Dynamic[If[val == "",
+                   Text[""],
+                   If[val == "2.5"|| val == "2,5",
+                      Style["\[Checkmark]",FontColor->Green],
+                      Style["X",FontColor->Red,Bold],
+                      Text[""]],
+                   Text[""]]]
+   
+   }]
+*)
 
 
 
@@ -1421,7 +1566,7 @@ EsercizioEsempio[]:=
 
 Module[{},
 
-(* Vendono inizializzate le variabili che contengono i dati e la risoluzione dell'esempio *)
+(* Vengono inizializzate le variabili che contengono i dati e la risoluzione dell'esempio *)
 datiEsempio = StringJoin[Style["A = 25 \nC = 50",FontFamily-> "OpenDyslexic",Bold],Style["\nTrovare sen(\[Alpha])",FontColor->Red,FontFamily-> "OpenDyslexic",Bold]];
 risoluzioneEsempio =Panel[Style[" Sin(\[Alpha]) = \!\(\*FractionBox[\(A\), \(C\)]\) = \!\(\*FractionBox[\(\(\\\ \\\ \)\(25\)\(\\\ \)\), \(\(\\\ \)\(50\)\)]\) = \!\(\*FractionBox[\(\(\\\ \)\(1\)\(\\\ \)\), \(2\)]\)",FontFamily-> "OpenDyslexic"]];
 
