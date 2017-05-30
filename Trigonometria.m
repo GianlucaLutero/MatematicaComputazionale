@@ -15,6 +15,7 @@
 		  poter disegnare un arco (\[Theta]1, \[Theta]2 estremi).
 		  Quindi \[EGrave] stata creata un funzione che calcola i due angoli, in particoare si \[EGrave] cercato il coefficente angolare delle 
 		  rette passanti tra ipunti d'interesse.
+		  Vedi funzione: angolo[p1_,p2_,p3_].
 		
 		- E stata sviluppata in parte una calcolatrice che doveva servire allo studente per risolvere i problemi forniti.
 		  Questa idea \[EGrave] stata poi successivamene accantonata, perch\[EGrave] particolarmente complicata la gestione delle problematiche
