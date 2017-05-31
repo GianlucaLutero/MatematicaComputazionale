@@ -19,8 +19,11 @@
 		
 		- E stata sviluppata in parte una calcolatrice che doveva servire allo studente per risolvere i problemi forniti.
 		  Questa idea \[EGrave] stata poi successivamene accantonata, perch\[EGrave] particolarmente complicata la gestione delle problematiche
-		  e soprattutto perch\[EGrave] la calcolatrice segue il linguaggio di mathematica, che risulta meno intuitivo di quello delle
-		  calcolatrici normai
+		  e soprattutto perch\[EGrave] la calcolatrice segue il linguaggio di mathematica, che risulta meno intuitivo di quello di una
+		  calcolatrice normale
+		  
+		- La parte dedicata al disegno delle figure \[EGrave] poco modificabile, a meno di grosse modifiche al codice, dato che sono state
+		  usate diverse costanti
 		  
 *)
 
@@ -165,6 +168,28 @@ bottonecalcolatrice[]:=
 Button["Calcolatrice",MessageDialog[  Calcolatrice[] ,WindowSize->All,Editable->False]]
 
 
+(*
+	###################### LOCATOR #######################
+	
+	%% INIZIALIZAZIONE LOCATOR 
+	%% http://mathworld.wolfram.com/Circle.html 
+	%% https://reference.wolfram.com/language/ref/LocatorPane.html 
+	
+	%% pt \[EGrave] il punto iliziale del locator
+	%% gli altri parametri determinano il comportamento del locator durante lacomputazione
+	{LocatorPane[Dynamic[pt,
+		{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
+		(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
+		(pt=Normalize[#];ptctrl=pt2[[1]])&}],
+		
+	%% background del locator, viene chiamata la funzone per disegnare la figura passanfdogli 
+	%% il valore dell'angolo \[Theta] Dinamico
+		
+	Dynamic[anglegraph[If[pt2=={2Pi,0},2Pi,Mod[ArcTan[pt[[1]],pt[[2]]],2 Pi]]]]],
+
+*)
+
+
 (* ILLUSTRAZIONE SENO *)
 graficoseno[] := 
 Manipulate[
@@ -239,6 +264,7 @@ Labeled[
 	Grid[{
 	(* INIZIALIZAZIONE LOCATOR *)
 	(* http://mathworld.wolfram.com/Circle.html *)
+	(* https://reference.wolfram.com/language/ref/LocatorPane.html *)
 	{LocatorPane[Dynamic[pt,
 		{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
 		(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
@@ -341,6 +367,7 @@ Labeled[
 	Grid[{
 	(* INIZIALIZAZIONE LOCATOR *)
 	(* http://mathworld.wolfram.com/Circle.html *)
+	(* https://reference.wolfram.com/language/ref/LocatorPane.html *)
 	{LocatorPane[Dynamic[pt,
 		{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
 		(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
@@ -437,6 +464,7 @@ Labeled[
 	Grid[{
 	(* INIZIALIZAZIONE LOCATOR *)
 	(* http://mathworld.wolfram.com/Circle.html *)
+	(* https://reference.wolfram.com/language/ref/LocatorPane.html *)
 	{LocatorPane[Dynamic[pt,
 		{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
 		(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
@@ -515,6 +543,7 @@ DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
 Grid[{
 (* INIZIALIZAZIONE LOCATOR *)
 (* http://mathworld.wolfram.com/Circle.html *)
+(* https://reference.wolfram.com/language/ref/LocatorPane.html *)
 {LocatorPane[Dynamic[pt,
 	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
 	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
@@ -596,6 +625,7 @@ DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
 Grid[{
 (* INIZIALIZAZIONE LOCATOR *)
 (* http://mathworld.wolfram.com/Circle.html *)
+(* https://reference.wolfram.com/language/ref/LocatorPane.html *)
 {LocatorPane[Dynamic[pt,
 	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
 	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
@@ -701,6 +731,7 @@ DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
 Grid[{
 (* INIZIALIZAZIONE LOCATOR *)
 (* http://mathworld.wolfram.com/Circle.html *)
+(* https://reference.wolfram.com/language/ref/LocatorPane.html *)
 {LocatorPane[Dynamic[pt,
 	{(pt={1,Tan[ptctrl]})&,
 	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
@@ -808,6 +839,7 @@ DynamicModule[{pt={Cos[ptctrl],Sin[ptctrl]},pt2={ptctrl,0}},
 Grid[{
 (* INIZIALIZAZIONE LOCATOR *)
 (* http://mathworld.wolfram.com/Circle.html *)
+(* https://reference.wolfram.com/language/ref/LocatorPane.html *)
 {LocatorPane[Dynamic[pt,
 	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
 	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
@@ -890,6 +922,7 @@ Labeled[
 Grid[{
 (* INIZIALIZAZIONE LOCATOR *)
 (* http://mathworld.wolfram.com/Circle.html *)
+(* https://reference.wolfram.com/language/ref/LocatorPane.html *)
 {LocatorPane[Dynamic[pt,
 	{(pt=Normalize[#]) &,
 	(pt=Normalize[#])&,
@@ -970,6 +1003,7 @@ Labeled[
 Grid[{
 (* INIZIALIZAZIONE LOCATOR *)
 (* http://mathworld.wolfram.com/Circle.html *)
+(* https://reference.wolfram.com/language/ref/LocatorPane.html *)
 {LocatorPane[Dynamic[pt,
 	{(pt=Normalize[#]) &,
 	(pt=Normalize[#])&,
@@ -1119,6 +1153,7 @@ DynamicModule[{pt={Cos[ptctrl], Sin[ptctrl]},pt2={ptctrl,0}},
 Grid[{
 (* INIZIALIZAZIONE LOCATOR *)
 (* http://mathworld.wolfram.com/Circle.html *)
+(* https://reference.wolfram.com/language/ref/LocatorPane.html *)
 {LocatorPane[Dynamic[pt,
 	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
 	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
@@ -1227,6 +1262,7 @@ DynamicModule[{pt={Cos[ptctrl], Sin[ptctrl]},pt2={ptctrl,0}},
 Grid[{
 (* INIZIALIZAZIONE LOCATOR *)
 (* http://mathworld.wolfram.com/Circle.html *)
+(* https://reference.wolfram.com/language/ref/LocatorPane.html *)
 {LocatorPane[Dynamic[pt,
 	{(pt={Cos[pt2[[1]]],Sin[pt2[[1]]]})&,
 	(pt=Normalize[#];pt2={If[pt2=={2Pi,0},2Pi,Mod[ArcTan[#[[1]],#[[2]]],2 Pi]],0})&,
