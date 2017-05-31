@@ -1476,13 +1476,14 @@ PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->{0.20
    
    EsercizioTutorial[]:=
      
-     Module[{val1 = ""}, %% Le variabili che conterranno le risposte dell'utente vengono inizializzate con il valore ""
+     Module[{val1 = ""}, %% Le variabili che conterranno le risposte dell'utente vengono prima inizializzate con il valore ""
      
           %% All'inizio vengono inizializzate le variabili che contengono i dati e i passi di risoluzione dell'esercizio
            
           datiEsercizio = StringJoin[Style[" Qui vanno inseriti i dati del problema ",FontFamily-> "OpenDyslexic",Bold],
                                       Style[" Qui va inserita la richiesta del problema",FontColor->Red,FontFamily-> "OpenDyslexic",Bold] ];
-                                      
+           
+          %% I passi di risoluzione degli esercizi sono combinazioni di InputField e testo, compresi anche i controlli di correttezza.                                                       
           passoNEsercizio = Panel[
                                    Row[{
                                      %% Parte dell'espressione da completare 
@@ -1531,7 +1532,7 @@ PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->{0.20
              {
                Magnify[Graphics[{
                
-               %% Qui va tutto il codice per il disegno della figura
+               %% Qui va il codice per il disegno della figura
                
                }],2],
              
@@ -1683,7 +1684,7 @@ Grid[{{Text[Style["Esempio 1:",20,FontColor-> Red,FontFamily-> "OpenDyslexic"]]}
 CheckAnswer[answer_,correct_]:=
 DynamicModule[{},
 If[answer == "", 
-         Text[""],  (*Se la risposta \[EGrave] vuota stampo nulla *)
+         Text[""],  (*Se la risposta contiene la stringa vuota stampo nulla *)
          If[answer == correct,
                     (*Se la risposta \[EGrave] corretta stampa un segno di spunta verde verde*)
                     Style["\[Checkmark]",FontColor->Green], 
@@ -1701,19 +1702,7 @@ datiEsercizioGuidato = StringJoin[Style["A = 40 \nB = 110",FontFamily-> "OpenDys
                                    Style["\nTrovare sen(\[Alpha]),cos(\[Alpha]),tan(\[Alpha]) e l'angolo \[Alpha]",FontColor->Red,FontFamily-> "OpenDyslexic",Bold,FontSize->14]];
 
 (*Inizializzazione primo passo dell'esercizio *)
-risoluzioneEsercizioGuidatoPasso1 = Row[{TPitagora[],
-									(*Style[
-                                    "\n",
-                                    "Applico il teorema \[LongRightArrow] \!\(\*SuperscriptBox[\(A\), \(2\)]\) + ",FontFamily-> "OpenDyslexic"],
-                                    Dynamic[InputField[Dynamic[catetoNome],String,FieldSize-> 1]],
-                                    "\!\(\*SuperscriptBox[\(\\\ \), \(2\)]\) ",
-                                    Dynamic[CheckAnswer[catetoNome,"B"]],
-                                    " = ",
-                                    InputField[Dynamic[ipotenusaNome],String,FieldSize-> 1] ,
-                                   "\!\(\*SuperscriptBox[\(\\\ \), \(\(2\)\(\\\ \\\ \\\ \)\)]\)",
-                                    Dynamic[CheckAnswer[ipotenusaNome,"C"]],
-                                    Style["\n \n",FontFamily-> "OpenDyslexic"],*)
-                                    
+risoluzioneEsercizioGuidatoPasso1 = Row[{TPitagora[],								                                    
                                    "\n",
                                     Style["Applico il teorema \[LongRightArrow] \!\(\*SuperscriptBox[\(A\), \(2\)]\) + ",FontFamily->"OpenDyslexic"],
                                     Dynamic[InputField[Dynamic[catetoNome],String,FieldSize-> 1]],
@@ -2472,7 +2461,7 @@ CreateDialog[{Magnify[InputField[Dynamic[espressione],String,Alignment->Right,Fi
 }]
 ]
 
-(*Teorema di pitagora*)
+(*Teorema di Pitagora*)
 TPitagora[]:=Button[Style["Teorema di Pitagora",FontFamily->"OpenDyslexic"],
 Module[{},
 
