@@ -108,8 +108,16 @@ ClearAll["Global`*"]
 
 
 
-(* FUNZIONE CALCOLO ANGOLO *)
-(* Angolo calcola i due angoli \[Theta]1, \[Theta]2 necessari per poter disegnare una arco di circonferenza tramite Disk[{x, y},...,{\[Theta]1, \[Theta]2}] *)
+(*
+	###################### FUNZIONE ANGOLO  #######################
+	%% Angolo calcola i due angoli \[Theta]1, \[Theta]2 necessari per poter disegnare 
+	%% una arco di circonferenza tramite Disk o Circle dato che entrambi
+	%% pssono prendo come input "[{x, y},...,{\[Theta]1, \[Theta]2}]".
+   
+    %% In particolare cerca il coefficiente angolare della retta passante
+    %% per {p3, (il punto dove vogliamo disegnare l'arco) p2}, {p3, p1}.
+    %% Lo statement If impedisce divisioni per 0.
+*)
 angolo[p1_,p2_,p3_]:=Module[{anga},
 anga={If[(p3[[1]]-p1[[1]])!=0, ArcTan[(p3[[2]] -p1[[2]])/(p3[[1]]-p1[[1]])], 0] ,
 	  If[(p3[[1]]-p2[[1]])!=0, ArcTan[(p3[[2]] -p2[[2]])/(p3[[1]]-p2[[1]])], 0] }
