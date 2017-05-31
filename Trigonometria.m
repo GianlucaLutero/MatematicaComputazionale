@@ -1496,7 +1496,7 @@ PlotRange->1,ImageSize-> 400,BaseStyle->{15},Axes->False,PlotRangePadding->{0.20
              {
                Magnify[Graphics[{
                
-               %% Qui va tutto il codice per il disegno della figura
+               %% Qui va il codice per il disegno della figura
                
                }],2],
              
